@@ -17,6 +17,10 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 - Venue locations
 - Direct links to event details
 
+## Slow scraper
+
+This scraper does not use more than a single-person's bandwidth. It is intentionally slow to avoid overloading the festival's website.
+
 ## How to use
 
 1. Download the `.ics` file using the link above

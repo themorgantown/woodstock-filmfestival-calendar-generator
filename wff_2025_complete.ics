@@ -3,16 +3,31 @@ VERSION:2.0
 PRODID:-//Woodstock Film Festival 2025 Complete Calendar//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
+SUMMARY:A Life Illuminated
+DTSTART:20251015T170000
+DTEND:20251015T190000
+DTSTAMP:20251014T172557Z
+UID:a-life-illuminated-20251015T170000-b43d760a3b97e8f0@wff2025
+DESCRIPTION:Q&A with director Tasha Van Zandt.\n\nAfter a lifetime of unve
+ iling the deep sea's most elusive secrets\, pioneering marine biologist Dr
+ . Edie Widder descends 3\,300 feet into the ocean's depths on her most gro
+ undbreaking mission yet: to capture a bioluminescent phenomenon that could
+  transform our understanding of life on Earth.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a05
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Blue Moon
 DTSTART:20251015T171500
 DTEND:20251015T191500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:blue-moon-20251015T171500-8c3a5a6aa9912f9c@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:In Richard Linklater's newest film\, on the evening of March 3
+ 1\, 1943\, legendary lyricist Lorenz Hart (Ethan Hawke) confronts his shat
+ tered self-confidence in Sardi's bar as his former collaborator Richard Ro
+ dgers (Andrew Scott) celebrates the opening night of his ground-breaking h
+ itOklahoma!
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b9b
@@ -21,13 +36,12 @@ BEGIN:VEVENT
 SUMMARY:Arco
 DTSTART:20251015T173000
 DTEND:20251015T193000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:arco-20251015T173000-4dbea0d506136023@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:In 2075\, a ten-year-old girl\, Iris\, witnesses a mysterious 
+ boy in a rainbow suit fall from the sky. It’s Arco. He comes from an idy
+ llic far future where time travel is possible. Iris shelters him and will 
+ do whatever it takes to help him return to his time.\n\nCourtesy of Neon.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a9c
@@ -36,23 +50,53 @@ BEGIN:VEVENT
 SUMMARY:Honky Tonkin' in Kingston
 DTSTART:20251015T193000
 DTEND:20251015T213000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:honky-tonkin-in-kingston-20251015T193000-43ae39dbaf605e79@wff2025
+DESCRIPTION:Capturing the popularity and spirit of Honky Tonk Wednesdays h
+ eld at the Kingston VFW\, we’re featuring the world premiere of HONKY TO
+ NK WEDNESDAYS directed by Al Markman and OPRYLAND USA: A CIRCLE BROKEN dir
+ ected by Brandon Vestal.\n\nFollowing the screenings\, Honky Tonk Wednesda
+ ys co-founder and Texas Steel Guitar Hall of Fame inductee Cindy Cashdolla
+ r and co-founder of The Lovin’ Spoonful musician John Sebastian will par
+ ticipate in a Q&A. The night continues with two-steppin’ to vinyl countr
+ y classics spun by DJ Pretty Good.\n\nAbout DJ Pretty Good:\n\n﻿Country 
+ music lover turned DJ hailing from Austin Texas\, playing everything from 
+ obscure tracks to hits. I started collecting vinyl for fun and out of fear
+  of losing access to the songs I loved the most. As my collection grows\, 
+ so does my love for all branches of the genre and the history behind it. I
+ ’m absolutely honored to play my records for you!
 LOCATION:Assembly
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68a489b0c665
  25a82b7e64a7
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
+DTSTART:20251015T194500
+DTEND:20251015T214500
+DTSTAMP:20251014T172557Z
+UID:everywhere-man-the-lives-and-t-20251015T194500-3b809478ec31a2a4@wff202
+ 5
+DESCRIPTION:Q&A with Dayna Goldfine (Producer/Director) and Dan Geller (Pr
+ oducer/Director).\n\nBlending rock documentary and musical memoir\,Everywh
+ ere Mantells the extraordinary life story of Peter Asher – pop star\, pr
+ oducer\, manager\, and confidant to legends from Paul McCartney to James T
+ aylor\, Linda Ronstadt\, Carole King\, and many more – across six decade
+ s at the heart of rock and roll history.\n\nCourtesy of Film Collaborative
+ .
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68b9a1d69dda
+ 499e9b291c09
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Testament of Ann Lee
 DTSTART:20251015T200000
 DTEND:20251015T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-testament-of-ann-lee-20251015T200000-8c744538098643f8@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:OPENING NIGHT FILM. Q&A with director Mona Fastvold\, star Ama
+ nda Seyfried\, and choreographer Celia Rowlson-Hall.\n\nAn epic fable insp
+ ired by the life of Ann Lee\, the founder of the Shakers\, a radical relig
+ ious movement that began in the late 1700s.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68d5aaeb65f8
  244782d9315f
@@ -61,13 +105,13 @@ BEGIN:VEVENT
 SUMMARY:Sentimental Value
 DTSTART:20251015T200000
 DTEND:20251015T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:sentimental-value-20251015T200000-2ef9564ec0e38211@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Joachim Trier (The Worst Person in the World) has led Norway
+ ’s global cinema wave. His Cannes Grand Prix winnerSentimental Valuereun
+ ites him with Renata Reinsve in a father-daughter drama about art\, memory
+ \, and family wounds\, exploring where life ends and creation begins. – 
+ Amir Bogen\n\nCourtesy of Neon.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ab0
@@ -76,28 +120,44 @@ BEGIN:VEVENT
 SUMMARY:Out Standing
 DTSTART:20251016T110000
 DTEND:20251016T130000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:out-standing-20251016T110000-5db11c1859e8d8f4@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Mélanie Charbonneau and producer Jul
+ ia Rosenberg.\n\nBased on a true story\, a determined young woman shatters
+  military barriers as Canada's first female infantry officer — only to f
+ ace her fiercest battles within her own ranks.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aa1
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Holding Liat
+DTSTART:20251016T113000
+DTEND:20251016T133000
+DTSTAMP:20251014T172557Z
+UID:holding-liat-20251016T113000-e228a9add58786ea@wff2025
+DESCRIPTION:Q&A with director Brandon Kramer. Moderated by Ondi Timoner.\n
+ \nDuring the October 7th attack on Israel\, Liat and her husband Aviv are 
+ kidnapped by Hamas. This is the gripping and beautiful story of a family's
+  struggle to win their return\, while grappling with their own fight for p
+ eace for those on both sides. —Sabina Barach'\n\n﻿Courtesy of The Film
+  Collaborative
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a0a
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Train Dreams
 DTSTART:20251016T140000
 DTEND:20251016T160000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:train-dreams-20251016T140000-e518e6096ca8748c@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Joel Edgerton stars in Train Dreams\, a soulful period drama s
+ et amid America's western expansion. As he lays railroad tracks\, he build
+ s friendships\, love\, and family while enduring hardship and loss. Clint 
+ Bentley channels classic Hollywood in his Sundance standout\, supported by
+  powerful performances by Felicity Jones\, William H. Macy\, and Clifton C
+ ollins Jr. —Amir Bogen\n\n﻿Courtesy of Netflix.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bb9
@@ -106,23 +166,40 @@ BEGIN:VEVENT
 SUMMARY:Outdoor School
 DTSTART:20251016T140000
 DTEND:20251016T160000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:outdoor-school-20251016T140000-68c99370d6f13896@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with Producer Ifanyi Bell and Executive Producer Vin Shamb
+ ry.\n\nBased upon the Moth story of how 12-year-old Melvin Shambry\, now a
+ n actor and published writer\, survived his own childhood on the hardscrab
+ ble streets of 1990s Portland\, Oregon\, a single week in the wilderness a
+ t the real-life Outdoor School transformed his life. —Peter Wortmann
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aa6
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Come See Me In The Good Light
+DTSTART:20251016T143000
+DTEND:20251016T163000
+DTSTAMP:20251014T172557Z
+UID:come-see-me-in-the-good-light-20251016T143000-22a115aeb878c9a4@wff2025
+DESCRIPTION:Q&A with director Ryan White.\n\nWinner of the Festival Favori
+ te Award at this year's Sundance\, this extraordinary story follows much-c
+ elebrated non-binary poet Andrea Gibson as they battle ovarian cancer toge
+ ther with their wife\, told with a deft and kind eye into this intimate an
+ d heartbreaking world. —Sabina Barach\n\nCourtesy of Apple TV+
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a19
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Chef's Choice
 DTSTART:20251016T163000
 DTEND:20251016T183000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:chef-s-choice-20251016T163000-c098c37587726c66@wff2025
+DESCRIPTION:With Q&A\n\nEntrusting. A thematically-diverse collection of n
+ arrative and documentary films.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbc709ecf
  ba6af5eca786
@@ -131,13 +208,14 @@ BEGIN:VEVENT
 SUMMARY:IDIOTKA
 DTSTART:20251016T164500
 DTEND:20251016T184500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:idiotka-20251016T164500-85e6167c8fd80c19@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Nastasya Popov\, producer Camila Mendes\, st
+ ars Anna Baryshnikov and Nerses Stamos.\n\nFacing eviction\, Margarita –
+  Depop “seller\,” hustler\, and fashion maven – turns her chaotic li
+ fe into content\, staring us down as if daring us to root for her. In this
+  electric satire of reality TV and self‑mythmaking\, the question isn’
+ t if she’ll win\, but how far she’ll go. –Monet Massac
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aab
@@ -146,43 +224,100 @@ BEGIN:VEVENT
 SUMMARY:Mr. Scorsese
 DTSTART:20251016T170000
 DTEND:20251016T190000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:mr-scorsese-20251016T170000-ce4a8fa8a7aacdfb@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Followed by a conversation with its acclaimed director Rebecca
+  Miller\, executive producers Damon Cardasis and Cindy Tolan\, and editor 
+ David Bartner.\n\nThe first two episodes of the upcoming special 5-part do
+ cumentary series explores the incredible life and award-winning work of le
+ gendary filmmaker Martin Scorsese\, a visionary who redefined filmmaking\,
+  followed by a conversation with its acclaimed director Rebecca Miller and
+  executive producers Damon Cardasis and Cindy Tolan.With exclusive access 
+ to Scorsese’s private archives\, the documentary series is anchored by e
+ xtensive conversations with the filmmaker himself and interviews with frie
+ nds\, family and creative collaborators.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ba0
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Concessions
+DTSTART:20251016T171500
+DTEND:20251016T191500
+DTSTAMP:20251014T172557Z
+UID:concessions-20251016T171500-9f4f0a357ceffd67@wff2025
+DESCRIPTION:Q&A with writer/director Mas Bouzidi\, cast members Rob Riorda
+ n\, Jonathan Lorenzo Price\, Lana Rockwell\, and Volkan Eryaman. Introduce
+ d by Max Madsen.\n\nAs the beloved Royal Alamo Cinema closes its doors for
+  good\, jaded staff\, eccentric patrons\, and one unhinged manager stumble
+  through one last night at the movies — grappling with busted dreams\, b
+ ad popcorn\, and hard goodbyes. Featuring Michael Madsen in one of his 
+ last roles.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b2d
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ask E. Jean
+DTSTART:20251016T173000
+DTEND:20251016T193000
+DTSTAMP:20251014T172557Z
+UID:ask-e-jean-20251016T173000-629e05187c94bb7a@wff2025
+DESCRIPTION:Q&A with director Ivy Meeropol and E. Jean Carroll. Moderated 
+ by Sheila Nevins.\n\n﻿\n\nE. Jean Carroll's sharp wit meets steely resol
+ ve in this riveting portrait of the only woman to beat Donald Trump in cou
+ rt. Ivy Meeropol's Ask E. Jean fuses outrage\, humor\, and resilience\, ch
+ arting Carroll's transformation from advice columnist to fearless icon. 
+ —Jessica Edwards
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a14
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Arrest The Midwife
 DTSTART:20251016T173000
 DTEND:20251016T193000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:arrest-the-midwife-20251016T173000-0ab567a9d8eb5d42@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Elaine Epstein and producer Robin Hessman.\n
+ \nWhen trusted midwives are arrested in a tight-knit Amish and Mennonite e
+ nclave\, a quiet community is thrust into turmoil. With their way of life 
+ under threat\, these women — once expected to stay silent — emerge as 
+ unexpected activists\, defying tradition and fighting for justice.
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b73
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
+DTSTART:20251016T190000
+DTEND:20251016T210000
+DTSTAMP:20251014T172557Z
+UID:everywhere-man-the-lives-and-t-20251016T190000-4e522e8d46415068@wff202
+ 5
+DESCRIPTION:Q&A with Dayna Goldfine (Producer/Director) and Dan Geller (Pr
+ oducer/Director).\n\nBlending rock documentary and musical memoir\,Everywh
+ ere Mantells the extraordinary life story of Peter Asher – pop star\, pr
+ oducer\, manager\, and confidant to legends from Paul McCartney to James T
+ aylor\, Linda Ronstadt\, Carole King\, and many more – across six decade
+ s at the heart of rock and roll history.\n\nPreceded by the short film OH 
+ YEAH.\n\n﻿Courtesy of Film Collaborative.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c43c31e6b6
+ 7ad85b3aa097
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Secret Agent
 DTSTART:20251016T193000
 DTEND:20251016T213000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-secret-agent-20251016T193000-057732694e80ff55@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Kleber Mendonça Filho’s political thriller is set in 1970s 
+ Brazil during the dictatorship. Leading actor Wagner Moura (Civil War) shi
+ nes as a disgraced engineer who returns to his hometown\, Recife\, to see 
+ his son and confront a corrupt establishment that ruined his career. This 
+ historical drama won Best Director and Best Actor at Cannes. –Amir Bogen
+ \n\n﻿Courtesy of Neon.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ab5
@@ -191,8 +326,10 @@ BEGIN:VEVENT
 SUMMARY:Film School Shorts
 DTSTART:20251016T193000
 DTEND:20251016T213000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:film-school-shorts-20251016T193000-16b5f4e739892495@wff2025
+DESCRIPTION:Finely-crafted and distinctive narrative and documentary short
+ s from up and coming visionary film school students.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68adc1f50145
  ff59e28b061e
@@ -201,28 +338,63 @@ BEGIN:VEVENT
 SUMMARY:Comparsa
 DTSTART:20251016T194500
 DTEND:20251016T214500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:comparsa-20251016T194500-3f80c159a2ec5749@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with directors Vickie Curtis & Doug Anderson\, screenwrite
+ rs Lesli Canela Pérez & Lupe Pére. Moderated by Pamela Yates.\n\nAfter 4
+ 1 girls die in a fire at a state-run safe house\, teenage sisters Lesli an
+ d Lupe take action. In Ciudad Peronia\, Guatemala\, they ignite a youth mo
+ vement\, blending circus\, music\, and performance to reclaim public space
+ \, confront injustice\, and spark a powerful movement of resilience and ho
+ pe. —Jessica Edwards
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b78
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sirāt
+DTSTART:20251016T200000
+DTEND:20251016T220000
+DTSTAMP:20251014T172557Z
+UID:sir-t-20251016T200000-e303153a3df12062@wff2025
+DESCRIPTION:Winner of Cannes’ Special Jury Prize\, beginning with a fren
+ zied desert party\, then becoming a trippy journey toward the world’s en
+ d\, this Spanish wild road trip film blends a father’s search for his da
+ ughter with war’s shadow\, desert vistas\, and electrifying rave energy.
+  – Amir Bogen\n\nCourtesy of Neon.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b32
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Free Leonard Peltier
+DTSTART:20251016T201500
+DTEND:20251016T221500
+DTSTAMP:20251014T172557Z
+UID:free-leonard-peltier-20251016T201500-a2f02b3e3c60ef64@wff2025
+DESCRIPTION:Q&A with David France (co-director)\, Jhane Myers and Paul McG
+ uire (producers)\, Holly Cook Macarro (featured in the film)\, and a virtu
+ al Q&A with Leonard Peltier.\n\nLeonard Peltier was a young leader of the 
+ American Indian Movement in the 1970s\, when he was convicted of a brutal 
+ crime based on falsified evidence. After global outrage and fifty years of
+  failed appeals\, Free Leonard Peltier arrives to revive calls for his fre
+ edom. This time\, things are different.\n\nCourtesy of The Film Collaborat
+ ive
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a0f
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Adult Children
 DTSTART:20251016T203000
 DTEND:20251016T223000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:adult-children-20251016T203000-981eb0198a2f5be7@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with actor Thomas Sadoski.\n\nLiving a sheltered life\, Mo
+ rgan struggles to define herself in a college essay. A family crisis bring
+ s her significantly older half siblings home for the summer.Adult Children
+ is filled with heart and hijinks that reminds us sometimes human connectio
+ n is all we have. —Sierra Slaughter
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ba5
@@ -231,23 +403,45 @@ BEGIN:VEVENT
 SUMMARY:Park Avenue
 DTSTART:20251017T110000
 DTEND:20251017T130000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:park-avenue-20251017T110000-0e57547769cf6460@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Gaby Dellal & DOP David Johnson. Preceded by
+  the short film ELOISE AND THE DRESS.\n\nEscaping a cowboy existence\, Cha
+ rlotte tips up at her childhood Park Avenue apartment unannounced. Set aga
+ inst the backdrop of old New York and the eclectic\, intertwined lives of 
+ the building's long-time residents\, PARK AVENUE explores the intricate bo
+ nd between a mother and daughter.\n\nPreceded by the short film ELOISE AND
+  THE DRESS.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68b70376b92e
  138c1bba87bf
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Teenage Wasteland
+DTSTART:20251017T111500
+DTEND:20251017T131500
+DTSTAMP:20251014T172557Z
+UID:teenage-wasteland-20251017T111500-193c7971f00d6ab4@wff2025
+DESCRIPTION:Q&A with editor Chris Passig\; subjects Fred Isseks\, David Bi
+ rmingham\, Jeff Dutemple\, and Mike Regan.Introductory remarks by Senator 
+ Michelle Hinchey.\n\nIn the 90s\, when a media arts teacher and his studen
+ ts uncover a disturbing secret\, their high school documentaryGarbage\, Ga
+ ngsters and Greedexposes a web of corruption. Packed with suspense\, humor
+ \, and nostalgic VHS archive\, Emmy®-winning filmmakers Jesse Moss and Am
+ anda McBaine’s feature documentaryTeenage Wastelandis a thrilling remind
+ er that youth can spark real change. –Jessica Edwards
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a1e
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Family Matters
 DTSTART:20251017T111500
 DTEND:20251017T131500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:family-matters-20251017T111500-0bf666b5a8a56463@wff2025
+DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
+ s in moments of control\, heartbreak\, and memory.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbb34bdb8
  e197ddd2a3e4
@@ -256,28 +450,42 @@ BEGIN:VEVENT
 SUMMARY:Solomamma
 DTSTART:20251017T113000
 DTEND:20251017T133000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:solomamma-20251017T113000-88cdc55c8e4191d6@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Journalist Edith chose to become a single mother in her 40s th
+ rough an anonymous sperm donor and now she is the happy mother of a five-y
+ ear-old son. When she unexpectedly discovers the donor’s identity\, what
+  begins as a calculated encounter gradually deepens into a genuine connect
+ ion\, driving Edith to sink deeper into lies and endanger the fragile bala
+ nce of the life she has built.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277baa
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Out Standing
+DTSTART:20251017T113000
+DTEND:20251017T133000
+DTSTAMP:20251014T172557Z
+UID:out-standing-20251017T113000-fdb495994f6af515@wff2025
+DESCRIPTION:Q&A with writer/director Mélanie Charbonneau and producer Jul
+ ia Rosenberg.\n\nBased on a true story\, a determined young woman shatters
+  military barriers as Canada's first female infantry officer — only to f
+ ace her fiercest battles within her own ranks.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277af1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:THE VOICE OF HIND RAJAB
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-voice-of-hind-rajab-20251017T141500-02adcdf71caae53d@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:January 29\, 2024. Red Crescent volunteers receive an emergenc
+ y call. A 6-year old girl is trapped in a car under fire in Gaza\, pleadin
+ g for rescue. While trying to keep her on the line\, they do everything th
+ ey can to get an ambulance to her. Her name was Hind Rajab.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277baf
@@ -286,53 +494,107 @@ BEGIN:VEVENT
 SUMMARY:The Floaters
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-floaters-20251017T141500-dc5fe72b3d4f294e@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with Rachel Israel and cast members.\n\nStruggling musicia
+ n Nomi (Jackie Tohn) takes a last-resort job from her overachiever best fr
+ iend Mara (Sarah Podemski): supervising misfits at their childhood Jewish 
+ summer camp. With the camp’s survival in the balance as it ramps up for 
+ a drama competition with a longtime rival\, the clashing friends and campe
+ rs must overcome their differences to save the camp.\n\nPreceded by the sh
+ ort film MEOW.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=6895ff6aa244
  2a19d0c2a11e
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Memory Lane
+DTSTART:20251017T141500
+DTEND:20251017T161500
+DTSTAMP:20251014T172557Z
+UID:memory-lane-20251017T141500-4ccafcf42a7e2d3e@wff2025
+DESCRIPTION:Q&A with writer/director Jelle de Jonge.\n\nAn unexpected lett
+ er disrupts the lives of an elderly couple\, forcing them to confront what
+  they've long avoided. Maartje\, who is battling dementia\, and her husban
+ d Jaap embark on a road trip to a dying friend in Spain. Along the way\, t
+ hey encounter a changed world\, but nevertheless rediscover their shared p
+ ast.\n\nThis film is supported by the Dutch Culture USA program of the Con
+ sulate General of the Kingdom of the Netherlands in New York.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b37
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dislocation
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dislocation-20251017T141500-8217542d633c757a@wff2025
+DESCRIPTION:With Q&A\n\nWell-crafted\, authentic documentaries which share
+  stories of displacement and community repossession.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbca55174
  b14b28a20537
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:AN EYE FOR AN EYE
+DTSTART:20251017T143000
+DTEND:20251017T163000
+DTSTAMP:20251014T172557Z
+UID:an-eye-for-an-eye-20251017T143000-326cc33f088f96d2@wff2025
+DESCRIPTION:Q&A with director Tanaz Eshaghian\n\nUpon release from a long 
+ prison sentence\, an Iranian mother's fate lies in the hands of her victim
+ 's family: they can either receive a "blood money" payment or have her exe
+ cuted. Is murder of an abuser justifiable? Unpredictable twists make this 
+ film a compelling watch. —Sabina Barach
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a23
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concessions
 DTSTART:20251017T143000
 DTEND:20251017T163000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:concessions-20251017T143000-697be51341bc6218@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Mas Bouzidi\, cast members Rob Riorda
+ n\, Jonathan Lorenzo Price\, Lana Rockwell\, and Volkan Eryaman. Introduce
+ d by Max Madsen.\n\nAs the beloved Royal Alamo Cinema closes its doors for
+  good\, jaded staff\, eccentric patrons\, and one unhinged manager stumble
+  through one last night at the movies — grappling with busted dreams\, b
+ ad popcorn\, and hard goodbyes. Featuring Michael Madsen in one of his 
+ last roles.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a65
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Outdoor School
+DTSTART:20251017T144500
+DTEND:20251017T164500
+DTSTAMP:20251014T172557Z
+UID:outdoor-school-20251017T144500-dce666a6650edfdf@wff2025
+DESCRIPTION:Q&A with Producer Ifanyi Bell and Executive Producer Vin Shamb
+ ry.\n\nBased upon the Moth story of how 12-year-old Melvin Shambry\, now a
+ n actor and published writer\, survived his own childhood on the hardscrab
+ ble streets of 1990s Portland\, Oregon\, a single week in the wilderness a
+ t the real-life Outdoor School transformed his life. —Peter Wortmann
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277af6
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Magic Hour
 DTSTART:20251017T144500
 DTEND:20251017T164500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:magic-hour-20251017T144500-b9018aabdc8f1410@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with filmmakers Katie Aselton and Mark Duplass.\n\nErin (d
+ irector and star Katie Aselton) is on a weekend retreat in the desert with
+  her partner Charlie (Daveed Diggs). The couple has chosen to escape their
+  L.A. life and work through deep love and unexpected loss. But a much more
+  complicated situation emerges\,and things may be different than they seem
+ . —Adam Schartoff
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b7d
@@ -341,28 +603,72 @@ BEGIN:VEVENT
 SUMMARY:HEDDA
 DTSTART:20251017T170000
 DTEND:20251017T190000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:hedda-20251017T170000-90bbfea3959ef6ad@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Nia DaCosta's bold adaptation of Ibsen's Hedda Gabler is fast-
+ paced\, sexy\, and glamorously dark. Tessa Thompson plays a larger-than-li
+ fe Black woman battling boredom\, class\, and social norms with seductive 
+ plots and treacherous schemes. Set around a dazzling Gatsby-like party\, t
+ his sharp\, wild\, and relevant film spirals toward self-destruction. —A
+ mir Bogen\n\nCourtesy of Amazon.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bb4
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Is This Thing On?
+DTSTART:20251017T170000
+DTEND:20251017T190000
+DTSTAMP:20251014T172557Z
+UID:is-this-thing-on-20251017T170000-9c26dca090d40d04@wff2025
+DESCRIPTION:As their marriage quietly unravels\, Alex (Will Arnett) faces 
+ middle age and an impending divorce\, seeking new purpose in the New York 
+ comedy scene while Tess (Laura Dern) confronts the sacrifices she made for
+  their family — forcing them to navigate co-parenting\, identity\, and w
+ hether love can take a new form.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b3c
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Coexistence\, My Ass!
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T172557Z
+UID:coexistence-my-ass-20251017T171500-32e5c59768919f6e@wff2025
+DESCRIPTION:Q&A with director Amber Fares and editor Rabab Haj Yahya\n\nHo
+ w do we create real change — through policy\, protest or punchlines? Com
+ ic Noam Shuster Eliassi unpacks the concept of coexistence with sharp humo
+ r and disarming honesty in a moving\, provocative\, and funny Sundance-win
+ ning doc\, making space to rethink what peace means. —Jessica Edwards
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a28
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuremberg
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T172557Z
+UID:nuremberg-20251017T171500-17d213581a6da1df@wff2025
+DESCRIPTION:The Allies\, led by the unyielding chief prosecutor Robert H. 
+ Jackson (Michael Shannon)\, have the task of ensuring the Nazi regime answ
+ ers for the unveiled horrors of the Holocaust at the Nuremberg trials\, wh
+ ile a US Army psychiatrist (Rami Malek) is locked in a dramatic psychologi
+ cal duel with former Reichsmarschall Herman Goring (Russell Crowe).
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277afb
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Friday Night Toons
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:friday-night-toons-20251017T171500-4fd44f2d59004d1e@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:With Q&A\n\nA selection of the best new indie animation from a
+ cross the globe. Kick off your festival weekend with a wild ride that’s 
+ a feast for the eyes! Mature Audience.
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9d7f6f14
  3360ceb36a7a
@@ -371,13 +677,13 @@ BEGIN:VEVENT
 SUMMARY:Mildlife
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:mildlife-20251017T171500-6bb845d17ffe7ab3@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with filmmaker Cory Thibert and editor/co-creator of origi
+ nal score Gary Thibert.\n\nLawrence just wants to drum his depression away
+  in his hardcore band. The only problem? His girlfriend wants to leave the
+ ir hometown\, where he struggles with a complicated\, co-dependent relatio
+ nship with his parents\, who both live with cerebral palsy.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a6a
@@ -386,8 +692,11 @@ BEGIN:VEVENT
 SUMMARY:Nice to Meet You
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:nice-to-meet-you-20251017T171500-37903d10d68a2ea0@wff2025
+DESCRIPTION:With Q&A\n\nA poignant collection of films that explore compli
+ cated human relationships\, capturing the delicate balance of love\, confl
+ ict\, and the unspoken truths that shape our connections.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbb79379b
  88e690591c24
@@ -396,13 +705,13 @@ BEGIN:VEVENT
 SUMMARY:THE PLAGUE
 DTSTART:20251017T173000
 DTEND:20251017T193000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-plague-20251017T173000-380fc8818ecd9632@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Charlie Polinger's Cannes debut is a playful yet darkly humoro
+ us coming-of-age drama set at a youth water polo camp. Exploring the bully
+ ing of "plague"-rumored misfits\, it features Joel Edgerton in a visually 
+ striking\, Lord of the Flies-like tale reimagined for today. —Amir Bogen
+ \n\nCourtesy of IFC.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aba
@@ -411,13 +720,13 @@ BEGIN:VEVENT
 SUMMARY:BUGONIA
 DTSTART:20251017T194500
 DTEND:20251017T214500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:bugonia-20251017T194500-cff2a578925f309b@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:In Academy Award-nominated director Yorgos Lanthimos' (Poor Th
+ ings\,The Favourite) latest satirical absurdist sci-fi dark comedy\, two c
+ onspiracy obsessed young men kidnap the high-powered CEO (two-time Academy
+  Award-winner Emma Stone) of a major company\, convinced that she is an al
+ ien intent on destroying planet Earth.\n\nCourtesy of Focus Features.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a6f
@@ -426,54 +735,104 @@ BEGIN:VEVENT
 SUMMARY:Wake Up Dead Man: A Knives Out Mystery
 DTSTART:20251017T200000
 DTEND:20251017T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:wake-up-dead-man-a-knives-out--20251017T200000-6ba39b7de21fa29f@wff202
  5
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Kleinert/James Art Center[PANELS]\n\nTinker Street Cinema\n\nW
+ oodstock Community Center[SHORTS]\n\nWoodstock Playhouse\n\nHudson Valley 
+ LGBTQ+ Community Center\n\nUpstate Midtown\n\nRosendale Theatre\n\nBroken 
+ Wing Barn at White Feather Farm\n\nOrpheum Theatre
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c84e241a4c
  8a26624f5a08
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Our Girls
+DTSTART:20251017T200000
+DTEND:20251017T220000
+DTSTAMP:20251014T172557Z
+UID:our-girls-20251017T200000-51a0b46b6d998566@wff2025
+DESCRIPTION:Q&A with writer/director Mike van Diem\n\nDuring an idyllic ho
+ liday in the Austrian Alps\, the long- standing friendship between two cou
+ ples spins out of control when an unthinkable accident forces them to deci
+ de how far they will go\, and which lines they will cross\, to save their 
+ daughters.\n\nThis film is supported by the Dutch Culture USA program of t
+ he Consulate General of the Kingdom of the Netherlands in New York.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b41
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Kain
 DTSTART:20251017T200000
 DTEND:20251017T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:kain-20251017T200000-4b16d90359dcffcb@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with Gabriel Bauer (Director) & Daniël Gellvoet Gellvoet 
+ (lead actor).\n\nAn autistic man sets out to get his driver's license and 
+ prove he can function "normally" in society. But when he meets the love of
+  his life during driving lessons\, his desire for independence collides wi
+ th society's demands. Confronted with his autism\, he learns a valuable le
+ sson in self-acceptance.\n\nThis film is supported by the Dutch Culture US
+ A program of the Consulate General of the Kingdom of the Netherlands in Ne
+ w York.
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b82
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Perfect Neighbor
+DTSTART:20251017T201500
+DTEND:20251017T221500
+DTSTAMP:20251014T172557Z
+UID:the-perfect-neighbor-20251017T201500-dce00f7e240eed13@wff2025
+DESCRIPTION:Q&A with director Geeta Gandbhir.\n\nUsing bodycam footage fro
+ m dozens of police visits\, The Perfect Neighbor bears witness to a tight-
+ knit community navigating one neighbor’s relentless harassment. But her 
+ hostility takes a sinister turn when it escalates into a fatal crime.\n\nC
+ ourtesy of Netflix.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a2d
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Floating Carousel
 DTSTART:20251017T203000
 DTEND:20251017T223000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:floating-carousel-20251017T203000-b60e738acebb0130@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with filmmakers Delilah Napier & Lucy Powers.\n\nTwo young
+  women\, a sugar daddy\, a jealous boyfriend\, a cuddler\, and a gay cabar
+ et star collide in this sharp\, sexy NYC dramedy. Yale alums Lucy Powers a
+ nd Delilah Napier's debut is a funny\, messy\, modern Sex and the City\, w
+ ith rising stars and veteran talent. —Amir Bogen
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277abf
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:STARMAN
+DTSTART:20251017T203000
+DTEND:20251017T223000
+DTSTAMP:20251014T172557Z
+UID:starman-20251017T203000-5b29131098ddfb6e@wff2025
+DESCRIPTION:Q&A with director Robert Stone.\n\nYou won't find a more dynam
+ ic documentary subject than NASA robotics engineer turned best-selling sci
+ ence fiction author Gentry Lee. Robert Stone's latest documentary\, STARMA
+ N\, gives the octogenarian Lee the ideal platform to ponder life's big que
+ stions. —Adam Schartoff
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b00
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Hilarity
 DTSTART:20251017T203000
 DTEND:20251017T223000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:hilarity-20251017T203000-b6752d162f6009ee@wff2025
+DESCRIPTION:With Q&A\n\nIn an uncertain world\, laughter is the best medic
+ ine.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68aca11dc8a1
  8db6ac79af3c
@@ -482,13 +841,13 @@ BEGIN:VEVENT
 SUMMARY:Rental Family
 DTSTART:20251018T100000
 DTEND:20251018T120000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:rental-family-20251018T100000-47cfea0227916afe@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Set against modern-day Tokyo\, RENTAL FAMILY follows an Americ
+ an actor (Brendan Fraser) who struggles to find purpose until he lands an 
+ unusual gig: working for a Japanese "rental family" agency\, playing stand
+ -in roles for strangers in various emotional and life altering situations.
+ \n\nCourtesy of Searchlight.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bbe
@@ -497,39 +856,100 @@ BEGIN:VEVENT
 SUMMARY:The Lure of Ponies - a spellbound attic mystery
 DTSTART:20251018T100000
 DTEND:20251018T120000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-lure-of-ponies-a-spellboun-20251018T100000-6695da1870453ae2@wff202
  5
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Beck Underwood.\n\nSet in an attic populated
+  by toys\, an animated playful homage to the cozy mystery finds a distress
+ ed baby doll unable to find her human child. She enlists Detectives France
+ s Faraday\, a Victorian era doll\, and her sidekick Midge\, a sixties plas
+ tic doll\, to solve the case. —Noelle Melody
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ac4
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Park Avenue
+DTSTART:20251018T100000
+DTEND:20251018T120000
+DTSTAMP:20251014T172557Z
+UID:park-avenue-20251018T100000-5a480f65685777db@wff2025
+DESCRIPTION:Q&A with director Gaby Dellal & DOP David Johnson. Preceded by
+  the short film ELOISE AND THE DRESS.\n\nEscaping a cowboy existence\, Cha
+ rlotte tips up at her childhood Park Avenue apartment unannounced. Set aga
+ inst the backdrop of old New York and the eclectic\, intertwined lives of 
+ the building's long-time residents\, PARK AVENUE explores the intricate bo
+ nd between a mother and daughter.\n\nPreceded by the short film ELOISE AND
+  THE DRESS.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c31fb18923
+ 2c0da79097e6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mildlife
+DTSTART:20251018T101500
+DTEND:20251018T121500
+DTSTAMP:20251014T172557Z
+UID:mildlife-20251018T101500-6da58e4c45f719a2@wff2025
+DESCRIPTION:Q&A with filmmaker Cory Thibert and editor/co-creator of origi
+ nal score Gary Thibert.\n\nLawrence just wants to drum his depression away
+  in his hardcore band. The only problem? His girlfriend wants to leave the
+ ir hometown\, where he struggles with a complicated\, co-dependent relatio
+ nship with his parents\, who both live with cerebral palsy.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b46
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Difficult Beauty
 DTSTART:20251018T103000
 DTEND:20251018T123000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:difficult-beauty-20251018T103000-184f61c539a0fd85@wff2025
+DESCRIPTION:With Q&A\n\nThe pain and joy of creation: a diverse group of a
+ rtists admitting their truths.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9f23e9f2
  fc85c97cc899
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Long Walk: The Story of the Bharat Jodo Yatra
+DTSTART:20251018T110000
+DTEND:20251018T130000
+DTSTAMP:20251014T172557Z
+UID:the-long-walk-the-story-of-the-20251018T110000-cffdcef0184b728e@wff202
+ 5
+DESCRIPTION:Join us for the world premiere ofThe Long Walk: The Story of t
+ he Bharat Jodo Yatra.This is the story of one of the largest marches and m
+ ovements that the world has yet to know about where Rahul Gandhi\, India's
+  opposition leader\, walked 4000 kilometers – from the Southern tip of t
+ he country to the North over 141 days. Millions of everyday Indians partic
+ ipated. Following the screening is a discussion with DirectorShruti Gangu
+ ly\, Executive ProducerGeeta Gandbhir\, moderated byTimeExecutive EditorNi
+ khil Kumar.\n\nThe post-screening conversation will discuss the interconne
+ ctedness of movements and cultures\, movements that can actually work\, it
+ ’s about standing up against silencing\, and an examination of self\, id
+ entity\, pluralism\, and community.India is the largest democracy in the w
+ orld\, and its protection should matter\, even to people who are not of th
+ e place or its diaspora.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c336aa80bd
+ 1cbf8f2fe029
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Kain
 DTSTART:20251018T113000
 DTEND:20251018T133000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:kain-20251018T113000-0663fd153aa1765d@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with Gabriel Bauer (Director) & Daniël Gellvoet Gellvoet 
+ (lead actor).\n\nAn autistic man sets out to get his driver's license and 
+ prove he can function "normally" in society. But when he meets the love of
+  his life during driving lessons\, his desire for independence collides wi
+ th society's demands. Confronted with his autism\, he learns a valuable le
+ sson in self-acceptance.\n\nThis film is supported by the Dutch Culture US
+ A program of the Consulate General of the Kingdom of the Netherlands in Ne
+ w York.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a74
@@ -538,13 +958,14 @@ BEGIN:VEVENT
 SUMMARY:Love + War
 DTSTART:20251018T121500
 DTEND:20251018T141500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:love-war-20251018T121500-9b83ae07c46f587c@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director E. Chai Vasarhelyi\n\nRaw\, riveting\, and d
+ eeply human\; directed by Oscar® winners E. Chai Vasarhelyi and Jimmy Chi
+ n\; Love+War follows Pulitzer Prize-winner Lynsey Addario from war zones t
+ o home life\, revealing the impossible trade-offs faced by parents in high
+ -impact professions. —Jessica Edwards\n\nCourtesy of National Geographic
+ .
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ac9
@@ -553,23 +974,121 @@ BEGIN:VEVENT
 SUMMARY:Peter Hujar's Day
 DTSTART:20251018T123000
 DTEND:20251018T143000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:peter-hujar-s-day-20251018T123000-6a0a946ad27f9758@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Fearless independent filmmaker Ira Sachs' (Passages\, Love is 
+ Strange) latest film centers on groundbreaking gay photographer Peter Huja
+ r (Ben Whishaw). Based on rediscovered transcripts from an unused 1974 int
+ erview by nonfiction writer Linda Rosenkrantz (Rebecca Hall)\, Sachs shutt
+ les us back to a specific moment in New York queer cultural history in thi
+ s illustration of the life of the creative mind.\n\nCourtesy of Janus Film
+ s.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bc3
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cover-Up
+DTSTART:20251018T124500
+DTEND:20251018T144500
+DTSTAMP:20251014T172557Z
+UID:cover-up-20251018T124500-3e4a3170ca1b5824@wff2025
+DESCRIPTION:Q&A with director Laura Poitras and producerYoni Golijov\n\nCo
+ ver-Up is a political thriller that traces the explosive career of Pulitze
+ r Prize-winning investigative reporter Seymour Hersh. Urgent and deeply re
+ ported\, Cover-Up is both a portrait of a relentless journalist and an ind
+ ictment of institutional violence — revealing a cycle of impunity in the
+  U.S. military and intelligence agencies.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b4b
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sylvania
+DTSTART:20251018T130000
+DTEND:20251018T150000
+DTSTAMP:20251014T172557Z
+UID:sylvania-20251018T130000-b9bf5cee49338fda@wff2025
+DESCRIPTION:Q&A with writer/director Kyle Smith and producers Morgan Polli
+ tt & Ben Shields Catlin.\n\nAs their own marriage falls apart\, Gracie and
+  Stewart take their family on a Midwest road trip to convince Gracie’s s
+ tubborn\, ailing father that he needs help.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b05
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Evolution of the Modern Sports Doc
+DTSTART:20251018T133000
+DTEND:20251018T153000
+DTSTAMP:20251014T172557Z
+UID:evolution-of-the-modern-sports-20251018T133000-726e09ac8e1bb841@wff202
+ 5
+DESCRIPTION:The Evolution of the Modern Sports Doc panel with ESPN F
+ ilms producers and Rudy Valdez\, director of Big Dreams: Little League Wor
+ ld Series 2024 and Breakaway for 30 for 30\, showcases the progression of
+  sports documentaries over the years. The panel features clips from vari
+ ous ESPN documentaries\, highlighting the evolution of storytelling and 
+ production quality in sports filmmaking.\n\nThe panel also explores the 
+ role of sports documentaries in shaping the cultural narrative of sport
+ s and athletes\, as well as the importance of authenticity and storytelli
+ ng in captivating audiences. Overall\, the panel offers a fascinating look
+  at the evolution of sports documentaries and their enduring appeal in
+  the world of entertainment.\n\nPanel Participants:\n\nMarquis Daisy\, co-
+ director of “Baltimore Boys\,” is a producer for ESPN Films. Among his
+  most notable work includes Rand University\, a 30 for 30 film on the ofte
+ n-turbulent career of former NFL great Randy Moss and Black Hoosiers\, a S
+ pike Lee Lil’ Joint on the high school years of NBA Hall of Famer Oscar 
+ Robertson. Daisy’s 2021 project\, “The March on Washington: Keepers of
+  the Dream\,” debuted on NatGeo and is available on-demand from Hulu.\n\
+ nCarolyn Hepburnis an Emmy\, Peabody and Gotham Award-winning producer and
+  executive producer who joined ESPN Films in 2022. Recent films include Em
+ pire Skate (ESPN 30 for 30)\; Candace Parker: Unapologetic (ESPN Films)\; 
+ Love To Love You\, Donna Summer (HBO Documentaries)\, Victim/Suspect (Emmy
+  Winner\, Netflix)\; The Fire That Took Her (Emmy Winner\, MTV Documentary
+  Films)\; American Pain (CNN Films)\; The Return of Tanya Tucker featuring
+  Brandi Carlile (SXSW Audience Winner\, Sony Pictures Classics)\; In The S
+ ame Breath (Oscar Shortlisted\, HBO Documentaries)\; The Velvet Undergroun
+ d (Oscar Shortlisted\, Apple Originals)\; The Mole Agent (Oscar nominee\, 
+ Hulu)\; A Thousand Cuts (Emmy\, Gotham and IDA winner\, Frontline)\; One C
+ hild Nation (Oscar-shortlisted\, Sundance Grand Jury Prize winner\, Amazon
+  Studios)\; Life\, Animated (Oscar nominee\, Winner of three Emmys\, A&E I
+ ndieFilms)\; Weiner (Oscar shortlisted\, Sundance Grand Jury Prize winner\
+ , IFC Films)\; and 3½ Minutes\, Ten Bullets (Sundance Special Jury Prize\
+ , HBO Documentaries)\n\nGentry Kirbyis an Emmy-award winning producer who 
+ joined ESPN Films in 2014. Kirby directed or co-directed three 30 for 30s
+  - This Magic Moment\, The Great Heisman Race of 1997 and Tommy – as wel
+ l as producing over 30 other ESPN Films projects including The Last Dance\
+ , Fantastic Lies\, and Be Water.\n\nRudy Valdezis a two-time Emmy Award-wi
+ nning filmmaker known for telling powerful\, emotionally resonant stories
+  through a self-taught and deeply human lens. His work spans family\, jus
+ tice\, culture\, and legacy—centered on truth\, voice\, and representati
+ on. He directed the HBO documentary The Sentence\, a decade-long project a
+ bout his sister’s incarceration and the impact of mandatory minimums\, 
+ which earned a Primetime Emmy and the Sundance Audience Award. His recent
+  credits include Carlos\, a portrait of Carlos Santana’s rise from stre
+ et musician to global icon\; Choir\, a Disney+ series following the Detroi
+ t Youth Choir as they chase a dream beyond America’s Got Talent\; Big D
+ reams\, an ESPN film spotlighting young athletes from around the world at
+  the Little League World Series\; and Eyes on the Prize III\, where he di
+ rected an episode on environmental justice in the legendary civil rights s
+ eries. He also directed Translators\, a Tribeca-winning short about child
+ ren translating adult worlds for their immigrant families. Through his co
+ mpany Bluff Road Films\, Valdez continues to champion untold stories and b
+ old voices\, with award-winning work across HBO\, Netflix\, ESPN\, Disney
+ +\, and beyond.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c4216f81b8
+ e06c5bb8c1df
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Achaar
 DTSTART:20251018T133000
 DTEND:20251018T153000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:achaar-20251018T133000-3ee1d8f31e6c04b4@wff2025
+DESCRIPTION:With Q&A\n\nA distinctive set of shorts with a wide flavor pro
+ file from across the South Asian diaspora.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbce14452
  61623d86c412
@@ -578,8 +1097,14 @@ BEGIN:VEVENT
 SUMMARY:Remaining Native
 DTSTART:20251018T141500
 DTEND:20251018T161500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:remaining-native-20251018T141500-f1cda91abb4cd16d@wff2025
+DESCRIPTION:Q&A with producer Jessica Epstein.\n\nKu Stevens is the fastes
+ t 17-year-old cross-country runner in Nevada. While training for recruitme
+ nt to his dream school with limited resources\, he recalls his great-grand
+ father\, who ran 50 miles from a boarding school designated to repatriate 
+ Indians. This coming-of-age documentary reflects on the weight of history 
+ in carving one's path. —Shira Friedman-Parks
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a79
@@ -588,13 +1113,16 @@ BEGIN:VEVENT
 SUMMARY:Steal This Story\, Please!
 DTSTART:20251018T150000
 DTEND:20251018T170000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:steal-this-story-please-20251018T150000-559a6e636df1314e@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with filmmakers Tia Lessin and Carl Deal\, Amy Goodman (su
+ bject)\, and producer Karen Ranucci.\n\nModerated by playwright\, author\,
+  and activist V (formerly Eve Ensler).\n\nFiercely independent journalist 
+ Amy Goodman has spent three decades holding the powerful to account\, repo
+ rting from conflict zones and the Democracy Now! newsroom. InSteal This St
+ ory\, Please!\, Oscar-nominated filmmakers Carl Deal and Tia Lessin craft 
+ a riveting portrait of journalism's power — and peril — in an era of c
+ orporate control and political attacks on truth.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bc8
@@ -603,13 +1131,16 @@ BEGIN:VEVENT
 SUMMARY:Teenage Wasteland
 DTSTART:20251018T150000
 DTEND:20251018T170000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:teenage-wasteland-20251018T150000-d704cee4e5640a11@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with editor Chris Passig\; subjects Fred Isseks\, David Bi
+ rmingham\, Jeff Dutemple\, and Mike Regan.\n\nIn the 90s\, when a media ar
+ ts teacher and his students uncover a disturbing secret\, their high schoo
+ l documentaryGarbage\, Gangsters and Greedexposes a web of corruption. Pac
+ ked with suspense\, humor\, and nostalgic VHS archive\, Emmy®-winning fil
+ mmakers Jesse Moss and Amanda McBaine’s feature documentaryTeenage Waste
+ landis a thrilling reminder that youth can spark real change. –Jessica E
+ dwards
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b87
@@ -618,23 +1149,77 @@ BEGIN:VEVENT
 SUMMARY:Magic Hour
 DTSTART:20251018T151500
 DTEND:20251018T171500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:magic-hour-20251018T151500-c92e8ec858fe1610@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with filmmakers Katie Aselton and Mark Duplass.\n\nErin (d
+ irector and star Katie Aselton) is on a weekend retreat in the desert with
+  her partner Charlie (Daveed Diggs). The couple has chosen to escape their
+  L.A. life and work through deep love and unexpected loss. But a much more
+  complicated situation emerges\,and things may be different than they seem
+ . —Adam Schartoff
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ace
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Ark
+DTSTART:20251018T153000
+DTEND:20251018T173000
+DTSTAMP:20251014T172557Z
+UID:the-ark-20251018T153000-e9b24c3447663721@wff2025
+DESCRIPTION:Q&A with Tony Castle (producer)\, Roxy Hunt (producer)\, Jerem
+ y Chilnick (director)\, and Joe Vele (editor).\n\nSoon after Russia invade
+ d in 2022 and the remnants of a missile fell on their land\, Zhenya and An
+ atoly Pilipenko opened up their homestead in eastern Ukraine to orphaned a
+ nimals\, some local\, others abandoned in the fighting\, and delivered by 
+ the Ukrainian military. The Ark is the intimate story of their family's de
+ fiance\, courage and patriotism. —Peter Wortmann
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b0a
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Holding Liat
+DTSTART:20251018T154500
+DTEND:20251018T174500
+DTSTAMP:20251014T172557Z
+UID:holding-liat-20251018T154500-fb0d47eef635a59a@wff2025
+DESCRIPTION:Q&A with director Brandon Kramer and producer and cinematograp
+ her Yoni Brook.\n\nDuring the October 7th attack on Israel\, Liat and her 
+ husband Aviv are kidnapped by Hamas. This is the gripping and beautiful st
+ ory of a family's struggle to win their return\, while grappling with thei
+ r own fight for peace for those on both sides. —Sabina Barach\n\nCourtes
+ y of The Film Collaborative
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b50
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Keeper
+DTSTART:20251018T160000
+DTEND:20251018T180000
+DTSTAMP:20251014T172557Z
+UID:the-keeper-20251018T160000-03c89ad60a725c0d@wff2025
+DESCRIPTION:Q&A with director Jon Bowermaster and film subject John Lipsco
+ mb.\n\nNew York’s Hudson River stars in Jon Bowermaster’s environmenta
+ l documentary The Keeper about America’s “first river”. The film fol
+ lows patrol boat captain John Lipscomb who has been the eyes and ears of t
+ he environmental watchdog group Riverkeeper and is fast approaching retire
+ ment. We learn that while the River might look more beautiful and cleaner 
+ than ever\, the news isn’t all that great. –Adam Schartoff
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a32
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Saturday Evening Cartoons
 DTSTART:20251018T163000
 DTEND:20251018T183000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:saturday-evening-cartoons-20251018T163000-830892451af85d75@wff2025
+DESCRIPTION:With Q&A\n\nNot your average Saturday Morning Cartoons! Join u
+ s for yet another spectacular lineup of animation from around the world. M
+ ature Audience.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9c75a8a3
  bbd7d6b079d2
@@ -643,8 +1228,15 @@ BEGIN:VEVENT
 SUMMARY:Memory Lane
 DTSTART:20251018T171500
 DTEND:20251018T191500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:memory-lane-20251018T171500-900ba5f86fa3905e@wff2025
+DESCRIPTION:Q&A with writer/director Jelle de Jonge.\n\nAn unexpected lett
+ er disrupts the lives of an elderly couple\, forcing them to confront what
+  they've long avoided. Maartje\, who is battling dementia\, and her husban
+ d Jaap embark on a road trip to a dying friend in Spain. Along the way\, t
+ hey encounter a changed world\, but nevertheless rediscover their shared p
+ ast.\n\nThis film is supported by the Dutch Culture USA program of the Con
+ sulate General of the Kingdom of the Netherlands in New York.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a7e
@@ -653,13 +1245,14 @@ BEGIN:VEVENT
 SUMMARY:Yes
 DTSTART:20251018T174500
 DTEND:20251018T194500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:yes-20251018T174500-3a0b0d3737afc03c@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Nadav Lapid.\n\nCo-presented by Albi\
+ n\nIsraeli auteur Nadav Lapid (Synonyms\, Ahed's Knee) returns with Yes\, 
+ his most provocative work yet — a bold\, visually charged portrait of a 
+ nation reeling from October 7\, torn between grief and manic excess. As Ga
+ za burns\, Israel's elites descend into vulgar\, glittering revelry\, blur
+ ring reality\, fantasy\, empathy\, and cynicism. —Amir Bogen
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b8c
@@ -668,13 +1261,12 @@ BEGIN:VEVENT
 SUMMARY:Hamnet
 DTSTART:20251018T180000
 DTEND:20251018T200000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:hamnet-20251018T180000-4ed09b78402f5934@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Kleinert/James Art Center[PANELS]\n\nTinker Street Cinema\n\nW
+ oodstock Community Center[SHORTS]\n\nWoodstock Playhouse\n\nHudson Valley 
+ LGBTQ+ Community Center\n\nUpstate Midtown\n\nRosendale Theatre\n\nBroken 
+ Wing Barn at White Feather Farm\n\nOrpheum Theatre
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bcd
@@ -683,23 +1275,72 @@ BEGIN:VEVENT
 SUMMARY:DUST TO MALIBU
 DTSTART:20251018T180000
 DTEND:20251018T200000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dust-to-malibu-20251018T180000-b9e5cbad53f108ea@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Stephen Ward\, actor Tim Daly\, and a
+ ctor/producer Shelly Gibson.\n\nAnchored by Tim Daly's brave vulnerable pe
+ rformance\,Dust to Malibuexplores the lingering trauma of a father's attem
+ pt to reconnect with his grown daughter\, embarking on an ill-conceived ro
+ ad trip\, and forcing him to confront the central role he has played in th
+ eir deep-set estrangement.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ad3
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cutting Through Rocks
+DTSTART:20251018T180000
+DTEND:20251018T200000
+DTSTAMP:20251014T172557Z
+UID:cutting-through-rocks-20251018T180000-696eab4ba78e7d12@wff2025
+DESCRIPTION:Q&A with executive producer Judith Helfand.\n\nAs the first el
+ ected councilwoman of her Iranian village\, Sara Shahverdi aims to break l
+ ong-held patriarchal traditions by training teenage girls to ride motorcyc
+ les and stopping child marriages. When accusations arise questioning Sara
+ ’s intentions to empower the girls\, her identity is put in turmoil.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b0f
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Comparsa
+DTSTART:20251018T183000
+DTEND:20251018T203000
+DTSTAMP:20251014T172557Z
+UID:comparsa-20251018T183000-94c3e13c19e60582@wff2025
+DESCRIPTION:Q&A with directors Vickie Curtis & Doug Anderson\, screenwrite
+ rs Lesli Canela Pérez & Lupe Pére. Moderated by Pamela Yates.\n\nAfter 4
+ 1 girls die in a fire at a state-run safe house\, teenage sisters Lesli an
+ d Lupe take action. In Ciudad Peronia\, Guatemala\, they ignite a youth mo
+ vement\, blending circus\, music\, and performance to reclaim public space
+ \, confront injustice\, and spark a powerful movement of resilience and ho
+ pe. —Jessica Edwards
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b55
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Arrest The Midwife
+DTSTART:20251018T190000
+DTEND:20251018T210000
+DTSTAMP:20251014T172557Z
+UID:arrest-the-midwife-20251018T190000-d224aa40cebfee24@wff2025
+DESCRIPTION:Q&A with Elaine Epstein\, Robin Hessman\, and film participant
+ s.\n\nWhen trusted midwives are arrested in a tight-knit Amish and Mennoni
+ te enclave\, a quiet community is thrust into turmoil. With their way of l
+ ife under threat\, these women – once expected to stay silent – emerge
+  as unexpected activists\, defying tradition and fighting for justice.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a37
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dilated Pupils
 DTSTART:20251018T200000
 DTEND:20251018T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dilated-pupils-20251018T200000-6a5c27b3330cda9b@wff2025
+DESCRIPTION:With Q&A\n\nPulse-increasing thrillers and genre films.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acb91c9de0
  d833ac8c038f
@@ -708,8 +1349,14 @@ BEGIN:VEVENT
 SUMMARY:The Secret Agent
 DTSTART:20251018T201500
 DTEND:20251018T221500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-secret-agent-20251018T201500-49d12a9a7969a8b4@wff2025
+DESCRIPTION:Kleber Mendonça Filho’s political thriller is set in 1970s 
+ Brazil during the dictatorship. Leading actor Wagner Moura (Civil War) shi
+ nes as a disgraced engineer who returns to his hometown\, Recife\, to see 
+ his son and confront a corrupt establishment that ruined his career. This 
+ historical drama won Best Director and Best Actor at Cannes. –Amir Bogen
+ \n\n﻿Courtesy of Neon.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a83
@@ -718,13 +1365,13 @@ BEGIN:VEVENT
 SUMMARY:Jay Kelly
 DTSTART:20251018T204500
 DTEND:20251018T224500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:jay-kelly-20251018T204500-a3239d0802cbd977@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:In Noah Baumbach's newest film\, famous movie actor Jay Kelly 
+ (George Clooney) embarks on a journey of self discovery confronting both h
+ is past and present. Alongside his devoted manager Ron (Adam Sandler)\, th
+ ey explore the intersection of life's regrets and notable glories.\n\nCour
+ tesy of Netflix.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bd2
@@ -733,73 +1380,209 @@ BEGIN:VEVENT
 SUMMARY:Dust Bunny
 DTSTART:20251018T204500
 DTEND:20251018T224500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dust-bunny-20251018T204500-c57785315390aefc@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:In this nightmarish coming-of-age fantasy\, a girl suspects a 
+ giant bunny devoured her adoptive parents. With her hitman neighbor\, she 
+ faces criminals – and the lurking dust bunny – through suspense\, horr
+ or\, and dark humor. Mads Mikkelsen\, Sigourney Weaver\, David Dastmalchia
+ n\, and child actress Sophie Sloan star in Bryan Fuller’s feature debutD
+ ust Bunnythat premiered at TIFF’s “Midnight Madness.” – Amir Boge
+ n
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ad8
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:THE VOICE OF HIND RAJAB
+DTSTART:20251018T204500
+DTEND:20251018T224500
+DTSTAMP:20251014T172557Z
+UID:the-voice-of-hind-rajab-20251018T204500-0bfff4f50d2ee2c7@wff2025
+DESCRIPTION:January 29\, 2024. Red Crescent volunteers receive an emergenc
+ y call. A 6-year old girl is trapped in a car under fire in Gaza\, pleadin
+ g for rescue. While trying to keep her on the line\, they do everything th
+ ey can to get an ambulance to her. Her name was Hind Rajab.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b5a
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sentimental Value
+DTSTART:20251018T210000
+DTEND:20251018T230000
+DTSTAMP:20251014T172557Z
+UID:sentimental-value-20251018T210000-3fcb901001060caf@wff2025
+DESCRIPTION:Joachim Trier (The Worst Person in the World) has led Norway
+ ’s global cinema wave. His Cannes Grand Prix winnerSentimental Valuereun
+ ites him with Renata Reinsve in a father-daughter drama about art\, memory
+ \, and family wounds\, exploring where life ends and creation begins. –A
+ mir Bogen\n\n﻿Courtesy of Neon.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b14
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Maverick Awards
 DTSTART:20251018T210000
 DTEND:20251018T230000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:maverick-awards-20251018T210000-0a5f57f785544894@wff2025
+DESCRIPTION:The Woodstock Film Festival will introduce the inauguralLauren
+ t Rejto Made in the Hudson Valley Award. Named in tribute to the late Rejt
+ o\, co-founder of the festival and a tireless champion for regional filmma
+ king\, the award celebrates a filmmaker whose work was produced in the Hud
+ son Valley. The trophy was crafted and donated by Steve Heller of Fabulous
+  Furniture.\n\nThis year’s honoree recipients include:\n\nThe Fiercely I
+ ndependent Award is presented to a filmmaker whose singular vision has adv
+ anced the field of independent filmmaking while serving as a role model fo
+ r others. This year’s honoree is NYC-based indie icon Ira Sachs\, acclai
+ med forPassages\,Little Men\,Love is Strange\, and the Sundance Grand Jury
+  Prize–winningForty Shades of Blue. A Guggenheim Fellow and founder of Q
+ ueer|Art\, Sachs has work in the permanent collections of MoMA and the Whi
+ tney Museum of American Art. His filmPeter Hujar’s Daywill also screen a
+ t this year’s festival.\n\nAcclaimed filmmakersTia LessinandCarl Deal\, 
+ directors ofSteal This Story\, Please!which first premiered at the 2025 Te
+ lluride Film Festival\, will receive this year’s Art of Activism Award. 
+ Their Oscar-nominatedTrouble the Waterwon the Sundance Grand Jury Prize an
+ d a Gotham Award\, whileCitizen Kochwas shortlisted for an Oscar. Lessin a
+ lso co-directed the Emmy-winningThe Janes\, and together the pair produced
+  Michael Moore’sBowling for Columbine\,Fahrenheit 9/11\,Where to Invade 
+ Next\, andFahrenheit 11/9.\n\nPresented to a filmmaker whose work demonstr
+ ates courage\, creativity\, and an unflinching commitment to truth\, the F
+ reedom of Expression Award honors storytelling that challenges power\, amp
+ lifies silenced voices\, and defends free speech in the face of censorship
+ .Laura Poitras\, an Oscar and Pulitzer Prize–winning filmmaker and journ
+ alist\, received the Golden Lion forAll the Beauty and the Bloodshed\, won
+  an Oscar forCitizenfour\,which also earned BAFTA\, DGA\, and Emmy Awards\
+ , and was recognized with the Pulitzer for her journalism exposing NSA glo
+ bal mass surveillance. Her filmCover-Upwill also screen at this year’s f
+ estival.\n\nAdditionally\, jury award winners will also be presented acros
+ s multiple categories includingBest Narrative Feature\,Best Documentary Fe
+ ature\,Best Ultra Indie\, andBest Short Documentary.\n\nThe Woodstock Film
+  Festival is an Academy Awards® qualifying festival in the categories of 
+ Animated Short Film\, Live Action Short Film\, and Documentary Short Film.
 LOCATION:Assembly
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c98cfe390b
  2e0575d6046d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:MAN ON THE RUN
+DTSTART:20251018T211500
+DTEND:20251018T231500
+DTSTAMP:20251014T172557Z
+UID:man-on-the-run-20251018T211500-b1b5de665b1c9e8d@wff2025
+DESCRIPTION:Man On The Runtakes viewers on an intimate journey through Pau
+ l McCartney's extraordinary life following the breakup of The Beatles and 
+ the formation of Wings with his wife\, Linda. From Academy Award®-winning
+  director Morgan Neville\, the film chronicles the arc of McCartney's solo
+  career as he faces down a myriad of challenges while creating new music t
+ o define a new decade.\n\nCourtesy of Amazon
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a3c
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Our Girls
 DTSTART:20251019T100000
 DTEND:20251019T120000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:our-girls-20251019T100000-db4b1912afee6dca@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Mike van Diem\n\nDuring an idyllic ho
+ liday in the Austrian Alps\, the long- standing friendship between two cou
+ ples spins out of control when an unthinkable accident forces them to deci
+ de how far they will go\, and which lines they will cross\, to save their 
+ daughters.\n\nThis film is supported by the Dutch Culture USA program of t
+ he Consulate General of the Kingdom of the Netherlands in New York.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277add
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Remaining Native
+DTSTART:20251019T101500
+DTEND:20251019T121500
+DTSTAMP:20251014T172557Z
+UID:remaining-native-20251019T101500-941e987c85fb5427@wff2025
+DESCRIPTION:Q&A with producer Jessica Epstein.\n\nKu Stevens is the fastes
+ t 17-year-old cross-country runner in Nevada. While training for recruitme
+ nt to his dream school with limited resources\, he recalls his great-grand
+ father\, who ran 50 miles from a boarding school designated to repatriate 
+ Indians. This coming-of-age documentary reflects on the weight of history 
+ in carving one's path. —Shira Friedman-Parks
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a41
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Teen Shorts + Youth Film Lab
 DTSTART:20251019T101500
 DTEND:20251019T121500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:teen-shorts-youth-film-lab-20251019T101500-1d9c28b7ec7f19a9@wff2025
+DESCRIPTION:View documentary and narrative films by tomorrow's filmmakers.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9fbb1ad4
  10f8abbf7aa5
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Selena y Los Dinos
+DTSTART:20251019T110000
+DTEND:20251019T130000
+DTSTAMP:20251014T172557Z
+UID:selena-y-los-dinos-20251019T110000-963698f4fa641889@wff2025
+DESCRIPTION:Q&A with Isabel Castro (director)\, Julie Goldman (producer)\,
+  Christopher Clements (producer)\, and Daniel Torres (producer). Courtesy 
+ of Netflix.\n\nIn a fitting tribute\, Selena y Los Dinos unveils intimate 
+ stories from those who knew Tejano icon Selena best. Blending home videos\
+ , archives\, and personal interviews\, the film transcends the promise of 
+ "never-before-seen" footage to capture both the electric joy of her perfor
+ mances and the quiet tenderness behind them. —Jessica Edwards\n\nCourtes
+ y of Netflix.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b19
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Is This Thing On?
 DTSTART:20251019T111500
 DTEND:20251019T131500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:is-this-thing-on-20251019T111500-a453a0e5ab7263e6@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:As their marriage quietly unravels\, Alex (Will Arnett) faces 
+ middle age and an impending divorce\, seeking new purpose in the New York 
+ comedy scene while Tess (Laura Dern) confronts the sacrifices she made for
+  their family — forcing them to navigate co-parenting\, identity\, and w
+ hether love can take a new form.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bd7
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Hamnet
+DTSTART:20251019T111500
+DTEND:20251019T131500
+DTSTAMP:20251014T172557Z
+UID:hamnet-20251019T111500-0652df5a9e16b982@wff2025
+DESCRIPTION:From Academy Award® winning writer/director Chloé Zhao (Noma
+ dland\, The Rider)\, Hamnet tells the powerful story of love and loss that
+  inspired the creation of Shakespeare’s timeless masterpiece\, Hamlet.\n
+ \nCourtesy of Focus Features.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b5f
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Floating Carousel
 DTSTART:20251019T113000
 DTEND:20251019T133000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:floating-carousel-20251019T113000-918a9633d8cdb670@wff2025
+DESCRIPTION:Q&A with filmmakers Delilah Napier & Lucy Powers.\n\nTwo young
+  women\, a sugar daddy\, a jealous boyfriend\, a cuddler\, and a gay cabar
+ et star collide in this sharp\, sexy NYC dramedy. Yale alums Lucy Powers a
+ nd Delilah Napier's debut is a funny\, messy\, modern Sex and the City\, w
+ ith rising stars and veteran talent. —Amir Bogen
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a88
@@ -808,33 +1591,87 @@ BEGIN:VEVENT
 SUMMARY:A People's Archive
 DTSTART:20251019T124500
 DTEND:20251019T144500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:a-people-s-archive-20251019T124500-798e44dada9d4b24@wff2025
+DESCRIPTION:Powerful documentaries that follow the transformative journeys
+  of communities pursuing justice\, accountability and the truth of their o
+ wn histories from extractive American systems of power.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acb984f86d
  59fa8686a079
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:STARMAN
+DTSTART:20251019T130000
+DTEND:20251019T150000
+DTSTAMP:20251014T172557Z
+UID:starman-20251019T130000-a5f815120cf0c2dc@wff2025
+DESCRIPTION:Q&A with director Robert Stone.\n\nYou won't find a more dynam
+ ic documentary subject than NASA robotics engineer turned best-selling sci
+ ence fiction author Gentry Lee. Robert Stone's latest documentary\, STARMA
+ N\, gives the octogenarian Lee the ideal platform to ponder life's big que
+ stions. —Adam Schartoff
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a46
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Franz
 DTSTART:20251019T130000
 DTEND:20251019T150000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:franz-20251019T130000-268b1382c35b4b97@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Award-winning director Agnieszka Holland is embarking on her m
+ ost ambitious project to date\, a biopic of the iconic 20th-century Czech 
+ writer Franz Kafka. Conceived as a kaleidoscopic mosaic\, the film follows
+  the imprint Kafka left on the world from his birth in 19th century Prague
+ \, to his death in post-WW1 Berlin.Franzwill give the audience a brand new
+  perspective on the life of the man behind the literary giant.
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ae2
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Perfect Neighbor
+DTSTART:20251019T140000
+DTEND:20251019T160000
+DTSTAMP:20251014T172557Z
+UID:the-perfect-neighbor-20251019T140000-3eb00f2e4d2f729c@wff2025
+DESCRIPTION:Using bodycam footage from dozens of police visits\, The Perfe
+ ct Neighbor bears witness to a tight-knit community navigating one neighbo
+ r’s relentless harassment. But her hostility takes a sinister turn when 
+ it escalates into a fatal crime.\n\nCourtesy of Netflix.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b1e
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:MAN ON THE RUN
+DTSTART:20251019T141500
+DTEND:20251019T161500
+DTSTAMP:20251014T172557Z
+UID:man-on-the-run-20251019T141500-fcf83ed0273cfed3@wff2025
+DESCRIPTION:Man On The Runtakes viewers on an intimate journey through Pau
+ l McCartney's extraordinary life following the breakup of The Beatles and 
+ the formation of Wings with his wife\, Linda. From Academy Award®-winning
+  director Morgan Neville\, the film chronicles the arc of McCartney's solo
+  career as he faces down a myriad of challenges while creating new music t
+ o define a new decade.\n\nCourtesy of Amazon
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b64
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Nuremberg
 DTSTART:20251019T141500
 DTEND:20251019T161500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:nuremberg-20251019T141500-35989a386719f7f3@wff2025
+DESCRIPTION:The Allies\, led by the unyielding chief prosecutor Robert H. 
+ Jackson (Michael Shannon)\, have the task of ensuring the Nazi regime answ
+ ers for the unveiled horrors of the Holocaust at the Nuremberg trials\, wh
+ ile a US Army psychiatrist (Rami Malek) is locked in a dramatic psychologi
+ cal duel with former Reichsmarschall Herman Goring (Russell Crowe).
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a8d
@@ -844,29 +1681,63 @@ SUMMARY:RESTORING A LEGACY / "The Struggle Against Terrorism" by Philip Gu
  ston
 DTSTART:20251019T143000
 DTEND:20251019T163000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:restoring-a-legacy-the-struggl-20251019T143000-a211c0eab71c4ee3@wff202
  5
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Join us for a screening ofRestoring A Legacy: "The Struggle Ag
+ ainst Terrorism" by Philip Gustonfollowed by a special conversation with a
+ rtists Avery Singer\, Matthew Day Jackson\, Mark Thomas Gibson\, and schol
+ ar Barbara Sproul\, moderated by journalist Laura Furcic.\n\n—\n\nAvery 
+ Singer\, a leading contemporary artist\, merges painting and technology\, 
+ blending archival traditions with art historical themes. Her innovative wo
+ rk quickly earned critical acclaim through major solo exhibitions worldwid
+ e.\n\nMatthew Day Jacksonexplores American history\, technology and identi
+ ty across diverse media\, using American iconography and art historical re
+ ferences to examine false utopias\, authorship\, and connections between p
+ ast and present political\, social and environmental issues.\n\nMark Thoma
+ s Gibson\, artist\, professor\, and American history buff\, uses drawing\,
+  painting\, print\, and sculpture to depict a satirical\, dystopian Americ
+ a where every viewer becomes a potential character. (Photo by Ryan Collerd
+ \, courtesy of The Pew Center for Arts & Heritage)\n\nBarbara Sproul\, for
+ mer Director of Hunter College’s Religion Program\, holds a PhD in relig
+ ion from Columbia University and authored Primal Myths. She has been an Am
+ nesty International member since 1968.\n\nModerator\n\nLaura Furcic\, an a
+ rt-and-science journalist and producer\, began in Venezuelan TV. Awarded t
+ he International King of Spain Journalism Award\, she creates news\, art d
+ ocumentaries\, and projects with distinctive aesthetic and critical vision
+ .
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=6890dda6a201
  e29119c1b0d2
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cover-Up
+DTSTART:20251019T153000
+DTEND:20251019T173000
+DTSTAMP:20251014T172557Z
+UID:cover-up-20251019T153000-8cd5b6986479ca5a@wff2025
+DESCRIPTION:Q&A with Laura Poitras and Olivia Streisand.\n\nCover-Upis a p
+ olitical thriller that traces the explosive career of Pulitzer Prize-winni
+ ng investigative reporter Seymour Hersh. Urgent and deeply reported\,Cover
+ -Upis both a portrait of a relentless journalist and an indictment of inst
+ itutional violence – revealing a cycle of impunity in the U.S. military 
+ and intelligence agencies.
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a4b
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:On the End
 DTSTART:20251019T160000
 DTEND:20251019T180000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:on-the-end-20251019T160000-d0926220d6ce4c82@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Ari Selinger and star Tim Blake Nelson.\n\nA
+  curmudgeon Montauk local (Tim Blake Nelson) is a hoarding mechanic with a
+  beachfront property with a brand new love interest. Suddenly\, a power-hu
+ ngry realtor wants to strip him of everything. A heroic true story of what
+  it means to fight against greed and power in the midst of losing everythi
+ ng. —Sierra Slaughter
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ae7
@@ -875,39 +1746,77 @@ BEGIN:VEVENT
 SUMMARY:Coming of Age
 DTSTART:20251019T161500
 DTEND:20251019T181500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:coming-of-age-20251019T161500-9ae4834e89cffcfe@wff2025
+DESCRIPTION:With Q&A\n\nGenuine and heart-wrenching shorts for when we lea
+ rn all the important truths of being human.
 LOCATION:Woodstock Community Center
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9e3fcd06
  7964e9dc380a
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:THE PLAGUE
+DTSTART:20251019T164500
+DTEND:20251019T184500
+DTSTAMP:20251014T172557Z
+UID:the-plague-20251019T164500-7573116b4e8394a4@wff2025
+DESCRIPTION:Q&A with director Charlie Polinger and producer Lizzie Shapiro
+ .\n\nCharlie Polinger's Cannes debut is a playful yet darkly humorous comi
+ ng-of-age drama set at a youth water polo camp. Exploring the bullying of 
+ "plague"-rumored misfits\, it features Joel Edgerton in a visually strikin
+ g\, Lord of the Flies-like tale reimagined for today. —Amir Bogen\n\n﻿
+ Courtesy of IFC.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b69
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHRISTY
 DTSTART:20251019T170000
 DTEND:20251019T190000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:christy-20251019T170000-20585e1b11f387c5@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Based on remarkable true events\, David Michôd’s (The Rover
+ \, Animal Kingdom) latest film follows boxer Christy Martin (Sydney Sweene
+ y in a powerful performance) as she charges into the world of boxing under
+  the guidance of her trainer and manager-turned-husband\, Jim (Ben Foster)
+ . While Christy flaunts a fiery persona in the ring\, her toughest battles
+  unfold outside it – confronting family\, identity\, and a relationship 
+ that just might become life-or-death.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bdc
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Steal This Story\, Please!
+DTSTART:20251019T170000
+DTEND:20251019T190000
+DTSTAMP:20251014T172557Z
+UID:steal-this-story-please-20251019T170000-3599ae8af1daf6cd@wff2025
+DESCRIPTION:Q&A with filmmakers Tia Lessin and Carl Deal\, Amy Goodman (su
+ bject)\, and producer Karen Ranucci.\n\nModerated by filmmakerYoruba Riche
+ n.\n\nFiercely independent journalist Amy Goodman has spent three decades 
+ holding the powerful to account\, reporting from conflict zones and the De
+ mocracy Now! newsroom. InSteal This Story\, Please!\, Oscar-nominated film
+ makers Carl Deal and Tia Lessin craft a riveting portrait of journalism's 
+ power — and peril — in an era of corporate control and political attac
+ ks on truth.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b23
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Lure of Ponies - a spellbound attic mystery
 DTSTART:20251019T170000
 DTEND:20251019T190000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-lure-of-ponies-a-spellboun-20251019T170000-914b1b1d5652e866@wff202
  5
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Beck Underwood.\n\nSet in an attic populated
+  by toys\, an animated playful homage to the cozy mystery finds a distress
+ ed baby doll unable to find her human child. She enlists Detectives France
+ s Faraday\, a Victorian era doll\, and her sidekick Midge\, a sixties plas
+ tic doll\, to solve the case. —Noelle Melody
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b91
@@ -916,23 +1825,46 @@ BEGIN:VEVENT
 SUMMARY:Rental Family
 DTSTART:20251019T174500
 DTEND:20251019T194500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:rental-family-20251019T174500-67b2d0423b7e0719@wff2025
+DESCRIPTION:Set against modern-day Tokyo\, RENTAL FAMILY follows an Americ
+ an actor (Brendan Fraser) who struggles to find purpose until he lands an 
+ unusual gig: working for a Japanese "rental family" agency\, playing stand
+ -in roles for strangers in various emotional and life altering situations.
+ \n\nCourtesy of Searchlight.
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a92
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Ark
+DTSTART:20251019T190000
+DTEND:20251019T210000
+DTSTAMP:20251014T172557Z
+UID:the-ark-20251019T190000-0796635064bafba1@wff2025
+DESCRIPTION:Q&A with Tony Castle (producer)\, Roxy Hunt (producer)\, Jerem
+ y Chilnick (director)\, and Joe Vele (editor).\n\nSoon after Russia invade
+ d in 2022 and the remnants of a missile fell on their land\, Zhenya and An
+ atoly Pilipenko opened up their homestead in eastern Ukraine to orphaned a
+ nimals\, some local\, others abandoned in the fighting\, and delivered by 
+ the Ukrainian military. The Ark is the intimate story of their family's de
+ fiance\, courage and patriotism. —Peter Wortmann
+LOCATION:Bearsville Theater
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277a50
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Yes
 DTSTART:20251019T191500
 DTEND:20251019T211500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:yes-20251019T191500-5641d915b6d526cf@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with writer/director Nadav Lapid.\n\nCo-presented by Albi\
+ n\nIsraeli auteur Nadav Lapid (Synonyms\, Ahed's Knee) returns with Yes\, 
+ his most provocative work yet — a bold\, visually charged portrait of a 
+ nation reeling from October 7\, torn between grief and manic excess. As Ga
+ za burns\, Israel's elites descend into vulgar\, glittering revelry\, blur
+ ring reality\, fantasy\, empathy\, and cynicism. —Amir Bogen
 LOCATION:Tinker Street Cinema
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aec
@@ -941,23 +1873,63 @@ BEGIN:VEVENT
 SUMMARY:The Keeper
 DTSTART:20251019T191500
 DTEND:20251019T211500
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:the-keeper-20251019T191500-3cf258e9962caa36@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:Q&A with director Jon Bowermaster and film subject John Lipsco
+ mb.\n\nNew York’s Hudson River stars in Jon Bowermaster’s environmenta
+ l documentary The Keeper about America’s “first river”. The film fol
+ lows patrol boat captain John Lipscomb who has been the eyes and ears of t
+ he environmental watchdog group Riverkeeper and is fast approaching retire
+ ment. We learn that while the River might look more beautiful and cleaner 
+ than ever\, the news isn’t all that great. –Adam Schartoff
 LOCATION:Upstate Midtown
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b96
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Jay Kelly
+DTSTART:20251019T194500
+DTEND:20251019T214500
+DTSTAMP:20251014T172557Z
+UID:jay-kelly-20251019T194500-cc1eff70ded53347@wff2025
+DESCRIPTION:In Noah Baumbach's newest film\, famous movie actor Jay Kelly 
+ (George Clooney) embarks on a journey of self discovery confronting both h
+ is past and present. Alongside his devoted manager Ron (Adam Sandler)\, th
+ ey explore the intersection of life's regrets and notable glories.\n\nCour
+ tesy of Netflix.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 2
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b6e
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:HEDDA
+DTSTART:20251019T200000
+DTEND:20251019T220000
+DTSTAMP:20251014T172557Z
+UID:hedda-20251019T200000-1e8af33c0614e397@wff2025
+DESCRIPTION:Nia DaCosta's bold adaptation of Ibsen's Hedda Gabler is fast-
+ paced\, sexy\, and glamorously dark. Tessa Thompson plays a larger-than-li
+ fe Black woman battling boredom\, class\, and social norms with seductive 
+ plots and treacherous schemes. Set around a dazzling Gatsby-like party\, t
+ his sharp\, wild\, and relevant film spirals toward self-destruction. —A
+ mir Bogen\n\nCourtesy of Amazon.
+LOCATION:Upstate Films (Saugerties): Orpheum Theatre 1
+URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
+ 73748e277b28
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dust Bunny
 DTSTART:20251019T200000
 DTEND:20251019T220000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dust-bunny-20251019T200000-a3b6baef9825839e@wff2025
+DESCRIPTION:In this nightmarish coming-of-age fantasy\, a girl suspects a 
+ giant bunny devoured her adoptive parents. With her hitman neighbor\, she 
+ faces criminals – and the lurking dust bunny – through suspense\, horr
+ or\, and dark humor. Mads Mikkelsen\, Sigourney Weaver\, David Dastmalchia
+ n\, and child actress Sophie Sloan star in Bryan Fuller’s feature debutD
+ ust Bunnythat premiered at TIFF’s “Midnight Madness.” – Amir Boge
+ n
 LOCATION:Rosendale Theatre
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a97
@@ -966,13 +1938,14 @@ BEGIN:VEVENT
 SUMMARY:Dead Man's Wire
 DTSTART:20251019T203000
 DTEND:20251019T223000
-DTSTAMP:20251014T165955Z
+DTSTAMP:20251014T172557Z
 UID:dead-man-s-wire-20251019T203000-628ecf4b6d067363@wff2025
-DESCRIPTION:WOODSTOCK\n\nBearsville Theater\n\nColony\n\nKleinert/James Ar
- t Center[PANELS]\n\nTinker Street Cinema\n\nWoodstock Community Center[SHO
- RTS]\n\nWoodstock Playhouse\n\nKINGSTON\n\nAssembly\n\nHudson Valley LGBTQ
- + Community Center\n\nUpstate Midtown\n\nROSENDALE\n\nRosendale Theatre\n\
- nSAUGERTIES\n\nBroken Wing Barn at White Feather Farm\n\nOrpheum Theatre
+DESCRIPTION:InDead Man’s Wire\, Gus Van Sant dramatizes Tony Kritsis’s
+  1977 Indianapolis hostage crisis\, where a failed real-estate mogul seize
+ s a loan shark’s son. Broadcast live on national TV\, the ordeal shifts 
+ between menace and empathy\, blending suspense\, dark humor\, and searing 
+ commentary on the fractured American Dream. Starring Bill Skarsgård\, Dac
+ re Montgomery\, Al Pacino and Colman Domingo.
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68d6e6cf94d0
  1c53551b143f

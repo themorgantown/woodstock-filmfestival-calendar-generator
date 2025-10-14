@@ -155,11 +155,29 @@ class WoodstockEventScraper:
             page = context.new_page()
             
             try:
-                page.goto(url, wait_until="networkidle", timeout=60000)
-                # Wait for events to load
-                page.wait_for_selector(".event-banner, .event-card, [class*='event']", timeout=10000)
+                # Navigate to page and wait for it to load
+                page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                
+                # Wait specifically for event boxes to load
+                try:
+                    page.wait_for_selector(".event-box.list-view", timeout=15000)
+                    logger.info(f"Successfully found .event-box.list-view elements on {url}")
+                except:
+                    logger.warning(f"No .event-box.list-view found on {url}, waiting for general content")
+                    # If specific selectors don't appear, just wait a bit for general content
+                    page.wait_for_timeout(5000)
+                
                 content = page.content()
                 return content
+            except Exception as e:
+                logger.warning(f"Playwright error for {url}: {e}")
+                # Try one more time with just basic loading
+                try:
+                    page.goto(url, timeout=20000)
+                    page.wait_for_timeout(5000)  # Just wait 5 seconds
+                    return page.content()
+                except:
+                    raise e
             finally:
                 browser.close()
     
@@ -187,7 +205,30 @@ class WoodstockEventScraper:
             found_cards = soup.select(selector)
             if found_cards:
                 cards.extend(found_cards)
+                logger.info(f"Found {len(found_cards)} cards with selector '{selector}'")
                 break
+        
+        # Debug: If no events found, let's see what's actually on the page
+        if not cards:
+            # Look for any divs with "event" in the class name
+            debug_selectors = [
+                "[class*='event']",
+                "div[class*='event']", 
+                ".event",
+                "[data-event]"
+            ]
+            
+            for debug_selector in debug_selectors:
+                debug_elements = soup.select(debug_selector)
+                if debug_elements:
+                    logger.info(f"DEBUG: Found {len(debug_elements)} elements with selector '{debug_selector}'")
+                    # Log the first few elements' classes for debugging
+                    for i, elem in enumerate(debug_elements[:3]):
+                        classes = elem.get('class')
+                        if classes:
+                            logger.info(f"DEBUG: Element {i+1} classes: {list(classes) if hasattr(classes, '__iter__') else [str(classes)]}")
+                        else:
+                            logger.info(f"DEBUG: Element {i+1} has no class attribute")
         
         logger.info(f"Found {len(cards)} event cards on {source_url}")
         
@@ -236,15 +277,8 @@ class WoodstockEventScraper:
         if not venue:
             venue = self._infer_venue_from_url(source_url)
         
-        # Description
-        desc_selectors = [
-            ".event-description", 
-            ".event-synopsis", 
-            ".event-copy",
-            ".summary-content",
-            ".event-subtitle"
-        ]
-        description = self._extract_text_by_selectors(card, desc_selectors)
+        # Description - extract from venue page format
+        description = self._extract_description_from_card(card)
         
         # Event detail URL - extract from onclick attribute
         detail_url = self._extract_event_detail_url(card, source_url)
@@ -270,6 +304,53 @@ class WoodstockEventScraper:
                 if venue_text:
                     return venue_text
         return None
+    
+    def _extract_description_from_card(self, card: BeautifulSoup) -> Optional[str]:
+        """Extract event description from venue page format"""
+        description_parts = []
+        
+        # Find the empty <p class="event-description"></p> element
+        desc_elem = card.select_one('p.event-description')
+        if desc_elem:
+            # Get all following <p> siblings until we hit the venue paragraph
+            current_elem = desc_elem.next_sibling
+            
+            while current_elem:
+                # Skip text nodes and look for <p> elements
+                if hasattr(current_elem, 'name') and getattr(current_elem, 'name', None) == 'p':
+                    text = current_elem.get_text(strip=True)
+                    
+                    # Stop when we reach the venue information
+                    if text and text.startswith('Venue:'):
+                        break
+                    
+                    # Add non-empty paragraphs that aren't venue info
+                    if text and 'Venue:' not in text:
+                        description_parts.append(text)
+                        
+                current_elem = current_elem.next_sibling
+            
+            return '\n\n'.join(description_parts) if description_parts else None
+        
+        # Fallback: look within the event-details div for description paragraphs
+        event_details = card.select_one('.event-details')
+        if event_details:
+            paragraphs = event_details.find_all('p')
+            for p in paragraphs:
+                text = p.get_text(strip=True)
+                # Skip empty paragraphs, venue info, and the event-description class itself
+                classes = p.get('class')
+                is_description_elem = False
+                if classes:
+                    is_description_elem = 'event-description' in (classes if isinstance(classes, list) else [str(classes)])
+                
+                if (text and 
+                    not text.startswith('Venue:') and 
+                    'Venue:' not in text and
+                    not is_description_elem):
+                    description_parts.append(text)
+        
+        return '\n\n'.join(description_parts) if description_parts else None
     
     def _extract_text_by_selectors(self, element: BeautifulSoup, selectors: List[str]) -> Optional[str]:
         """Try multiple selectors to extract text"""
@@ -398,6 +479,9 @@ class WoodstockEventScraper:
             soup = BeautifulSoup(detail_html, 'lxml')
             
             # Enhanced description from detail page
+            # Only enhance if the current description is empty or generic
+            current_desc = event.get('description', '')
+            
             desc_selectors = [
                 ".event-description p",
                 ".event-details p",  
@@ -408,11 +492,21 @@ class WoodstockEventScraper:
             for selector in desc_selectors:
                 elements = soup.select(selector)
                 if elements:
-                    paragraphs = [elem.get_text(strip=True) for elem in elements]
-                    enhanced_desc = '\n\n'.join(p for p in paragraphs if p)
-                    break
+                    # Filter out venue information and empty paragraphs
+                    paragraphs = []
+                    for elem in elements:
+                        text = elem.get_text(strip=True)
+                        if text and not text.startswith('Venue:') and 'Venue:' not in text:
+                            # Also filter out the venue list that appears on detail pages
+                            if not any(v in text for v in ['Bearsville Theater', 'Colony', 'WOODSTOCK', 'KINGSTON', 'ROSENDALE', 'SAUGERTIES']):
+                                paragraphs.append(text)
+                    
+                    enhanced_desc = '\n\n'.join(p for p in paragraphs if p and len(p) > 10)
+                    if enhanced_desc:
+                        break
             
-            if enhanced_desc:
+            # Only update description if we got something better
+            if enhanced_desc and (not current_desc or len(enhanced_desc) > len(current_desc)):
                 event['description'] = enhanced_desc
                 
             # Try to get more precise venue info
@@ -479,23 +573,19 @@ class WoodstockEventScraper:
         for i, venue_url in enumerate(self.venue_urls, 1):
             logger.info(f"Scraping venue page {i}/{len(self.venue_urls)}: {venue_url}")
             
-            # Try static first, then Playwright if needed
-            html = self.fetch_page_content(venue_url, use_playwright=False)
-            events = self.extract_events_from_page(html or "", venue_url)
-            
-            # If too few events found, try with JavaScript rendering
-            if len(events) < 3:  # Arbitrary threshold
-                logger.info(f"Found only {len(events)} events, trying with Playwright...")
+            # Use Playwright directly since these pages require JavaScript
+            try:
                 html = self.fetch_page_content(venue_url, use_playwright=True)
-                playwright_events = self.extract_events_from_page(html or "", venue_url)
-                if len(playwright_events) > len(events):
-                    events = playwright_events
+                events = self.extract_events_from_page(html or "", venue_url)
+                logger.info(f"Extracted {len(events)} events from {venue_url}")
+                all_events.extend(events)
+            except Exception as e:
+                logger.error(f"Failed to scrape {venue_url}: {e}")
+                # Continue with next venue instead of stopping
+                continue
             
-            logger.info(f"Extracted {len(events)} events from {venue_url}")
-            all_events.extend(events)
-            
-            # Rate limiting
-            time.sleep(1)
+            # Rate limiting between requests
+            time.sleep(2)
         
         logger.info(f"Found {len(all_events)} total events before enhancement")
         

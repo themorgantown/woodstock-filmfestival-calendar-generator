@@ -1,10 +1,10 @@
-# Woodstock Film Festival 2025 Calendar
+# Woodstock Film Festival 2025 Calendar (Unofficial)
 
 Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours.
 
 ## How to use
 
-You can subscribe to this url using the following ics file:
+You can subscribe to this url using the [following ics file](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics):
 
 `https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics`
 

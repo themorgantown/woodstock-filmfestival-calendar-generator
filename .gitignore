@@ -2,7 +2,7 @@
 .venv/
 venv/
 env/
-
+js/
 # Development files
 dev.md
 

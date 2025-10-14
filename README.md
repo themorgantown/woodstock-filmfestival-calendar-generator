@@ -31,14 +31,28 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 - Venue locations
 - Direct links to event details
 
-## Slow scraper
+## Respectful Scraping
 
-This scraper does not use more than a single-person's bandwidth. It is intentionally slow to avoid overloading the festival's website.
+This scraper is designed to be respectful of the festival's website:
+- **Rate Limited**: 2-second delays between venue pages, 0.5-second delays between detail pages
+- **Limited Scope**: Only enhances first 50 events with detail pages (out of ~119 total)
+- **Efficient**: Uses cached results, runs only 4 times per day
+- **Transparent**: Identifies itself with a clear User-Agent
+- **Total bandwidth**: ~1 minute of requests every 6 hours
 
+This is equivalent to a single person browsing the website once per day.
 
 ## Updates
 
-The calendar is automatically updated every 6 hours via GitHub Actions. Check back regularly for the latest schedule updates.
+The calendar is automatically updated every 6 hours via GitHub Actions (00:00, 06:00, 12:00, 18:00 UTC). 
+
+**Last successful scrape**: Check the [latest commit](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/commits/main) or [workflow runs](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/actions)
+
+## Known Limitations
+
+- Detail page descriptions are only fetched for the first 50 events (to limit server load)
+- ICS URLs may appear line-wrapped in some calendar apps (this is correct per ICS standard)
+- Event descriptions are extracted from venue pages and may occasionally include extra formatting
 
 
 *This is an unofficial calendar. Please verify event details on the [official Woodstock Film Festival website](https://woodstockfilmfestival.org).*

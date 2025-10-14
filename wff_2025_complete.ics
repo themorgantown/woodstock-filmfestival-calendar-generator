@@ -3,10 +3,27 @@ VERSION:2.0
 PRODID:-//Woodstock Film Festival 2025 Complete Calendar//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
+SUMMARY:Fatal Watch
+DTSTART:20251014T191500
+DTEND:20251014T211500
+DTSTAMP:20251014T194349Z
+UID:fatal-watch-20251014T191500-72d54dd24f77212c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Barry Feinstein Photography Exhibition
+DTSTART:20251015T110000
+DTEND:20251015T130000
+DTSTAMP:20251014T194349Z
+UID:barry-feinstein-photography-ex-20251015T110000-05f29e8cba0234c3@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:A Life Illuminated
 DTSTART:20251015T170000
 DTEND:20251015T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:a-life-illuminated-20251015T170000-b43d760a3b97e8f0@wff2025
 DESCRIPTION:Q&A with director Tasha Van Zandt.\n\nAfter a lifetime of unve
  iling the deep sea's most elusive secrets\, pioneering marine biologist Dr
@@ -18,10 +35,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a05
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:A Life Illuminated
+DTSTART:20251015T170000
+DTEND:20251015T190000
+DTSTAMP:20251014T194349Z
+UID:a-life-illuminated-20251015T170000-d87fe9ddecbe1905@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Blue Moon
 DTSTART:20251015T171500
 DTEND:20251015T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:blue-moon-20251015T171500-8c3a5a6aa9912f9c@wff2025
 DESCRIPTION:In Richard Linklater's newest film\, on the evening of March 3
  1\, 1943\, legendary lyricist Lorenz Hart (Ethan Hawke) confronts his shat
@@ -33,10 +58,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b9b
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Blue Moon
+DTSTART:20251015T171500
+DTEND:20251015T191500
+DTSTAMP:20251014T194349Z
+UID:blue-moon-20251015T171500-1052b56324facea9@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Arco
 DTSTART:20251015T173000
 DTEND:20251015T193000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:arco-20251015T173000-4dbea0d506136023@wff2025
 DESCRIPTION:In 2075\, a ten-year-old girl\, Iris\, witnesses a mysterious 
  boy in a rainbow suit fall from the sky. It’s Arco. He comes from an idy
@@ -47,10 +80,34 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a9c
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Arco
+DTSTART:20251015T173000
+DTEND:20251015T193000
+DTSTAMP:20251014T194349Z
+UID:arco-20251015T173000-df4e7124c0bd6bd2@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:A BREAK IN THE RAIN
+DTSTART:20251015T190000
+DTEND:20251015T210000
+DTSTAMP:20251014T194349Z
+UID:a-break-in-the-rain-20251015T190000-9eb01d280a18d4b8@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:River of Grass
+DTSTART:20251015T191500
+DTEND:20251015T211500
+DTSTAMP:20251014T194349Z
+UID:river-of-grass-20251015T191500-e010901eb3db8342@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Honky Tonkin' in Kingston
 DTSTART:20251015T193000
 DTEND:20251015T213000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:honky-tonkin-in-kingston-20251015T193000-43ae39dbaf605e79@wff2025
 DESCRIPTION:Capturing the popularity and spirit of Honky Tonk Wednesdays h
  eld at the Kingston VFW\, we’re featuring the world premiere of HONKY TO
@@ -70,10 +127,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68a489b0c665
  25a82b7e64a7
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Honky Tonkin' in Kingston
+DTSTART:20251015T193000
+DTEND:20251015T213000
+DTSTAMP:20251014T194349Z
+UID:honky-tonkin-in-kingston-20251015T193000-ce33fe1094c7c526@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
 DTSTART:20251015T194500
 DTEND:20251015T214500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:everywhere-man-the-lives-and-t-20251015T194500-3b809478ec31a2a4@wff202
  5
 DESCRIPTION:Q&A with Dayna Goldfine (Producer/Director) and Dan Geller (Pr
@@ -88,10 +153,19 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68b9a1d69dda
  499e9b291c09
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
+DTSTART:20251015T194500
+DTEND:20251015T214500
+DTSTAMP:20251014T194349Z
+UID:everywhere-man-the-lives-and-t-20251015T194500-f40837ab4fdfae09@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Testament of Ann Lee
 DTSTART:20251015T200000
 DTEND:20251015T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-testament-of-ann-lee-20251015T200000-8c744538098643f8@wff2025
 DESCRIPTION:OPENING NIGHT FILM. Q&A with director Mona Fastvold\, star Ama
  nda Seyfried\, and choreographer Celia Rowlson-Hall.\n\nAn epic fable insp
@@ -105,7 +179,7 @@ BEGIN:VEVENT
 SUMMARY:Sentimental Value
 DTSTART:20251015T200000
 DTEND:20251015T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:sentimental-value-20251015T200000-2ef9564ec0e38211@wff2025
 DESCRIPTION:Joachim Trier (The Worst Person in the World) has led Norway
  ’s global cinema wave. His Cannes Grand Prix winnerSentimental Valuereun
@@ -117,10 +191,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ab0
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sentimental Value
+DTSTART:20251015T200000
+DTEND:20251015T220000
+DTSTAMP:20251014T194349Z
+UID:sentimental-value-20251015T200000-05210779c7d07c2c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Testament of Ann Lee
+DTSTART:20251015T200000
+DTEND:20251015T220000
+DTSTAMP:20251014T194349Z
+UID:the-testament-of-ann-lee-20251015T200000-3bd0541408125d77@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Out Standing
 DTSTART:20251016T110000
 DTEND:20251016T130000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:out-standing-20251016T110000-5db11c1859e8d8f4@wff2025
 DESCRIPTION:Q&A with writer/director Mélanie Charbonneau and producer Jul
  ia Rosenberg.\n\nBased on a true story\, a determined young woman shatters
@@ -131,10 +221,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aa1
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Out Standing
+DTSTART:20251016T110000
+DTEND:20251016T130000
+DTSTAMP:20251014T194349Z
+UID:out-standing-20251016T110000-36ac67b1fa5d728c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:THE BEND IN THE RIVER
+DTSTART:20251016T111500
+DTEND:20251016T131500
+DTSTAMP:20251014T194349Z
+UID:the-bend-in-the-river-20251016T111500-9d19a53d74e36f14@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Holding Liat
 DTSTART:20251016T113000
 DTEND:20251016T133000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:holding-liat-20251016T113000-e228a9add58786ea@wff2025
 DESCRIPTION:Q&A with director Brandon Kramer. Moderated by Ondi Timoner.\n
  \nDuring the October 7th attack on Israel\, Liat and her husband Aviv are 
@@ -147,10 +253,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a0a
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Holding Liat
+DTSTART:20251016T113000
+DTEND:20251016T133000
+DTSTAMP:20251014T194349Z
+UID:holding-liat-20251016T113000-aaf84eeaace5966d@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Train Dreams
 DTSTART:20251016T140000
 DTEND:20251016T160000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:train-dreams-20251016T140000-e518e6096ca8748c@wff2025
 DESCRIPTION:Joel Edgerton stars in Train Dreams\, a soulful period drama s
  et amid America's western expansion. As he lays railroad tracks\, he build
@@ -166,7 +280,7 @@ BEGIN:VEVENT
 SUMMARY:Outdoor School
 DTSTART:20251016T140000
 DTEND:20251016T160000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:outdoor-school-20251016T140000-68c99370d6f13896@wff2025
 DESCRIPTION:Q&A with Producer Ifanyi Bell and Executive Producer Vin Shamb
  ry.\n\nBased upon the Moth story of how 12-year-old Melvin Shambry\, now a
@@ -178,10 +292,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aa6
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Outdoor School
+DTSTART:20251016T140000
+DTEND:20251016T160000
+DTSTAMP:20251014T194349Z
+UID:outdoor-school-20251016T140000-6601415d15293126@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Train Dreams
+DTSTART:20251016T140000
+DTEND:20251016T160000
+DTSTAMP:20251014T194349Z
+UID:train-dreams-20251016T140000-01a7ef116122dce6@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Come See Me In The Good Light
 DTSTART:20251016T143000
 DTEND:20251016T163000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:come-see-me-in-the-good-light-20251016T143000-22a115aeb878c9a4@wff2025
 DESCRIPTION:Q&A with director Ryan White.\n\nWinner of the Festival Favori
  te Award at this year's Sundance\, this extraordinary story follows much-c
@@ -193,10 +323,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a19
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Come See Me In The Good Light
+DTSTART:20251016T143000
+DTEND:20251016T163000
+DTSTAMP:20251014T194349Z
+UID:come-see-me-in-the-good-light-20251016T143000-484a14ee544e1aed@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Chef's Choice
 DTSTART:20251016T163000
 DTEND:20251016T183000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:chef-s-choice-20251016T163000-c098c37587726c66@wff2025
 DESCRIPTION:With Q&A\n\nEntrusting. A thematically-diverse collection of n
  arrative and documentary films.
@@ -205,10 +343,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbc709ecf
  ba6af5eca786
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Chef's Choice
+DTSTART:20251016T163000
+DTEND:20251016T183000
+DTSTAMP:20251014T194349Z
+UID:chef-s-choice-20251016T163000-0bc74df431c15b17@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:IDIOTKA
 DTSTART:20251016T164500
 DTEND:20251016T184500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:idiotka-20251016T164500-85e6167c8fd80c19@wff2025
 DESCRIPTION:Q&A with director Nastasya Popov\, producer Camila Mendes\, st
  ars Anna Baryshnikov and Nerses Stamos.\n\nFacing eviction\, Margarita –
@@ -221,10 +367,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aab
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:IDIOTKA
+DTSTART:20251016T164500
+DTEND:20251016T184500
+DTSTAMP:20251014T194349Z
+UID:idiotka-20251016T164500-3feb2a7c4fd5778f@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Mr. Scorsese
 DTSTART:20251016T170000
 DTEND:20251016T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:mr-scorsese-20251016T170000-ce4a8fa8a7aacdfb@wff2025
 DESCRIPTION:Followed by a conversation with its acclaimed director Rebecca
   Miller\, executive producers Damon Cardasis and Cindy Tolan\, and editor 
@@ -241,10 +395,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ba0
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Mr. Scorsese
+DTSTART:20251016T170000
+DTEND:20251016T190000
+DTSTAMP:20251014T194349Z
+UID:mr-scorsese-20251016T170000-1500a7a974cf8342@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concessions
 DTSTART:20251016T171500
 DTEND:20251016T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:concessions-20251016T171500-9f4f0a357ceffd67@wff2025
 DESCRIPTION:Q&A with writer/director Mas Bouzidi\, cast members Rob Riorda
  n\, Jonathan Lorenzo Price\, Lana Rockwell\, and Volkan Eryaman. Introduce
@@ -258,10 +420,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b2d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Concessions
+DTSTART:20251016T171500
+DTEND:20251016T191500
+DTSTAMP:20251014T194349Z
+UID:concessions-20251016T171500-86796617db1373a5@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ask E. Jean
 DTSTART:20251016T173000
 DTEND:20251016T193000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:ask-e-jean-20251016T173000-629e05187c94bb7a@wff2025
 DESCRIPTION:Q&A with director Ivy Meeropol and E. Jean Carroll. Moderated 
  by Sheila Nevins.\n\n﻿\n\nE. Jean Carroll's sharp wit meets steely resol
@@ -277,7 +447,7 @@ BEGIN:VEVENT
 SUMMARY:Arrest The Midwife
 DTSTART:20251016T173000
 DTEND:20251016T193000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:arrest-the-midwife-20251016T173000-0ab567a9d8eb5d42@wff2025
 DESCRIPTION:Q&A with director Elaine Epstein and producer Robin Hessman.\n
  \nWhen trusted midwives are arrested in a tight-knit Amish and Mennonite e
@@ -289,10 +459,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b73
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Ask E. Jean
+DTSTART:20251016T173000
+DTEND:20251016T193000
+DTSTAMP:20251014T194349Z
+UID:ask-e-jean-20251016T173000-9686fdaec295e050@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Arrest The Midwife
+DTSTART:20251016T173000
+DTEND:20251016T193000
+DTSTAMP:20251014T194349Z
+UID:arrest-the-midwife-20251016T173000-a18bf291b061b3f0@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
 DTSTART:20251016T190000
 DTEND:20251016T210000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:everywhere-man-the-lives-and-t-20251016T190000-4e522e8d46415068@wff202
  5
 DESCRIPTION:Q&A with Dayna Goldfine (Producer/Director) and Dan Geller (Pr
@@ -307,10 +493,27 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c43c31e6b6
  7ad85b3aa097
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Everywhere Man: The Lives and Times of Peter Asher
+DTSTART:20251016T190000
+DTEND:20251016T210000
+DTSTAMP:20251014T194349Z
+UID:everywhere-man-the-lives-and-t-20251016T190000-01242e580279873e@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:SEEDS
+DTSTART:20251016T191500
+DTEND:20251016T211500
+DTSTAMP:20251014T194349Z
+UID:seeds-20251016T191500-658e4f7bf3e5477d@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Secret Agent
 DTSTART:20251016T193000
 DTEND:20251016T213000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-secret-agent-20251016T193000-057732694e80ff55@wff2025
 DESCRIPTION:Kleber Mendonça Filho’s political thriller is set in 1970s 
  Brazil during the dictatorship. Leading actor Wagner Moura (Civil War) shi
@@ -326,7 +529,7 @@ BEGIN:VEVENT
 SUMMARY:Film School Shorts
 DTSTART:20251016T193000
 DTEND:20251016T213000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:film-school-shorts-20251016T193000-16b5f4e739892495@wff2025
 DESCRIPTION:Finely-crafted and distinctive narrative and documentary short
  s from up and coming visionary film school students.
@@ -335,10 +538,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68adc1f50145
  ff59e28b061e
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Film School Shorts
+DTSTART:20251016T193000
+DTEND:20251016T213000
+DTSTAMP:20251014T194349Z
+UID:film-school-shorts-20251016T193000-27f243342444b031@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Secret Agent
+DTSTART:20251016T193000
+DTEND:20251016T213000
+DTSTAMP:20251014T194349Z
+UID:the-secret-agent-20251016T193000-e1eec3c4b6de983c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Comparsa
 DTSTART:20251016T194500
 DTEND:20251016T214500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:comparsa-20251016T194500-3f80c159a2ec5749@wff2025
 DESCRIPTION:Q&A with directors Vickie Curtis & Doug Anderson\, screenwrite
  rs Lesli Canela Pérez & Lupe Pére. Moderated by Pamela Yates.\n\nAfter 4
@@ -352,10 +571,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b78
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Comparsa
+DTSTART:20251016T194500
+DTEND:20251016T214500
+DTSTAMP:20251014T194349Z
+UID:comparsa-20251016T194500-dba598866bb4496a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sirāt
 DTSTART:20251016T200000
 DTEND:20251016T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:sir-t-20251016T200000-e303153a3df12062@wff2025
 DESCRIPTION:Winner of Cannes’ Special Jury Prize\, beginning with a fren
  zied desert party\, then becoming a trippy journey toward the world’s en
@@ -367,10 +594,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b32
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sirāt
+DTSTART:20251016T200000
+DTEND:20251016T220000
+DTSTAMP:20251014T194349Z
+UID:sir-t-20251016T200000-01ff1e08aa4c4144@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Free Leonard Peltier
 DTSTART:20251016T201500
 DTEND:20251016T221500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:free-leonard-peltier-20251016T201500-a2f02b3e3c60ef64@wff2025
 DESCRIPTION:Q&A with David France (co-director)\, Jhane Myers and Paul McG
  uire (producers)\, Holly Cook Macarro (featured in the film)\, and a virtu
@@ -385,10 +620,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a0f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Free Leonard Peltier
+DTSTART:20251016T201500
+DTEND:20251016T221500
+DTSTAMP:20251014T194349Z
+UID:free-leonard-peltier-20251016T201500-738b5f30229062be@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Adult Children
 DTSTART:20251016T203000
 DTEND:20251016T223000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:adult-children-20251016T203000-981eb0198a2f5be7@wff2025
 DESCRIPTION:Q&A with actor Thomas Sadoski.\n\nLiving a sheltered life\, Mo
  rgan struggles to define herself in a college essay. A family crisis bring
@@ -400,10 +643,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ba5
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Adult Children
+DTSTART:20251016T203000
+DTEND:20251016T223000
+DTSTAMP:20251014T194349Z
+UID:adult-children-20251016T203000-a0a0e08c1f339d7c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Park Avenue
 DTSTART:20251017T110000
 DTEND:20251017T130000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:park-avenue-20251017T110000-0e57547769cf6460@wff2025
 DESCRIPTION:Q&A with director Gaby Dellal & DOP David Johnson. Preceded by
   the short film ELOISE AND THE DRESS.\n\nEscaping a cowboy existence\, Cha
@@ -417,10 +668,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68b70376b92e
  138c1bba87bf
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Park Avenue
+DTSTART:20251017T110000
+DTEND:20251017T130000
+DTSTAMP:20251014T194349Z
+UID:park-avenue-20251017T110000-ab23b74254063d22@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Teenage Wasteland
 DTSTART:20251017T111500
 DTEND:20251017T131500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:teenage-wasteland-20251017T111500-193c7971f00d6ab4@wff2025
 DESCRIPTION:Q&A with editor Chris Passig\; subjects Fred Isseks\, David Bi
  rmingham\, Jeff Dutemple\, and Mike Regan.Introductory remarks by Senator 
@@ -438,7 +697,7 @@ BEGIN:VEVENT
 SUMMARY:Family Matters
 DTSTART:20251017T111500
 DTEND:20251017T131500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:family-matters-20251017T111500-0bf666b5a8a56463@wff2025
 DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
  s in moments of control\, heartbreak\, and memory.
@@ -447,10 +706,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbb34bdb8
  e197ddd2a3e4
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Family Matters
+DTSTART:20251017T111500
+DTEND:20251017T131500
+DTSTAMP:20251014T194349Z
+UID:family-matters-20251017T111500-b39259e66317fd02@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teenage Wasteland
+DTSTART:20251017T111500
+DTEND:20251017T131500
+DTSTAMP:20251014T194349Z
+UID:teenage-wasteland-20251017T111500-798e5a11cfa044f2@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Solomamma
 DTSTART:20251017T113000
 DTEND:20251017T133000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:solomamma-20251017T113000-88cdc55c8e4191d6@wff2025
 DESCRIPTION:Journalist Edith chose to become a single mother in her 40s th
  rough an anonymous sperm donor and now she is the happy mother of a five-y
@@ -466,7 +741,7 @@ BEGIN:VEVENT
 SUMMARY:Out Standing
 DTSTART:20251017T113000
 DTEND:20251017T133000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:out-standing-20251017T113000-fdb495994f6af515@wff2025
 DESCRIPTION:Q&A with writer/director Mélanie Charbonneau and producer Jul
  ia Rosenberg.\n\nBased on a true story\, a determined young woman shatters
@@ -477,10 +752,35 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277af1
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Out Standing
+DTSTART:20251017T113000
+DTEND:20251017T133000
+DTSTAMP:20251014T194349Z
+UID:out-standing-20251017T113000-4cc79a931be4000a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solomamma
+DTSTART:20251017T113000
+DTEND:20251017T133000
+DTSTAMP:20251014T194349Z
+UID:solomamma-20251017T113000-1ce63f1122c05f3b@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DEFINING SUCCESS IN DOCUMENTARY FILMMAKING
+DTSTART:20251017T140000
+DTEND:20251017T160000
+DTSTAMP:20251014T194349Z
+UID:defining-success-in-documentar-20251017T140000-296852ac9c680080@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:THE VOICE OF HIND RAJAB
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-voice-of-hind-rajab-20251017T141500-02adcdf71caae53d@wff2025
 DESCRIPTION:January 29\, 2024. Red Crescent volunteers receive an emergenc
  y call. A 6-year old girl is trapped in a car under fire in Gaza\, pleadin
@@ -494,7 +794,7 @@ BEGIN:VEVENT
 SUMMARY:The Floaters
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-floaters-20251017T141500-dc5fe72b3d4f294e@wff2025
 DESCRIPTION:Q&A with Rachel Israel and cast members.\n\nStruggling musicia
  n Nomi (Jackie Tohn) takes a last-resort job from her overachiever best fr
@@ -511,7 +811,7 @@ BEGIN:VEVENT
 SUMMARY:Memory Lane
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:memory-lane-20251017T141500-4ccafcf42a7e2d3e@wff2025
 DESCRIPTION:Q&A with writer/director Jelle de Jonge.\n\nAn unexpected lett
  er disrupts the lives of an elderly couple\, forcing them to confront what
@@ -528,7 +828,7 @@ BEGIN:VEVENT
 SUMMARY:Dislocation
 DTSTART:20251017T141500
 DTEND:20251017T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dislocation-20251017T141500-8217542d633c757a@wff2025
 DESCRIPTION:With Q&A\n\nWell-crafted\, authentic documentaries which share
   stories of displacement and community repossession.
@@ -537,10 +837,42 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbca55174
  b14b28a20537
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Floaters
+DTSTART:20251017T141500
+DTEND:20251017T161500
+DTSTAMP:20251014T194349Z
+UID:the-floaters-20251017T141500-4698bb2addc8bfa3@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dislocation
+DTSTART:20251017T141500
+DTEND:20251017T161500
+DTSTAMP:20251014T194349Z
+UID:dislocation-20251017T141500-803a14a25882a7cd@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Memory Lane
+DTSTART:20251017T141500
+DTEND:20251017T161500
+DTSTAMP:20251014T194349Z
+UID:memory-lane-20251017T141500-24a54e38ff494472@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:THE VOICE OF HIND RAJAB
+DTSTART:20251017T141500
+DTEND:20251017T161500
+DTSTAMP:20251014T194349Z
+UID:the-voice-of-hind-rajab-20251017T141500-f36d03e2238a4386@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:AN EYE FOR AN EYE
 DTSTART:20251017T143000
 DTEND:20251017T163000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:an-eye-for-an-eye-20251017T143000-326cc33f088f96d2@wff2025
 DESCRIPTION:Q&A with director Tanaz Eshaghian\n\nUpon release from a long 
  prison sentence\, an Iranian mother's fate lies in the hands of her victim
@@ -555,7 +887,7 @@ BEGIN:VEVENT
 SUMMARY:Concessions
 DTSTART:20251017T143000
 DTEND:20251017T163000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:concessions-20251017T143000-697be51341bc6218@wff2025
 DESCRIPTION:Q&A with writer/director Mas Bouzidi\, cast members Rob Riorda
  n\, Jonathan Lorenzo Price\, Lana Rockwell\, and Volkan Eryaman. Introduce
@@ -569,10 +901,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a65
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:AN EYE FOR AN EYE
+DTSTART:20251017T143000
+DTEND:20251017T163000
+DTSTAMP:20251014T194349Z
+UID:an-eye-for-an-eye-20251017T143000-e3dcf71ab951f124@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concessions
+DTSTART:20251017T143000
+DTEND:20251017T163000
+DTSTAMP:20251014T194349Z
+UID:concessions-20251017T143000-d1bbe142656e934a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Outdoor School
 DTSTART:20251017T144500
 DTEND:20251017T164500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:outdoor-school-20251017T144500-dce666a6650edfdf@wff2025
 DESCRIPTION:Q&A with Producer Ifanyi Bell and Executive Producer Vin Shamb
  ry.\n\nBased upon the Moth story of how 12-year-old Melvin Shambry\, now a
@@ -587,7 +935,7 @@ BEGIN:VEVENT
 SUMMARY:Magic Hour
 DTSTART:20251017T144500
 DTEND:20251017T164500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:magic-hour-20251017T144500-b9018aabdc8f1410@wff2025
 DESCRIPTION:Q&A with filmmakers Katie Aselton and Mark Duplass.\n\nErin (d
  irector and star Katie Aselton) is on a weekend retreat in the desert with
@@ -600,10 +948,35 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b7d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Outdoor School
+DTSTART:20251017T144500
+DTEND:20251017T164500
+DTSTAMP:20251014T194349Z
+UID:outdoor-school-20251017T144500-c92f53cf1dbfe78a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Magic Hour
+DTSTART:20251017T144500
+DTEND:20251017T164500
+DTSTAMP:20251014T194349Z
+UID:magic-hour-20251017T144500-d0e44dd7a4419672@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:A CONVERSATION WITH BRAD DOURIF
+DTSTART:20251017T160000
+DTEND:20251017T180000
+DTSTAMP:20251014T194349Z
+UID:a-conversation-with-brad-douri-20251017T160000-6e0f576056347fc9@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:HEDDA
 DTSTART:20251017T170000
 DTEND:20251017T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:hedda-20251017T170000-90bbfea3959ef6ad@wff2025
 DESCRIPTION:Nia DaCosta's bold adaptation of Ibsen's Hedda Gabler is fast-
  paced\, sexy\, and glamorously dark. Tessa Thompson plays a larger-than-li
@@ -619,7 +992,7 @@ BEGIN:VEVENT
 SUMMARY:Is This Thing On?
 DTSTART:20251017T170000
 DTEND:20251017T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:is-this-thing-on-20251017T170000-9c26dca090d40d04@wff2025
 DESCRIPTION:As their marriage quietly unravels\, Alex (Will Arnett) faces 
  middle age and an impending divorce\, seeking new purpose in the New York 
@@ -631,10 +1004,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b3c
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Is This Thing On?
+DTSTART:20251017T170000
+DTEND:20251017T190000
+DTSTAMP:20251014T194349Z
+UID:is-this-thing-on-20251017T170000-7cc240665a4e50ee@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:HEDDA
+DTSTART:20251017T170000
+DTEND:20251017T190000
+DTSTAMP:20251014T194349Z
+UID:hedda-20251017T170000-9c26809f5a7bd730@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Coexistence\, My Ass!
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:coexistence-my-ass-20251017T171500-32e5c59768919f6e@wff2025
 DESCRIPTION:Q&A with director Amber Fares and editor Rabab Haj Yahya\n\nHo
  w do we create real change — through policy\, protest or punchlines? Com
@@ -649,7 +1038,7 @@ BEGIN:VEVENT
 SUMMARY:Nuremberg
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:nuremberg-20251017T171500-17d213581a6da1df@wff2025
 DESCRIPTION:The Allies\, led by the unyielding chief prosecutor Robert H. 
  Jackson (Michael Shannon)\, have the task of ensuring the Nazi regime answ
@@ -664,7 +1053,7 @@ BEGIN:VEVENT
 SUMMARY:Friday Night Toons
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:friday-night-toons-20251017T171500-4fd44f2d59004d1e@wff2025
 DESCRIPTION:With Q&A\n\nA selection of the best new indie animation from a
  cross the globe. Kick off your festival weekend with a wild ride that’s 
@@ -677,7 +1066,7 @@ BEGIN:VEVENT
 SUMMARY:Mildlife
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:mildlife-20251017T171500-6bb845d17ffe7ab3@wff2025
 DESCRIPTION:Q&A with filmmaker Cory Thibert and editor/co-creator of origi
  nal score Gary Thibert.\n\nLawrence just wants to drum his depression away
@@ -692,7 +1081,7 @@ BEGIN:VEVENT
 SUMMARY:Nice to Meet You
 DTSTART:20251017T171500
 DTEND:20251017T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:nice-to-meet-you-20251017T171500-37903d10d68a2ea0@wff2025
 DESCRIPTION:With Q&A\n\nA poignant collection of films that explore compli
  cated human relationships\, capturing the delicate balance of love\, confl
@@ -702,10 +1091,50 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbb79379b
  88e690591c24
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Friday Night Toons
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T194349Z
+UID:friday-night-toons-20251017T171500-88ec11765222328e@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nice to Meet You
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T194349Z
+UID:nice-to-meet-you-20251017T171500-d78ed7a52c03b8be@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuremberg
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T194349Z
+UID:nuremberg-20251017T171500-0657e3cb66daddda@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Coexistence\, My Ass!
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T194349Z
+UID:coexistence-my-ass-20251017T171500-e8af52eaa6dbde6c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mildlife
+DTSTART:20251017T171500
+DTEND:20251017T191500
+DTSTAMP:20251014T194349Z
+UID:mildlife-20251017T171500-cd7f8a514157bbfa@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:THE PLAGUE
 DTSTART:20251017T173000
 DTEND:20251017T193000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-plague-20251017T173000-380fc8818ecd9632@wff2025
 DESCRIPTION:Charlie Polinger's Cannes debut is a playful yet darkly humoro
  us coming-of-age drama set at a youth water polo camp. Exploring the bully
@@ -717,10 +1146,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277aba
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:THE PLAGUE
+DTSTART:20251017T173000
+DTEND:20251017T193000
+DTSTAMP:20251014T194349Z
+UID:the-plague-20251017T173000-b08fe52c6e078f51@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:BUGONIA
 DTSTART:20251017T194500
 DTEND:20251017T214500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:bugonia-20251017T194500-cff2a578925f309b@wff2025
 DESCRIPTION:In Academy Award-nominated director Yorgos Lanthimos' (Poor Th
  ings\,The Favourite) latest satirical absurdist sci-fi dark comedy\, two c
@@ -732,10 +1169,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a6f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:BUGONIA
+DTSTART:20251017T194500
+DTEND:20251017T214500
+DTSTAMP:20251014T194349Z
+UID:bugonia-20251017T194500-fd52c0b3a51e9276@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Wake Up Dead Man: A Knives Out Mystery
 DTSTART:20251017T200000
 DTEND:20251017T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:wake-up-dead-man-a-knives-out--20251017T200000-6ba39b7de21fa29f@wff202
  5
 DESCRIPTION:Kleinert/James Art Center[PANELS]\n\nTinker Street Cinema\n\nW
@@ -750,7 +1195,7 @@ BEGIN:VEVENT
 SUMMARY:Our Girls
 DTSTART:20251017T200000
 DTEND:20251017T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:our-girls-20251017T200000-51a0b46b6d998566@wff2025
 DESCRIPTION:Q&A with writer/director Mike van Diem\n\nDuring an idyllic ho
  liday in the Austrian Alps\, the long- standing friendship between two cou
@@ -766,7 +1211,7 @@ BEGIN:VEVENT
 SUMMARY:Kain
 DTSTART:20251017T200000
 DTEND:20251017T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:kain-20251017T200000-4b16d90359dcffcb@wff2025
 DESCRIPTION:Q&A with Gabriel Bauer (Director) & Daniël Gellvoet Gellvoet 
  (lead actor).\n\nAn autistic man sets out to get his driver's license and 
@@ -781,10 +1226,35 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b82
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Our Girls
+DTSTART:20251017T200000
+DTEND:20251017T220000
+DTSTAMP:20251014T194349Z
+UID:our-girls-20251017T200000-5d7bc959193c0837@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kain
+DTSTART:20251017T200000
+DTEND:20251017T220000
+DTSTAMP:20251014T194349Z
+UID:kain-20251017T200000-0f153df98350e4fd@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wake Up Dead Man: A Knives Out Mystery
+DTSTART:20251017T200000
+DTEND:20251017T220000
+DTSTAMP:20251014T194349Z
+UID:wake-up-dead-man-a-knives-out--20251017T200000-4a7d7312dd1059ee@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Perfect Neighbor
 DTSTART:20251017T201500
 DTEND:20251017T221500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-perfect-neighbor-20251017T201500-dce00f7e240eed13@wff2025
 DESCRIPTION:Q&A with director Geeta Gandbhir.\n\nUsing bodycam footage fro
  m dozens of police visits\, The Perfect Neighbor bears witness to a tight-
@@ -796,10 +1266,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a2d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Perfect Neighbor
+DTSTART:20251017T201500
+DTEND:20251017T221500
+DTSTAMP:20251014T194349Z
+UID:the-perfect-neighbor-20251017T201500-5d6ecf6a8dc151c0@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Floating Carousel
 DTSTART:20251017T203000
 DTEND:20251017T223000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:floating-carousel-20251017T203000-b60e738acebb0130@wff2025
 DESCRIPTION:Q&A with filmmakers Delilah Napier & Lucy Powers.\n\nTwo young
   women\, a sugar daddy\, a jealous boyfriend\, a cuddler\, and a gay cabar
@@ -814,7 +1292,7 @@ BEGIN:VEVENT
 SUMMARY:STARMAN
 DTSTART:20251017T203000
 DTEND:20251017T223000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:starman-20251017T203000-5b29131098ddfb6e@wff2025
 DESCRIPTION:Q&A with director Robert Stone.\n\nYou won't find a more dynam
  ic documentary subject than NASA robotics engineer turned best-selling sci
@@ -829,7 +1307,7 @@ BEGIN:VEVENT
 SUMMARY:Hilarity
 DTSTART:20251017T203000
 DTEND:20251017T223000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:hilarity-20251017T203000-b6752d162f6009ee@wff2025
 DESCRIPTION:With Q&A\n\nIn an uncertain world\, laughter is the best medic
  ine.
@@ -838,10 +1316,34 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68aca11dc8a1
  8db6ac79af3c
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Hilarity
+DTSTART:20251017T203000
+DTEND:20251017T223000
+DTSTAMP:20251014T194349Z
+UID:hilarity-20251017T203000-9fa92449f1313fcb@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Floating Carousel
+DTSTART:20251017T203000
+DTEND:20251017T223000
+DTSTAMP:20251014T194349Z
+UID:floating-carousel-20251017T203000-3ff16e2e341d69ca@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STARMAN
+DTSTART:20251017T203000
+DTEND:20251017T223000
+DTSTAMP:20251014T194349Z
+UID:starman-20251017T203000-1ecf95d6ae082316@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rental Family
 DTSTART:20251018T100000
 DTEND:20251018T120000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:rental-family-20251018T100000-47cfea0227916afe@wff2025
 DESCRIPTION:Set against modern-day Tokyo\, RENTAL FAMILY follows an Americ
  an actor (Brendan Fraser) who struggles to find purpose until he lands an 
@@ -856,7 +1358,7 @@ BEGIN:VEVENT
 SUMMARY:The Lure of Ponies - a spellbound attic mystery
 DTSTART:20251018T100000
 DTEND:20251018T120000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-lure-of-ponies-a-spellboun-20251018T100000-6695da1870453ae2@wff202
  5
 DESCRIPTION:Q&A with director Beck Underwood.\n\nSet in an attic populated
@@ -872,7 +1374,7 @@ BEGIN:VEVENT
 SUMMARY:Park Avenue
 DTSTART:20251018T100000
 DTEND:20251018T120000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:park-avenue-20251018T100000-5a480f65685777db@wff2025
 DESCRIPTION:Q&A with director Gaby Dellal & DOP David Johnson. Preceded by
   the short film ELOISE AND THE DRESS.\n\nEscaping a cowboy existence\, Cha
@@ -886,10 +1388,44 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c31fb18923
  2c0da79097e6
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Park Avenue
+DTSTART:20251018T100000
+DTEND:20251018T120000
+DTSTAMP:20251014T194349Z
+UID:park-avenue-20251018T100000-f4a9e4ecd9df5c10@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:LOVE (AND WORK WITH) THE ONES YOU'RE WITH
+DTSTART:20251018T100000
+DTEND:20251018T120000
+DTSTAMP:20251014T194349Z
+UID:love-and-work-with-the-ones-yo-20251018T100000-ec8f40fcbe2c9273@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Lure of Ponies - a spellbound attic mystery
+DTSTART:20251018T100000
+DTEND:20251018T120000
+DTSTAMP:20251014T194349Z
+UID:the-lure-of-ponies-a-spellboun-20251018T100000-7fbb2c8074cd52e9@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rental Family
+DTSTART:20251018T100000
+DTEND:20251018T120000
+DTSTAMP:20251014T194349Z
+UID:rental-family-20251018T100000-0accfafd95734e55@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Mildlife
 DTSTART:20251018T101500
 DTEND:20251018T121500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:mildlife-20251018T101500-6da58e4c45f719a2@wff2025
 DESCRIPTION:Q&A with filmmaker Cory Thibert and editor/co-creator of origi
  nal score Gary Thibert.\n\nLawrence just wants to drum his depression away
@@ -901,10 +1437,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b46
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Mildlife
+DTSTART:20251018T101500
+DTEND:20251018T121500
+DTSTAMP:20251014T194349Z
+UID:mildlife-20251018T101500-57c3bc8fc56c05e3@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Difficult Beauty
 DTSTART:20251018T103000
 DTEND:20251018T123000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:difficult-beauty-20251018T103000-184f61c539a0fd85@wff2025
 DESCRIPTION:With Q&A\n\nThe pain and joy of creation: a diverse group of a
  rtists admitting their truths.
@@ -913,10 +1457,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9f23e9f2
  fc85c97cc899
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Difficult Beauty
+DTSTART:20251018T103000
+DTEND:20251018T123000
+DTSTAMP:20251014T194349Z
+UID:difficult-beauty-20251018T103000-363c8c0ebc687b08@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Long Walk: The Story of the Bharat Jodo Yatra
 DTSTART:20251018T110000
 DTEND:20251018T130000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-long-walk-the-story-of-the-20251018T110000-cffdcef0184b728e@wff202
  5
 DESCRIPTION:Join us for the world premiere ofThe Long Walk: The Story of t
@@ -937,10 +1489,19 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c336aa80bd
  1cbf8f2fe029
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Long Walk: The Story of the Bharat Jodo Yatra
+DTSTART:20251018T110000
+DTEND:20251018T130000
+DTSTAMP:20251014T194349Z
+UID:the-long-walk-the-story-of-the-20251018T110000-fa62d8c4a54d86bf@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Kain
 DTSTART:20251018T113000
 DTEND:20251018T133000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:kain-20251018T113000-0663fd153aa1765d@wff2025
 DESCRIPTION:Q&A with Gabriel Bauer (Director) & Daniël Gellvoet Gellvoet 
  (lead actor).\n\nAn autistic man sets out to get his driver's license and 
@@ -955,10 +1516,27 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a74
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Kain
+DTSTART:20251018T113000
+DTEND:20251018T133000
+DTSTAMP:20251014T194349Z
+UID:kain-20251018T113000-e6c1ec4e426901c3@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CONVERSATION WITH MARISKA HARGITAY
+DTSTART:20251018T120000
+DTEND:20251018T140000
+DTSTAMP:20251014T194349Z
+UID:conversation-with-mariska-harg-20251018T120000-db408c69c0c1f940@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Love + War
 DTSTART:20251018T121500
 DTEND:20251018T141500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:love-war-20251018T121500-9b83ae07c46f587c@wff2025
 DESCRIPTION:Q&A with director E. Chai Vasarhelyi\n\nRaw\, riveting\, and d
  eeply human\; directed by Oscar® winners E. Chai Vasarhelyi and Jimmy Chi
@@ -971,10 +1549,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ac9
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Love + War
+DTSTART:20251018T121500
+DTEND:20251018T141500
+DTSTAMP:20251014T194349Z
+UID:love-war-20251018T121500-8950b1ea4f010592@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Peter Hujar's Day
 DTSTART:20251018T123000
 DTEND:20251018T143000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:peter-hujar-s-day-20251018T123000-6a0a946ad27f9758@wff2025
 DESCRIPTION:Fearless independent filmmaker Ira Sachs' (Passages\, Love is 
  Strange) latest film centers on groundbreaking gay photographer Peter Huja
@@ -988,10 +1574,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277bc3
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Peter Hujar's Day
+DTSTART:20251018T123000
+DTEND:20251018T143000
+DTSTAMP:20251014T194349Z
+UID:peter-hujar-s-day-20251018T123000-0986123e7c099bbb@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cover-Up
 DTSTART:20251018T124500
 DTEND:20251018T144500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:cover-up-20251018T124500-3e4a3170ca1b5824@wff2025
 DESCRIPTION:Q&A with director Laura Poitras and producerYoni Golijov\n\nCo
  ver-Up is a political thriller that traces the explosive career of Pulitze
@@ -1004,10 +1598,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b4b
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cover-Up
+DTSTART:20251018T124500
+DTEND:20251018T144500
+DTSTAMP:20251014T194349Z
+UID:cover-up-20251018T124500-f128a91f9affb27d@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sylvania
 DTSTART:20251018T130000
 DTEND:20251018T150000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:sylvania-20251018T130000-b9bf5cee49338fda@wff2025
 DESCRIPTION:Q&A with writer/director Kyle Smith and producers Morgan Polli
  tt & Ben Shields Catlin.\n\nAs their own marriage falls apart\, Gracie and
@@ -1018,10 +1620,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b05
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sylvania
+DTSTART:20251018T130000
+DTEND:20251018T150000
+DTSTAMP:20251014T194349Z
+UID:sylvania-20251018T130000-f163679c909515d2@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Evolution of the Modern Sports Doc
 DTSTART:20251018T133000
 DTEND:20251018T153000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:evolution-of-the-modern-sports-20251018T133000-726e09ac8e1bb841@wff202
  5
 DESCRIPTION:The Evolution of the Modern Sports Doc panel with ESPN F
@@ -1085,7 +1695,7 @@ BEGIN:VEVENT
 SUMMARY:Achaar
 DTSTART:20251018T133000
 DTEND:20251018T153000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:achaar-20251018T133000-3ee1d8f31e6c04b4@wff2025
 DESCRIPTION:With Q&A\n\nA distinctive set of shorts with a wide flavor pro
  file from across the South Asian diaspora.
@@ -1094,10 +1704,36 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acbce14452
  61623d86c412
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Achaar
+DTSTART:20251018T133000
+DTEND:20251018T153000
+DTSTAMP:20251014T194349Z
+UID:achaar-20251018T133000-6bdf9a0687e9e395@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Evolution of the Modern Sports Doc
+DTSTART:20251018T133000
+DTEND:20251018T153000
+DTSTAMP:20251014T194349Z
+UID:evolution-of-the-modern-sports-20251018T133000-432de60ed4d8a413@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CREATIVE CONTROL: CENSORSHIP\, FILM AUDIENCES\, AND FREE SPEECH
+DTSTART:20251018T133000
+DTEND:20251018T153000
+DTSTAMP:20251014T194349Z
+UID:creative-control-censorship-fi-20251018T133000-0f41c97ea590f1c9@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Remaining Native
 DTSTART:20251018T141500
 DTEND:20251018T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:remaining-native-20251018T141500-f1cda91abb4cd16d@wff2025
 DESCRIPTION:Q&A with producer Jessica Epstein.\n\nKu Stevens is the fastes
  t 17-year-old cross-country runner in Nevada. While training for recruitme
@@ -1110,10 +1746,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a79
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Remaining Native
+DTSTART:20251018T141500
+DTEND:20251018T161500
+DTSTAMP:20251014T194349Z
+UID:remaining-native-20251018T141500-a8e9aee6a43da273@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Steal This Story\, Please!
 DTSTART:20251018T150000
 DTEND:20251018T170000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:steal-this-story-please-20251018T150000-559a6e636df1314e@wff2025
 DESCRIPTION:Q&A with filmmakers Tia Lessin and Carl Deal\, Amy Goodman (su
  bject)\, and producer Karen Ranucci.\n\nModerated by playwright\, author\,
@@ -1131,7 +1775,7 @@ BEGIN:VEVENT
 SUMMARY:Teenage Wasteland
 DTSTART:20251018T150000
 DTEND:20251018T170000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:teenage-wasteland-20251018T150000-d704cee4e5640a11@wff2025
 DESCRIPTION:Q&A with editor Chris Passig\; subjects Fred Isseks\, David Bi
  rmingham\, Jeff Dutemple\, and Mike Regan.\n\nIn the 90s\, when a media ar
@@ -1146,10 +1790,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b87
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Teenage Wasteland
+DTSTART:20251018T150000
+DTEND:20251018T170000
+DTSTAMP:20251014T194349Z
+UID:teenage-wasteland-20251018T150000-a84c4b1f3e12ff6a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Steal This Story\, Please!
+DTSTART:20251018T150000
+DTEND:20251018T170000
+DTSTAMP:20251014T194349Z
+UID:steal-this-story-please-20251018T150000-c07467a2f1895dfa@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Magic Hour
 DTSTART:20251018T151500
 DTEND:20251018T171500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:magic-hour-20251018T151500-c92e8ec858fe1610@wff2025
 DESCRIPTION:Q&A with filmmakers Katie Aselton and Mark Duplass.\n\nErin (d
  irector and star Katie Aselton) is on a weekend retreat in the desert with
@@ -1162,10 +1822,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ace
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Magic Hour
+DTSTART:20251018T151500
+DTEND:20251018T171500
+DTSTAMP:20251014T194349Z
+UID:magic-hour-20251018T151500-d8e9b0fc43e7a479@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Ark
 DTSTART:20251018T153000
 DTEND:20251018T173000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-ark-20251018T153000-e9b24c3447663721@wff2025
 DESCRIPTION:Q&A with Tony Castle (producer)\, Roxy Hunt (producer)\, Jerem
  y Chilnick (director)\, and Joe Vele (editor).\n\nSoon after Russia invade
@@ -1179,10 +1847,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b0a
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:THE FUTURE OF FILM - SOLUTIONS
+DTSTART:20251018T153000
+DTEND:20251018T173000
+DTSTAMP:20251014T194349Z
+UID:the-future-of-film-solutions-20251018T153000-f9c39277bc0e9510@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Ark
+DTSTART:20251018T153000
+DTEND:20251018T173000
+DTSTAMP:20251014T194349Z
+UID:the-ark-20251018T153000-195478f21df32b65@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Holding Liat
 DTSTART:20251018T154500
 DTEND:20251018T174500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:holding-liat-20251018T154500-fb0d47eef635a59a@wff2025
 DESCRIPTION:Q&A with director Brandon Kramer and producer and cinematograp
  her Yoni Brook.\n\nDuring the October 7th attack on Israel\, Liat and her 
@@ -1195,10 +1879,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b50
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Holding Liat
+DTSTART:20251018T154500
+DTEND:20251018T174500
+DTSTAMP:20251014T194349Z
+UID:holding-liat-20251018T154500-bd9c44afe85d5d08@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Keeper
 DTSTART:20251018T160000
 DTEND:20251018T180000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-keeper-20251018T160000-03c89ad60a725c0d@wff2025
 DESCRIPTION:Q&A with director Jon Bowermaster and film subject John Lipsco
  mb.\n\nNew York’s Hudson River stars in Jon Bowermaster’s environmenta
@@ -1212,10 +1904,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a32
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Keeper
+DTSTART:20251018T160000
+DTEND:20251018T180000
+DTSTAMP:20251014T194349Z
+UID:the-keeper-20251018T160000-15387cf72e45c091@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Saturday Evening Cartoons
 DTSTART:20251018T163000
 DTEND:20251018T183000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:saturday-evening-cartoons-20251018T163000-830892451af85d75@wff2025
 DESCRIPTION:With Q&A\n\nNot your average Saturday Morning Cartoons! Join u
  s for yet another spectacular lineup of animation from around the world. M
@@ -1225,10 +1925,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9c75a8a3
  bbd7d6b079d2
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Saturday Evening Cartoons
+DTSTART:20251018T163000
+DTEND:20251018T183000
+DTSTAMP:20251014T194349Z
+UID:saturday-evening-cartoons-20251018T163000-bc9d01596276d64c@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:WE'RE OUT HERE
+DTSTART:20251018T163000
+DTEND:20251018T183000
+DTSTAMP:20251014T194349Z
+UID:we-re-out-here-20251018T163000-bdaa99d6eaae8491@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Memory Lane
 DTSTART:20251018T171500
 DTEND:20251018T191500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:memory-lane-20251018T171500-900ba5f86fa3905e@wff2025
 DESCRIPTION:Q&A with writer/director Jelle de Jonge.\n\nAn unexpected lett
  er disrupts the lives of an elderly couple\, forcing them to confront what
@@ -1242,10 +1958,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a7e
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Memory Lane
+DTSTART:20251018T171500
+DTEND:20251018T191500
+DTSTAMP:20251014T194349Z
+UID:memory-lane-20251018T171500-72d4904034ecdb0a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Yes
 DTSTART:20251018T174500
 DTEND:20251018T194500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:yes-20251018T174500-3a0b0d3737afc03c@wff2025
 DESCRIPTION:Q&A with writer/director Nadav Lapid.\n\nCo-presented by Albi\
  n\nIsraeli auteur Nadav Lapid (Synonyms\, Ahed's Knee) returns with Yes\, 
@@ -1258,10 +1982,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b8c
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Yes
+DTSTART:20251018T174500
+DTEND:20251018T194500
+DTSTAMP:20251014T194349Z
+UID:yes-20251018T174500-f6396a5c0cb12953@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Hamnet
 DTSTART:20251018T180000
 DTEND:20251018T200000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:hamnet-20251018T180000-4ed09b78402f5934@wff2025
 DESCRIPTION:Kleinert/James Art Center[PANELS]\n\nTinker Street Cinema\n\nW
  oodstock Community Center[SHORTS]\n\nWoodstock Playhouse\n\nHudson Valley 
@@ -1275,7 +2007,7 @@ BEGIN:VEVENT
 SUMMARY:DUST TO MALIBU
 DTSTART:20251018T180000
 DTEND:20251018T200000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dust-to-malibu-20251018T180000-b9e5cbad53f108ea@wff2025
 DESCRIPTION:Q&A with writer/director Stephen Ward\, actor Tim Daly\, and a
  ctor/producer Shelly Gibson.\n\nAnchored by Tim Daly's brave vulnerable pe
@@ -1291,7 +2023,7 @@ BEGIN:VEVENT
 SUMMARY:Cutting Through Rocks
 DTSTART:20251018T180000
 DTEND:20251018T200000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:cutting-through-rocks-20251018T180000-696eab4ba78e7d12@wff2025
 DESCRIPTION:Q&A with executive producer Judith Helfand.\n\nAs the first el
  ected councilwoman of her Iranian village\, Sara Shahverdi aims to break l
@@ -1303,10 +2035,34 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b0f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:DUST TO MALIBU
+DTSTART:20251018T180000
+DTEND:20251018T200000
+DTSTAMP:20251014T194349Z
+UID:dust-to-malibu-20251018T180000-86f65b4731d85cec@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cutting Through Rocks
+DTSTART:20251018T180000
+DTEND:20251018T200000
+DTSTAMP:20251014T194349Z
+UID:cutting-through-rocks-20251018T180000-a47a507cb2777968@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hamnet
+DTSTART:20251018T180000
+DTEND:20251018T200000
+DTSTAMP:20251014T194349Z
+UID:hamnet-20251018T180000-68ef6cffbb48451b@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Comparsa
 DTSTART:20251018T183000
 DTEND:20251018T203000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:comparsa-20251018T183000-94c3e13c19e60582@wff2025
 DESCRIPTION:Q&A with directors Vickie Curtis & Doug Anderson\, screenwrite
  rs Lesli Canela Pérez & Lupe Pére. Moderated by Pamela Yates.\n\nAfter 4
@@ -1320,10 +2076,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b55
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Comparsa
+DTSTART:20251018T183000
+DTEND:20251018T203000
+DTSTAMP:20251014T194349Z
+UID:comparsa-20251018T183000-2a7141980339faee@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Arrest The Midwife
 DTSTART:20251018T190000
 DTEND:20251018T210000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:arrest-the-midwife-20251018T190000-d224aa40cebfee24@wff2025
 DESCRIPTION:Q&A with Elaine Epstein\, Robin Hessman\, and film participant
  s.\n\nWhen trusted midwives are arrested in a tight-knit Amish and Mennoni
@@ -1335,10 +2099,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a37
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Arrest The Midwife
+DTSTART:20251018T190000
+DTEND:20251018T210000
+DTSTAMP:20251014T194349Z
+UID:arrest-the-midwife-20251018T190000-c02341ad40877c3e@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dilated Pupils
 DTSTART:20251018T200000
 DTEND:20251018T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dilated-pupils-20251018T200000-6a5c27b3330cda9b@wff2025
 DESCRIPTION:With Q&A\n\nPulse-increasing thrillers and genre films.
 LOCATION:Woodstock Community Center
@@ -1346,10 +2118,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acb91c9de0
  d833ac8c038f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dilated Pupils
+DTSTART:20251018T200000
+DTEND:20251018T220000
+DTSTAMP:20251014T194349Z
+UID:dilated-pupils-20251018T200000-f96e6ff38f50a096@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Secret Agent
 DTSTART:20251018T201500
 DTEND:20251018T221500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-secret-agent-20251018T201500-49d12a9a7969a8b4@wff2025
 DESCRIPTION:Kleber Mendonça Filho’s political thriller is set in 1970s 
  Brazil during the dictatorship. Leading actor Wagner Moura (Civil War) shi
@@ -1362,10 +2142,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a83
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Secret Agent
+DTSTART:20251018T201500
+DTEND:20251018T221500
+DTSTAMP:20251014T194349Z
+UID:the-secret-agent-20251018T201500-5351a44fefd37cd0@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Jay Kelly
 DTSTART:20251018T204500
 DTEND:20251018T224500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:jay-kelly-20251018T204500-a3239d0802cbd977@wff2025
 DESCRIPTION:In Noah Baumbach's newest film\, famous movie actor Jay Kelly 
  (George Clooney) embarks on a journey of self discovery confronting both h
@@ -1380,7 +2168,7 @@ BEGIN:VEVENT
 SUMMARY:Dust Bunny
 DTSTART:20251018T204500
 DTEND:20251018T224500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dust-bunny-20251018T204500-c57785315390aefc@wff2025
 DESCRIPTION:In this nightmarish coming-of-age fantasy\, a girl suspects a 
  giant bunny devoured her adoptive parents. With her hitman neighbor\, she 
@@ -1397,7 +2185,7 @@ BEGIN:VEVENT
 SUMMARY:THE VOICE OF HIND RAJAB
 DTSTART:20251018T204500
 DTEND:20251018T224500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-voice-of-hind-rajab-20251018T204500-0bfff4f50d2ee2c7@wff2025
 DESCRIPTION:January 29\, 2024. Red Crescent volunteers receive an emergenc
  y call. A 6-year old girl is trapped in a car under fire in Gaza\, pleadin
@@ -1408,10 +2196,34 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b5a
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dust Bunny
+DTSTART:20251018T204500
+DTEND:20251018T224500
+DTSTAMP:20251014T194349Z
+UID:dust-bunny-20251018T204500-6a79c25f8a04b853@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:THE VOICE OF HIND RAJAB
+DTSTART:20251018T204500
+DTEND:20251018T224500
+DTSTAMP:20251014T194349Z
+UID:the-voice-of-hind-rajab-20251018T204500-322b7483172d3bfa@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jay Kelly
+DTSTART:20251018T204500
+DTEND:20251018T224500
+DTSTAMP:20251014T194349Z
+UID:jay-kelly-20251018T204500-ce38ee320646a94e@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sentimental Value
 DTSTART:20251018T210000
 DTEND:20251018T230000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:sentimental-value-20251018T210000-3fcb901001060caf@wff2025
 DESCRIPTION:Joachim Trier (The Worst Person in the World) has led Norway
  ’s global cinema wave. His Cannes Grand Prix winnerSentimental Valuereun
@@ -1426,7 +2238,7 @@ BEGIN:VEVENT
 SUMMARY:Maverick Awards
 DTSTART:20251018T210000
 DTEND:20251018T230000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:maverick-awards-20251018T210000-0a5f57f785544894@wff2025
 DESCRIPTION:The Woodstock Film Festival will introduce the inauguralLauren
  t Rejto Made in the Hudson Valley Award. Named in tribute to the late Rejt
@@ -1467,10 +2279,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c98cfe390b
  2e0575d6046d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sentimental Value
+DTSTART:20251018T210000
+DTEND:20251018T230000
+DTSTAMP:20251014T194349Z
+UID:sentimental-value-20251018T210000-84fcb977a101a689@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Maverick Awards
+DTSTART:20251018T210000
+DTEND:20251018T230000
+DTSTAMP:20251014T194349Z
+UID:maverick-awards-20251018T210000-b350f08c98aa6087@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:MAN ON THE RUN
 DTSTART:20251018T211500
 DTEND:20251018T231500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:man-on-the-run-20251018T211500-b1b5de665b1c9e8d@wff2025
 DESCRIPTION:Man On The Runtakes viewers on an intimate journey through Pau
  l McCartney's extraordinary life following the breakup of The Beatles and 
@@ -1483,10 +2311,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a3c
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:MAN ON THE RUN
+DTSTART:20251018T211500
+DTEND:20251018T231500
+DTSTAMP:20251014T194349Z
+UID:man-on-the-run-20251018T211500-e5c958f673ee0363@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Our Girls
 DTSTART:20251019T100000
 DTEND:20251019T120000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:our-girls-20251019T100000-db4b1912afee6dca@wff2025
 DESCRIPTION:Q&A with writer/director Mike van Diem\n\nDuring an idyllic ho
  liday in the Austrian Alps\, the long- standing friendship between two cou
@@ -1499,10 +2335,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277add
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:ACTOR'S DIALOGUE
+DTSTART:20251019T100000
+DTEND:20251019T120000
+DTSTAMP:20251014T194349Z
+UID:actor-s-dialogue-20251019T100000-4f7cc4b847e39a9d@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Our Girls
+DTSTART:20251019T100000
+DTEND:20251019T120000
+DTSTAMP:20251014T194349Z
+UID:our-girls-20251019T100000-1e840219325292f0@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Remaining Native
 DTSTART:20251019T101500
 DTEND:20251019T121500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:remaining-native-20251019T101500-941e987c85fb5427@wff2025
 DESCRIPTION:Q&A with producer Jessica Epstein.\n\nKu Stevens is the fastes
  t 17-year-old cross-country runner in Nevada. While training for recruitme
@@ -1518,7 +2370,7 @@ BEGIN:VEVENT
 SUMMARY:Teen Shorts + Youth Film Lab
 DTSTART:20251019T101500
 DTEND:20251019T121500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:teen-shorts-youth-film-lab-20251019T101500-1d9c28b7ec7f19a9@wff2025
 DESCRIPTION:View documentary and narrative films by tomorrow's filmmakers.
 LOCATION:Woodstock Community Center
@@ -1526,10 +2378,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9fbb1ad4
  10f8abbf7aa5
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Teen Shorts + Youth Film Lab
+DTSTART:20251019T101500
+DTEND:20251019T121500
+DTSTAMP:20251014T194349Z
+UID:teen-shorts-youth-film-lab-20251019T101500-a741af2328ee7f4a@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Remaining Native
+DTSTART:20251019T101500
+DTEND:20251019T121500
+DTSTAMP:20251014T194349Z
+UID:remaining-native-20251019T101500-637de40a0583503b@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Selena y Los Dinos
 DTSTART:20251019T110000
 DTEND:20251019T130000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:selena-y-los-dinos-20251019T110000-963698f4fa641889@wff2025
 DESCRIPTION:Q&A with Isabel Castro (director)\, Julie Goldman (producer)\,
   Christopher Clements (producer)\, and Daniel Torres (producer). Courtesy 
@@ -1544,10 +2412,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b19
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Selena y Los Dinos
+DTSTART:20251019T110000
+DTEND:20251019T130000
+DTSTAMP:20251014T194349Z
+UID:selena-y-los-dinos-20251019T110000-bbd0ea9d2438f1bd@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Is This Thing On?
 DTSTART:20251019T111500
 DTEND:20251019T131500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:is-this-thing-on-20251019T111500-a453a0e5ab7263e6@wff2025
 DESCRIPTION:As their marriage quietly unravels\, Alex (Will Arnett) faces 
  middle age and an impending divorce\, seeking new purpose in the New York 
@@ -1562,7 +2438,7 @@ BEGIN:VEVENT
 SUMMARY:Hamnet
 DTSTART:20251019T111500
 DTEND:20251019T131500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:hamnet-20251019T111500-0652df5a9e16b982@wff2025
 DESCRIPTION:From Academy Award® winning writer/director Chloé Zhao (Noma
  dland\, The Rider)\, Hamnet tells the powerful story of love and loss that
@@ -1573,10 +2449,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b5f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Hamnet
+DTSTART:20251019T111500
+DTEND:20251019T131500
+DTSTAMP:20251014T194349Z
+UID:hamnet-20251019T111500-d1038031fd313104@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Is This Thing On?
+DTSTART:20251019T111500
+DTEND:20251019T131500
+DTSTAMP:20251014T194349Z
+UID:is-this-thing-on-20251019T111500-cfc2ae6ad7124cf0@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Floating Carousel
 DTSTART:20251019T113000
 DTEND:20251019T133000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:floating-carousel-20251019T113000-918a9633d8cdb670@wff2025
 DESCRIPTION:Q&A with filmmakers Delilah Napier & Lucy Powers.\n\nTwo young
   women\, a sugar daddy\, a jealous boyfriend\, a cuddler\, and a gay cabar
@@ -1588,10 +2480,27 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a88
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Floating Carousel
+DTSTART:20251019T113000
+DTEND:20251019T133000
+DTSTAMP:20251014T194349Z
+UID:floating-carousel-20251019T113000-a92c7bf486b6cecc@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Barbara Kopple and David Amram on Scoring Films
+DTSTART:20251019T120000
+DTEND:20251019T140000
+DTSTAMP:20251014T194349Z
+UID:barbara-kopple-and-david-amram-20251019T120000-5f6d1daec2f4bbe8@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:A People's Archive
 DTSTART:20251019T124500
 DTEND:20251019T144500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:a-people-s-archive-20251019T124500-798e44dada9d4b24@wff2025
 DESCRIPTION:Powerful documentaries that follow the transformative journeys
   of communities pursuing justice\, accountability and the truth of their o
@@ -1601,10 +2510,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68acb984f86d
  59fa8686a079
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:A People's Archive
+DTSTART:20251019T124500
+DTEND:20251019T144500
+DTSTAMP:20251014T194349Z
+UID:a-people-s-archive-20251019T124500-6b4abee82869d77f@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:STARMAN
 DTSTART:20251019T130000
 DTEND:20251019T150000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:starman-20251019T130000-a5f815120cf0c2dc@wff2025
 DESCRIPTION:Q&A with director Robert Stone.\n\nYou won't find a more dynam
  ic documentary subject than NASA robotics engineer turned best-selling sci
@@ -1619,7 +2536,7 @@ BEGIN:VEVENT
 SUMMARY:Franz
 DTSTART:20251019T130000
 DTEND:20251019T150000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:franz-20251019T130000-268b1382c35b4b97@wff2025
 DESCRIPTION:Award-winning director Agnieszka Holland is embarking on her m
  ost ambitious project to date\, a biopic of the iconic 20th-century Czech 
@@ -1632,10 +2549,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ae2
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:STARMAN
+DTSTART:20251019T130000
+DTEND:20251019T150000
+DTSTAMP:20251014T194349Z
+UID:starman-20251019T130000-a66089d348cccbdb@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Franz
+DTSTART:20251019T130000
+DTEND:20251019T150000
+DTSTAMP:20251014T194349Z
+UID:franz-20251019T130000-db3608d3368069c1@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Perfect Neighbor
 DTSTART:20251019T140000
 DTEND:20251019T160000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-perfect-neighbor-20251019T140000-3eb00f2e4d2f729c@wff2025
 DESCRIPTION:Using bodycam footage from dozens of police visits\, The Perfe
  ct Neighbor bears witness to a tight-knit community navigating one neighbo
@@ -1646,10 +2579,27 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b1e
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:STATE OF THE ARTIST: HOW ART IS SHAKING COLLECTIVE CONSCIOUSNESS
+DTSTART:20251019T140000
+DTEND:20251019T160000
+DTSTAMP:20251014T194349Z
+UID:state-of-the-artist-how-art-is-20251019T140000-b42e9a473017ae67@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Perfect Neighbor
+DTSTART:20251019T140000
+DTEND:20251019T160000
+DTSTAMP:20251014T194349Z
+UID:the-perfect-neighbor-20251019T140000-b70f0f64432829e4@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:MAN ON THE RUN
 DTSTART:20251019T141500
 DTEND:20251019T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:man-on-the-run-20251019T141500-fcf83ed0273cfed3@wff2025
 DESCRIPTION:Man On The Runtakes viewers on an intimate journey through Pau
  l McCartney's extraordinary life following the breakup of The Beatles and 
@@ -1665,7 +2615,7 @@ BEGIN:VEVENT
 SUMMARY:Nuremberg
 DTSTART:20251019T141500
 DTEND:20251019T161500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:nuremberg-20251019T141500-35989a386719f7f3@wff2025
 DESCRIPTION:The Allies\, led by the unyielding chief prosecutor Robert H. 
  Jackson (Michael Shannon)\, have the task of ensuring the Nazi regime answ
@@ -1677,11 +2627,27 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a8d
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:MAN ON THE RUN
+DTSTART:20251019T141500
+DTEND:20251019T161500
+DTSTAMP:20251014T194349Z
+UID:man-on-the-run-20251019T141500-1ec47baa77620b85@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuremberg
+DTSTART:20251019T141500
+DTEND:20251019T161500
+DTSTAMP:20251014T194349Z
+UID:nuremberg-20251019T141500-f613b31d2dd7e03e@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:RESTORING A LEGACY / "The Struggle Against Terrorism" by Philip Gu
  ston
 DTSTART:20251019T143000
 DTEND:20251019T163000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:restoring-a-legacy-the-struggl-20251019T143000-a211c0eab71c4ee3@wff202
  5
 DESCRIPTION:Join us for a screening ofRestoring A Legacy: "The Struggle Ag
@@ -1711,10 +2677,20 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=6890dda6a201
  e29119c1b0d2
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:RESTORING A LEGACY / "The Struggle Against Terrorism" by Philip Gu
+ ston
+DTSTART:20251019T143000
+DTEND:20251019T163000
+DTSTAMP:20251014T194349Z
+UID:restoring-a-legacy-the-struggl-20251019T143000-463eff5351c68a2e@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cover-Up
 DTSTART:20251019T153000
 DTEND:20251019T173000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:cover-up-20251019T153000-8cd5b6986479ca5a@wff2025
 DESCRIPTION:Q&A with Laura Poitras and Olivia Streisand.\n\nCover-Upis a p
  olitical thriller that traces the explosive career of Pulitzer Prize-winni
@@ -1727,10 +2703,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a4b
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cover-Up
+DTSTART:20251019T153000
+DTEND:20251019T173000
+DTSTAMP:20251014T194349Z
+UID:cover-up-20251019T153000-a03816cb6cb58cf4@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:On the End
 DTSTART:20251019T160000
 DTEND:20251019T180000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:on-the-end-20251019T160000-d0926220d6ce4c82@wff2025
 DESCRIPTION:Q&A with director Ari Selinger and star Tim Blake Nelson.\n\nA
   curmudgeon Montauk local (Tim Blake Nelson) is a hoarding mechanic with a
@@ -1743,10 +2727,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277ae7
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:On the End
+DTSTART:20251019T160000
+DTEND:20251019T180000
+DTSTAMP:20251014T194349Z
+UID:on-the-end-20251019T160000-68444d4ce14fe384@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Coming of Age
 DTSTART:20251019T161500
 DTEND:20251019T181500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:coming-of-age-20251019T161500-9ae4834e89cffcfe@wff2025
 DESCRIPTION:With Q&A\n\nGenuine and heart-wrenching shorts for when we lea
  rn all the important truths of being human.
@@ -1755,10 +2747,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9e3fcd06
  7964e9dc380a
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Coming of Age
+DTSTART:20251019T161500
+DTEND:20251019T181500
+DTSTAMP:20251014T194349Z
+UID:coming-of-age-20251019T161500-509bd2d967dbb595@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:THE PLAGUE
 DTSTART:20251019T164500
 DTEND:20251019T184500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-plague-20251019T164500-7573116b4e8394a4@wff2025
 DESCRIPTION:Q&A with director Charlie Polinger and producer Lizzie Shapiro
  .\n\nCharlie Polinger's Cannes debut is a playful yet darkly humorous comi
@@ -1771,10 +2771,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b69
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:THE PLAGUE
+DTSTART:20251019T164500
+DTEND:20251019T184500
+DTSTAMP:20251014T194349Z
+UID:the-plague-20251019T164500-4cbbe7b23d092509@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:CHRISTY
 DTSTART:20251019T170000
 DTEND:20251019T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:christy-20251019T170000-20585e1b11f387c5@wff2025
 DESCRIPTION:Based on remarkable true events\, David Michôd’s (The Rover
  \, Animal Kingdom) latest film follows boxer Christy Martin (Sydney Sweene
@@ -1791,7 +2799,7 @@ BEGIN:VEVENT
 SUMMARY:Steal This Story\, Please!
 DTSTART:20251019T170000
 DTEND:20251019T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:steal-this-story-please-20251019T170000-3599ae8af1daf6cd@wff2025
 DESCRIPTION:Q&A with filmmakers Tia Lessin and Carl Deal\, Amy Goodman (su
  bject)\, and producer Karen Ranucci.\n\nModerated by filmmakerYoruba Riche
@@ -1809,7 +2817,7 @@ BEGIN:VEVENT
 SUMMARY:The Lure of Ponies - a spellbound attic mystery
 DTSTART:20251019T170000
 DTEND:20251019T190000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-lure-of-ponies-a-spellboun-20251019T170000-914b1b1d5652e866@wff202
  5
 DESCRIPTION:Q&A with director Beck Underwood.\n\nSet in an attic populated
@@ -1822,10 +2830,35 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b91
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Steal This Story\, Please!
+DTSTART:20251019T170000
+DTEND:20251019T190000
+DTSTAMP:20251014T194349Z
+UID:steal-this-story-please-20251019T170000-e182e15f6d11c9fc@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Lure of Ponies - a spellbound attic mystery
+DTSTART:20251019T170000
+DTEND:20251019T190000
+DTSTAMP:20251014T194349Z
+UID:the-lure-of-ponies-a-spellboun-20251019T170000-035b8571b4220025@wff202
+ 5
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CHRISTY
+DTSTART:20251019T170000
+DTEND:20251019T190000
+DTSTAMP:20251014T194349Z
+UID:christy-20251019T170000-641589321dec3487@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rental Family
 DTSTART:20251019T174500
 DTEND:20251019T194500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:rental-family-20251019T174500-67b2d0423b7e0719@wff2025
 DESCRIPTION:Set against modern-day Tokyo\, RENTAL FAMILY follows an Americ
  an actor (Brendan Fraser) who struggles to find purpose until he lands an 
@@ -1837,10 +2870,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a92
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Rental Family
+DTSTART:20251019T174500
+DTEND:20251019T194500
+DTSTAMP:20251014T194349Z
+UID:rental-family-20251019T174500-6de67c33de195fd3@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The Ark
 DTSTART:20251019T190000
 DTEND:20251019T210000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-ark-20251019T190000-0796635064bafba1@wff2025
 DESCRIPTION:Q&A with Tony Castle (producer)\, Roxy Hunt (producer)\, Jerem
  y Chilnick (director)\, and Joe Vele (editor).\n\nSoon after Russia invade
@@ -1854,10 +2895,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a50
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The Ark
+DTSTART:20251019T190000
+DTEND:20251019T210000
+DTSTAMP:20251014T194349Z
+UID:the-ark-20251019T190000-c56d2832165cef03@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Yes
 DTSTART:20251019T191500
 DTEND:20251019T211500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:yes-20251019T191500-5641d915b6d526cf@wff2025
 DESCRIPTION:Q&A with writer/director Nadav Lapid.\n\nCo-presented by Albi\
  n\nIsraeli auteur Nadav Lapid (Synonyms\, Ahed's Knee) returns with Yes\, 
@@ -1873,7 +2922,7 @@ BEGIN:VEVENT
 SUMMARY:The Keeper
 DTSTART:20251019T191500
 DTEND:20251019T211500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:the-keeper-20251019T191500-3cf258e9962caa36@wff2025
 DESCRIPTION:Q&A with director Jon Bowermaster and film subject John Lipsco
  mb.\n\nNew York’s Hudson River stars in Jon Bowermaster’s environmenta
@@ -1887,10 +2936,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b96
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Yes
+DTSTART:20251019T191500
+DTEND:20251019T211500
+DTSTAMP:20251014T194349Z
+UID:yes-20251019T191500-22fd5b53b5896e66@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Keeper
+DTSTART:20251019T191500
+DTEND:20251019T211500
+DTSTAMP:20251014T194349Z
+UID:the-keeper-20251019T191500-93c79b8c597ce304@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Jay Kelly
 DTSTART:20251019T194500
 DTEND:20251019T214500
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:jay-kelly-20251019T194500-cc1eff70ded53347@wff2025
 DESCRIPTION:In Noah Baumbach's newest film\, famous movie actor Jay Kelly 
  (George Clooney) embarks on a journey of self discovery confronting both h
@@ -1902,10 +2967,18 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277b6e
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Jay Kelly
+DTSTART:20251019T194500
+DTEND:20251019T214500
+DTSTAMP:20251014T194349Z
+UID:jay-kelly-20251019T194500-e2538c030fcb7da5@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:HEDDA
 DTSTART:20251019T200000
 DTEND:20251019T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:hedda-20251019T200000-1e8af33c0614e397@wff2025
 DESCRIPTION:Nia DaCosta's bold adaptation of Ibsen's Hedda Gabler is fast-
  paced\, sexy\, and glamorously dark. Tessa Thompson plays a larger-than-li
@@ -1921,7 +2994,7 @@ BEGIN:VEVENT
 SUMMARY:Dust Bunny
 DTSTART:20251019T200000
 DTEND:20251019T220000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dust-bunny-20251019T200000-a3b6baef9825839e@wff2025
 DESCRIPTION:In this nightmarish coming-of-age fantasy\, a girl suspects a 
  giant bunny devoured her adoptive parents. With her hitman neighbor\, she 
@@ -1935,10 +3008,26 @@ URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68c821f87534
  73748e277a97
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:HEDDA
+DTSTART:20251019T200000
+DTEND:20251019T220000
+DTSTAMP:20251014T194349Z
+UID:hedda-20251019T200000-fbce73875e5879d9@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dust Bunny
+DTSTART:20251019T200000
+DTEND:20251019T220000
+DTSTAMP:20251014T194349Z
+UID:dust-bunny-20251019T200000-6d10263deac6958d@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dead Man's Wire
 DTSTART:20251019T203000
 DTEND:20251019T223000
-DTSTAMP:20251014T172557Z
+DTSTAMP:20251014T194349Z
 UID:dead-man-s-wire-20251019T203000-628ecf4b6d067363@wff2025
 DESCRIPTION:InDead Man’s Wire\, Gus Van Sant dramatizes Tony Kritsis’s
   1977 Indianapolis hostage crisis\, where a failed real-estate mogul seize
@@ -1949,5 +3038,13 @@ DESCRIPTION:InDead Man’s Wire\, Gus Van Sant dramatizes Tony Kritsis’s
 LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68d6e6cf94d0
  1c53551b143f
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dead Man's Wire
+DTSTART:20251019T203000
+DTEND:20251019T223000
+DTSTAMP:20251014T194349Z
+UID:dead-man-s-wire-20251019T203000-df01016f9a7f9e78@wff2025
+URL:https://woodstockfilmfestival.org/2025-all-events-1
 END:VEVENT
 END:VCALENDAR

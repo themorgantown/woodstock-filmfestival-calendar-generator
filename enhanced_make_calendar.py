@@ -50,6 +50,9 @@ YEAR = 2025
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 MIN_REASONABLE_EVENTS = 10
+MAX_DETAIL_PAGE_ENHANCEMENTS = 50  # Limit detail page fetches to be respectful
+VENUE_PAGE_DELAY = 2  # Seconds between venue page requests
+DETAIL_PAGE_DELAY = 0.5  # Seconds between detail page requests
 
 # Venue mapping from URL suffix to proper venue name
 VENUE_MAPPING = {
@@ -80,13 +83,23 @@ class WoodstockEventScraper:
     def discover_venue_urls(self) -> List[str]:
         """Extract venue URLs from sitemap.xml"""
         try:
-            if not Path(SITEMAP_FILE).exists():
-                logger.warning(f"Sitemap file {SITEMAP_FILE} not found, using fallback URLs")
-                return self._get_fallback_venue_urls()
-            
-            # Read and clean the XML content
-            with open(SITEMAP_FILE, 'r', encoding='utf-8') as f:
-                content = f.read()
+            # Try to fetch sitemap from website first
+            sitemap_url = f"{BASE_URL}/sitemap.xml"
+            try:
+                logger.info(f"Fetching sitemap from {sitemap_url}")
+                response = self.session.get(sitemap_url, timeout=10)
+                response.raise_for_status()
+                content = response.text
+            except Exception as e:
+                logger.warning(f"Could not fetch sitemap from web: {e}")
+                # Fall back to local file if it exists
+                if Path(SITEMAP_FILE).exists():
+                    logger.info(f"Using local sitemap file {SITEMAP_FILE}")
+                    with open(SITEMAP_FILE, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                else:
+                    logger.warning(f"No local sitemap file found, using fallback URLs")
+                    return self._get_fallback_venue_urls()
             
             # Remove the comment line at the top if present
             lines = content.split('\n')
@@ -232,6 +245,7 @@ class WoodstockEventScraper:
         
         logger.info(f"Found {len(cards)} event cards on {source_url}")
         
+        duplicates_skipped = 0
         for card in cards:
             event_data = self._extract_event_from_card(card, source_url)
             if event_data and event_data.get('title') and event_data.get('start'):
@@ -240,6 +254,12 @@ class WoodstockEventScraper:
                 if event_id not in self.processed_event_ids:
                     events.append(event_data)
                     self.processed_event_ids.add(event_id)
+                else:
+                    duplicates_skipped += 1
+                    logger.debug(f"Skipping duplicate event: {event_data.get('title')} at {event_data.get('start')}")
+        
+        if duplicates_skipped > 0:
+            logger.info(f"Skipped {duplicates_skipped} duplicate events from {source_url}")
         
         return events
     
@@ -516,7 +536,7 @@ class WoodstockEventScraper:
                 if venue_text and len(venue_text) < 200:  # Reasonable venue name length
                     event['venue'] = venue_text
             
-            time.sleep(0.5)  # Rate limiting
+            time.sleep(DETAIL_PAGE_DELAY)  # Rate limiting
             
         except Exception as e:
             logger.error(f"Error enhancing event with detail page {detail_url}: {e}")
@@ -585,26 +605,33 @@ class WoodstockEventScraper:
                 continue
             
             # Rate limiting between requests
-            time.sleep(2)
+            time.sleep(VENUE_PAGE_DELAY)
         
-        logger.info(f"Found {len(all_events)} total events before enhancement")
+        logger.info(f"Found {len(all_events)} unique events after deduplication")
         
         # Enhance selected events with detail pages (limit to avoid overload)
         events_with_detail_urls = [e for e in all_events if e.get('url') and 'eventId=' in e.get('url', '')]
-        logger.info(f"Enhancing {len(events_with_detail_urls)} events with detail pages...")
+        logger.info(f"Enhancing up to {MAX_DETAIL_PAGE_ENHANCEMENTS} events with detail pages (found {len(events_with_detail_urls)} eligible)...")
         
         enhanced_events = []
-        for i, event in enumerate(all_events):
-            if event.get('url') and 'eventId=' in event.get('url', '') and i < 50:  # Limit enhancement
+        enhancements_done = 0
+        for event in all_events:
+            if (event.get('url') and 'eventId=' in event.get('url', '') and 
+                enhancements_done < MAX_DETAIL_PAGE_ENHANCEMENTS):
                 enhanced_event = self.enhance_event_with_detail_page(event)
                 enhanced_events.append(enhanced_event)
+                enhancements_done += 1
             else:
                 enhanced_events.append(event)
         
         # Sort by date
         enhanced_events.sort(key=lambda x: x['start'])
         
-        logger.info(f"Completed scraping with {len(enhanced_events)} final events")
+        # Log summary
+        total_cards_found = sum(1 for _ in self.processed_event_ids)
+        logger.info(f"Completed scraping with {len(enhanced_events)} unique events")
+        logger.info(f"Deduplication: Processed {total_cards_found} event IDs across all venues")
+        
         return enhanced_events
     
     def run_scraping_job(self):

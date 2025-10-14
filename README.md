@@ -2,6 +2,22 @@
 
 Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours.
 
+## How to use
+
+You can subscribe to this url using the following ics file:
+
+`https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics`
+
+![Add to Calendar](calendar_add.png)
+
+Or:
+
+1. Download the `.ics` file using the link above
+2. Import it into your preferred calendar application:
+   - **Apple Calendar**: File → Import
+   - **Google Calendar**: Settings → Import & Export → Import
+   - **Outlook**: File → Open & Export → Import/Export
+
 **[Download Latest Calendar (ICS file)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics)**
 
 Right-click and "Save Link As..." or click to open directly in your calendar application.
@@ -19,21 +35,6 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 
 This scraper does not use more than a single-person's bandwidth. It is intentionally slow to avoid overloading the festival's website.
 
-## How to use
-
-You can subscribe to this url using the following ics file:
-
-`https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics`
-
-![Add to Calendar](calendar_add.png)
-
-Or:
-
-1. Download the `.ics` file using the link above
-2. Import it into your preferred calendar application:
-   - **Apple Calendar**: File → Import
-   - **Google Calendar**: Settings → Import & Export → Import
-   - **Outlook**: File → Open & Export → Import/Export
 
 ## Updates
 

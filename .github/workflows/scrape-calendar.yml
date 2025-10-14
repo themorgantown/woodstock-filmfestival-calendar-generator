@@ -1,0 +1,52 @@
+name: Scrape Woodstock Calendar
+
+on:
+  schedule:
+    # Run every 6 hours (at 00:00, 06:00, 12:00, and 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.0.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install --with-deps chromium
+
+      - name: Run calendar scraper
+        run: |
+          python enhanced_make_calendar.py
+
+      - name: Upload calendar artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: wff-calendar-${{ github.run_number }}
+          path: |
+            wff_2025_complete.ics
+            wff_calendar.log
+          retention-days: 30
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add wff_2025_complete.ics wff_calendar.log
+          git diff --staged --quiet || git commit -m "Update calendar data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+        continue-on-error: true

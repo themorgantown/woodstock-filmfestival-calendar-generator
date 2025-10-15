@@ -57,7 +57,7 @@ DETAIL_PAGE_DELAY = 0.5  # Seconds between detail page requests
 # Venue mapping from URL suffix to proper venue name
 VENUE_MAPPING = {
     "bearsville": "Bearsville Theater",
-    "woodstock-playhouse": "Woodstock Playhouse", 
+    "woodstock-playhouse": "Woodstock Playhouse",
     "tinker-street-cinema": "Tinker Street Cinema",
     "orpheum": "Orpheum Theatre",
     "upstate-midtown": "Upstate Midtown",
@@ -65,9 +65,8 @@ VENUE_MAPPING = {
     "assembly": "Assembly",
     "wcc": "Woodstock Community Center [SHORTS]",
     "colony": "Colony",
-    "kleinert-james": "Kleinert/James Art Center [PANELS]",
     "hvlgbtq": "Hudson Valley LGBTQ+ Community Center",
-    "broken-wing-barn": "Broken Wing Barn at White Feather Farm",
+    "special-events": "2025 Special Events",
 }
 
 class WoodstockEventScraper:
@@ -81,69 +80,27 @@ class WoodstockEventScraper:
         self.processed_event_ids: Set[str] = set()
         
     def discover_venue_urls(self) -> List[str]:
-        """Extract venue URLs from sitemap.xml"""
-        try:
-            # Try to fetch sitemap from website first
-            sitemap_url = f"{BASE_URL}/sitemap.xml"
-            try:
-                logger.info(f"Fetching sitemap from {sitemap_url}")
-                response = self.session.get(sitemap_url, timeout=10)
-                response.raise_for_status()
-                content = response.text
-            except Exception as e:
-                logger.warning(f"Could not fetch sitemap from web: {e}")
-                # Fall back to local file if it exists
-                if Path(SITEMAP_FILE).exists():
-                    logger.info(f"Using local sitemap file {SITEMAP_FILE}")
-                    with open(SITEMAP_FILE, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                else:
-                    logger.warning(f"No local sitemap file found, using fallback URLs")
-                    return self._get_fallback_venue_urls()
-            
-            # Remove the comment line at the top if present
-            lines = content.split('\n')
-            xml_start = 0
-            for i, line in enumerate(lines):
-                if line.strip().startswith('<urlset'):
-                    xml_start = i
-                    break
-            
-            clean_content = '\n'.join(lines[xml_start:])
-            root = ET.fromstring(clean_content)
-            
-            # Extract URLs matching the venue pattern
-            venue_urls = []
-            ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-            
-            for url_elem in root.findall('.//ns:url', ns):
-                loc_elem = url_elem.find('ns:loc', ns)
-                if loc_elem is not None and loc_elem.text:
-                    url = loc_elem.text.strip()
-                    if '/2025-all-events' in url and url != f"{BASE_URL}/2025-all-events":
-                        venue_urls.append(url)
-            
-            # Don't include the main events page per user request
-                
-            logger.info(f"Discovered {len(venue_urls)} venue URLs from sitemap")
-            return venue_urls
-            
-        except Exception as e:
-            logger.error(f"Error parsing sitemap: {e}")
-            return self._get_fallback_venue_urls()
-    
-    def _get_fallback_venue_urls(self) -> List[str]:
-        """Fallback venue URLs if sitemap parsing fails - exclude main page per user request"""
-        return [
-            f"{BASE_URL}/2025-all-events-bearsville",
-            f"{BASE_URL}/2025-all-events-woodstock-playhouse", 
-            f"{BASE_URL}/2025-all-events-tinker-street-cinema",
-            f"{BASE_URL}/2025-all-events-orpheum",
-            f"{BASE_URL}/2025-all-events-upstate-midtown",
-            f"{BASE_URL}/2025-all-events-rosendale",
-            f"{BASE_URL}/2025-all-events-assembly",
-            f"{BASE_URL}/2025-all-events-wcc",
+        """Generate venue URLs from VENUE_MAPPING - venues are static"""
+        venue_urls = []
+        
+        # Generate standard venue URLs with /2025-all-events- prefix
+        for suffix in VENUE_MAPPING.keys():
+            # Skip the special ones that don't follow the pattern
+            if suffix in ['panels', 'shorts', 'special-events']:
+                continue
+            venue_urls.append(f"{BASE_URL}/2025-all-events-{suffix}")
+        
+        # Add custom URLs that don't follow the standard pattern
+        custom_urls = [
+            f"{BASE_URL}/2025-panels",
+            f"{BASE_URL}/2025-shorts",
+            f"{BASE_URL}/2025-special-events",
+            f"{BASE_URL}/2025-all-white-feather-farm"
         ]
+        venue_urls.extend(custom_urls)
+        
+        logger.info(f"Generated {len(venue_urls)} venue URLs ({len(venue_urls) - len(custom_urls)} standard + {len(custom_urls)} custom)")
+        return venue_urls
     
     def fetch_page_content(self, url: str, use_playwright: bool = False) -> Optional[str]:
         """Fetch page content, optionally using Playwright for JS rendering"""
@@ -193,12 +150,12 @@ class WoodstockEventScraper:
                     raise e
             finally:
                 browser.close()
-    
+
     def extract_events_from_page(self, html: str, source_url: str) -> List[Dict]:
         """Extract events from a venue page"""
         if not html:
             return []
-            
+
         soup = BeautifulSoup(html, 'lxml')
         events = []
         
@@ -242,7 +199,7 @@ class WoodstockEventScraper:
                             logger.info(f"DEBUG: Element {i+1} classes: {list(classes) if hasattr(classes, '__iter__') else [str(classes)]}")
                         else:
                             logger.info(f"DEBUG: Element {i+1} has no class attribute")
-        
+
         logger.info(f"Found {len(cards)} event cards on {source_url}")
         
         duplicates_skipped = 0
@@ -344,8 +301,16 @@ class WoodstockEventScraper:
                     if text and text.startswith('Venue:'):
                         break
                     
+                    # Stop when we hit an empty paragraph (common separator)
+                    if not text:
+                        break
+                    
                     # Add non-empty paragraphs that aren't venue info
-                    if text and 'Venue:' not in text:
+                    # Filter out image-only paragraphs and venue info
+                    if (text and 
+                        'Venue:' not in text and 
+                        not text.startswith('Moderator:') and  # Keep moderator info
+                        len(text) > 20):  # Skip very short paragraphs that are likely formatting
                         description_parts.append(text)
                         
                 current_elem = current_elem.next_sibling
@@ -384,6 +349,15 @@ class WoodstockEventScraper:
     
     def _infer_venue_from_url(self, url: str) -> str:
         """Infer venue name from URL pattern"""
+        # Check for custom URLs first (exact match)
+        if url.endswith('/2025-panels'):
+            return "2025 Panels"
+        elif url.endswith('/2025-shorts'):
+            return "2025 Shorts"
+        elif url.endswith('/2025-special-events'):
+            return "2025 Special Events"
+        
+        # Standard pattern matching
         for suffix, venue_name in VENUE_MAPPING.items():
             if f"-{suffix}" in url or url.endswith(suffix):
                 return venue_name
@@ -482,6 +456,26 @@ class WoodstockEventScraper:
             event_data.get('venue', ''),
         ]
         return hashlib.md5('|'.join(str(p) for p in key_parts).encode()).hexdigest()
+    
+    def _get_custom_events(self) -> List[Dict]:
+        """Return list of custom hardcoded events that should be added to the calendar"""
+        custom_events = []
+        
+        # Colony - A BREAK IN THE RAIN
+        try:
+            custom_events.append({
+                'title': 'A BREAK IN THE RAIN',
+                'start': datetime(2025, 10, 15, 19, 0),  # 10/15 7:00 PM
+                'venue': 'Colony',
+                'description': "Jake Watson has been on the road for ten years since his wife passed away. When his grown son dies, he comes home to a life he walked out on. A stranger in his own house, he takes a job driving a limo to help his daughter-in-law pay the bills. One rainy afternoon he picks up Catriona Walsh, a Nashville singer with her own secret. One ride becomes a two week road trip. Catriona sets his poems to music, and Jake begins to heal, as they both find their way home.",
+                'url': 'https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e',
+                'source_url': 'https://woodstockfilmfestival.org/2025-all-events-colony'
+            })
+            logger.info("Added custom event: A BREAK IN THE RAIN at Colony")
+        except Exception as e:
+            logger.error(f"Error creating custom event: {e}")
+        
+        return custom_events
     
     def enhance_event_with_detail_page(self, event: Dict) -> Dict:
         """Fetch event detail page for enhanced information"""
@@ -608,6 +602,12 @@ class WoodstockEventScraper:
             time.sleep(VENUE_PAGE_DELAY)
         
         logger.info(f"Found {len(all_events)} unique events after deduplication")
+        
+        # Add custom hardcoded events
+        custom_events = self._get_custom_events()
+        if custom_events:
+            logger.info(f"Adding {len(custom_events)} custom hardcoded events")
+            all_events.extend(custom_events)
         
         # Enhance selected events with detail pages (limit to avoid overload)
         events_with_detail_urls = [e for e in all_events if e.get('url') and 'eventId=' in e.get('url', '')]

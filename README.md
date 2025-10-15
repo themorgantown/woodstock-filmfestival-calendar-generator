@@ -2,6 +2,29 @@
 
 Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours.
 
+
+Results:
+📊 Final Event Count: 120+ events (from venue-specific pages + custom events)
+
+Venue Breakdown:
+
+✅ Bearsville Theater: 19 events
+✅ Woodstock Playhouse: 18 events
+✅ Tinker Street Cinema: 19 events
+✅ Orpheum Theatre: 28 events
+✅ Upstate Midtown: 9 events
+✅ Rosendale Theatre: 11 events
+✅ Assembly: 2 events
+✅ WCC (Shorts): 13 events
+✅ Colony: 1 custom event
+✅ 2025 Panels: Events extracted
+✅ 2025 Shorts: Events extracted
+✅ 2025 Special Events: Events extracted
+⚪ Kleinert/James: 0 events
+⚪ HVLGBTQ: 0 events
+⚪ Broken Wing Barn: 0 events
+
+
 ## How to use
 
 You can subscribe to this url using the [following ics file](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics):

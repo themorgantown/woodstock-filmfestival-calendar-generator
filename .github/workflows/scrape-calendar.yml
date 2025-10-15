@@ -44,7 +44,7 @@ jobs:
 
       - name: Run calendar scraper
         run: |
-          python enhanced_make_calendar.py
+          python make_calendar.py
 
       - name: Upload calendar artifact
         uses: actions/upload-artifact@v4.6.2

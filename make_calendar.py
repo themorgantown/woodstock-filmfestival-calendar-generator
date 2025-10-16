@@ -296,8 +296,15 @@ class WoodstockEventScraper:
         # Event detail URL - extract from onclick attribute
         detail_url = self._extract_event_detail_url(card, source_url)
         
+        # Check if event has ticketing (Order tickets button)
+        card_text = card.get_text()
+        if 'Order tickets' in card_text:
+            title = f"🎟️ {title.strip()}"
+        else:
+            title = title.strip()
+        
         return {
-            'title': title.strip(),
+            'title': title,
             'start': start_dt,
             'venue': venue.strip() if venue else '',
             'description': description.strip() if description else '',
@@ -658,6 +665,20 @@ class WoodstockEventScraper:
             logger.info("Added custom event: LGBTQ+ Community Center Event")
         except Exception as e:
             logger.error(f"Error creating custom event: {e}")
+            
+        # Film School Shorts
+        try:
+            custom_events.append({
+                'title': 'Film School Shorts',
+                'start': datetime(2025, 10, 16, 19, 30),  # Thu, Oct 16, 7:30 PM ET
+                'venue': 'TBD',  # Venue not specified in the description
+                'description': "Finely-crafted and distinctive narrative and documentary shorts from up and coming visionary film school students.\n\nFilms Showing:\n\nDawn's World\nA lonely gallery docent consults the imaginary creatures in her head when she learns that a fellow docent is getting fired. Should she talk to him? Or remain solitary forever?\n\nHow I Learned to Die\n16-year-old Iris finds out she has a 60% chance of dying in four days from a high-risk surgery… so now she's gotta live it up. Chasing a wild bucket-list, she makes unexpected discoveries along the way.\n\nAre You Having Fun?\nUnemployed Ava has planned a fun bachelorette party weekend in Miami for her picture-perfect best friend, Kendall. But when Kendall's party and Ava's job prospects come in conflict with each other, Ava tests just how far she is willing to go for her friend to have a good time.\n\nHotspot\nA spoiled city teen is dragged upstate for spring break with his dad and his dad's new girlfriend as they renovate their Airbnb. But when he meets a troubled local with a history of arson, an unexpected common ground is formed.\n\nSt. Joe's Hoes\nFour young women, a dancer, a painter, a photographer, and a writer, come to New York City from different parts of the world with suitcases full of hope and a single address just blocks from Times Square: a former convent converted into affordable housing for nearly 80 women. In tight communal spaces, from a rat-prone kitchen to a stained-glass chapel and clogged bathrooms, the women forge unlikely bonds while navigating personal struggles, creative ambition, and the shared audacity of \"making it\" in New York. Set in a time just before current shifts in immigration and international student policies, the film captures their resilience and precarity.\n\nThe Wrath of Othell-Yo!\nOn the set of the erotic blaxploitation film The Wrath of Othell-Yo, Tommy, the black production assistant, replaces the lead actor of the film who fails to get erect and finds himself thrust into a racialized Othello pastiche that becomes more than he bargained for.",
+                'url': 'https://woodstockfilmfestival.org/2025-shorts',
+                'source_url': 'https://woodstockfilmfestival.org/2025-shorts'
+            })
+            logger.info("Added custom event: Film School Shorts")
+        except Exception as e:
+            logger.error(f"Error creating custom event: {e}")
         
         return custom_events
     
@@ -706,6 +727,13 @@ class WoodstockEventScraper:
             # Only update description if we got something better
             if enhanced_desc and (not current_desc or len(enhanced_desc) > len(current_desc)):
                 event['description'] = enhanced_desc
+                
+            # Check if event is sold out (STANDBY ONLY)
+            page_text = soup.get_text()
+            if 'STANDBY ONLY' in page_text:
+                current_title = event.get('title', '')
+                if not current_title.startswith('🫷'):
+                    event['title'] = f"🫷 {current_title}"
                 
             # Try to get more precise venue info
             venue_elem = soup.select_one('.event-details strong:contains("Venue:") + br')

@@ -16,16 +16,34 @@ jobs:
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
     steps:
+      - name: Check cutoff date
+        id: check-date
+        run: |
+          # Stop running after Oct 19, 2025 at 10pm EST (Oct 20, 2025 02:00 UTC)
+          CUTOFF_DATE="2025-10-20 02:00:00 UTC"
+          CUTOFF_TIMESTAMP=$(date -d "$CUTOFF_DATE" +%s 2>/dev/null || date -j -f "%Y-%m-%d %H:%M:%S %Z" "$CUTOFF_DATE" +%s)
+          CURRENT_TIMESTAMP=$(date +%s)
+
+          if [ "$CURRENT_TIMESTAMP" -gt "$CUTOFF_TIMESTAMP" ]; then
+            echo "Skipping run - past cutoff date (Oct 19, 2025 10pm EST)"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout repository
+        if: steps.check-date.outputs.skip != 'true'
         uses: actions/checkout@v5.0.0
 
       - name: Set up Python
+        if: steps.check-date.outputs.skip != 'true'
         uses: actions/setup-python@v6.0.0
         with:
           python-version: '3.11'
           cache: 'pip'
 
       - name: Cache Playwright browsers
+        if: steps.check-date.outputs.skip != 'true'
         uses: actions/cache@v4.3.0
         id: playwright-cache
         with:
@@ -33,25 +51,28 @@ jobs:
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
 
       - name: Install Python dependencies
+        if: steps.check-date.outputs.skip != 'true'
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Install Playwright browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        if: steps.check-date.outputs.skip != 'true' && steps.playwright-cache.outputs.cache-hit != 'true'
         run: |
           python -m playwright install --with-deps chromium
-      
+
       - name: Install Playwright system dependencies
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        if: steps.check-date.outputs.skip != 'true' && steps.playwright-cache.outputs.cache-hit == 'true'
         run: |
           python -m playwright install-deps chromium
 
       - name: Run calendar scraper
+        if: steps.check-date.outputs.skip != 'true'
         run: |
           python make_calendar.py
 
       - name: Upload calendar artifact
+        if: steps.check-date.outputs.skip != 'true'
         uses: actions/upload-artifact@v4.6.2
         with:
           name: wff-calendar-${{ github.run_number }}
@@ -61,6 +82,7 @@ jobs:
           retention-days: 30
 
       - name: Commit and push changes
+        if: steps.check-date.outputs.skip != 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

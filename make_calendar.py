@@ -123,6 +123,7 @@ class WoodstockEventScraper:
         })
         self.venue_urls: List[str] = []
         self.events: List[Dict] = []
+        self.event_registry: Dict[str, Dict] = {}
         self.processed_event_ids: Set[str] = set()
         self.llm_activity: List[Dict[str, object]] = []
         
@@ -239,20 +240,36 @@ class WoodstockEventScraper:
         logger.info(f"Found {len(cards)} event cards on {source_url}")
         
         duplicates_skipped = 0
+        duplicates_merged = 0
         for card in cards:
             event_data = self._extract_event_from_card(card, source_url)
             if event_data and event_data.get('title') and event_data.get('start'):
-                # Create unique ID for deduplication
-                event_id = self._create_event_id(event_data)
-                if event_id not in self.processed_event_ids:
-                    events.append(event_data)
-                    self.processed_event_ids.add(event_id)
+                is_new, stored_event, updated = self._register_event(event_data)
+                if is_new:
+                    events.append(stored_event)
                 else:
                     duplicates_skipped += 1
-                    logger.debug(f"Skipping duplicate event: {event_data.get('title')} at {event_data.get('start')}")
+                    if updated:
+                        logger.debug(
+                            "Merged duplicate event with new details: %s at %s",
+                            stored_event.get('title'),
+                            stored_event.get('start')
+                        )
+                        duplicates_merged += 1
+                    else:
+                        logger.debug(
+                            "Skipping duplicate event: %s at %s",
+                            stored_event.get('title'),
+                            stored_event.get('start')
+                        )
         
         if duplicates_skipped > 0:
-            logger.info(f"Skipped {duplicates_skipped} duplicate events from {source_url}")
+            logger.info(
+                "Deduplicated %d events from %s (%d merged with richer data)",
+                duplicates_skipped,
+                source_url,
+                duplicates_merged
+            )
         
         return events
     
@@ -297,11 +314,10 @@ class WoodstockEventScraper:
         detail_url = self._extract_event_detail_url(card, source_url)
         
         # Check if event has ticketing (Order tickets button)
-        card_text = card.get_text()
-        if 'Order tickets' in card_text:
-            title = f"🎟️ {title.strip()}"
-        else:
-            title = title.strip()
+        card_text = card.get_text(" ", strip=True)
+        title = title.strip()
+        if 'order tickets' in card_text.lower() and '🎟️' not in title:
+            title = f"🎟️ {title}"
         
         return {
             'title': title,
@@ -533,6 +549,8 @@ class WoodstockEventScraper:
 
         events: List[Dict] = []
         chunks = [chunk.strip() for chunk in content.split("Event:") if chunk.strip()]
+        duplicates_skipped = 0
+        duplicates_updated = 0
         for chunk in chunks:
             fields: Dict[str, str] = {}
             for line in chunk.splitlines():
@@ -564,13 +582,22 @@ class WoodstockEventScraper:
                 'url': source_url,
                 'source_url': source_url
             }
-            event_id = self._create_event_id(event_obj)
-            if event_id in self.processed_event_ids:
-                continue
-            self.processed_event_ids.add(event_id)
-            events.append(event_obj)
+            is_new, stored_event, updated = self._register_event(event_obj)
+            if is_new:
+                events.append(stored_event)
+            else:
+                duplicates_skipped += 1
+                if updated:
+                    duplicates_updated += 1
 
-        logger.info(f"LLM extracted {len(events)} events from {source_url}")
+        if duplicates_skipped:
+            logger.info(
+                "LLM deduplicated %d events for %s (%d merged with richer data)",
+                duplicates_skipped,
+                source_url,
+                duplicates_updated
+            )
+        logger.info(f"LLM extracted {len(events)} unique events from {source_url}")
         self.llm_activity.append({
             'url': source_url,
             'payload_chars': len(payload),
@@ -625,14 +652,122 @@ class WoodstockEventScraper:
         
         return None
     
+    def _split_title_prefixes(self, title: Optional[str]) -> Tuple[List[str], str]:
+        """Return leading status emoji markers and the core title text."""
+        if not title:
+            return [], ''
+        
+        remaining = title.strip()
+        statuses: List[str] = []
+        known_prefixes = ('🫷', '🎟️')
+        
+        while remaining:
+            matched_prefix = False
+            for prefix in known_prefixes:
+                if remaining.startswith(prefix):
+                    statuses.append(prefix)
+                    remaining = remaining[len(prefix):].lstrip()
+                    matched_prefix = True
+                    break
+            if not matched_prefix:
+                break
+        
+        return statuses, remaining
+
+    def _normalize_title_for_id(self, title: Optional[str]) -> str:
+        """Normalize title for deduplication ID comparison."""
+        _, core = self._split_title_prefixes(title)
+        normalized = re.sub(r'\s+', ' ', core).strip()
+        return normalized.lower()
+
+    def _merge_event_records(self, existing: Dict, new_data: Dict) -> bool:
+        """
+        Merge duplicate event records, preferring richer data and ensuring status
+        markers like ticket or standby are preserved.
+        Returns True if any field was updated.
+        """
+        changed = False
+
+        existing_statuses, existing_base = self._split_title_prefixes(existing.get('title'))
+        new_statuses, new_base = self._split_title_prefixes(new_data.get('title'))
+
+        status_order = ('🫷', '🎟️')
+        merged_statuses = [
+            status for status in status_order
+            if status in existing_statuses or status in new_statuses
+        ]
+
+        base_candidates = [text for text in (existing_base, new_base) if text]
+        merged_base = ''
+        if base_candidates:
+            merged_base = max(base_candidates, key=len)
+
+        if merged_base or merged_statuses:
+            assembled_title = merged_base
+            if merged_statuses:
+                assembled_title = f"{' '.join(merged_statuses)} {merged_base}".strip()
+            if assembled_title and assembled_title != existing.get('title'):
+                existing['title'] = assembled_title
+                changed = True
+
+        # Description - keep the longer one
+        existing_desc = existing.get('description') or ''
+        new_desc = new_data.get('description') or ''
+        if new_desc and len(new_desc) > len(existing_desc):
+            existing['description'] = new_desc
+            changed = True
+
+        # Venue - prefer a specific venue over placeholders
+        existing_venue = existing.get('venue') or ''
+        new_venue = new_data.get('venue') or ''
+        if new_venue and (not existing_venue or existing_venue in {'', 'TBD', 'Unknown'}):
+            if new_venue != existing_venue:
+                existing['venue'] = new_venue
+                changed = True
+
+        # URL - prefer one with an explicit eventId parameter
+        existing_url = existing.get('url') or ''
+        new_url = new_data.get('url') or ''
+        if new_url:
+            prefer_new_url = (
+                not existing_url or
+                ('eventId=' in new_url and 'eventId=' not in existing_url)
+            )
+            if prefer_new_url and new_url != existing_url:
+                existing['url'] = new_url
+                changed = True
+
+        # Source URL - keep original if set, otherwise fill in
+        if not existing.get('source_url') and new_data.get('source_url'):
+            existing['source_url'] = new_data['source_url']
+            changed = True
+
+        return changed
+    
     def _create_event_id(self, event_data: Dict) -> str:
         """Create unique ID for event deduplication"""
         key_parts = [
-            event_data.get('title', ''),
+            self._normalize_title_for_id(event_data.get('title', '')),
             event_data.get('start', datetime.now()).isoformat(),
-            event_data.get('venue', ''),
+            (event_data.get('venue') or '').strip().lower(),
         ]
         return hashlib.md5('|'.join(str(p) for p in key_parts).encode()).hexdigest()
+
+    def _register_event(self, event_data: Dict) -> Tuple[bool, Dict, bool]:
+        """
+        Register an event with deduplication.
+        Returns (is_new, stored_event, changed) where changed indicates an update
+        to an existing record.
+        """
+        event_id = self._create_event_id(event_data)
+        existing = self.event_registry.get(event_id)
+        if existing is None:
+            self.event_registry[event_id] = event_data
+            self.processed_event_ids.add(event_id)
+            return True, event_data, False
+
+        updated = self._merge_event_records(existing, event_data)
+        return False, existing, updated
     
     def _get_custom_events(self) -> List[Dict]:
         """Return list of custom hardcoded events that should be added to the calendar"""
@@ -856,6 +991,8 @@ class WoodstockEventScraper:
         """Main scraping workflow"""
         logger.info("Starting comprehensive event scraping...")
         self.llm_activity.clear()
+        self.event_registry.clear()
+        self.processed_event_ids.clear()
         
         # Discover venue URLs
         self.venue_urls = self.discover_venue_urls()
@@ -930,7 +1067,22 @@ class WoodstockEventScraper:
         custom_events = self._get_custom_events()
         if custom_events:
             logger.info(f"Adding {len(custom_events)} custom hardcoded events")
-            all_events.extend(custom_events)
+            custom_duplicates = 0
+            custom_updates = 0
+            for custom_event in custom_events:
+                is_new, stored_event, updated = self._register_event(custom_event)
+                if is_new:
+                    all_events.append(stored_event)
+                else:
+                    custom_duplicates += 1
+                    if updated:
+                        custom_updates += 1
+            if custom_duplicates:
+                logger.info(
+                    "Custom events deduplicated %d entries (%d merged with additional data)",
+                    custom_duplicates,
+                    custom_updates
+                )
         
         # Enhance selected events with detail pages (limit to avoid overload)
         events_with_detail_urls = [e for e in all_events if e.get('url') and 'eventId=' in e.get('url', '')]
@@ -951,7 +1103,7 @@ class WoodstockEventScraper:
         enhanced_events.sort(key=lambda x: x['start'])
         
         # Log summary
-        total_cards_found = sum(1 for _ in self.processed_event_ids)
+        total_cards_found = len(self.event_registry)
         logger.info(f"Completed scraping with {len(enhanced_events)} unique events")
         logger.info(f"Deduplication: Processed {total_cards_found} event IDs across all venues")
         

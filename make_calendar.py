@@ -867,8 +867,8 @@ class WoodstockEventScraper:
             page_text = soup.get_text()
             if 'STANDBY ONLY' in page_text:
                 current_title = event.get('title', '')
-                if not current_title.startswith('🫷'):
-                    event['title'] = f"🫷 {current_title}"
+                if not current_title.startswith('(standby only)'):
+                    event['title'] = f"(standby only) {current_title}"
                 
             # Try to get more precise venue info
             venue_elem = soup.select_one('.event-details strong:contains("Venue:") + br')

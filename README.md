@@ -1,6 +1,6 @@
 # Woodstock Film Festival 2025 Calendar (Unofficial)
 
-Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours.
+Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours. Shows 🎟️ when event has tickets available. 
 
 
 ## How to use
@@ -38,17 +38,15 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 This scraper is designed to be respectful of the festival's website:
 - **Rate Limited**: 2-second delays between venue pages, 0.5-second delays between detail pages
 - **Limited Scope**: Only enhances first 50 events with detail pages (out of ~119 total)
-- **Efficient**: Uses cached results, runs only 4 times per day
 - **Transparent**: Identifies itself with a clear User-Agent
-- **Total bandwidth**: ~1 minute of requests every 6 hours
+- **Total bandwidth**: ~1 minute of requests every 2 hours
 
 This is equivalent to a single person browsing the website once per day.
 
 ## Updates
 
-The calendar is automatically updated every 6 hours via GitHub Actions (00:00, 06:00, 12:00, 18:00 UTC). 
+The calendar is automatically updated every 2 hours via GitHub Actions (00:00, 02:00, 04:00, 06:00, 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00, 22:00 UTC).
 
-**Last successful scrape**: Check the [latest commit](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/commits/main) or [workflow runs](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/actions)
 
 ## Known Limitations
 

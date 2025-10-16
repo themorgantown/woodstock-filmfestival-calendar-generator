@@ -870,6 +870,48 @@ class WoodstockEventScraper:
                 if not current_title.startswith('(standby only)'):
                     event['title'] = f"(standby only) {current_title}"
                 
+            # Detect ticket availability (look for ORDER TICKETS and common variants)
+            try:
+                ticket_indicators = ['ORDER TICKETS', 'Order Tickets']
+                found_ticket = False
+
+                # Check visible page text for explicit phrases
+                page_text_upper = page_text.upper() if page_text else ''
+                for phrase in ticket_indicators:
+                    if phrase.upper() in page_text_upper:
+                        found_ticket = True
+                        break
+
+                # Also look for buttons/links with likely ticketing hrefs or labels
+                if not found_ticket:
+                    # common ticketing words in link/button text
+                    link_like = soup.find_all(['a', 'button'])
+                    for elem in link_like:
+                        try:
+                            text = (elem.get_text(" ", strip=True) or '').strip()
+                            href = (elem.get('href') or '') if elem.name == 'a' else ''
+                            if not text and not href:
+                                continue
+                            txt_upper = text.upper()
+                            if any(k.upper() in txt_upper for k in ticket_indicators):
+                                found_ticket = True
+                                break
+                        except Exception:
+                            continue
+
+                # If ticketing is found, add ticket emoji if not already present
+                if found_ticket:
+                    current_title = event.get('title', '') or ''
+                    # Respect existing emoji/status prefixes
+                    statuses, base_title = self._split_title_prefixes(current_title)
+                    if '🎟️' not in statuses:
+                        # Prepend ticket emoji to statuses preserving order
+                        new_statuses = statuses + ['🎟️']
+                        assembled = f"{' '.join(new_statuses)} {base_title}".strip()
+                        event['title'] = assembled
+            except Exception as e:
+                logger.debug(f"Ticket detection error for {detail_url}: {e}")
+
             # Try to get more precise venue info
             venue_elem = soup.select_one('.event-details strong:contains("Venue:") + br')
             if venue_elem and venue_elem.next_sibling:

@@ -55,3 +55,4 @@ Thumbs.db
 scrape_log.txt
 .env
 .claude/settings.local.json
+logs_githubaction/

@@ -12,6 +12,8 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
     steps:
       - name: Checkout repository

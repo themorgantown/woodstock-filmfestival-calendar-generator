@@ -53,3 +53,4 @@ Thumbs.db
 # Logs
 *.log
 scrape_log.txt
+.env

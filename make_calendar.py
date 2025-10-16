@@ -21,6 +21,7 @@ import xml.etree.ElementTree as ET
 import hashlib
 import logging
 import time
+import os
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Tuple, Set
 from urllib.parse import urljoin, urlparse
@@ -42,6 +43,33 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Environment helpers
+def _load_env_file(path: str = ".env") -> None:
+    """Best-effort .env loader so OPENROUTER_API_KEY can be defined outside the shell."""
+    env_path = Path(path)
+    if not env_path.exists():
+        return
+
+    try:
+        with env_path.open('r', encoding='utf-8') as env_file:
+            for raw_line in env_file:
+                line = raw_line.strip()
+                if not line or line.startswith('#'):
+                    continue
+                if '=' not in line:
+                    continue
+                key, value = line.split('=', 1)
+                key = key.strip()
+                value = value.strip().strip('"').strip("'")
+                # Do not override environment variables that are already set
+                if key and key not in os.environ:
+                    os.environ[key] = value
+    except Exception as exc:
+        logger.warning("Failed to load environment file %s: %s", env_path, exc)
+
+
+_load_env_file()
+
 # Configuration
 BASE_URL = "https://woodstockfilmfestival.org"
 SITEMAP_FILE = "sitemap.xml"
@@ -50,24 +78,42 @@ YEAR = 2025
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 MIN_REASONABLE_EVENTS = 10
-MAX_DETAIL_PAGE_ENHANCEMENTS = 50  # Limit detail page fetches to be respectful
+MAX_DETAIL_PAGE_ENHANCEMENTS = 150
 VENUE_PAGE_DELAY = 2  # Seconds between venue page requests
 DETAIL_PAGE_DELAY = 0.5  # Seconds between detail page requests
 
-# Venue mapping from URL suffix to proper venue name
-VENUE_MAPPING = {
-    "bearsville": "Bearsville Theater",
-    "woodstock-playhouse": "Woodstock Playhouse",
-    "tinker-street-cinema": "Tinker Street Cinema",
-    "orpheum": "Orpheum Theatre",
-    "upstate-midtown": "Upstate Midtown",
-    "rosendale": "Rosendale Theatre",
-    "assembly": "Assembly",
-    "wcc": "Woodstock Community Center [SHORTS]",
-    "colony": "Colony",
-    "hvlgbtq": "Hudson Valley LGBTQ+ Community Center",
-    "special-events": "2025 Special Events",
-}
+# LLM Configuration
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+LLM_MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.2-3b-instruct:free")
+
+# List of venue URLs to scrape
+VENUE_URLS = [
+    "https://woodstockfilmfestival.org/2025-all-events-assembly",
+    "https://woodstockfilmfestival.org/2025-all-events-bearsville",
+    "https://woodstockfilmfestival.org/2025-all-events-orpheum",
+    "https://woodstockfilmfestival.org/2025-all-events-rosendale",
+    "https://woodstockfilmfestival.org/2025-all-events-tinker-street-cinema",
+    "https://woodstockfilmfestival.org/2025-all-events-upstate-midtown",
+    "https://woodstockfilmfestival.org/2025-all-events-wcc",
+    "https://woodstockfilmfestival.org/2025-all-events-woodstock-playhouse",
+    "https://woodstockfilmfestival.org/2025-all-white-feather-farm",
+    "https://woodstockfilmfestival.org/2025-panels",
+    "https://woodstockfilmfestival.org/2025-special-events",
+]
+
+# URLs that consistently return 0 events (monitored but not actively scraped)
+ZERO_EVENT_URLS = [
+    "https://woodstockfilmfestival.org/2025-all-events-hvlgbtq",
+    "https://woodstockfilmfestival.org/2025-colony",
+    "https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e",
+]
+
+# URLs that require LLM processing when DOM parsing fails
+LLM_REQUIRED_URLS = [
+    "https://woodstockfilmfestival.org/2025-colony",
+    "https://woodstockfilmfestival.org/2025-shorts",
+    "https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e",
+]
 
 class WoodstockEventScraper:
     def __init__(self):
@@ -78,29 +124,19 @@ class WoodstockEventScraper:
         self.venue_urls: List[str] = []
         self.events: List[Dict] = []
         self.processed_event_ids: Set[str] = set()
+        self.llm_activity: List[Dict[str, object]] = []
         
     def discover_venue_urls(self) -> List[str]:
-        """Generate venue URLs from VENUE_MAPPING - venues are static"""
-        venue_urls = []
-        
-        # Generate standard venue URLs with /2025-all-events- prefix
-        for suffix in VENUE_MAPPING.keys():
-            # Skip the special ones that don't follow the pattern
-            if suffix in ['panels', 'shorts', 'special-events']:
-                continue
-            venue_urls.append(f"{BASE_URL}/2025-all-events-{suffix}")
-        
-        # Add custom URLs that don't follow the standard pattern
-        custom_urls = [
-            f"{BASE_URL}/2025-panels",
-            f"{BASE_URL}/2025-shorts",
-            f"{BASE_URL}/2025-special-events",
-            f"{BASE_URL}/2025-all-white-feather-farm"
-        ]
-        venue_urls.extend(custom_urls)
-        
-        logger.info(f"Generated {len(venue_urls)} venue URLs ({len(venue_urls) - len(custom_urls)} standard + {len(custom_urls)} custom)")
-        return venue_urls
+        """Return the list of venue URLs to scrape"""
+        logger.info(f"Using {len(VENUE_URLS)} predefined venue URLs")
+        # Ensure LLM-required URLs are always scraped
+        combined_urls = sorted(set(VENUE_URLS).union(LLM_REQUIRED_URLS))
+        if len(combined_urls) != len(VENUE_URLS):
+            logger.debug(
+                "Ensuring coverage for LLM-required URLs: added %d supplemental entries",
+                len(combined_urls) - len(VENUE_URLS)
+            )
+        return combined_urls
     
     def fetch_page_content(self, url: str, use_playwright: bool = False) -> Optional[str]:
         """Fetch page content, optionally using Playwright for JS rendering"""
@@ -356,11 +392,29 @@ class WoodstockEventScraper:
             return "2025 Shorts"
         elif url.endswith('/2025-special-events'):
             return "2025 Special Events"
+        elif 'white-feather-farm' in url:
+            return "Broken Wing Barn at White Feather Farm"
+        elif 'colony' in url:
+            return "Colony"
+        elif 'assembly' in url:
+            return "Assembly"
+        elif 'bearsville' in url:
+            return "Bearsville Theater"
+        elif 'woodstock-playhouse' in url:
+            return "Woodstock Playhouse"
+        elif 'tinker-street-cinema' in url:
+            return "Tinker Street Cinema"
+        elif 'orpheum' in url:
+            return "Orpheum Theatre"
+        elif 'upstate-midtown' in url:
+            return "Upstate Midtown"
+        elif 'rosendale' in url:
+            return "Rosendale Theatre"
+        elif 'wcc' in url:
+            return "Woodstock Community Center [SHORTS]"
+        elif 'hvlgbtq' in url:
+            return "Hudson Valley LGBTQ+ Community Center"
         
-        # Standard pattern matching
-        for suffix, venue_name in VENUE_MAPPING.items():
-            if f"-{suffix}" in url or url.endswith(suffix):
-                return venue_name
         return ""
     
     def _extract_event_detail_url(self, card: BeautifulSoup, source_url: str) -> Optional[str]:
@@ -400,6 +454,122 @@ class WoodstockEventScraper:
                     if 'eventId=' in href:
                         return href
         return None
+
+    def _prepare_html_for_llm(self, html: str) -> str:
+        """Prepare HTML content for LLM processing by limiting size."""
+        # Limit HTML content to prevent token overflow
+        return html[:15000]  # Allow more content for better context
+
+    def _parse_events_with_llm(self, html: str, source_url: str) -> List[Dict]:
+        """Ask a lightweight LLM to extract events when DOM parsing fails."""
+        if not OPENROUTER_API_KEY:
+            logger.warning("OPENROUTER_API_KEY not set; skipping LLM parsing")
+            return []
+        
+        payload = self._prepare_html_for_llm(html)
+        if not payload.strip():
+            return []
+
+        logger.info(
+            "LLM request prepared for %s (payload=%d chars)",
+            source_url,
+            len(payload)
+        )
+
+        prompt = (
+            "You extract Woodstock Film Festival 2025 schedule data from HTML. "
+            "Return one or more events using this template exactly:\n\n"
+            "Event:\n"
+            "Title: <title>\n"
+            "Date: <weekday, month day>\n"
+            "Time: <time with AM/PM>\n"
+            "Venue: <location name>\n"
+            "Description: <verbatim event description copied from the input without omitting sentences.>\n\n"
+            "Do not use markdown formatting or bullets. Leave one blank line between events. "
+            "If a field is unknown, leave it blank after the colon. An event has a date and start time and title and description. Do your best to find them."
+        )
+
+        try:
+            start_time = time.time()
+            response = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                    "Content-Type": "application/json",
+                    "HTTP-Referer": "https://github.com/themorgantown/woodstock-filmfestival-calendar-generator",
+                },
+                json={
+                    "model": LLM_MODEL,
+                    "messages": [
+                        {"role": "system", "content": "You are a structured data extractor."},
+                        {"role": "user", "content": f"Source URL: {source_url}\n\nContent:\n{payload}"},
+                        {"role": "user", "content": prompt}
+                    ],
+                    "temperature": 0.1,
+                    "max_tokens": 10000,  # Increased tokens for better extraction
+                },
+                timeout=30
+            )
+            response.raise_for_status()
+            content = response.json()["choices"][0]["message"]["content"]
+            elapsed = time.time() - start_time
+            logger.info(
+                "LLM response received for %s (status=%d, duration=%.2fs, bytes=%d)",
+                source_url,
+                response.status_code,
+                elapsed,
+                len(content or "")
+            )
+        except Exception as exc:
+            logger.error(f"LLM parsing failed for {source_url}: {exc}")
+            return []
+
+        events: List[Dict] = []
+        chunks = [chunk.strip() for chunk in content.split("Event:") if chunk.strip()]
+        for chunk in chunks:
+            fields: Dict[str, str] = {}
+            for line in chunk.splitlines():
+                if ':' not in line:
+                    continue
+                key, value = line.split(':', 1)
+                fields[key.strip().lower()] = value.strip()
+            title = fields.get('title', '')
+            date_part = fields.get('date', '')
+            time_part = fields.get('time', '')
+            venue = fields.get('venue', '') or self._infer_venue_from_url(source_url)
+            desc = fields.get('description', '')
+            if not title:
+                continue
+            combined_datetime = ''
+            if date_part and time_part:
+                combined_datetime = f"{date_part} at {time_part}"
+            elif date_part:
+                combined_datetime = date_part
+            start_dt = self._parse_datetime(combined_datetime)
+            if not start_dt:
+                logger.debug(f"LLM event discarded due to unparsed datetime: {title} ({combined_datetime})")
+                continue
+            event_obj = {
+                'title': title,
+                'start': start_dt,
+                'venue': venue,
+                'description': desc,
+                'url': source_url,
+                'source_url': source_url
+            }
+            event_id = self._create_event_id(event_obj)
+            if event_id in self.processed_event_ids:
+                continue
+            self.processed_event_ids.add(event_id)
+            events.append(event_obj)
+
+        logger.info(f"LLM extracted {len(events)} events from {source_url}")
+        self.llm_activity.append({
+            'url': source_url,
+            'payload_chars': len(payload),
+            'events_returned': len(events),
+        })
+        return events
     
     def _parse_datetime(self, date_text: str) -> Optional[datetime]:
         """Parse datetime from various formats"""
@@ -474,6 +644,20 @@ class WoodstockEventScraper:
             logger.info("Added custom event: A BREAK IN THE RAIN at Colony")
         except Exception as e:
             logger.error(f"Error creating custom event: {e}")
+            
+        # Hudson Valley LGBTQ+ Community Center event
+        try:
+            custom_events.append({
+                'title': 'LGBTQ+ Community Center Event',
+                'start': datetime(2025, 10, 18, 16, 30),  # Sat, Oct 18, 4:30 PM ET
+                'venue': 'Hudson Valley LGBTQ+ Community Center',
+                'description': "Event at Hudson Valley LGBTQ+ Community Center",
+                'url': 'https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9de3e4f9783fb47dc2f3',
+                'source_url': 'https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9de3e4f9783fb47dc2f3'
+            })
+            logger.info("Added custom event: LGBTQ+ Community Center Event")
+        except Exception as e:
+            logger.error(f"Error creating custom event: {e}")
         
         return custom_events
     
@@ -539,6 +723,7 @@ class WoodstockEventScraper:
     
     def generate_ics_calendar(self, events: List[Dict]) -> str:
         """Generate ICS calendar from events"""
+        existing_metadata = self._load_existing_event_metadata()
         cal = Calendar()
         cal.add('prodid', '-//Woodstock Film Festival 2025 Complete Calendar//EN')
         cal.add('version', '2.0')
@@ -548,7 +733,8 @@ class WoodstockEventScraper:
             event = Event()
             
             # Required fields
-            event.add('uid', self._generate_uid(event_data))
+            uid = self._generate_uid(event_data)
+            event.add('uid', uid)
             event.add('dtstart', event_data['start'])
             event.add('dtend', event_data['start'] + timedelta(hours=DEFAULT_DURATION_HOURS))
             event.add('summary', vText(event_data['title']))
@@ -560,8 +746,13 @@ class WoodstockEventScraper:
                 event.add('description', vText(event_data['description']))
             if event_data.get('url'):
                 event.add('url', vText(event_data['url']))
-                
-            event.add('dtstamp', datetime.now())
+
+            signature = self._event_signature_from_data(event_data)
+            previous = existing_metadata.get(uid)
+            if previous and previous.get('signature') == signature and previous.get('dtstamp'):
+                event.add('dtstamp', previous['dtstamp'])
+            else:
+                event.add('dtstamp', datetime.now())
             cal.add_component(event)
         
         return cal.to_ical().decode('utf-8')
@@ -572,25 +763,117 @@ class WoodstockEventScraper:
         hash_part = hashlib.sha256(base.encode()).hexdigest()[:16]
         slug = re.sub(r'[^a-z0-9]+', '-', event_data['title'].lower()).strip('-')[:30]
         return f"{slug}-{event_data['start'].strftime('%Y%m%dT%H%M%S')}-{hash_part}@wff2025"
+
+    def _load_existing_event_metadata(self) -> Dict[str, Dict[str, object]]:
+        """Load existing event dtstamp and content signatures from current ICS output."""
+        metadata: Dict[str, Dict[str, object]] = {}
+        if not os.path.exists(OUTPUT_PATH):
+            return metadata
+
+        try:
+            with open(OUTPUT_PATH, 'rb') as ics_file:
+                existing_cal = Calendar.from_ical(ics_file.read())
+
+            for component in existing_cal.walk('VEVENT'):
+                uid = str(component.get('uid')) if component.get('uid') else None
+                if not uid:
+                    continue
+
+                signature = self._event_signature_from_component(component)
+                dtstamp_field = component.get('dtstamp')
+                dtstamp_value = dtstamp_field.dt if dtstamp_field else None
+                metadata[uid] = {
+                    'dtstamp': dtstamp_value,
+                    'signature': signature,
+                }
+        except Exception as exc:
+            logger.warning(f"Failed to parse existing ICS for dtstamp reuse: {exc}")
+
+        return metadata
+
+    def _event_signature_from_data(self, event_data: Dict) -> str:
+        """Create a deterministic signature representing current event fields."""
+        dtstart = event_data.get('start')
+        dtend = dtstart + timedelta(hours=DEFAULT_DURATION_HOURS) if dtstart else None
+        fields = [
+            event_data.get('title', ''),
+            dtstart.isoformat() if isinstance(dtstart, datetime) else '',
+            dtend.isoformat() if isinstance(dtend, datetime) else '',
+            event_data.get('venue', ''),
+            event_data.get('description', ''),
+            event_data.get('url', ''),
+        ]
+        return '|'.join(fields)
+
+    def _event_signature_from_component(self, component: Event) -> str:
+        """Create a deterministic signature from an existing ICS component."""
+        def normalize(name: str) -> str:
+            value = component.get(name)
+            if value is None:
+                return ''
+            raw = value.dt if hasattr(value, 'dt') else value
+            return raw.isoformat() if isinstance(raw, datetime) else str(raw)
+
+        fields = [
+            normalize('summary'),
+            normalize('dtstart'),
+            normalize('dtend'),
+            normalize('location'),
+            normalize('description'),
+            normalize('url'),
+        ]
+        return '|'.join(fields)
     
     def scrape_all_events(self) -> List[Dict]:
         """Main scraping workflow"""
         logger.info("Starting comprehensive event scraping...")
+        self.llm_activity.clear()
         
         # Discover venue URLs
         self.venue_urls = self.discover_venue_urls()
         logger.info(f"Will scrape {len(self.venue_urls)} venue pages")
-        
+
         all_events = []
+        visited_urls: Set[str] = set()
         
         # Scrape each venue page
         for i, venue_url in enumerate(self.venue_urls, 1):
-            logger.info(f"Scraping venue page {i}/{len(self.venue_urls)}: {venue_url}")
+            visited_urls.add(venue_url)
+            is_llm_required = venue_url in LLM_REQUIRED_URLS
+            context_label = "LLM-required" if is_llm_required else "standard"
+            logger.info(
+                "Scraping %s page %d/%d: %s",
+                context_label,
+                i,
+                len(self.venue_urls),
+                venue_url
+            )
             
             # Use Playwright directly since these pages require JavaScript
             try:
                 html = self.fetch_page_content(venue_url, use_playwright=True)
                 events = self.extract_events_from_page(html or "", venue_url)
+                logger.info(
+                    "Extracted %d DOM events from %s",
+                    len(events),
+                    venue_url
+                )
+                if not events and venue_url in LLM_REQUIRED_URLS and html:
+                    logger.info(
+                        "LLM-required URL %s yielded 0 DOM events; invoking LLM fallback",
+                        venue_url
+                    )
+                    events = self._parse_events_with_llm(html, venue_url)
+                elif not events and venue_url in LLM_REQUIRED_URLS:
+                    logger.warning(
+                        "LLM-required URL %s returned empty HTML response; skipping LLM fallback",
+                        venue_url
+                    )
+                elif not events:
+                    logger.debug(
+                        "No DOM events for %s; skipping LLM fallback (not in required list)",
+                        venue_url
+                    )
                 logger.info(f"Extracted {len(events)} events from {venue_url}")
                 all_events.extend(events)
             except Exception as e:
@@ -602,6 +885,18 @@ class WoodstockEventScraper:
             time.sleep(VENUE_PAGE_DELAY)
         
         logger.info(f"Found {len(all_events)} unique events after deduplication")
+
+        missing_llm_urls = set(LLM_REQUIRED_URLS) - visited_urls
+        if missing_llm_urls:
+            logger.error("Missing LLM-required URLs from scrape: %s", ", ".join(sorted(missing_llm_urls)))
+        else:
+            logger.info("All LLM-required URLs were scraped this run (%d total)", len(LLM_REQUIRED_URLS))
+
+        if self.llm_activity:
+            activity_summary = ", ".join(
+                f"{entry['url']} ({entry['events_returned']} events)" for entry in self.llm_activity
+            )
+            logger.info("LLM processed %d URLs: %s", len(self.llm_activity), activity_summary)
         
         # Add custom hardcoded events
         custom_events = self._get_custom_events()

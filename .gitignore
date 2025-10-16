@@ -54,3 +54,4 @@ Thumbs.db
 *.log
 scrape_log.txt
 .env
+.claude/settings.local.json

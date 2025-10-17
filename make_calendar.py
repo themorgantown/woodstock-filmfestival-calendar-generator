@@ -82,9 +82,17 @@ MAX_DETAIL_PAGE_ENHANCEMENTS = 150
 VENUE_PAGE_DELAY = 2  # Seconds between venue page requests
 DETAIL_PAGE_DELAY = 0.5  # Seconds between detail page requests
 
+# Timezone support: prefer zoneinfo, fallback to dateutil
+try:
+    from zoneinfo import ZoneInfo
+    _TZ = ZoneInfo(TZ_ID)
+except Exception:
+    from dateutil import tz as _dateutil_tz
+    _TZ = _dateutil_tz.gettz(TZ_ID)
+
 # LLM Configuration
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-LLM_MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.2-3b-instruct:free")
+LLM_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
 
 # List of venue URLs to scrape
 VENUE_URLS = [
@@ -104,13 +112,11 @@ VENUE_URLS = [
 # URLs that consistently return 0 events (monitored but not actively scraped)
 ZERO_EVENT_URLS = [
     "https://woodstockfilmfestival.org/2025-all-events-hvlgbtq",
-    "https://woodstockfilmfestival.org/2025-colony",
     "https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e",
 ]
 
 # URLs that require LLM processing when DOM parsing fails
 LLM_REQUIRED_URLS = [
-    "https://woodstockfilmfestival.org/2025-colony",
     "https://woodstockfilmfestival.org/2025-shorts",
     "https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e",
 ]
@@ -126,6 +132,7 @@ class WoodstockEventScraper:
         self.event_registry: Dict[str, Dict] = {}
         self.processed_event_ids: Set[str] = set()
         self.llm_activity: List[Dict[str, object]] = []
+        self.images_found: int = 0  # Track number of images successfully extracted
         
     def discover_venue_urls(self) -> List[str]:
         """Return the list of venue URLs to scrape"""
@@ -344,36 +351,46 @@ class WoodstockEventScraper:
     def _extract_description_from_card(self, card: BeautifulSoup) -> Optional[str]:
         """Extract event description from venue page format"""
         description_parts = []
-        
+
         # Find the empty <p class="event-description"></p> element
         desc_elem = card.select_one('p.event-description')
         if desc_elem:
             # Get all following <p> siblings until we hit the venue paragraph
             current_elem = desc_elem.next_sibling
-            
+
             while current_elem:
                 # Skip text nodes and look for <p> elements
                 if hasattr(current_elem, 'name') and getattr(current_elem, 'name', None) == 'p':
                     text = current_elem.get_text(strip=True)
-                    
+
                     # Stop when we reach the venue information
                     if text and text.startswith('Venue:'):
                         break
-                    
-                    # Stop when we hit an empty paragraph (common separator)
+
+                    # Check if this is the last empty paragraph before venue
+                    # (empty paragraphs only stop us if they're followed by venue or end of content)
                     if not text:
-                        break
-                    
+                        # Peek ahead to see if the next <p> is the venue
+                        next_p = current_elem.find_next_sibling('p')
+                        if next_p:
+                            next_text = next_p.get_text(strip=True)
+                            if next_text and next_text.startswith('Venue:'):
+                                # This empty paragraph precedes venue, so stop
+                                break
+                        else:
+                            # No more paragraphs after this empty one, stop
+                            break
+                        # Otherwise, continue (this allows image-only paragraphs to be skipped)
+
                     # Add non-empty paragraphs that aren't venue info
-                    # Filter out image-only paragraphs and venue info
-                    if (text and 
-                        'Venue:' not in text and 
-                        not text.startswith('Moderator:') and  # Keep moderator info
-                        len(text) > 20):  # Skip very short paragraphs that are likely formatting
+                    # Include all content text (moderator info, bios, etc.)
+                    if (text and
+                        'Venue:' not in text and
+                        len(text) > 5):  # Skip very short paragraphs that are likely formatting
                         description_parts.append(text)
-                        
+
                 current_elem = current_elem.next_sibling
-            
+
             return '\n\n'.join(description_parts) if description_parts else None
         
         # Fallback: look within the event-details div for description paragraphs
@@ -479,9 +496,26 @@ class WoodstockEventScraper:
         return None
 
     def _prepare_html_for_llm(self, html: str) -> str:
-        """Prepare HTML content for LLM processing by limiting size."""
-        # Limit HTML content to prevent token overflow
-        return html[:15000]  # Allow more content for better context
+        """Prepare HTML content for LLM processing by extracting relevant text."""
+        # Parse HTML and extract text content, removing excessive whitespace and scripts
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, 'lxml')
+        
+        # Remove script and style elements
+        for script in soup(["script", "style", "noscript"]):
+            script.decompose()
+        
+        # Get text and clean it up
+        text = soup.get_text()
+        # Break into lines and remove leading/trailing space
+        lines = (line.strip() for line in text.splitlines())
+        # Break multi-headlines into a line each
+        chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+        # Drop blank lines and join
+        text = '\n'.join(chunk for chunk in chunks if chunk)
+        
+        # Limit to prevent token overflow (allow more since we cleaned it)
+        return text[:20000]
 
     def _parse_events_with_llm(self, html: str, source_url: str) -> List[Dict]:
         """Ask a lightweight LLM to extract events when DOM parsing fails."""
@@ -503,13 +537,25 @@ class WoodstockEventScraper:
             "You extract Woodstock Film Festival 2025 schedule data from HTML. "
             "Return one or more events using this template exactly:\n\n"
             "Event:\n"
-            "Title: <title>\n"
+            "Title: <title only, no date or time>\n"
             "Date: <weekday, month day>\n"
             "Time: <time with AM/PM>\n"
             "Venue: <location name>\n"
             "Description: <verbatim event description copied from the input without omitting sentences.>\n\n"
-            "Do not use markdown formatting or bullets. Leave one blank line between events. "
-            "If a field is unknown, leave it blank after the colon. An event has a date and start time and title and description. Do your best to find them."
+            "CRITICAL RULES:\n"
+            "- Title field must ONLY contain the event name, never include date or time\n"
+            "- Date and Time must be separate fields\n"
+            "- Do not use markdown formatting or bullets\n"
+            "- Leave one blank line between events\n"
+            "- If a field is unknown, leave it blank after the colon\n\n"
+            "EXAMPLE:\n"
+            "Event:\n"
+            "Title: A BREAK IN THE RAIN\n"
+            "Date: Monday, October 15\n"
+            "Time: 7:00 PM\n"
+            "Venue: Colony\n"
+            "Description: A film about healing and finding home.\n\n"
+            "Now extract all events from the provided content."
         )
 
         try:
@@ -531,7 +577,7 @@ class WoodstockEventScraper:
                     "temperature": 0.1,
                     "max_tokens": 10000,  # Increased tokens for better extraction
                 },
-                timeout=30
+                timeout=10
             )
             response.raise_for_status()
             content = response.json()["choices"][0]["message"]["content"]
@@ -549,6 +595,7 @@ class WoodstockEventScraper:
 
         events: List[Dict] = []
         chunks = [chunk.strip() for chunk in content.split("Event:") if chunk.strip()]
+        logger.info(f"LLM returned {len(chunks)} event chunks to parse for {source_url}")
         duplicates_skipped = 0
         duplicates_updated = 0
         for chunk in chunks:
@@ -563,7 +610,9 @@ class WoodstockEventScraper:
             time_part = fields.get('time', '')
             venue = fields.get('venue', '') or self._infer_venue_from_url(source_url)
             desc = fields.get('description', '')
+            logger.info(f"LLM extracted fields - Title: {title[:50] if title else 'NONE'}, Date: {date_part}, Time: {time_part}")
             if not title:
+                logger.warning(f"LLM event skipped - no title found in chunk")
                 continue
             combined_datetime = ''
             if date_part and time_part:
@@ -572,7 +621,7 @@ class WoodstockEventScraper:
                 combined_datetime = date_part
             start_dt = self._parse_datetime(combined_datetime)
             if not start_dt:
-                logger.debug(f"LLM event discarded due to unparsed datetime: {title} ({combined_datetime})")
+                logger.warning(f"LLM event discarded due to unparsed datetime: {title} ({combined_datetime})")
                 continue
             event_obj = {
                 'title': title,
@@ -646,7 +695,7 @@ class WoodstockEventScraper:
                     return datetime.strptime(
                         f"{YEAR}-{month_num:02d}-{int(day_str):02d} {time_str}",
                         "%Y-%m-%d %I:%M %p"
-                    )
+                    ).replace(tzinfo=_TZ)
                 except (ValueError, KeyError):
                     continue
         
@@ -748,7 +797,7 @@ class WoodstockEventScraper:
         """Create unique ID for event deduplication"""
         key_parts = [
             self._normalize_title_for_id(event_data.get('title', '')),
-            event_data.get('start', datetime.now()).isoformat(),
+            event_data.get('start', datetime.now(_TZ)).isoformat(),
             (event_data.get('venue') or '').strip().lower(),
         ]
         return hashlib.md5('|'.join(str(p) for p in key_parts).encode()).hexdigest()
@@ -777,7 +826,7 @@ class WoodstockEventScraper:
         try:
             custom_events.append({
                 'title': 'A BREAK IN THE RAIN',
-                'start': datetime(2025, 10, 15, 19, 0),  # 10/15 7:00 PM
+                'start': datetime(2025, 10, 15, 19, 0, tzinfo=_TZ),  # 10/15 7:00 PM
                 'venue': 'Colony',
                 'description': "Jake Watson has been on the road for ten years since his wife passed away. When his grown son dies, he comes home to a life he walked out on. A stranger in his own house, he takes a job driving a limo to help his daughter-in-law pay the bills. One rainy afternoon he picks up Catriona Walsh, a Nashville singer with her own secret. One ride becomes a two week road trip. Catriona sets his poems to music, and Jake begins to heal, as they both find their way home.",
                 'url': 'https://woodstockfilmfestival.org/2025-film-guide?filmId=689f72571f570dd52f0c566e',
@@ -791,7 +840,7 @@ class WoodstockEventScraper:
         try:
             custom_events.append({
                 'title': 'LGBTQ+ Community Center Event',
-                'start': datetime(2025, 10, 18, 16, 30),  # Sat, Oct 18, 4:30 PM ET
+                'start': datetime(2025, 10, 18, 16, 30, tzinfo=_TZ),  # Sat, Oct 18, 4:30 PM ET
                 'venue': 'Hudson Valley LGBTQ+ Community Center',
                 'description': "Event at Hudson Valley LGBTQ+ Community Center",
                 'url': 'https://woodstockfilmfestival.org/2025-all-events?eventId=68ac9de3e4f9783fb47dc2f3',
@@ -805,7 +854,7 @@ class WoodstockEventScraper:
         try:
             custom_events.append({
                 'title': 'Film School Shorts',
-                'start': datetime(2025, 10, 16, 19, 30),  # Thu, Oct 16, 7:30 PM ET
+                'start': datetime(2025, 10, 16, 19, 30, tzinfo=_TZ),  # Thu, Oct 16, 7:30 PM ET
                 'venue': 'TBD',  # Venue not specified in the description
                 'description': "Finely-crafted and distinctive narrative and documentary shorts from up and coming visionary film school students.\n\nFilms Showing:\n\nDawn's World\nA lonely gallery docent consults the imaginary creatures in her head when she learns that a fellow docent is getting fired. Should she talk to him? Or remain solitary forever?\n\nHow I Learned to Die\n16-year-old Iris finds out she has a 60% chance of dying in four days from a high-risk surgery… so now she's gotta live it up. Chasing a wild bucket-list, she makes unexpected discoveries along the way.\n\nAre You Having Fun?\nUnemployed Ava has planned a fun bachelorette party weekend in Miami for her picture-perfect best friend, Kendall. But when Kendall's party and Ava's job prospects come in conflict with each other, Ava tests just how far she is willing to go for her friend to have a good time.\n\nHotspot\nA spoiled city teen is dragged upstate for spring break with his dad and his dad's new girlfriend as they renovate their Airbnb. But when he meets a troubled local with a history of arson, an unexpected common ground is formed.\n\nSt. Joe's Hoes\nFour young women, a dancer, a painter, a photographer, and a writer, come to New York City from different parts of the world with suitcases full of hope and a single address just blocks from Times Square: a former convent converted into affordable housing for nearly 80 women. In tight communal spaces, from a rat-prone kitchen to a stained-glass chapel and clogged bathrooms, the women forge unlikely bonds while navigating personal struggles, creative ambition, and the shared audacity of \"making it\" in New York. Set in a time just before current shifts in immigration and international student policies, the film captures their resilience and precarity.\n\nThe Wrath of Othell-Yo!\nOn the set of the erotic blaxploitation film The Wrath of Othell-Yo, Tommy, the black production assistant, replaces the lead actor of the film who fails to get erect and finds himself thrust into a racialized Othello pastiche that becomes more than he bargained for.",
                 'url': 'https://woodstockfilmfestival.org/2025-shorts',
@@ -831,7 +880,34 @@ class WoodstockEventScraper:
                 return event
                 
             soup = BeautifulSoup(detail_html, 'lxml')
-            
+
+            # Extract cover image from detail page (fail silently if not found)
+            try:
+                cover_image_url = None
+                image_selectors = [
+                    ".single-event-header img.event-cover-image",
+                    ".single-event-header img",
+                    ".event-cover-image",
+                    ".event-image-container img"
+                ]
+                for selector in image_selectors:
+                    img_elem = soup.select_one(selector)
+                    if img_elem and img_elem.get('src'):
+                        src = img_elem.get('src')
+                        # Validate that it's a proper URL
+                        if src and isinstance(src, str) and (src.startswith('http://') or src.startswith('https://')):
+                            cover_image_url = src
+                            logger.debug(f"Found cover image for {event.get('title', 'unknown')}: {cover_image_url}")
+                            break
+
+                # Store image URL in event data
+                if cover_image_url:
+                    event['image_url'] = cover_image_url
+                    self.images_found += 1
+            except Exception as e:
+                # Silently fail - just don't include an image
+                logger.debug(f"Could not extract image for {detail_url}: {e}")
+
             # Enhanced description from detail page
             # Only enhance if the current description is empty or generic
             current_desc = event.get('description', '')
@@ -947,8 +1023,19 @@ class WoodstockEventScraper:
             # Optional fields
             if event_data.get('venue'):
                 event.add('location', vText(event_data['venue']))
+
+            # Build description with image URL at the top if available
+            description_parts = []
+            if event_data.get('image_url'):
+                description_parts.append(f"[Event Image: {event_data['image_url']}]")
+                description_parts.append("")  # Blank line after image
             if event_data.get('description'):
-                event.add('description', vText(event_data['description']))
+                description_parts.append(event_data['description'])
+
+            if description_parts:
+                full_description = '\n'.join(description_parts)
+                event.add('description', vText(full_description))
+
             if event_data.get('url'):
                 event.add('url', vText(event_data['url']))
 
@@ -957,7 +1044,9 @@ class WoodstockEventScraper:
             if previous and previous.get('signature') == signature and previous.get('dtstamp'):
                 event.add('dtstamp', previous['dtstamp'])
             else:
-                event.add('dtstamp', datetime.now())
+                # Ensure dtstamp is timezone-aware using the configured timezone
+                now = datetime.now(_TZ)
+                event.add('dtstamp', now)
             cal.add_component(event)
         
         return cal.to_ical().decode('utf-8')
@@ -1007,6 +1096,7 @@ class WoodstockEventScraper:
             event_data.get('venue', ''),
             event_data.get('description', ''),
             event_data.get('url', ''),
+            event_data.get('image_url', ''),  # Include image URL in signature
         ]
         return '|'.join(fields)
 
@@ -1035,6 +1125,7 @@ class WoodstockEventScraper:
         self.llm_activity.clear()
         self.event_registry.clear()
         self.processed_event_ids.clear()
+        self.images_found = 0  # Reset image counter
         
         # Discover venue URLs
         self.venue_urls = self.discover_venue_urls()
@@ -1148,7 +1239,8 @@ class WoodstockEventScraper:
         total_cards_found = len(self.event_registry)
         logger.info(f"Completed scraping with {len(enhanced_events)} unique events")
         logger.info(f"Deduplication: Processed {total_cards_found} event IDs across all venues")
-        
+        logger.info(f"Image detection: Found and embedded {self.images_found} event images from detail pages")
+
         return enhanced_events
     
     def run_scraping_job(self):

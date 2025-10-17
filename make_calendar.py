@@ -1006,7 +1006,7 @@ class WoodstockEventScraper:
         """Generate ICS calendar from events"""
         existing_metadata = self._load_existing_event_metadata()
         cal = Calendar()
-        cal.add('prodid', '-//Woodstock Film Festival 2025 Complete Calendar//EN')
+        cal.add('prodid', '-//Woodstock Film Festival 2025 Unofficial Calendar//EN')
         cal.add('version', '2.0')
         cal.add('calscale', 'GREGORIAN')
         

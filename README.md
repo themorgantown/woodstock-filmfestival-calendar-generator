@@ -1,6 +1,6 @@
 # Woodstock Film Festival 2025 Calendar (Unofficial)
 
-Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every 6 hours. Shows 🎟️ when event has tickets available. 
+Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every hour. Shows 🎟️ when event has tickets available. 
 
 
 ## How to use

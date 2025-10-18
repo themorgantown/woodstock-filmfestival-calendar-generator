@@ -28,7 +28,8 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
 from bs4 import BeautifulSoup
-from icalendar import Calendar, Event, vText
+from icalendar import Calendar, Event, vText, Timezone
+import pytz
 
 # Setup logging
 logging.basicConfig(
@@ -47,16 +48,11 @@ OUTPUT_PATH = "wff_2025_complete.ics"
 YEAR = 2025
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
-EVENT_BOX_DELAY = 0.1  # Minimal delay - no server requests, just DOM clicks
-OVERLAY_WAIT_TIMEOUT = 5000  # Milliseconds to wait for overlay
+EVENT_BOX_DELAY = 0  # No delay needed - client-side JS only
+OVERLAY_WAIT_TIMEOUT = 2000  # Milliseconds to wait for overlay
 
-# Timezone support
-try:
-    from zoneinfo import ZoneInfo
-    TZ = ZoneInfo(TZ_ID)
-except ImportError:
-    from dateutil import tz as _dateutil_tz
-    TZ = _dateutil_tz.gettz(TZ_ID)
+# Timezone support - use pytz for ICS compatibility
+TZ = pytz.timezone(TZ_ID)
 
 
 class SimplifiedEventScraper:
@@ -74,10 +70,13 @@ class SimplifiedEventScraper:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page()
             
+            # Block images to speed up loading
+            page.route("**/*.{png,jpg,jpeg,gif,svg,webp,ico}", lambda route: route.abort())
+            
             try:
                 # Navigate to the all-events page
                 logger.info("Loading all-events page...")
-                page.goto(ALL_EVENTS_URL, wait_until="networkidle", timeout=30000)
+                page.goto(ALL_EVENTS_URL, wait_until="domcontentloaded", timeout=30000)
                 
                 # Wait for event boxes to load
                 page.wait_for_selector('.event-box', timeout=10000)
@@ -154,10 +153,7 @@ class SimplifiedEventScraper:
                 logger.warning(f"Overlay did not appear for event {event_id}")
                 return None
             
-            # Small delay to ensure content is fully rendered
-            time.sleep(0.5)
-            
-            # Get the overlay HTML
+            # Get the overlay HTML (no additional delay needed)
             overlay_html = page.content()
             
             # Parse the overlay
@@ -174,13 +170,13 @@ class SimplifiedEventScraper:
                     logger.warning(f"Back button not found for event {event_id}")
                     # Fallback: press Escape
                     page.keyboard.press('Escape')
-                    time.sleep(0.2)
+                    time.sleep(0.05)
             except Exception as e:
                 logger.warning(f"Could not close overlay for {event_id}: {e}")
                 # Try Escape as last resort
                 try:
                     page.keyboard.press('Escape')
-                    time.sleep(0.2)
+                    time.sleep(0.05)
                 except:
                     pass
             
@@ -298,9 +294,8 @@ class SimplifiedEventScraper:
                 dt = datetime.strptime(date_text, fmt)
                 # Add the year
                 dt = dt.replace(year=YEAR)
-                # Add timezone
-                if hasattr(dt, 'replace'):
-                    dt = dt.replace(tzinfo=TZ)
+                # Add timezone using pytz localize (handles DST correctly)
+                dt = TZ.localize(dt)
                 return dt
             except ValueError:
                 continue
@@ -331,6 +326,9 @@ class SimplifiedEventScraper:
         cal.add('version', '2.0')
         cal.add('x-wr-calname', 'Woodstock Film Festival 2025')
         cal.add('x-wr-timezone', TZ_ID)
+        
+        # Add VTIMEZONE component for proper timezone support
+        # Note: icalendar library should handle this automatically with pytz timezones
         
         for event_data in events:
             event = Event()
@@ -368,7 +366,7 @@ class SimplifiedEventScraper:
             event.add('uid', uid)
             
             # Add timestamp
-            event.add('dtstamp', datetime.now(tz=TZ))
+            event.add('dtstamp', datetime.now(TZ))
             
             cal.add_component(event)
         

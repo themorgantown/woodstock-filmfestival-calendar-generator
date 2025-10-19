@@ -61,6 +61,7 @@ class SimplifiedEventScraper:
     def __init__(self):
         self.events: List[Dict] = []
         self.seen_event_ids: Set[str] = set()
+        self.existing_events_metadata: Dict[str, Dict] = {}
         
     def scrape_all_events(self) -> List[Dict]:
         """Main scraping method using Playwright"""
@@ -319,8 +320,137 @@ class SimplifiedEventScraper:
         
         return f"{title}_{venue}_{timestamp}"
     
+    def _load_existing_ics_metadata(self) -> Dict[str, Dict]:
+        """Load existing ICS file and extract DTSTAMP and other metadata for each event"""
+        output_file = Path(OUTPUT_PATH)
+        if not output_file.exists():
+            logger.info("No existing ICS file found - all events will be new")
+            return {}
+        
+        try:
+            existing_content = output_file.read_text(encoding='utf-8')
+            existing_cal = Calendar.from_ical(existing_content)
+            
+            metadata = {}
+            for component in existing_cal.walk('VEVENT'):
+                # Extract UID
+                uid = str(component.get('uid', ''))
+                if not uid:
+                    continue
+                
+                # Extract event signature for comparison
+                summary = str(component.get('summary', ''))
+                dtstart = component.get('dtstart')
+                location = str(component.get('location', ''))
+                description = str(component.get('description', ''))
+                
+                # Create a comparable signature
+                if dtstart:
+                    if hasattr(dtstart, 'dt'):
+                        start_dt = dtstart.dt
+                    else:
+                        start_dt = dtstart
+                else:
+                    start_dt = None
+                
+                # Get DTSTAMP
+                dtstamp = component.get('dtstamp')
+                if dtstamp:
+                    if hasattr(dtstamp, 'dt'):
+                        dtstamp_dt = dtstamp.dt
+                    else:
+                        dtstamp_dt = dtstamp
+                else:
+                    dtstamp_dt = None
+                
+                # Store metadata indexed by UID
+                metadata[uid] = {
+                    'uid': uid,
+                    'summary': summary,
+                    'dtstart': start_dt,
+                    'location': location,
+                    'description': description,
+                    'dtstamp': dtstamp_dt
+                }
+            
+            logger.info(f"Loaded metadata for {len(metadata)} existing events")
+            return metadata
+            
+        except Exception as e:
+            logger.warning(f"Could not load existing ICS file: {e}")
+            return {}
+    
+    def _normalize_description(self, desc: str) -> str:
+        """Normalize description for comparison - remove URL and ticket lines we add"""
+        if not desc:
+            return ''
+        
+        lines = desc.split('\n')
+        filtered_lines = []
+        for line in lines:
+            # Skip lines we add programmatically
+            if line.strip().startswith('🎟️'):
+                continue
+            if line.strip().startswith('🔗'):
+                continue
+            filtered_lines.append(line)
+        
+        return '\n'.join(filtered_lines).strip()
+    
+    def _event_has_changed(self, event_data: Dict, existing_metadata: Dict) -> bool:
+        """Compare new event data with existing metadata to detect changes"""
+        # Compare key fields
+        new_summary = event_data.get('title', '').strip()
+        new_location = event_data.get('venue', '').strip()
+        new_description = event_data.get('description', '')
+        new_start = event_data.get('start')
+        
+        old_summary = existing_metadata.get('summary', '').strip()
+        old_location = existing_metadata.get('location', '').strip()
+        old_description = existing_metadata.get('description', '')
+        old_start = existing_metadata.get('dtstart')
+        
+        # Normalize descriptions (remove our added URL and ticket lines)
+        new_desc_normalized = self._normalize_description(new_description)
+        old_desc_normalized = self._normalize_description(old_description)
+        
+        # Check if anything changed
+        if new_summary != old_summary:
+            return True
+        if new_location != old_location:
+            return True
+        if new_desc_normalized != old_desc_normalized:
+            return True
+        
+        # Compare timestamps (handle timezone-aware and naive datetimes)
+        if new_start and old_start:
+            # Convert both to UTC for comparison if they're timezone-aware
+            try:
+                if hasattr(new_start, 'tzinfo') and new_start.tzinfo:
+                    new_utc = new_start.astimezone(pytz.UTC)
+                else:
+                    new_utc = TZ.localize(new_start).astimezone(pytz.UTC)
+                    
+                if hasattr(old_start, 'tzinfo') and old_start.tzinfo:
+                    old_utc = old_start.astimezone(pytz.UTC)
+                else:
+                    old_utc = TZ.localize(old_start).astimezone(pytz.UTC)
+                
+                # Compare with 1-minute tolerance (in case of slight differences)
+                time_diff = abs((new_utc - old_utc).total_seconds())
+                if time_diff > 60:
+                    return True
+            except Exception as e:
+                # If comparison fails, log and consider it changed
+                logger.debug(f"Timestamp comparison failed: {e}")
+                return True
+        elif new_start != old_start:
+            return True
+        
+        return False
+    
     def generate_ics_calendar(self, events: List[Dict]) -> str:
-        """Generate ICS calendar file from events"""
+        """Generate ICS calendar file from events, preserving DTSTAMP for unchanged events"""
         cal = Calendar()
         cal.add('prodid', '-//Woodstock Film Festival 2025 Unofficial Calendar//EN')
         cal.add('version', '2.0')
@@ -329,6 +459,10 @@ class SimplifiedEventScraper:
         
         # Add VTIMEZONE component for proper timezone support
         # Note: icalendar library should handle this automatically with pytz timezones
+        
+        events_unchanged = 0
+        events_modified = 0
+        events_new = 0
         
         for event_data in events:
             event = Event()
@@ -365,16 +499,39 @@ class SimplifiedEventScraper:
             uid = f"{event_data.get('event_id', self._create_event_id(event_data))}@woodstockfilmfestival.org"
             event.add('uid', uid)
             
-            # Add timestamp
-            event.add('dtstamp', datetime.now(TZ))
+            # Add timestamp - preserve existing if event hasn't changed
+            if uid in self.existing_events_metadata:
+                existing_meta = self.existing_events_metadata[uid]
+                if not self._event_has_changed(event_data, existing_meta):
+                    # Event unchanged - use existing DTSTAMP
+                    if existing_meta.get('dtstamp'):
+                        event.add('dtstamp', existing_meta['dtstamp'])
+                        events_unchanged += 1
+                    else:
+                        event.add('dtstamp', datetime.now(TZ))
+                        events_modified += 1
+                else:
+                    # Event changed - use current timestamp
+                    event.add('dtstamp', datetime.now(TZ))
+                    events_modified += 1
+            else:
+                # New event - use current timestamp
+                event.add('dtstamp', datetime.now(TZ))
+                events_new += 1
             
             cal.add_component(event)
+        
+        logger.info(f"Event changes: {events_new} new, {events_modified} modified, {events_unchanged} unchanged")
         
         return cal.to_ical().decode('utf-8')
     
     def run(self):
         """Main execution method"""
         try:
+            # Load existing ICS metadata first
+            logger.info("Loading existing ICS file for comparison...")
+            self.existing_events_metadata = self._load_existing_ics_metadata()
+            
             # Scrape events
             events = self.scrape_all_events()
             

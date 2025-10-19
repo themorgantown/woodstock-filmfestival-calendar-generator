@@ -2,6 +2,7 @@
 
 Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every hour. Shows 🎟️ when event has tickets available. 
 
+[![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics)
 
 ## How to use
 

@@ -56,3 +56,7 @@ scrape_log.txt
 .env
 .claude/settings.local.json
 logs_githubaction/
+
+# Analysis scripts (not for production)
+analyze_sellouts.py
+sellout_analysis.md

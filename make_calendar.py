@@ -1,9 +1,9 @@
 """
-Woodstock Film Festival 2025 Simplified Event Scraper
+Woodstock Film Festival Event Scraper (year set by WFF_YEAR, default 2026)
 Scrapes the single all-events page by clicking each event overlay.
 
 This version replaces the complex multi-venue scraper with a simpler approach:
-- Single URL: https://woodstockfilmfestival.org/2025-all-events
+- Single URL: https://woodstockfilmfestival.org/{YEAR}-all-events
 - Clicks each event-box to trigger overlay (client-side JS, no server requests)
 - Extracts data from overlay DOM following todo.md specification
 - Deduplicates events by title+venue+datetime
@@ -20,6 +20,7 @@ Usage:
 """
 
 import logging
+import os
 import re
 import time
 from datetime import datetime, timedelta
@@ -43,9 +44,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration
-ALL_EVENTS_URL = "https://woodstockfilmfestival.org/2025-all-events"
-OUTPUT_PATH = "wff_2025_complete.ics"
-YEAR = 2025
+YEAR = int(os.environ.get("WFF_YEAR", 2026))
+ALL_EVENTS_URL = f"https://woodstockfilmfestival.org/{YEAR}-all-events"
+OUTPUT_PATH = f"wff_{YEAR}_complete.ics"
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 EVENT_BOX_DELAY = 0  # No delay needed - client-side JS only
@@ -160,26 +161,13 @@ class SimplifiedEventScraper:
             # Parse the overlay
             event_data = self._parse_overlay(overlay_html, event_id)
             
-            # Click back button to return to list view (as per requirements)
+            # Return to list view. The back button exists but is hidden when the
+            # overlay was opened from the list, so call its handler directly.
             try:
-                back_button = page.query_selector('button[onclick="returnToPreviousView()"]')
-                if back_button:
-                    back_button.click()
-                    # Wait for overlay to close
-                    page.wait_for_selector('.event-details', state='hidden', timeout=3000)
-                else:
-                    logger.warning(f"Back button not found for event {event_id}")
-                    # Fallback: press Escape
-                    page.keyboard.press('Escape')
-                    time.sleep(0.05)
+                page.evaluate("returnToPreviousView()")
+                page.wait_for_selector('.event-box', timeout=3000)
             except Exception as e:
                 logger.warning(f"Could not close overlay for {event_id}: {e}")
-                # Try Escape as last resort
-                try:
-                    page.keyboard.press('Escape')
-                    time.sleep(0.05)
-                except:
-                    pass
             
             return event_data
             
@@ -278,6 +266,8 @@ class SimplifiedEventScraper:
         
         # Remove timezone indicator
         date_text = re.sub(r'\s+(ET|EST|EDT)\s*$', '', date_text)
+        # Site writes "6:00pm"; strptime's %p needs the separating space
+        date_text = re.sub(r'(\d)\s*([ap]\.?m\.?)$', r'\1 \2', date_text, flags=re.I)
         
         # Try various datetime formats
         formats = [
@@ -452,9 +442,9 @@ class SimplifiedEventScraper:
     def generate_ics_calendar(self, events: List[Dict]) -> str:
         """Generate ICS calendar file from events, preserving DTSTAMP for unchanged events"""
         cal = Calendar()
-        cal.add('prodid', '-//Woodstock Film Festival 2025 Unofficial Calendar//EN')
+        cal.add('prodid', f'-//Woodstock Film Festival {YEAR} Unofficial Calendar//EN')
         cal.add('version', '2.0')
-        cal.add('x-wr-calname', 'Woodstock Film Festival 2025')
+        cal.add('x-wr-calname', f'Woodstock Film Festival {YEAR}')
         cal.add('x-wr-timezone', TZ_ID)
         
         # Add VTIMEZONE component for proper timezone support

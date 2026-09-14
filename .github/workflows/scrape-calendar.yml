@@ -19,13 +19,13 @@ jobs:
       - name: Check cutoff date
         id: check-date
         run: |
-          # Stop running after Oct 19, 2025 at 10pm EST (Oct 20, 2025 02:00 UTC)
-          CUTOFF_DATE="2025-10-20 02:00:00 UTC"
+          # Stop running after Oct 19, 2026 at 10pm EDT (Oct 20, 2026 02:00 UTC)
+          CUTOFF_DATE="2026-10-20 02:00:00 UTC"
           CUTOFF_TIMESTAMP=$(date -d "$CUTOFF_DATE" +%s 2>/dev/null || date -j -f "%Y-%m-%d %H:%M:%S %Z" "$CUTOFF_DATE" +%s)
           CURRENT_TIMESTAMP=$(date +%s)
 
           if [ "$CURRENT_TIMESTAMP" -gt "$CUTOFF_TIMESTAMP" ]; then
-            echo "Skipping run - past cutoff date (Oct 19, 2025 10pm EST)"
+            echo "Skipping run - past cutoff date (Oct 19, 2026 10pm EDT)"
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
@@ -77,7 +77,7 @@ jobs:
         with:
           name: wff-calendar-${{ github.run_number }}
           path: |
-            wff_2025_complete.ics
+            wff_2026_complete.ics
             wff_calendar.log
           retention-days: 30
 
@@ -87,7 +87,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git pull origin main
-          git add wff_2025_complete.ics
+          git add wff_2026_complete.ics
           git diff --staged --quiet || git commit -m "Update calendar data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git push
         continue-on-error: true

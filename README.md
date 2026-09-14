@@ -1,14 +1,14 @@
-# Woodstock Film Festival 2025 Calendar (Unofficial)
+# Woodstock Film Festival 2026 Calendar (Unofficial)
 
-Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2025, updated every hour. Shows 🎟️ when event has tickets available. 
+Automatically generated (and not guaranteed to be correct) calendar feed for the Woodstock Film Festival 2026, updated every hour. Shows 🎟️ when event has tickets available. 
 
-[![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics)
+[![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2026_complete.ics)
 
 ## How to use
 
-You can subscribe to this url using the [following ics file](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics):
+You can subscribe to this url using the [following ics file](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2026_complete.ics):
 
-`https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics`
+`https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2026_complete.ics`
 
 ![Add to Calendar](calendar_add.png)
 
@@ -20,7 +20,7 @@ Or:
    - **Google Calendar**: Settings → Import & Export → Import
    - **Outlook**: File → Open & Export → Import/Export
 
-**[Download Latest Calendar (ICS file)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2025_complete.ics)**
+**[Download Latest Calendar (ICS file)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/wff_2026_complete.ics)**
 
 Right-click and "Save Link As..." or click to open directly in your calendar application.
 
@@ -38,7 +38,7 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 
 This scraper is designed to be respectful of the festival's website:
 
-* It loads a single page (https://woodstockfilmfestival.org/2025-all-events) and clicks around a bit to get data. 
+* It loads a single page (https://woodstockfilmfestival.org/2026-all-events) and clicks around a bit to get data. 
 
 ## Updates
 

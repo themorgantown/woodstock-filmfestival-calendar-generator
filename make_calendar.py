@@ -47,6 +47,8 @@ logger = logging.getLogger(__name__)
 YEAR = int(os.environ.get("WFF_YEAR", 2026))
 ALL_EVENTS_URL = f"https://woodstockfilmfestival.org/{YEAR}-all-events"
 OUTPUT_PATH = f"wff_{YEAR}_complete.ics"
+# Year-free copy of the current year's calendar - the URL advertised publicly
+STABLE_OUTPUT_PATH = "woodstockfilmfestival.ics"
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 EVENT_BOX_DELAY = 0  # No delay needed - client-side JS only
@@ -536,8 +538,9 @@ class SimplifiedEventScraper:
             # Write to file
             output_file = Path(OUTPUT_PATH)
             output_file.write_text(ics_content, encoding='utf-8')
-            
-            logger.info(f"✓ Calendar saved to {OUTPUT_PATH}")
+            Path(STABLE_OUTPUT_PATH).write_text(ics_content, encoding='utf-8')
+
+            logger.info(f"✓ Calendar saved to {OUTPUT_PATH} and {STABLE_OUTPUT_PATH}")
             logger.info(f"✓ Total events: {len(events)}")
             
             # Print summary
@@ -545,7 +548,7 @@ class SimplifiedEventScraper:
             print(f"Scraping Complete!")
             print("="*60)
             print(f"Events scraped: {len(events)}")
-            print(f"Output file: {OUTPUT_PATH}")
+            print(f"Output files: {OUTPUT_PATH}, {STABLE_OUTPUT_PATH}")
             print("="*60)
             
             # Show sample events

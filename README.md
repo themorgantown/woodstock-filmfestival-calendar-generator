@@ -13,6 +13,15 @@ You can subscribe to this url using the [following ics file](https://woodstock-f
 This URL always points at the current festival year, so you only have to subscribe once.
 The shorter `…workers.dev/calendar.ics` redirects to the same feed.
 
+**To subscribe rather than download**, use the `webcal://` form of the same URL:
+
+`webcal://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics`
+
+Clicking an `https://` .ics link makes the browser download a one-time snapshot that never
+updates. `webcal://` hands the URL to your calendar app, which subscribes and keeps it
+current. The [website](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev)
+has one-click buttons for Apple, Google, and Outlook.
+
 ![Add to Calendar](calendar_add.png)
 
 Or:

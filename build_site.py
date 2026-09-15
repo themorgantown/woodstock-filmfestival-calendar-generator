@@ -14,6 +14,7 @@ Usage:
 import shutil
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 from icalendar import Calendar
 
@@ -22,6 +23,14 @@ CURRENT_FEED = "woodstockfilmfestival.ics"
 ARCHIVE_GLOB = "wff_*_complete.ics"
 
 SITE_URL = "https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev"
+
+# An https:// link to a .ics makes the browser download a one-off snapshot.
+# webcal:// hands the URL to the calendar app, which subscribes and keeps polling.
+WEBCAL_URL = SITE_URL.replace("https://", "webcal://")
+CALENDAR_NAME = "Woodstock Film Festival"
+
+# Screenshot of Apple Calendar's subscribe menu, shown alongside the manual steps
+SCREENSHOT = "calendar_add.png"
 
 # The live feed changes hourly; frozen archives can be cached hard.
 CURRENT_CACHE = "public, max-age=1800"
@@ -69,6 +78,14 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
         f'      <li><a href="/{name}">{name}</a> <span>{count} events</span></li>'
         for name, count in archives
     )
+
+    feed_https = f"{SITE_URL}/{CURRENT_FEED}"
+    feed_webcal = f"{WEBCAL_URL}/{CURRENT_FEED}"
+    google_url = ("https://calendar.google.com/calendar/r?cid="
+                  + quote(feed_webcal, safe=""))
+    outlook_url = ("https://outlook.live.com/calendar/0/addfromweb?url="
+                   + quote(feed_https, safe="")
+                   + "&name=" + quote(CALENDAR_NAME, safe=""))
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -85,6 +102,14 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
           word-break: break-all; }}
   .cta {{ display: inline-block; margin: 1rem 0; padding: .7rem 1.2rem; border-radius: 8px;
           background: #1f6feb; color: #fff; text-decoration: none; font-weight: 600; }}
+  .alt {{ display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 1.25rem; }}
+  .alt a {{ padding: .5rem .9rem; border-radius: 8px; text-decoration: none;
+            border: 1px solid rgba(128,128,128,.45); color: inherit; font-size: .95rem; }}
+  .note {{ font-size: .9rem; opacity: .7; }}
+  figure {{ margin: 1rem 0; }}
+  figure img {{ max-width: 100%; height: auto; border-radius: 10px;
+                border: 1px solid rgba(128,128,128,.35); }}
+  figcaption {{ font-size: .85rem; opacity: .7; margin-top: .4rem; }}
   ul {{ padding-left: 1.2rem; }}
   li span {{ opacity: .6; font-size: .9em; }}
   footer {{ margin-top: 2.5rem; font-size: .9em; opacity: .7; }}
@@ -94,11 +119,28 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
   <h1>Woodstock Film Festival Calendar</h1>
   <p class="sub">Unofficial, auto-generated, updated hourly. Currently {current_events} events.</p>
 
-  <a class="cta" href="/{CURRENT_FEED}">Subscribe to the calendar</a>
+  <a class="cta" href="{feed_webcal}">Subscribe in your calendar app</a>
+
+  <div class="alt">
+    <a href="{google_url}" target="_blank" rel="noopener">Add to Google Calendar</a>
+    <a href="{outlook_url}" target="_blank" rel="noopener">Add to Outlook</a>
+    <a href="/{CURRENT_FEED}" download>Download .ics</a>
+  </div>
+
+  <p class="note">
+    Subscribing keeps the calendar up to date automatically. Downloading the .ics
+    imports a one-time snapshot that never changes - use it only if subscribing fails.
+  </p>
 
   <p>Or paste this URL into your calendar app:</p>
   <p style="font-family: monospace;font-size:larger"><code>{SITE_URL}/{CURRENT_FEED}</code></p>
   <p>This URL always points at the current festival, so you only subscribe once.</p>
+
+  <figure>
+    <img src="/{SCREENSHOT}" alt="The macOS Calendar File menu with New Calendar Subscription highlighted"
+         width="672" height="636" loading="lazy">
+    <figcaption>In Apple Calendar: File &rarr; New Calendar Subscription&hellip;, then paste the URL above.</figcaption>
+  </figure>
 
   <h2>Archive</h2>
   <p>Past festivals, kept as-is and no longer updated:</p>
@@ -140,6 +182,12 @@ def main():
         shutil.copy2(path, PUBLIC_DIR / path.name)
         feeds[path.name] = ARCHIVE_CACHE
         archive_info.append((path.name, count))
+
+    screenshot = Path(SCREENSHOT)
+    if screenshot.exists():
+        shutil.copy2(screenshot, PUBLIC_DIR / SCREENSHOT)
+    else:
+        print(f"  ! {SCREENSHOT} not found - page will render without it")
 
     (PUBLIC_DIR / "_headers").write_text(build_headers(feeds), encoding="utf-8")
     (PUBLIC_DIR / "_redirects").write_text(REDIRECTS, encoding="utf-8")

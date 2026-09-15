@@ -529,7 +529,9 @@ class SimplifiedEventScraper:
             
             if not events:
                 logger.error("No events found! Check the page structure.")
-                return
+                # Exit non-zero so CI fails loudly instead of silently no-op'ing
+                # and so nothing downstream deploys a stale calendar.
+                raise SystemExit(1)
             
             # Generate ICS
             logger.info(f"Generating ICS calendar with {len(events)} events...")

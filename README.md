@@ -2,15 +2,16 @@
 
 Automatically generated (and not guaranteed to be correct) calendar feed for the current Woodstock Film Festival, updated every hour. Shows 🎟️ when event has tickets available. 
 
-[![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/woodstockfilmfestival.ics)
+[![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics)
 
 ## How to use
 
-You can subscribe to this url using the [following ics file](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/woodstockfilmfestival.ics):
+You can subscribe to this url using the [following ics file](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics):
 
-`https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/woodstockfilmfestival.ics`
+`https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics`
 
 This URL always points at the current festival year, so you only have to subscribe once.
+The shorter `…workers.dev/calendar.ics` redirects to the same feed.
 
 ![Add to Calendar](calendar_add.png)
 
@@ -22,7 +23,7 @@ Or:
    - **Google Calendar**: Settings → Import & Export → Import
    - **Outlook**: File → Open & Export → Import/Export
 
-**[Download Latest Calendar (ICS file)](https://github.com/themorgantown/woodstock-filmfestival-calendar-generator/raw/main/woodstockfilmfestival.ics)**
+**[Download Latest Calendar (ICS file)](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics)**
 
 Right-click and "Save Link As..." or click to open directly in your calendar application.
 
@@ -49,5 +50,18 @@ The calendar is automatically updated every 2 hours via GitHub Actions (00:00, 0
 ## Archive
 
 Past festival years are kept as-is and are no longer updated: `wff_2025_complete.ics`, `wff_2026_complete.ics`.
+
+## Hosting
+
+The feeds are served from Cloudflare Workers (static assets) at
+`https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev`, which gives
+them a proper `text/calendar` content-type, request logs, and redirects.
+
+`build_site.py` assembles `public/` (feeds + `_headers` + `_redirects` + landing page) and
+refuses to build an empty or unparseable calendar. The GitHub Action runs it and deploys
+with `wrangler` after each successful scrape.
+
+Required repository secrets: `CLOUDFLARE_API_TOKEN` (with the *Edit Cloudflare Workers*
+template) and `CLOUDFLARE_ACCOUNT_ID`.
  
 *This is an unofficial calendar. Please verify event details on the [official Woodstock Film Festival website](https://woodstockfilmfestival.org).*

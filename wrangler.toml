@@ -1,0 +1,11 @@
+# Static-asset Worker serving the calendar feeds.
+# Deployed by .github/workflows/scrape-calendar.yml after each successful scrape.
+# Public URL: https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev
+
+name = "woodstock-filmfestival-calendar-generator"
+compatibility_date = "2026-09-15"
+
+# Assets-only Worker: no `main` script, Cloudflare just serves ./public,
+# honouring the generated _headers and _redirects files.
+[assets]
+directory = "./public"

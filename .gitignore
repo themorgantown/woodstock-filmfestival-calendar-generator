@@ -60,3 +60,6 @@ logs_githubaction/
 # Analysis scripts (not for production)
 analyze_sellouts.py
 sellout_analysis.md
+
+# Build output
+public/

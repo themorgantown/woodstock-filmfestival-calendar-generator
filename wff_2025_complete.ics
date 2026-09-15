@@ -2523,4 +2523,18 @@ LOCATION:Woodstock Playhouse
 URL:https://woodstockfilmfestival.org/2025-all-events?eventId=68d6e6cf94d0
  1c53551b143f
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Subscribe to the new Woodstock Film Festival Calendar
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+DTSTAMP:20260915T203617Z
+UID:subscribe-notice@woodstockfilmfestival.org
+DESCRIPTION:This calendar has been replaced and is no longer updated.\nSub
+ scribe to the new feed to get every Woodstock Film Festival from now on - 
+ you only have to do this once.\n\n🔗 https://github.com/themorgantown/wo
+ odstock-filmfestival-calendar-generator/blob/main/README.md
+TRANSP:TRANSPARENT
+URL:https://github.com/themorgantown/woodstock-filmfestival-calendar-gener
+ ator/blob/main/README.md
+END:VEVENT
 END:VCALENDAR

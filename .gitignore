@@ -59,7 +59,7 @@ logs_githubaction/
 
 # Analysis scripts (not for production)
 analyze_sellouts.py
-sellout_analysis.md
+sellout_analysis_2025.md
 
 # Build output
 public/

@@ -1,6 +1,6 @@
 # Woodstock Film Festival Calendar (Unofficial)
 
-Automatically generated (and not guaranteed to be correct) calendar feed for the current Woodstock Film Festival, updated every hour. Shows 🎟️ when event has tickets available. 
+Automatically generated (and not guaranteed to be correct) calendar feed for the current Woodstock Film Festival, updated every hour. Shows 🎟️ when an event has tickets available and 🔴 once it has sold out. 
 
 [![](https://img.shields.io/badge/iCal-Download-blue?style=for-the-badge&logo=apple&logoColor=white)](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/woodstockfilmfestival.ics)
 
@@ -45,6 +45,8 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 - Venue locations
 - Direct links to event details
 - Indication of ticket availability (🎟️)
+- Sellout marker (🔴) with the time tickets ran out, both in the event description
+  and as an `X-WFF-SOLDOUT` property; sellouts are also appended to `sellouts.csv`
  
 ## Respectful Scraping
 

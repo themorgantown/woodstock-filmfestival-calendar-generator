@@ -42,29 +42,40 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Cache Playwright browsers
-        if: steps.check-date.outputs.skip != 'true'
-        uses: actions/cache@v4.3.0
-        id: playwright-cache
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
-
       - name: Install Python dependencies
         if: steps.check-date.outputs.skip != 'true'
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      # requirements.txt pins no playwright version, so key the browser cache
+      # on the version pip actually resolved - otherwise an upgraded playwright
+      # restores a cache without the browser build it now expects.
+      - name: Resolve Playwright version
+        id: pw-version
+        if: steps.check-date.outputs.skip != 'true'
+        run: |
+          echo "version=$(python -c 'import importlib.metadata as m; print(m.version("playwright"))')" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        if: steps.check-date.outputs.skip != 'true'
+        uses: actions/cache@v4.3.0
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw-version.outputs.version }}
+
+      # Always run: a no-op download when the cache already holds this build,
+      # and the safety net when it doesn't.
       - name: Install Playwright browsers
-        if: steps.check-date.outputs.skip != 'true' && steps.playwright-cache.outputs.cache-hit != 'true'
+        if: steps.check-date.outputs.skip != 'true'
         run: |
           python -m playwright install --with-deps chromium
 
-      - name: Install Playwright system dependencies
-        if: steps.check-date.outputs.skip != 'true' && steps.playwright-cache.outputs.cache-hit == 'true'
+      - name: Self-check parsing and sellout logic
+        if: steps.check-date.outputs.skip != 'true'
         run: |
-          python -m playwright install-deps chromium
+          python test_make_calendar.py
 
       - name: Run calendar scraper
         id: scrape
@@ -96,7 +107,8 @@ jobs:
           path: |
             woodstockfilmfestival.ics
             wff_2026_complete.ics
-            wff_calendar.log
+            sellouts.csv
+            wff_calendar_v2.log
           retention-days: 30
 
       - name: Commit and push changes
@@ -106,6 +118,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git pull origin main
           git add woodstockfilmfestival.ics wff_2026_complete.ics
+          # Only exists once something has actually sold out
+          if [ -f sellouts.csv ]; then git add sellouts.csv; fi
           git diff --staged --quiet || git commit -m "Update calendar data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git push
         continue-on-error: true

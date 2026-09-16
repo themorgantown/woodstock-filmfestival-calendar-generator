@@ -19,6 +19,7 @@ Usage:
     python make_calendar_v2.py
 """
 
+import csv
 import logging
 import os
 import re
@@ -29,6 +30,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
 from bs4 import BeautifulSoup
+from dateutil import parser as dateparser
 from icalendar import Calendar, Event, vText, Timezone
 import pytz
 
@@ -49,10 +51,18 @@ ALL_EVENTS_URL = f"https://woodstockfilmfestival.org/{YEAR}-all-events"
 OUTPUT_PATH = f"wff_{YEAR}_complete.ics"
 # Year-free copy of the current year's calendar - the URL advertised publicly
 STABLE_OUTPUT_PATH = "woodstockfilmfestival.ics"
+SELLOUT_LOG_PATH = "sellouts.csv"
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 EVENT_BOX_DELAY = 0  # No delay needed - client-side JS only
 OVERLAY_WAIT_TIMEOUT = 2000  # Milliseconds to wait for overlay
+PAGE_LOAD_ATTEMPTS = 3  # The all-events page renders client-side and can stall
+# The Eventive ticket widget renders after the overlay, so it needs its own wait
+TICKET_WIDGET_TIMEOUT = 8000
+# ICS property holding when an event was first seen sold out
+SOLDOUT_PROP = "X-WFF-SOLDOUT"
+TICKET_EMOJI = "🎟️"
+SOLDOUT_EMOJI = "🔴"
 
 # Timezone support - use pytz for ICS compatibility
 TZ = pytz.timezone(TZ_ID)
@@ -78,12 +88,20 @@ class SimplifiedEventScraper:
             page.route("**/*.{png,jpg,jpeg,gif,svg,webp,ico}", lambda route: route.abort())
             
             try:
-                # Navigate to the all-events page
-                logger.info("Loading all-events page...")
-                page.goto(ALL_EVENTS_URL, wait_until="domcontentloaded", timeout=30000)
-                
-                # Wait for event boxes to load
-                page.wait_for_selector('.event-box', timeout=10000)
+                # Navigate to the all-events page. The Squarespace page renders
+                # the boxes client-side and sometimes stalls, so retry rather
+                # than failing the whole hourly run on one slow load.
+                for attempt in range(1, PAGE_LOAD_ATTEMPTS + 1):
+                    try:
+                        logger.info(f"Loading all-events page (attempt {attempt})...")
+                        page.goto(ALL_EVENTS_URL, wait_until="domcontentloaded", timeout=45000)
+                        page.wait_for_selector('.event-box', timeout=20000)
+                        break
+                    except PlaywrightTimeout as e:
+                        if attempt == PAGE_LOAD_ATTEMPTS:
+                            raise
+                        logger.warning(f"Page load attempt {attempt} failed: {e}")
+                        time.sleep(5)
                 
                 # Count total event boxes
                 initial_event_boxes = page.query_selector_all('.event-box')
@@ -150,18 +168,24 @@ class SimplifiedEventScraper:
             # Click the event box
             event_box.click()
             
-            # Wait for the overlay to appear
+            # Wait for the overlay to appear. Scope to .single-event: the list
+            # view gives every row an .event-details div too.
             try:
-                page.wait_for_selector('.event-details', timeout=OVERLAY_WAIT_TIMEOUT)
+                page.wait_for_selector('.single-event .event-details',
+                                       timeout=OVERLAY_WAIT_TIMEOUT)
             except PlaywrightTimeout:
                 logger.warning(f"Overlay did not appear for event {event_id}")
                 return None
+            
+            # Ticket state comes from the Eventive widget, which mounts after
+            # the overlay - reading the DOM too early always says "no tickets".
+            ticket_text = self._read_ticket_button(page, event_id)
             
             # Get the overlay HTML (no additional delay needed)
             overlay_html = page.content()
             
             # Parse the overlay
-            event_data = self._parse_overlay(overlay_html, event_id)
+            event_data = self._parse_overlay(overlay_html, event_id, ticket_text)
             
             # Return to list view. The back button exists but is hidden when the
             # overlay was opened from the list, so call its handler directly.
@@ -177,12 +201,47 @@ class SimplifiedEventScraper:
             logger.error(f"Error scraping event {index}: {e}")
             return None
     
-    def _parse_overlay(self, html: str, event_id: str) -> Optional[Dict]:
+    def _read_ticket_button(self, page: Page, event_id: str) -> Optional[str]:
+        """Return the Eventive button's text once the widget has mounted.
+
+        None means "could not tell" - the caller keeps whatever ticket state
+        the previous scrape recorded rather than inventing a sellout.
+        """
+        try:
+            page.wait_for_selector('.event-ticket-button .eventive-widget-container',
+                                   timeout=TICKET_WIDGET_TIMEOUT)
+            button = page.query_selector('.event-ticket-button')
+            text = button.inner_text().strip() if button else ''
+            return text or None
+        except PlaywrightTimeout:
+            logger.warning(f"Ticket widget did not render for {event_id}")
+            return None
+        except Exception as e:
+            logger.warning(f"Could not read ticket button for {event_id}: {e}")
+            return None
+
+    @staticmethod
+    def _classify_ticket_text(text: Optional[str]) -> str:
+        """Map Eventive button text to on_sale / sold_out / unknown"""
+        if not text:
+            return 'unknown'
+        t = text.strip().lower()
+        if 'sold out' in t or 'soldout' in t:
+            return 'sold_out'
+        if 'order tickets' in t or 'rsvp' in t or 'get tickets' in t or 'buy' in t:
+            return 'on_sale'
+        # "Off sale", "Coming soon", "Free", anything new: don't guess a sellout
+        return 'unknown'
+
+    def _parse_overlay(self, html: str, event_id: str,
+                       ticket_text: Optional[str] = None) -> Optional[Dict]:
         """Parse event data from overlay HTML"""
         soup = BeautifulSoup(html, 'html.parser')
         
-        # Find the event-details container
-        event_details = soup.find('div', class_='event-details')
+        # Find the event-details container inside the single-event overlay
+        # (list view rows carry the same class, so scope it)
+        single = soup.find('div', class_='single-event')
+        event_details = (single or soup).find('div', class_='event-details')
         if not event_details:
             logger.warning(f"No event-details found for {event_id}")
             return None
@@ -223,14 +282,13 @@ class SimplifiedEventScraper:
             logger.warning(f"No venue found for {event_id}: {title}")
             venue = "TBD"
         
-        # Check for tickets availability
-        has_tickets = False
-        order_tickets_button = event_details.find(string=re.compile(r'Order tickets', re.IGNORECASE))
-        if order_tickets_button:
-            has_tickets = True
-            # Add ticket emoji to title if not already present
-            if '🎟️' not in title:
-                title = f"{title} 🎟️"
+        # Ticket availability, from the rendered widget text when we got it,
+        # falling back to the overlay markup.
+        ticket_status = self._classify_ticket_text(ticket_text)
+        if ticket_status == 'unknown':
+            markup_text = event_details.get_text(' ', strip=True)
+            ticket_status = self._classify_ticket_text(markup_text)
+        has_tickets = ticket_status == 'on_sale'
         
         # Extract description
         description_elem = event_details.find('p', class_='event-description')
@@ -252,6 +310,7 @@ class SimplifiedEventScraper:
             'venue': venue,
             'description': description,
             'has_tickets': has_tickets,
+            'ticket_status': ticket_status,
             'event_id': event_id,
             'url': f"{ALL_EVENTS_URL}?eventId={event_id}"
         }
@@ -268,33 +327,24 @@ class SimplifiedEventScraper:
         
         # Remove timezone indicator
         date_text = re.sub(r'\s+(ET|EST|EDT)\s*$', '', date_text)
-        # Site writes "6:00pm"; strptime's %p needs the separating space
-        date_text = re.sub(r'(\d)\s*([ap]\.?m\.?)$', r'\1 \2', date_text, flags=re.I)
-        
-        # Try various datetime formats
-        formats = [
-            "%a, %b %d, %I:%M %p",  # Sat, Oct 18, 3:15 PM
-            "%A, %B %d, %I:%M %p",  # Saturday, October 18, 3:15 PM
-            "%b %d, %I:%M %p",      # Oct 18, 3:15 PM
-            "%B %d, %I:%M %p",      # October 18, 3:15 PM
-            "%m/%d/%Y %I:%M %p",    # 10/18/2025 3:15 PM
-            "%Y-%m-%d %I:%M %p",    # 2025-10-18 3:15 PM
-        ]
-        
-        for fmt in formats:
-            try:
-                # Parse without year first
-                dt = datetime.strptime(date_text, fmt)
-                # Add the year
-                dt = dt.replace(year=YEAR)
-                # Add timezone using pytz localize (handles DST correctly)
-                dt = TZ.localize(dt)
-                return dt
-            except ValueError:
-                continue
-        
-        logger.warning(f"Could not parse datetime: {date_text}")
-        return None
+
+        # The site has used both "Sat, Oct 18, 3:15 PM" and
+        # "Sunday, October 18 at 3:15 PM"; fuzzy parsing survives either, and
+        # the default supplies the festival year the site never prints.
+        try:
+            dt = dateparser.parse(date_text, fuzzy=True,
+                                  default=datetime(YEAR, 1, 1))
+        except (ValueError, OverflowError) as e:
+            logger.warning(f"Could not parse datetime: {date_text} ({e})")
+            return None
+
+        # The site never prints a year, so anything else came from a stray
+        # number in the string - force the festival year.
+        if dt.year != YEAR:
+            dt = dt.replace(year=YEAR)
+
+        # Add timezone using pytz localize (handles DST correctly)
+        return TZ.localize(dt)
     
     def _create_event_id(self, event_data: Dict) -> str:
         """Create a unique ID for deduplication"""
@@ -355,6 +405,17 @@ class SimplifiedEventScraper:
                 else:
                     dtstamp_dt = None
                 
+                # Previous ticket state: the emoji in the summary is what the
+                # last scrape concluded, and SOLDOUT_PROP is when tickets first
+                # disappeared. Both carry forward when a scrape can't tell.
+                soldout_at = None
+                raw_soldout = component.get(SOLDOUT_PROP)
+                if raw_soldout:
+                    try:
+                        soldout_at = dateparser.isoparse(str(raw_soldout))
+                    except ValueError:
+                        logger.warning(f"Bad {SOLDOUT_PROP} on {uid}: {raw_soldout}")
+
                 # Store metadata indexed by UID
                 metadata[uid] = {
                     'uid': uid,
@@ -362,7 +423,9 @@ class SimplifiedEventScraper:
                     'dtstart': start_dt,
                     'location': location,
                     'description': description,
-                    'dtstamp': dtstamp_dt
+                    'dtstamp': dtstamp_dt,
+                    'had_tickets': TICKET_EMOJI in summary,
+                    'soldout_at': soldout_at,
                 }
             
             logger.info(f"Loaded metadata for {len(metadata)} existing events")
@@ -372,6 +435,83 @@ class SimplifiedEventScraper:
             logger.warning(f"Could not load existing ICS file: {e}")
             return {}
     
+    def _apply_ticket_state(self, events: List[Dict]) -> List[Dict]:
+        """Resolve each event's ticket state against the previous scrape.
+
+        Sets 'soldout_at' (when tickets first vanished), decorates the title,
+        and appends a row to the sellout log on every state change.
+        """
+        now = datetime.now(TZ)
+        transitions = []
+
+        for event_data in events:
+            uid = f"{event_data.get('event_id', self._create_event_id(event_data))}@woodstockfilmfestival.org"
+            previous = self.existing_events_metadata.get(uid, {})
+            prior_soldout = previous.get('soldout_at')
+            status = event_data.get('ticket_status', 'unknown')
+
+            if status == 'on_sale':
+                soldout_at = None
+                if prior_soldout:
+                    transitions.append((now, event_data, 'back_on_sale'))
+            elif status == 'sold_out':
+                soldout_at = prior_soldout or now
+                if not prior_soldout:
+                    transitions.append((now, event_data, 'sold_out'))
+            else:
+                # Widget didn't render - keep the last known state rather than
+                # reporting a sellout that may just be a slow page.
+                soldout_at = prior_soldout
+                event_data['has_tickets'] = previous.get('had_tickets', False)
+
+            event_data['soldout_at'] = soldout_at
+
+            title = event_data['title']
+            if soldout_at and SOLDOUT_EMOJI not in title:
+                title = f"{title} {SOLDOUT_EMOJI}"
+            elif event_data.get('has_tickets') and TICKET_EMOJI not in title:
+                title = f"{title} {TICKET_EMOJI}"
+            event_data['title'] = title
+
+        if transitions:
+            self._log_ticket_transitions(transitions)
+
+        sold_out_now = sum(1 for e in events if e.get('soldout_at'))
+        unknown = sum(1 for e in events if e.get('ticket_status') == 'unknown')
+        logger.info(f"Ticket state: {sold_out_now} sold out, {unknown} unknown, "
+                    f"{len(transitions)} change(s) this run")
+        return events
+
+    def _log_ticket_transitions(self, transitions: List[tuple]) -> None:
+        """Append sellout / back-on-sale rows to the CSV log"""
+        log_path = Path(SELLOUT_LOG_PATH)
+        write_header = not log_path.exists()
+        try:
+            with log_path.open('a', newline='', encoding='utf-8') as fh:
+                writer = csv.writer(fh)
+                if write_header:
+                    writer.writerow(['detected_at', 'status', 'event_id', 'title',
+                                     'event_start', 'venue', 'hours_before_start'])
+                for detected_at, event_data, status in transitions:
+                    start = event_data.get('start')
+                    hours_before = ''
+                    if start:
+                        hours_before = f"{(start - detected_at).total_seconds() / 3600:.2f}"
+                    title = event_data['title'].replace(TICKET_EMOJI, '').replace(SOLDOUT_EMOJI, '').strip()
+                    writer.writerow([
+                        detected_at.isoformat(),
+                        status,
+                        event_data.get('event_id', ''),
+                        title,
+                        start.isoformat() if start else '',
+                        event_data.get('venue', ''),
+                        hours_before,
+                    ])
+                    logger.info(f"{status.upper()}: {title} "
+                                f"({hours_before}h before start)")
+        except OSError as e:
+            logger.error(f"Could not write {SELLOUT_LOG_PATH}: {e}")
+
     def _normalize_description(self, desc: str) -> str:
         """Normalize description for comparison - remove URL and ticket lines we add"""
         if not desc:
@@ -384,6 +524,8 @@ class SimplifiedEventScraper:
             if line.strip().startswith('🎟️'):
                 continue
             if line.strip().startswith('🔗'):
+                continue
+            if line.strip().startswith(SOLDOUT_EMOJI):
                 continue
             filtered_lines.append(line)
         
@@ -475,7 +617,12 @@ class SimplifiedEventScraper:
             description_parts = []
             if event_data.get('description'):
                 description_parts.append(event_data['description'])
-            if event_data.get('has_tickets'):
+            soldout_at = event_data.get('soldout_at')
+            if soldout_at:
+                description_parts.append(
+                    f"\n{SOLDOUT_EMOJI} Sold out as of "
+                    f"{soldout_at.strftime('%a, %b %d %Y at %-I:%M %p %Z')}")
+            elif event_data.get('has_tickets'):
                 description_parts.append('\n🎟️ Tickets Available')
             if event_data.get('url'):
                 description_parts.append(f"\n🔗 {event_data['url']}")
@@ -490,6 +637,10 @@ class SimplifiedEventScraper:
             # Add UID
             uid = f"{event_data.get('event_id', self._create_event_id(event_data))}@woodstockfilmfestival.org"
             event.add('uid', uid)
+
+            # Machine-readable sellout time, so it survives the next scrape
+            if soldout_at:
+                event.add(SOLDOUT_PROP, vText(soldout_at.isoformat()))
             
             # Add timestamp - preserve existing if event hasn't changed
             if uid in self.existing_events_metadata:
@@ -533,6 +684,9 @@ class SimplifiedEventScraper:
                 # and so nothing downstream deploys a stale calendar.
                 raise SystemExit(1)
             
+            # Resolve sellouts against the previous scrape before writing
+            events = self._apply_ticket_state(events)
+
             # Generate ICS
             logger.info(f"Generating ICS calendar with {len(events)} events...")
             ics_content = self.generate_ics_calendar(events)

@@ -34,6 +34,8 @@ from dateutil import parser as dateparser
 from icalendar import Calendar, Event, vText, Timezone
 import pytz
 
+import venues
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -267,20 +269,24 @@ class SimplifiedEventScraper:
             logger.warning(f"No start date found for {event_id}: {title}")
             return None
         
-        # Extract Venue
-        venue = None
+        # Extract Venue. The site prints the name on the first line and the
+        # address under it; keep both - the address is what LOCATION needs.
+        venue_block = None
         for p in start_paragraphs:
             strong = p.find('strong')
             if strong and 'Venue:' in strong.get_text():
-                # Get the text after the <strong> tag
-                venue_text = p.get_text('\n', strip=True).replace('Venue:', '').strip()
-                # Take only the first line (venue name)
-                venue = venue_text.split('\n')[0].strip()
+                venue_block = p.get_text('\n', strip=True).replace('Venue:', '').strip()
                 break
         
-        if not venue:
+        if not venue_block:
             logger.warning(f"No venue found for {event_id}: {title}")
-            venue = "TBD"
+            venue_block = "TBD"
+        
+        venue = venues.venue_name(venue_block)
+        location, address_verified = venues.resolve(venue_block)
+        if not address_verified and venue != "TBD":
+            logger.warning(f"No verified address for venue {venue!r} - "
+                           f"using the site's own text: {location!r}")
         
         # Ticket availability, from the rendered widget text when we got it,
         # falling back to the overlay markup.
@@ -308,6 +314,7 @@ class SimplifiedEventScraper:
             'title': title,
             'start': start_dt,
             'venue': venue,
+            'location': location,
             'description': description,
             'has_tickets': has_tickets,
             'ticket_status': ticket_status,
@@ -535,7 +542,7 @@ class SimplifiedEventScraper:
         """Compare new event data with existing metadata to detect changes"""
         # Compare key fields
         new_summary = event_data.get('title', '').strip()
-        new_location = event_data.get('venue', '').strip()
+        new_location = (event_data.get('location') or event_data.get('venue', '')).strip()
         new_description = event_data.get('description', '')
         new_start = event_data.get('start')
         
@@ -609,9 +616,10 @@ class SimplifiedEventScraper:
             end_time = event_data['start'] + timedelta(hours=DEFAULT_DURATION_HOURS)
             event.add('dtend', end_time)
             
-            # Add location
-            if event_data.get('venue'):
-                event.add('location', vText(event_data['venue']))
+            # Add location - full street address so calendar apps can map it
+            location = event_data.get('location') or event_data.get('venue')
+            if location:
+                event.add('location', vText(location))
             
             # Add description
             description_parts = []

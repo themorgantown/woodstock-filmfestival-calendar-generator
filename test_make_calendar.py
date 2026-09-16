@@ -11,6 +11,7 @@ from datetime import datetime
 os.environ.setdefault("WFF_YEAR", "2026")
 
 import make_calendar as mc
+import venues
 
 
 def test_parse_datetime():
@@ -143,6 +144,58 @@ def test_soldout_roundtrip_through_ics():
         meta = reloaded['abc123@woodstockfilmfestival.org']
         assert meta['soldout_at'] == sold['soldout_at']
         assert meta['had_tickets'] is False
+
+
+# Every venue block the site printed for the 2026 festival, verbatim.
+# If the site adds a venue, this list is what tells us the table needs a row.
+SITE_VENUE_BLOCKS = [
+    'Assembly\n236 Wall Street 3rd Floor\nKingston, NY 12401',
+    'Bearsville Theater\n291 Tinker Street\nWoodstock, NY 12498',
+    'Broken Wing Barn at White Feather Farm\n1389 State Route 212, Saugerties, NY 12477',
+    'Community Theater\n373 Main St, Catskill, NY 12414',
+    'Rosendale Theatre\n408 Main St\nRosendale, NY 12472',
+    'Tinker Street Cinema\n132 Tinker Street\nWoodstock, NY 12498',
+    'Unicorn Bar\n224 Foxhall Avenue, Kingston NY',
+    'Upstate Films (Saugerties): Orpheum Theatre 1\n156 Main St\nSaugerties, NY 12477',
+    'Upstate Midtown\n591 Broadway\nKingston, NY 12477',
+    'Utopia Studios\n293 Tinker St, Woodstock, NY 12498',
+    'Woodstock Community Center\n56 Rock City Rd\nWoodstock, NY 12498',
+    'Woodstock Playhouse\n103 Mill Hill Rd\nWoodstock, NY 12498',
+]
+
+
+def test_every_site_venue_has_a_verified_address():
+    """No event should fall back to the site's own sloppy address text."""
+    unresolved = [b.split(chr(10))[0] for b in SITE_VENUE_BLOCKS
+                  if not venues.resolve(b)[1]]
+    assert not unresolved, f"venues missing from VENUE_ADDRESSES: {unresolved}"
+
+
+def test_resolved_locations_are_mappable():
+    """Each LOCATION must carry a street number, a state and a 5-digit ZIP."""
+    import re
+    for block in SITE_VENUE_BLOCKS:
+        location, verified = venues.resolve(block)
+        assert verified, block
+        assert re.search(r'\d+\s+\w', location), f"no street number: {location}"
+        assert re.search(r'\bNY\s+\d{5}$', location), f"no state/ZIP: {location}"
+        assert location.count(',') >= 3, f"unexpected shape: {location}"
+
+
+def test_venue_name_matching_is_forgiving():
+    """Screen numbers, case and punctuation must not break the lookup."""
+    assert venues.normalize('Orpheum Theatre 1') == 'orpheum theatre'
+    assert venues.normalize('  TINKER STREET CINEMA  ') == 'tinker street cinema'
+    a = venues.lookup('Upstate Films (Saugerties): Orpheum Theatre 1')
+    b = venues.lookup('Upstate Films (Saugerties): Orpheum Theatre 2')
+    assert a is not None and a == b, "screen numbers must resolve to one venue"
+
+
+def test_unknown_venue_falls_back_to_site_text():
+    """A venue we haven't verified keeps its address instead of losing it."""
+    location, verified = venues.resolve('Some New Barn\n1 Made Up Rd\nWoodstock, NY 12498')
+    assert verified is False
+    assert location == 'Some New Barn, 1 Made Up Rd, Woodstock, NY 12498'
 
 
 if __name__ == "__main__":

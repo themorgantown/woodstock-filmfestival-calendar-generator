@@ -42,7 +42,7 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 
 - Event titles and descriptions
 - Screening times and dates
-- Venue locations
+- Venue locations as full street addresses (verified in `venues.py`), so calendar apps can map them
 - Direct links to event details
 - Indication of ticket availability (🎟️)
 - Sellout marker (🔴) with the time tickets ran out, both in the event description

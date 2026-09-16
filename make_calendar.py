@@ -55,6 +55,9 @@ DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
 PAGE_LOAD_ATTEMPTS = 3  # The all-events page renders client-side and can stall
 EVENT_DATA_TIMEOUT = 30000  # Milliseconds to wait for the page's event JSON
+# A scrape holding less than this share of the previous run's events is treated
+# as a broken upstream, not as events being cancelled.
+MIN_EVENT_RATIO = 0.8
 # ICS property holding when an event was first seen sold out
 SOLDOUT_PROP = "X-WFF-SOLDOUT"
 TICKET_EMOJI = "🎟️"
@@ -90,6 +93,16 @@ class SimplifiedEventScraper:
             # Nothing we read is a pixel.
             page.route("**/*.{png,jpg,jpeg,gif,svg,webp,ico}", lambda route: route.abort())
 
+            # Second source for the same data: the Eventive reply the page is
+            # reacting to. It survives the page renaming its variables, and
+            # costs nothing - the request happens either way. Only the URL is
+            # looked at here; reading a body inside a response handler hangs
+            # the sync API, so the JSON is parsed later, and only if needed.
+            api_responses = []
+            page.on("response", lambda response: api_responses.append(response)
+                    if 'event_buckets' in response.url and '/events' in response.url
+                    else None)
+
             try:
                 # The Squarespace page renders client-side and sometimes
                 # stalls, so retry rather than failing the whole hourly run on
@@ -105,8 +118,19 @@ class SimplifiedEventScraper:
                             "typeof cachedEvents !== 'undefined' && cachedEvents.length > 0",
                             timeout=EVENT_DATA_TIMEOUT)
                         raw_events = page.evaluate("cachedEvents")
+                        logger.info(f"Read {len(raw_events)} events from cachedEvents")
                         break
                     except PlaywrightTimeout as e:
+                        # The page's own array is the preferred source because
+                        # it is exactly what the site shows. If it's gone, the
+                        # API reply still has everything.
+                        fallback = self._events_from_responses(api_responses)
+                        if fallback:
+                            raw_events = fallback
+                            logger.warning(
+                                f"cachedEvents unusable ({e}); fell back to the "
+                                f"Eventive response: {len(raw_events)} events")
+                            break
                         if attempt == PAGE_LOAD_ATTEMPTS:
                             raise
                         logger.warning(f"Page load attempt {attempt} failed: {e}")
@@ -134,6 +158,32 @@ class SimplifiedEventScraper:
 
         logger.info(f"Scraping complete. Found {len(self.events)} unique events")
         return self.events
+
+    @staticmethod
+    def _events_from_responses(responses) -> List[Dict]:
+        """Pull the event list out of the captured Eventive replies.
+
+        Newest first, and every failure is shrugged off: this only runs when
+        the page's own array is already gone, so a bad body here just means
+        there is nothing to fall back to.
+        """
+        best: List[Dict] = []
+        for response in responses:
+            # The loader also asks for ?upcoming_only=true, which stops
+            # returning an event the moment it starts - that reply must never
+            # become the calendar.
+            if 'upcoming_only' in response.url:
+                continue
+            try:
+                body = response.json()
+            except Exception as e:
+                logger.warning(f"Could not read {response.url}: {e}")
+                continue
+            events = body.get('events') if isinstance(body, dict) else None
+            if events and len(events) > len(best):
+                # The page hides virtual events; match it.
+                best = [e for e in events if not e.get('is_virtual')]
+        return best
 
     def _event_from_api(self, raw: Dict) -> Optional[Dict]:
         """Map one Eventive event object to the dict the rest of the code uses"""
@@ -532,6 +582,18 @@ class SimplifiedEventScraper:
                 logger.error("No events found! Check the page structure.")
                 # Exit non-zero so CI fails loudly instead of silently no-op'ing
                 # and so nothing downstream deploys a stale calendar.
+                raise SystemExit(1)
+
+            # A half-empty upstream reply would otherwise quietly delete events
+            # out of every subscriber's calendar. Stalling on the last good
+            # calendar is the cheaper mistake.
+            # ponytail: flat ratio, not per-event reconciliation - revisit if
+            # the site ever starts dropping events once they have happened.
+            previous_count = len(self.existing_events_metadata)
+            if previous_count and len(events) < previous_count * MIN_EVENT_RATIO:
+                logger.error(
+                    f"Only {len(events)} events, down from {previous_count} - "
+                    f"refusing to publish. Re-run once the site is back.")
                 raise SystemExit(1)
             
             # Resolve sellouts against the previous scrape before writing

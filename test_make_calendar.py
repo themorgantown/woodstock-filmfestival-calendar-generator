@@ -154,6 +154,81 @@ def test_soldout_roundtrip_through_ics():
         assert meta['had_tickets'] is False
 
 
+class _FakeResponse:
+    """Just enough of a Playwright Response for _events_from_responses."""
+
+    def __init__(self, url, body):
+        self.url = url
+        self._body = body
+
+    def json(self):
+        if self._body is None:
+            raise ValueError("not JSON")
+        return self._body
+
+
+def test_fallback_picks_the_full_listing():
+    """The loader's ?upcoming_only reply must never become the calendar.
+
+    It stops listing an event the moment that event starts, so taking it
+    mid-festival would delete the day's screenings from every subscriber.
+    """
+    pick = mc.SimplifiedEventScraper._events_from_responses
+    full = {'events': [{'id': 'a'}, {'id': 'b'}, {'id': 'c', 'is_virtual': True}]}
+    upcoming = {'events': [{'id': 'c'}]}
+    responses = [
+        _FakeResponse('https://api.eventive.org/event_buckets/X/events?upcoming_only=true', upcoming),
+        _FakeResponse('https://api.eventive.org/event_buckets/X/events/', full),
+        _FakeResponse('https://api.eventive.org/event_buckets/X/events/', None),  # unreadable
+    ]
+    assert [e['id'] for e in pick(responses)] == ['a', 'b']   # virtual dropped
+    assert pick(list(reversed(responses))) == pick(responses)  # order can't matter
+    assert pick([]) == []
+    assert pick([_FakeResponse('https://api.eventive.org/event_buckets/X/events/', {})]) == []
+
+
+def test_refuses_to_publish_a_gutted_calendar():
+    """Half an upstream reply must not silently empty everyone's calendar."""
+    healthy = [_event('on_sale', title=f'Film {i}') for i in range(89)]
+    for i, e in enumerate(healthy):
+        e['event_id'] = f'id{i}'
+    gutted = healthy[:10]
+
+    with tempfile.TemporaryDirectory() as tmp:
+        original_out, original_stable, original_log = (
+            mc.OUTPUT_PATH, mc.STABLE_OUTPUT_PATH, mc.SELLOUT_LOG_PATH)
+        mc.OUTPUT_PATH = os.path.join(tmp, 'out.ics')
+        mc.STABLE_OUTPUT_PATH = os.path.join(tmp, 'stable.ics')
+        mc.SELLOUT_LOG_PATH = os.path.join(tmp, 'sellouts.csv')
+        try:
+            # Yesterday's calendar: all 89 events.
+            s = mc.SimplifiedEventScraper()
+            s.scrape_all_events = lambda: healthy
+            s.run()
+            good = open(mc.OUTPUT_PATH, encoding='utf-8').read()
+            assert good.count('BEGIN:VEVENT') == 89
+
+            # Today the site hands back 10 of them.
+            s = mc.SimplifiedEventScraper()
+            s.scrape_all_events = lambda: gutted
+            try:
+                s.run()
+                assert False, "a 10-of-89 scrape should have exited"
+            except SystemExit as e:
+                assert e.code == 1
+            assert open(mc.OUTPUT_PATH, encoding='utf-8').read() == good, \
+                "the last good calendar must survive a gutted scrape"
+
+            # A healthy scrape still writes.
+            s = mc.SimplifiedEventScraper()
+            s.scrape_all_events = lambda: healthy
+            s.run()
+            assert open(mc.OUTPUT_PATH, encoding='utf-8').read().count('BEGIN:VEVENT') == 89
+        finally:
+            (mc.OUTPUT_PATH, mc.STABLE_OUTPUT_PATH,
+             mc.SELLOUT_LOG_PATH) = original_out, original_stable, original_log
+
+
 # Every venue block the site printed for the 2026 festival, verbatim.
 # If the site adds a venue, this list is what tells us the table needs a row.
 SITE_VENUE_BLOCKS = [

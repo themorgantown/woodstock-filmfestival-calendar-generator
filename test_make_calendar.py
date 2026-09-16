@@ -14,27 +14,35 @@ import make_calendar as mc
 import venues
 
 
-def test_parse_datetime():
-    """Both date formats the site has used must parse to the same instant."""
+def test_event_from_api():
+    """One Eventive event object must map to the dict the ICS builder wants."""
     s = mc.SimplifiedEventScraper()
-    expected = mc.TZ.localize(datetime(2026, 10, 18, 15, 15))
-    for text in ["Sat, Oct 18, 3:15 PM ET",
-                 "Sunday, October 18 at 3:15 PM ET",
-                 "Saturday, October 18 at 3:15 PM"]:
-        assert s._parse_datetime(text) == expected, f"failed on {text!r}"
-    assert s._parse_datetime("") is None
-    assert s._parse_datetime("no date here at all") is None
+    raw = {
+        'id': 'abc123',
+        'name': '  Some Film  ',
+        'start_time': '2026-10-18T19:15:00.000Z',  # 3:15 PM EDT
+        'venue': {'name': 'Tinker Street Cinema', 'address': '10 Tinker St, Woodstock NY'},
+        'description': '<p></p><p>First para.</p><p>Second para.</p>',
+        'tickets_available': True,
+    }
+    e = s._event_from_api(raw)
+    assert e['title'] == 'Some Film'
+    assert e['start'] == mc.TZ.localize(datetime(2026, 10, 18, 15, 15))
+    assert e['venue'] == 'Tinker Street Cinema'
+    # the verified address wins over the address the API sends
+    assert e['location'] == 'Tinker Street Cinema, 132 Tinker Street, Woodstock, NY 12498'
+    assert e['description'] == 'First para.\n\nSecond para.'
+    assert e['ticket_status'] == 'on_sale' and e['has_tickets'] is True
+    assert e['event_id'] == 'abc123'
 
-
-def test_classify_ticket_text():
-    c = mc.SimplifiedEventScraper._classify_ticket_text
-    assert c("ORDER TICKETS") == 'on_sale'
-    assert c("RSVP") == 'on_sale'
-    assert c("SOLD OUT") == 'sold_out'
-    assert c("Sold Out") == 'sold_out'
-    assert c(None) == 'unknown'
-    assert c("") == 'unknown'
-    assert c("Coming soon") == 'unknown'
+    # The one field that decides a sellout.
+    assert s._event_from_api({**raw, 'tickets_available': False})['ticket_status'] == 'sold_out'
+    # Field gone entirely: don't invent a sellout, say so.
+    no_field = {k: v for k, v in raw.items() if k != 'tickets_available'}
+    assert s._event_from_api(no_field)['ticket_status'] == 'unknown'
+    # Junk in, nothing out - a bad row is skipped, not written as an event.
+    assert s._event_from_api({**raw, 'start_time': 'not a date'}) is None
+    assert s._event_from_api({**raw, 'name': ''}) is None
 
 
 def _event(status, title="Test Film"):

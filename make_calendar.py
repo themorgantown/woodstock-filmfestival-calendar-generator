@@ -1,15 +1,13 @@
 """
 Woodstock Film Festival Event Scraper (year set by WFF_YEAR, default 2026)
-Scrapes the single all-events page by clicking each event overlay.
+Reads the single all-events page's own event JSON.
 
-This version replaces the complex multi-venue scraper with a simpler approach:
 - Single URL: https://woodstockfilmfestival.org/{YEAR}-all-events
-- Clicks each event-box to trigger overlay (client-side JS, no server requests)
-- Extracts data from overlay DOM following todo.md specification
+- The page fetches the whole Eventive bucket once into `cachedEvents` and
+  renders every box and overlay from it, so one page load has all the data
 - Deduplicates events by title+venue+datetime
 - Generates ICS calendar file
 - No scheduling (handled by GitHub Actions)
-- Fast execution with minimal delays (0.1s between clicks)
 
 Dependencies:
     pip install playwright icalendar python-dateutil beautifulsoup4
@@ -22,13 +20,12 @@ Usage:
 import csv
 import logging
 import os
-import re
 import time
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Set
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
 from icalendar import Calendar, Event, vText, Timezone
@@ -56,11 +53,8 @@ STABLE_OUTPUT_PATH = "woodstockfilmfestival.ics"
 SELLOUT_LOG_PATH = "sellouts.csv"
 DEFAULT_DURATION_HOURS = 2
 TZ_ID = "America/New_York"
-EVENT_BOX_DELAY = 0  # No delay needed - client-side JS only
-OVERLAY_WAIT_TIMEOUT = 2000  # Milliseconds to wait for overlay
 PAGE_LOAD_ATTEMPTS = 3  # The all-events page renders client-side and can stall
-# The Eventive ticket widget renders after the overlay, so it needs its own wait
-TICKET_WIDGET_TIMEOUT = 8000
+EVENT_DATA_TIMEOUT = 30000  # Milliseconds to wait for the page's event JSON
 # ICS property holding when an event was first seen sold out
 SOLDOUT_PROP = "X-WFF-SOLDOUT"
 TICKET_EMOJI = "🎟️"
@@ -79,280 +73,128 @@ class SimplifiedEventScraper:
         self.existing_events_metadata: Dict[str, Dict] = {}
         
     def scrape_all_events(self) -> List[Dict]:
-        """Main scraping method using Playwright"""
+        """Read every event from the JSON the page itself fetched.
+
+        The page asks Eventive once for the whole bucket and keeps the answer
+        in `cachedEvents`; every overlay is just that array re-rendered by
+        client-side JS. So load the page once and read the array instead of
+        clicking through 89 overlays for data that is already in memory.
+        """
         logger.info(f"Starting scraper for {ALL_EVENTS_URL}")
-        
+
+        raw_events: List[Dict] = []
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page()
-            
-            # Block images to speed up loading
+
+            # Nothing we read is a pixel.
             page.route("**/*.{png,jpg,jpeg,gif,svg,webp,ico}", lambda route: route.abort())
-            
+
             try:
-                # Navigate to the all-events page. The Squarespace page renders
-                # the boxes client-side and sometimes stalls, so retry rather
-                # than failing the whole hourly run on one slow load.
+                # The Squarespace page renders client-side and sometimes
+                # stalls, so retry rather than failing the whole hourly run on
+                # one slow load.
                 for attempt in range(1, PAGE_LOAD_ATTEMPTS + 1):
                     try:
                         logger.info(f"Loading all-events page (attempt {attempt})...")
-                        page.goto(ALL_EVENTS_URL, wait_until="domcontentloaded", timeout=45000)
-                        page.wait_for_selector('.event-box', timeout=20000)
+                        page.goto(ALL_EVENTS_URL, wait_until="domcontentloaded",
+                                  timeout=45000)
+                        # cachedEvents is a script-scope `let`, not a property
+                        # of window, so it has to be named bare.
+                        page.wait_for_function(
+                            "typeof cachedEvents !== 'undefined' && cachedEvents.length > 0",
+                            timeout=EVENT_DATA_TIMEOUT)
+                        raw_events = page.evaluate("cachedEvents")
                         break
                     except PlaywrightTimeout as e:
                         if attempt == PAGE_LOAD_ATTEMPTS:
                             raise
                         logger.warning(f"Page load attempt {attempt} failed: {e}")
                         time.sleep(5)
-                
-                # Count total event boxes
-                initial_event_boxes = page.query_selector_all('.event-box')
-                total_events = len(initial_event_boxes)
-                logger.info(f"Found {total_events} event boxes")
-                
-                # Process each event by index (re-query each time to avoid stale elements)
-                for idx in range(total_events):
-                    try:
-                        logger.info(f"Processing event {idx+1}/{total_events}")
-                        
-                        # Re-query event boxes to get fresh references
-                        event_boxes = page.query_selector_all('.event-box')
-                        if idx >= len(event_boxes):
-                            logger.warning(f"Event box {idx+1} no longer exists, skipping")
-                            continue
-                        
-                        event_box = event_boxes[idx]
-                        event_data = self._scrape_single_event(page, event_box, idx+1)
-                        
-                        if event_data:
-                            # Check for duplicates
-                            event_id = self._create_event_id(event_data)
-                            if event_id not in self.seen_event_ids:
-                                self.events.append(event_data)
-                                self.seen_event_ids.add(event_id)
-                                logger.info(f"✓ Scraped: {event_data['title']}")
-                            else:
-                                logger.info(f"⊘ Duplicate skipped: {event_data['title']}")
-                        
-                        # Minimal delay - no server hammering since it's all client-side JS
-                        if EVENT_BOX_DELAY > 0:
-                            time.sleep(EVENT_BOX_DELAY)
-                        
-                    except Exception as e:
-                        logger.error(f"❌ Failed to process event {idx+1}: {e}")
-                        continue
-                
+
             except Exception as e:
                 logger.error(f"Fatal error during scraping: {e}")
             finally:
                 browser.close()
-        
+
+        logger.info(f"Page held {len(raw_events)} events")
+
+        for raw in raw_events:
+            event_data = self._event_from_api(raw)
+            if not event_data:
+                continue
+
+            event_id = self._create_event_id(event_data)
+            if event_id in self.seen_event_ids:
+                logger.info(f"⊘ Duplicate skipped: {event_data['title']}")
+                continue
+
+            self.events.append(event_data)
+            self.seen_event_ids.add(event_id)
+
         logger.info(f"Scraping complete. Found {len(self.events)} unique events")
         return self.events
-    
-    def _scrape_single_event(self, page: Page, event_box, index: int) -> Optional[Dict]:
-        """Click an event box and scrape data from the overlay"""
+
+    def _event_from_api(self, raw: Dict) -> Optional[Dict]:
+        """Map one Eventive event object to the dict the rest of the code uses"""
+        event_id = raw.get('id')
+        title = (raw.get('name') or '').strip()
+        if not event_id or not title:
+            logger.warning(f"Skipping event with no id or name: {raw.get('id')!r}")
+            return None
+
         try:
-            # Get the onclick attribute to extract event ID
-            onclick = event_box.get_attribute('onclick')
-            if not onclick:
-                logger.warning(f"Event {index} has no onclick attribute")
-                return None
-            
-            # Extract event ID from onclick="showSingleEvent('ID')"
-            match = re.search(r"showSingleEvent\('([^']+)'\)", onclick)
-            if not match:
-                logger.warning(f"Could not extract event ID from onclick: {onclick}")
-                return None
-            
-            event_id = match.group(1)
-            
-            # Click the event box
-            event_box.click()
-            
-            # Wait for the overlay to appear. Scope to .single-event: the list
-            # view gives every row an .event-details div too.
-            try:
-                page.wait_for_selector('.single-event .event-details',
-                                       timeout=OVERLAY_WAIT_TIMEOUT)
-            except PlaywrightTimeout:
-                logger.warning(f"Overlay did not appear for event {event_id}")
-                return None
-            
-            # Ticket state comes from the Eventive widget, which mounts after
-            # the overlay - reading the DOM too early always says "no tickets".
-            ticket_text = self._read_ticket_button(page, event_id)
-            
-            # Get the overlay HTML (no additional delay needed)
-            overlay_html = page.content()
-            
-            # Parse the overlay
-            event_data = self._parse_overlay(overlay_html, event_id, ticket_text)
-            
-            # Return to list view. The back button exists but is hidden when the
-            # overlay was opened from the list, so call its handler directly.
-            try:
-                page.evaluate("returnToPreviousView()")
-                page.wait_for_selector('.event-box', timeout=3000)
-            except Exception as e:
-                logger.warning(f"Could not close overlay for {event_id}: {e}")
-            
-            return event_data
-            
-        except Exception as e:
-            logger.error(f"Error scraping event {index}: {e}")
-            return None
-    
-    def _read_ticket_button(self, page: Page, event_id: str) -> Optional[str]:
-        """Return the Eventive button's text once the widget has mounted.
-
-        None means "could not tell" - the caller keeps whatever ticket state
-        the previous scrape recorded rather than inventing a sellout.
-        """
-        try:
-            page.wait_for_selector('.event-ticket-button .eventive-widget-container',
-                                   timeout=TICKET_WIDGET_TIMEOUT)
-            button = page.query_selector('.event-ticket-button')
-            text = button.inner_text().strip() if button else ''
-            return text or None
-        except PlaywrightTimeout:
-            logger.warning(f"Ticket widget did not render for {event_id}")
-            return None
-        except Exception as e:
-            logger.warning(f"Could not read ticket button for {event_id}: {e}")
+            start = dateparser.isoparse(raw['start_time']).astimezone(TZ)
+        except (KeyError, ValueError) as e:
+            logger.warning(f"No usable start time for {title}: {e}")
             return None
 
-    @staticmethod
-    def _classify_ticket_text(text: Optional[str]) -> str:
-        """Map Eventive button text to on_sale / sold_out / unknown"""
-        if not text:
-            return 'unknown'
-        t = text.strip().lower()
-        if 'sold out' in t or 'soldout' in t:
-            return 'sold_out'
-        if 'order tickets' in t or 'rsvp' in t or 'get tickets' in t or 'buy' in t:
-            return 'on_sale'
-        # "Off sale", "Coming soon", "Free", anything new: don't guess a sellout
-        return 'unknown'
-
-    def _parse_overlay(self, html: str, event_id: str,
-                       ticket_text: Optional[str] = None) -> Optional[Dict]:
-        """Parse event data from overlay HTML"""
-        soup = BeautifulSoup(html, 'html.parser')
-        
-        # Find the event-details container inside the single-event overlay
-        # (list view rows carry the same class, so scope it)
-        single = soup.find('div', class_='single-event')
-        event_details = (single or soup).find('div', class_='event-details')
-        if not event_details:
-            logger.warning(f"No event-details found for {event_id}")
-            return None
-        
-        # Extract Title
-        title_elem = event_details.find('h2', class_='event-title')
-        if not title_elem:
-            logger.warning(f"No title found for {event_id}")
-            return None
-        title = title_elem.get_text(strip=True)
-        
-        # Extract Start Date/Time
-        start_dt = None
-        start_paragraphs = event_details.find_all('p')
-        for p in start_paragraphs:
-            strong = p.find('strong')
-            if strong and 'Start:' in strong.get_text():
-                date_text = p.get_text(strip=True).replace('Start:', '').strip()
-                start_dt = self._parse_datetime(date_text)
-                break
-        
-        if not start_dt:
-            logger.warning(f"No start date found for {event_id}: {title}")
-            return None
-        
-        # Extract Venue. The site prints the name on the first line and the
-        # address under it; keep both - the address is what LOCATION needs.
-        venue_block = None
-        for p in start_paragraphs:
-            strong = p.find('strong')
-            if strong and 'Venue:' in strong.get_text():
-                venue_block = p.get_text('\n', strip=True).replace('Venue:', '').strip()
-                break
-        
+        # The page prints the venue name with its address underneath and
+        # venues.resolve() reads that block; the JSON keeps the two apart.
+        venue_obj = raw.get('venue') or {}
+        venue_block = '\n'.join(part for part in (venue_obj.get('name', ''),
+                                                  venue_obj.get('address', ''))
+                                if part)
         if not venue_block:
-            logger.warning(f"No venue found for {event_id}: {title}")
+            logger.warning(f"No venue found for {title}")
             venue_block = "TBD"
-        
+
         venue = venues.venue_name(venue_block)
         location, address_verified = venues.resolve(venue_block)
         if not address_verified and venue != "TBD":
             logger.warning(f"No verified address for venue {venue!r} - "
                            f"using the site's own text: {location!r}")
-        
-        # Ticket availability, from the rendered widget text when we got it,
-        # falling back to the overlay markup.
-        ticket_status = self._classify_ticket_text(ticket_text)
-        if ticket_status == 'unknown':
-            markup_text = event_details.get_text(' ', strip=True)
-            ticket_status = self._classify_ticket_text(markup_text)
-        has_tickets = ticket_status == 'on_sale'
-        
-        # Extract description
-        description_elem = event_details.find('p', class_='event-description')
-        description = ""
-        if description_elem:
-            # Get all siblings after the empty event-description element
-            description_parts = []
-            for sibling in description_elem.find_next_siblings():
-                if sibling.name == 'p':
-                    text = sibling.get_text(strip=True)
-                    if text:
-                        description_parts.append(text)
-            description = '\n\n'.join(description_parts)
-        
-        # Build event data
-        event_data = {
+
+        # tickets_available is the field the Eventive button itself renders
+        # from, so no widget has to mount for us to see a sellout. None means
+        # the API stopped sending it - keep the previous scrape's state.
+        available = raw.get('tickets_available')
+        if available is None:
+            ticket_status = 'unknown'
+        else:
+            ticket_status = 'on_sale' if available else 'sold_out'
+
+        return {
             'title': title,
-            'start': start_dt,
+            'start': start,
             'venue': venue,
             'location': location,
-            'description': description,
-            'has_tickets': has_tickets,
+            'description': self._description_text(raw.get('description')),
+            'has_tickets': ticket_status == 'on_sale',
             'ticket_status': ticket_status,
             'event_id': event_id,
-            'url': f"{ALL_EVENTS_URL}?eventId={event_id}"
+            'url': f"{ALL_EVENTS_URL}?eventId={event_id}",
         }
-        
-        return event_data
-    
-    def _parse_datetime(self, date_text: str) -> Optional[datetime]:
-        """Parse datetime from text like 'Sat, Oct 18, 3:15 PM ET'"""
-        if not date_text:
-            return None
-        
-        # Clean up the text
-        date_text = date_text.strip()
-        
-        # Remove timezone indicator
-        date_text = re.sub(r'\s+(ET|EST|EDT)\s*$', '', date_text)
 
-        # The site has used both "Sat, Oct 18, 3:15 PM" and
-        # "Sunday, October 18 at 3:15 PM"; fuzzy parsing survives either, and
-        # the default supplies the festival year the site never prints.
-        try:
-            dt = dateparser.parse(date_text, fuzzy=True,
-                                  default=datetime(YEAR, 1, 1))
-        except (ValueError, OverflowError) as e:
-            logger.warning(f"Could not parse datetime: {date_text} ({e})")
-            return None
-
-        # The site never prints a year, so anything else came from a stray
-        # number in the string - force the festival year.
-        if dt.year != YEAR:
-            dt = dt.replace(year=YEAR)
-
-        # Add timezone using pytz localize (handles DST correctly)
-        return TZ.localize(dt)
-    
+    @staticmethod
+    def _description_text(html: Optional[str]) -> str:
+        """Flatten the description HTML into the text the ICS carries"""
+        if not html:
+            return ''
+        soup = BeautifulSoup(html, 'html.parser')
+        paragraphs = [p.get_text(strip=True) for p in soup.find_all('p')]
+        paragraphs = [p for p in paragraphs if p]
+        return '\n\n'.join(paragraphs) if paragraphs else soup.get_text(strip=True)
     def _create_event_id(self, event_data: Dict) -> str:
         """Create a unique ID for deduplication"""
         title = event_data.get('title', '').lower().strip()

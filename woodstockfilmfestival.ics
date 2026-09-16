@@ -569,6 +569,21 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a98633470ce
  680e3ee7ac2f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Family Matters 🎟️
+DTSTART;TZID=America/New_York:20261016T143000
+DTEND;TZID=America/New_York:20261016T163000
+DTSTAMP:20260916T205128Z
+UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
+ s in moments of control\, heartbreak\, and memory.\n\n🎟️ Tickets Avai
+ lable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a
+ a05b3baa83481cdea888a5
+LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
+ 98
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
+ 481cdea888a5
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:DEMOCRACY IN DOCUMENTARY 🎟️
 DTSTART;TZID=America/New_York:20261016T143000
 DTEND;TZID=America/New_York:20261016T163000
@@ -660,19 +675,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8f
  cdbaebbd2a4f
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:FRIDAY AFTERNOON TOONS 🎟️
-DTSTART;TZID=America/New_York:20261016T143000
-DTEND;TZID=America/New_York:20261016T163000
-DTSTAMP:20260916T171252Z
-UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa30e35c98b5350b50db4b0
-LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
- 98
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
- 5350b50db4b0
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:To Hold a Mountain 🎟️
 DTSTART;TZID=America/New_York:20261016T143000
 DTEND;TZID=America/New_York:20261016T163000
@@ -738,19 +740,17 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797a1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Family Matters 🎟️
+SUMMARY:FRIDAY NIGHT TOONS 🎟️
 DTSTART;TZID=America/New_York:20261016T173000
 DTEND;TZID=America/New_York:20261016T193000
-DTSTAMP:20260916T171252Z
-UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
- s in moments of control\, heartbreak\, and memory.\n\n🎟️ Tickets Avai
- lable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a
- a05b3baa83481cdea888a5
+DTSTAMP:20260916T205128Z
+UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
+ kfilmfestival.org/2026-all-events?eventId=6aa30e35c98b5350b50db4b0
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
- 481cdea888a5
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
+ 5350b50db4b0
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Avedon 🎟️

@@ -120,6 +120,6 @@ jobs:
           git add woodstockfilmfestival.ics wff_2026_complete.ics
           # Only exists once something has actually sold out
           if [ -f sellouts.csv ]; then git add sellouts.csv; fi
-          git diff --staged --quiet || git commit -m "Update calendar data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git diff --staged --quiet || git commit -m "Update calendar data - $(TZ='America/New_York' date +'%Y-%m-%d %H:%M:%S %Z')"
           git push
         continue-on-error: true

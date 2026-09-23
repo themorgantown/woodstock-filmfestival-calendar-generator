@@ -150,20 +150,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
  5f8f5e65a05b
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Debut 🎟️
+SUMMARY:The Debut 🔴
 DTSTART;TZID=America/New_York:20261014T194500
 DTEND;TZID=America/New_York:20261014T214500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20260923T205114Z
 UID:6aa86c8f153010043a3797ba@woodstockfilmfestival.org
 DESCRIPTION:When Mona Friedman is cast in a bit part at a small community 
  theater\, she transforms from a shy\, unassuming housewife into a zealous 
  method actor willing to do anything to protect the artistic integrity of h
  er marginal role—even if it means waging war against the show’s domine
- ering director.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilm
- festival.org/2026-all-events?eventId=6aa86c8f153010043a3797ba
+ ering director.\n\n🔴 Sold out as of Wed\, Sep 23 2026 at 4:51 PM EDT\n
+ \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1
+ 53010043a3797ba
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797ba
+X-WFF-SOLDOUT:2026-09-23T16:51:14.611455-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Josephine 🎟️

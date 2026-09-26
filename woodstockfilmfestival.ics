@@ -303,23 +303,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797c9
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Their Town 🎟️
-DTSTART;TZID=America/New_York:20261015T190000
-DTEND;TZID=America/New_York:20261015T210000
-DTSTAMP:20260916T171252Z
-UID:6aa86c8f153010043a3797e7@woodstockfilmfestival.org
-DESCRIPTION:From husband and wife filmmaking team Katie Aselton and Mark D
- uplass comesTheir Town\, in which two teenagers\, Abby and Matt\, take a l
- ong evening’s walk around their hometown to work on the school play. As 
- the evening proceeds\, so too does the opportunity to discover dimensions 
- of themselves and each other. – Adam Schartoff\n\n🎟️ Tickets Availa
- ble\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa8
- 6c8f153010043a3797e7
-LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
- 10043a3797e7
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIERCELY INDEPENDENT BAND feat. JUST DESSERTS 🎟️
 DTSTART;TZID=America/New_York:20261015T190000
 DTEND;TZID=America/New_York:20261015T210000
@@ -344,6 +327,23 @@ DESCRIPTION:THE FIERCELY INDEPENDENT BAND is made up of longtime Woodstock
 LOCATION:Colony\, 22 Rock City Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6ab5322b3262
  5557cbe7529b
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Their Town 🎟️
+DTSTART;TZID=America/New_York:20261015T190000
+DTEND;TZID=America/New_York:20261015T210000
+DTSTAMP:20260916T171252Z
+UID:6aa86c8f153010043a3797e7@woodstockfilmfestival.org
+DESCRIPTION:From husband and wife filmmaking team Katie Aselton and Mark D
+ uplass comesTheir Town\, in which two teenagers\, Abby and Matt\, take a l
+ ong evening’s walk around their hometown to work on the school play. As 
+ the evening proceeds\, so too does the opportunity to discover dimensions 
+ of themselves and each other. – Adam Schartoff\n\n🎟️ Tickets Availa
+ ble\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa8
+ 6c8f153010043a3797e7
+LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
+ 10043a3797e7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Re/Pair 🎟️
@@ -564,6 +564,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876aac401c
  81e3b71cdb29
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Bolio 🎟️
+DTSTART;TZID=America/New_York:20261016T113000
+DTEND;TZID=America/New_York:20261016T133000
+DTSTAMP:20260924T205225Z
+UID:6aa86c8f153010043a379705@woodstockfilmfestival.org
+DESCRIPTION:A buddy comedy about a depressed shop teacher who discovers hi
+ s charismatic life coach is just as lost as he is\, forcing him to believe
+  in himself instead.\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
+ kfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379705
+LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
+ 10043a379705
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:MASTERCLASS WITH CATHERINE HARDWICKE: FIX IT IN PREP 🎟️
 DTSTART;TZID=America/New_York:20261016T113000
 DTEND;TZID=America/New_York:20261016T133000
@@ -589,20 +603,6 @@ DESCRIPTION:Catherine Hardwicke’s master class “Fix it in Prep” take
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1bb66f557
  af72f6cf64fc
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Bolio 🎟️
-DTSTART;TZID=America/New_York:20261016T113000
-DTEND;TZID=America/New_York:20261016T133000
-DTSTAMP:20260924T205225Z
-UID:6aa86c8f153010043a379705@woodstockfilmfestival.org
-DESCRIPTION:A buddy comedy about a depressed shop teacher who discovers hi
- s charismatic life coach is just as lost as he is\, forcing him to believe
-  in himself instead.\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379705
-LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
- 10043a379705
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:TENDER LOVING CARE 🎟️
@@ -651,58 +651,6 @@ DESCRIPTION:A group of young adults in Venice begin to crack when a new gi
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37979c
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:GRILLING BILL PLYMPTON 🎟️
-DTSTART;TZID=America/New_York:20261016T143000
-DTEND;TZID=America/New_York:20261016T163000
-DTSTAMP:20260922T185225Z
-UID:6a98633470ce680e3ee7ac2f@woodstockfilmfestival.org
-DESCRIPTION:ABOUT THE SPECIAL EVENT:\n\n﻿To celebrate Bill Plympton’s 
- milestone 80th birthday and to let audiences peek behind the scenes of mak
- ing some of his shorts\, a fellow independent animator Signe Baumane will 
- grill Bill to keep him humble. Together they will screen some of Bill’s 
- shorts and discuss secrets of Bill’s long and successful career.\n\nThey
-  will try to pin down the mysterious place where creativity comes from and
-  elaborate on why artists are the Cassandras of our times.\n\nFeaturing:Yo
- ur Face\, Homer's Face\, Guard Dog\, Mexican Standoff\, Nose Hair\, Duckvi
- lle\, The Cow Who Wanted to be a Hamburger\, Santa the Fascist Years\, Wha
- le 52.\n\nABOUT THE FILMMAKERS:\n\nBill Plymptonis the most influential in
- dependent animator that has ever lived. He has been nominated for an Oscar
- ® two times\, has made over 120 shorts and feature films\, impacted thous
- ands of careers and has worked with recognizable name such as Whoopi Goldb
- erg\, Kanye West\, Matthew Modine\, Paul Giamatti among many.\n\nSigne Bau
- maneis a Latvian born\, Brooklyn-based independent filmmaker\, artist\, wr
- iter\, and animator. She has made seventeen award-winning animated shorts.
-  Her first animated featureRocks in My Pockets(2014) screened at over 130 
- international festivals and opened theatrically in the U.S. through Zeitge
- ist Films. Signe’s second animated featureMy Love Affair with Marriage(2
- 022)\, tells the story of a spirited young woman’s quest for perfect lov
- e and lasting marriage. It premiered at Tribeca Festival\, screened at 110
-  festivals\, winning 25 awards\, and was released theatrically in North Am
- erica through 8 Above. She is now working on her third animated featureKar
- mic Knot(2028). Signe is a Guggenheim Fellow and has a degree in Philosoph
- y from Moscow State University.\n\n🎟️ Tickets Available\n\n🔗 https
- ://woodstockfilmfestival.org/2026-all-events?eventId=6a98633470ce680e3ee7a
- c2f
-LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a98633470ce
- 680e3ee7ac2f
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Family Matters 🎟️
-DTSTART;TZID=America/New_York:20261016T143000
-DTEND;TZID=America/New_York:20261016T163000
-DTSTAMP:20260916T205128Z
-UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
- s in moments of control\, heartbreak\, and memory.\n\n🎟️ Tickets Avai
- lable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a
- a05b3baa83481cdea888a5
-LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
- 98
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
- 481cdea888a5
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:DEMOCRACY IN DOCUMENTARY 🎟️
@@ -812,6 +760,58 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8f
  cdbaebbd2a4f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Family Matters 🎟️
+DTSTART;TZID=America/New_York:20261016T143000
+DTEND;TZID=America/New_York:20261016T163000
+DTSTAMP:20260916T205128Z
+UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
+ s in moments of control\, heartbreak\, and memory.\n\n🎟️ Tickets Avai
+ lable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a
+ a05b3baa83481cdea888a5
+LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
+ 98
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
+ 481cdea888a5
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GRILLING BILL PLYMPTON 🎟️
+DTSTART;TZID=America/New_York:20261016T143000
+DTEND;TZID=America/New_York:20261016T163000
+DTSTAMP:20260922T185225Z
+UID:6a98633470ce680e3ee7ac2f@woodstockfilmfestival.org
+DESCRIPTION:ABOUT THE SPECIAL EVENT:\n\n﻿To celebrate Bill Plympton’s 
+ milestone 80th birthday and to let audiences peek behind the scenes of mak
+ ing some of his shorts\, a fellow independent animator Signe Baumane will 
+ grill Bill to keep him humble. Together they will screen some of Bill’s 
+ shorts and discuss secrets of Bill’s long and successful career.\n\nThey
+  will try to pin down the mysterious place where creativity comes from and
+  elaborate on why artists are the Cassandras of our times.\n\nFeaturing:Yo
+ ur Face\, Homer's Face\, Guard Dog\, Mexican Standoff\, Nose Hair\, Duckvi
+ lle\, The Cow Who Wanted to be a Hamburger\, Santa the Fascist Years\, Wha
+ le 52.\n\nABOUT THE FILMMAKERS:\n\nBill Plymptonis the most influential in
+ dependent animator that has ever lived. He has been nominated for an Oscar
+ ® two times\, has made over 120 shorts and feature films\, impacted thous
+ ands of careers and has worked with recognizable name such as Whoopi Goldb
+ erg\, Kanye West\, Matthew Modine\, Paul Giamatti among many.\n\nSigne Bau
+ maneis a Latvian born\, Brooklyn-based independent filmmaker\, artist\, wr
+ iter\, and animator. She has made seventeen award-winning animated shorts.
+  Her first animated featureRocks in My Pockets(2014) screened at over 130 
+ international festivals and opened theatrically in the U.S. through Zeitge
+ ist Films. Signe’s second animated featureMy Love Affair with Marriage(2
+ 022)\, tells the story of a spirited young woman’s quest for perfect lov
+ e and lasting marriage. It premiered at Tribeca Festival\, screened at 110
+  festivals\, winning 25 awards\, and was released theatrically in North Am
+ erica through 8 Above. She is now working on her third animated featureKar
+ mic Knot(2028). Signe is a Guggenheim Fellow and has a degree in Philosoph
+ y from Moscow State University.\n\n🎟️ Tickets Available\n\n🔗 https
+ ://woodstockfilmfestival.org/2026-all-events?eventId=6a98633470ce680e3ee7a
+ c2f
+LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a98633470ce
+ 680e3ee7ac2f
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:To Hold a Mountain 🎟️
 DTSTART;TZID=America/New_York:20261016T143000
 DTEND;TZID=America/New_York:20261016T163000
@@ -894,19 +894,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797a1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:FRIDAY NIGHT TOONS 🎟️
-DTSTART;TZID=America/New_York:20261016T173000
-DTEND;TZID=America/New_York:20261016T193000
-DTSTAMP:20260916T205128Z
-UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa30e35c98b5350b50db4b0
-LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
- 98
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
- 5350b50db4b0
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Avedon 🎟️
 DTSTART;TZID=America/New_York:20261016T173000
 DTEND;TZID=America/New_York:20261016T193000
@@ -922,6 +909,19 @@ DESCRIPTION:Avedonis an epic biography of the renowned photographer and ar
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796f1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:FRIDAY NIGHT TOONS 🎟️
+DTSTART;TZID=America/New_York:20261016T173000
+DTEND;TZID=America/New_York:20261016T193000
+DTSTAMP:20260916T205128Z
+UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
+ kfilmfestival.org/2026-all-events?eventId=6aa30e35c98b5350b50db4b0
+LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
+ 98
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
+ 5350b50db4b0
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:A Company of Thieves 🎟️
@@ -980,23 +980,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796f6
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:School For Defectors 🎟️
-DTSTART;TZID=America/New_York:20261016T201500
-DTEND;TZID=America/New_York:20261016T221500
-DTSTAMP:20260916T171252Z
-UID:6aa86c8f153010043a37978d@woodstockfilmfestival.org
-DESCRIPTION:Unlike most schools\, Jangdaehyun School in South Korea is hom
- e to 20 boarders\, all children of defectors from North Korea\, risking ev
- erything including their lives. Director Jeremy Workman captures an intima
- te portrait of a generation living in the shadow of one of the world’s m
- ost enduring political divisions. – Adam Schartoff\n\n🎟️ Tickets Av
- ailable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=
- 6aa86c8f153010043a37978d
-LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
- 10043a37978d
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:On The Line 🎟️
 DTSTART;TZID=America/New_York:20261016T201500
 DTEND;TZID=America/New_York:20261016T221500
@@ -1013,6 +996,23 @@ DESCRIPTION:Alex (Rosa Salazar)\, a 988 suicide prevention counselor\, fin
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37975b
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:School For Defectors 🎟️
+DTSTART;TZID=America/New_York:20261016T201500
+DTEND;TZID=America/New_York:20261016T221500
+DTSTAMP:20260916T171252Z
+UID:6aa86c8f153010043a37978d@woodstockfilmfestival.org
+DESCRIPTION:Unlike most schools\, Jangdaehyun School in South Korea is hom
+ e to 20 boarders\, all children of defectors from North Korea\, risking ev
+ erything including their lives. Director Jeremy Workman captures an intima
+ te portrait of a generation living in the shadow of one of the world’s m
+ ost enduring political divisions. – Adam Schartoff\n\n🎟️ Tickets Av
+ ailable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=
+ 6aa86c8f153010043a37978d
+LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
+ 10043a37978d
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hilarity 🎟️
@@ -1078,25 +1078,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796e7
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Short Form Focus: WePresent by WeTransfer 🎟️
-DTSTART;TZID=America/New_York:20261017T100000
-DTEND;TZID=America/New_York:20261017T120000
-DTSTAMP:20260921T165234Z
-UID:6aa05c0a4202d9a219d10186@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\nCommissioned by WePresent\, the Academy Award®-wi
- nning arts platform of WeTransfer\, this screening features four short fil
- ms by some of cinema’s most distinct emerging voices. Screened alongside
-  a brunch reception\, attendees will also receive a complimentary copy ofB
- rilliant: Unexpected Art From Everywhere\, the upcoming book published by 
- Phaidon Monacelli that highlights the curatorial work and artist commissio
- ns by WePresent over the last decade.\n\nThe films screening as part of th
- e event are:\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfes
- tival.org/2026-all-events?eventId=6aa05c0a4202d9a219d10186
-LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c0a4202
- d9a219d10186
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:LIVE PODCAST WITH AMY HOBBY & AVI ZEV WEIDER: FEATURING MARK DUPLA
  SS & KATIE ASELTON 🎟️
 DTSTART;TZID=America/New_York:20261017T100000
@@ -1136,6 +1117,25 @@ DESCRIPTION:Every filmmaker carries with them the ghosts of films that nev
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1be2c843a
  0b27c5b431cf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Short Form Focus: WePresent by WeTransfer 🎟️
+DTSTART;TZID=America/New_York:20261017T100000
+DTEND;TZID=America/New_York:20261017T120000
+DTSTAMP:20260921T165234Z
+UID:6aa05c0a4202d9a219d10186@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\nCommissioned by WePresent\, the Academy Award®-wi
+ nning arts platform of WeTransfer\, this screening features four short fil
+ ms by some of cinema’s most distinct emerging voices. Screened alongside
+  a brunch reception\, attendees will also receive a complimentary copy ofB
+ rilliant: Unexpected Art From Everywhere\, the upcoming book published by 
+ Phaidon Monacelli that highlights the curatorial work and artist commissio
+ ns by WePresent over the last decade.\n\nThe films screening as part of th
+ e event are:\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfes
+ tival.org/2026-all-events?eventId=6aa05c0a4202d9a219d10186
+LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c0a4202
+ d9a219d10186
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:More Than Medicine: The Rise of Psychedelic Therapy 🎟️
@@ -1497,19 +1497,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
  5f8f5e65a046
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:SATURDAY EVENING CARTOONS 🎟️
-DTSTART;TZID=America/New_York:20261017T170000
-DTEND;TZID=America/New_York:20261017T190000
-DTSTAMP:20260916T171252Z
-UID:6aa30f22a0fa950a36b0b9ba@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa950a36b0b9ba
-LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
- 98
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa
- 950a36b0b9ba
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:In Conversation with Britt Lower 🎟️
 DTSTART;TZID=America/New_York:20261017T170000
 DTEND;TZID=America/New_York:20261017T190000
@@ -1567,6 +1554,19 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa85ed80c61
  cca506d64c58
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:SATURDAY EVENING CARTOONS 🎟️
+DTSTART;TZID=America/New_York:20261017T170000
+DTEND;TZID=America/New_York:20261017T190000
+DTSTAMP:20260916T171252Z
+UID:6aa30f22a0fa950a36b0b9ba@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
+ kfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa950a36b0b9ba
+LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
+ 98
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa
+ 950a36b0b9ba
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:I Play Rocky 🎟️
 DTSTART;TZID=America/New_York:20261017T180000
 DTEND;TZID=America/New_York:20261017T200000
@@ -1619,23 +1619,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37970f
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Wicker 🎟️
-DTSTART;TZID=America/New_York:20261017T190000
-DTEND;TZID=America/New_York:20261017T210000
-DTSTAMP:20260916T171252Z
-UID:6aa86c8f153010043a379800@woodstockfilmfestival.org
-DESCRIPTION:Olivia Colman\, Alexander Skarsgård\, Peter Dinklage\, Elizab
- eth Debicki\, and Richard E. Grant star in a medieval romantic fantasy fro
- m Eleanor Wilson and Alex Huston Fischer. When a lonely woman gets a man-l
- ike wicker creature\, her world fills with passion\, sparking fierce envy
- \, fear\, and desire across her village. – Amir Bogen\n\n🎟️ Tickets
-  Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?event
- Id=6aa86c8f153010043a379800
-LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
- 10043a379800
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Union Town 🎟️
 DTSTART;TZID=America/New_York:20261017T190000
 DTEND;TZID=America/New_York:20261017T210000
@@ -1651,6 +1634,23 @@ DESCRIPTION:Union Townis the third installment in Barbara Kopple’s labor
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797f6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wicker 🎟️
+DTSTART;TZID=America/New_York:20261017T190000
+DTEND;TZID=America/New_York:20261017T210000
+DTSTAMP:20260916T171252Z
+UID:6aa86c8f153010043a379800@woodstockfilmfestival.org
+DESCRIPTION:Olivia Colman\, Alexander Skarsgård\, Peter Dinklage\, Elizab
+ eth Debicki\, and Richard E. Grant star in a medieval romantic fantasy fro
+ m Eleanor Wilson and Alex Huston Fischer. When a lonely woman gets a man-l
+ ike wicker creature\, her world fills with passion\, sparking fierce envy
+ \, fear\, and desire across her village. – Amir Bogen\n\n🎟️ Tickets
+  Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?event
+ Id=6aa86c8f153010043a379800
+LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
+ 10043a379800
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dilated Pupils 🎟️
@@ -1829,20 +1829,6 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c4d0b1b
  01a1129538d1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:We're Out Here 🎟️
-DTSTART;TZID=America/New_York:20261018T153000
-DTEND;TZID=America/New_York:20261018T173000
-DTSTAMP:20260916T171252Z
-UID:6a74b6d88e7a45bcd3c37e23@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\nA collection of bold\, transformative narrative an
- d documentary shorts from across the LGBTQIA+ community.\n\n🎟️ Ticket
- s Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?even
- tId=6a74b6d88e7a45bcd3c37e23
-LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
-URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a74b6d88e7a
- 45bcd3c37e23
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:American Zoo 🎟️
 DTSTART;TZID=America/New_York:20261018T153000
 DTEND;TZID=America/New_York:20261018T173000
@@ -1858,6 +1844,20 @@ DESCRIPTION:Every documentary filmmaker dreams of finding a lost archive a
 LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796ec
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:We're Out Here 🎟️
+DTSTART;TZID=America/New_York:20261018T153000
+DTEND;TZID=America/New_York:20261018T173000
+DTSTAMP:20260916T171252Z
+UID:6a74b6d88e7a45bcd3c37e23@woodstockfilmfestival.org
+DESCRIPTION:With Q&A\n\nA collection of bold\, transformative narrative an
+ d documentary shorts from across the LGBTQIA+ community.\n\n🎟️ Ticket
+ s Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?even
+ tId=6a74b6d88e7a45bcd3c37e23
+LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a74b6d88e7a
+ 45bcd3c37e23
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Wild Horse Nine 🎟️

@@ -1601,10 +1601,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379797
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Club Kid 🎟️
+SUMMARY:Club Kid 🔴
 DTSTART;TZID=America/New_York:20261017T190000
 DTEND;TZID=America/New_York:20261017T210000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20260926T225119Z
 UID:6aa86c8f153010043a37970f@woodstockfilmfestival.org
 DESCRIPTION:Immersed in Brooklyn’s gay nightlife scene\, Jordan Firstman
  ’s first feature anchors its drug-fueled excess with surprising heart. W
@@ -1612,11 +1612,13 @@ DESCRIPTION:Immersed in Brooklyn’s gay nightlife scene\, Jordan Firstman
  ’s guardian\, his wild world collides with a sudden\, late-blooming comi
  ng-of-age journey. – Amir Bogen\n\n﻿Due to limited seating capacity of
   this 42-seat theater\, passholders must RSVP by choosing “Order Tickets
- .”\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.or
- g/2026-all-events?eventId=6aa86c8f153010043a37970f
+ .”\n\n🔴 Sold out as of Sat\, Sep 26 2026 at 6:51 PM EDT\n\n🔗 https
+ ://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379
+ 70f
 LOCATION:Upstate Midtown\, 591 Broadway\, Kingston\, NY 12401
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37970f
+X-WFF-SOLDOUT:2026-09-26T18:51:19.943465-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Union Town 🎟️

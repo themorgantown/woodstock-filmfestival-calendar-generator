@@ -894,21 +894,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797a1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Avedon 🎟️
+SUMMARY:Avedon 🔴
 DTSTART;TZID=America/New_York:20261016T173000
 DTEND;TZID=America/New_York:20261016T193000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20260929T025648Z
 UID:6aa86c8f153010043a3796f1@woodstockfilmfestival.org
 DESCRIPTION:Avedonis an epic biography of the renowned photographer and ar
  tist Richard Avedon\, whose work delivered many iconic visual moments of t
  he 20th century. Academy Award®-winning director Ron Howard was given unp
  recedented access to the Avedon archive\, and his film reminds us that art
-  and creativity sustain humanity. – Sabina Barach\n\n🎟️ Tickets Ava
- ilable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6
- aa86c8f153010043a3796f1
+  and creativity sustain humanity. – Sabina Barach\n\n🔴 Sold out as of
+  Mon\, Sep 28 2026 at 10:56 PM EDT\n\n🔗 https://woodstockfilmfestival.o
+ rg/2026-all-events?eventId=6aa86c8f153010043a3796f1
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796f1
+X-WFF-SOLDOUT:2026-09-28T22:56:48.699956-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:FRIDAY NIGHT TOONS 🎟️

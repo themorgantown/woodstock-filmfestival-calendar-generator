@@ -271,20 +271,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876a4e6f11
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Once Upon a Time in Harlem & Aja Monet: Live at the Blue Note\, NY
- C 🎟️
+ C 🔴
 DTSTART;TZID=America/New_York:20261015T173000
 DTEND;TZID=America/New_York:20261015T193000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261001T020940Z
 UID:6aa86c8f153010043a379760@woodstockfilmfestival.org
 DESCRIPTION:Filmed in 1972 by the late William Greaves and completed by hi
  s son David\,Once Upon a Time in Harlemgathers Harlem Renaissance luminari
  es at Duke Ellington’s townhouse to reminisce. Fresh from Sundance\, Can
  nes\, and NYFF\, it’s your invitation to New York’s coolest party. –
-  Jessica Edwards\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfil
- mfestival.org/2026-all-events?eventId=6aa86c8f153010043a379760
+  Jessica Edwards\n\n🔴 Sold out as of Wed\, Sep 30 2026 at 10:09 PM EDT
+ \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8
+ f153010043a379760
 LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379760
+X-WFF-SOLDOUT:2026-09-30T22:09:40.410825-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Life and Deaths of Wilson Shedd 🎟️

@@ -1876,17 +1876,19 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37976f
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Made in the Hudson Valley Shorts 🎟️
+SUMMARY:Made in the Hudson Valley Shorts 🔴
 DTSTART;TZID=America/New_York:20261018T134500
 DTEND;TZID=America/New_York:20261018T154500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261002T210231Z
 UID:6aa05ba36f4202e57f83b7b5@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa05ba36f4202e57f83b7b5
+DESCRIPTION:With Q&A\n\n🔴 Sold out as of Fri\, Oct 02 2026 at 5:02 PM E
+ DT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05
+ ba36f4202e57f83b7b5
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05ba36f42
  02e57f83b7b5
+X-WFF-SOLDOUT:2026-10-02T17:02:31.064148-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Everest: The Other Side 🎟️

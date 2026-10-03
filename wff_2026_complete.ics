@@ -1957,21 +1957,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a74b6d88e7a
  45bcd3c37e23
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Wild Horse Nine 🎟️
+SUMMARY:Wild Horse Nine 🔴
 DTSTART;TZID=America/New_York:20261018T160000
 DTEND;TZID=America/New_York:20261018T180000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261003T193149Z
 UID:6aa86c8f153010043a379805@woodstockfilmfestival.org
 DESCRIPTION:Cold War geopolitics\, espionage\, and mortality collide in Ma
  rtin McDonagh’s sharp new satire. Posing as tourists on Easter Island be
  fore Pinochet's coup\, two CIA agents face personal unraveling. Starring J
  ohn Malkovich (who won Best Actor at Venice) and Sam Rockwell\, it’s a w
- itty critique with soul. – Amir Bogen\n\n🎟️ Tickets Available\n\n
- 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153
- 010043a379805
+ itty critique with soul. – Amir Bogen\n\n🔴 Sold out as of Sat\, Oct 0
+ 3 2026 at 3:31 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-e
+ vents?eventId=6aa86c8f153010043a379805
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379805
+X-WFF-SOLDOUT:2026-10-03T15:31:49.236237-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Contact High 🎟️

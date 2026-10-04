@@ -1749,21 +1749,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797d3
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Only Living Pickpocket in New York 🎟️
+SUMMARY:The Only Living Pickpocket in New York 🔴
 DTSTART;TZID=America/New_York:20261017T211500
 DTEND;TZID=America/New_York:20261017T231500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261004T184851Z
 UID:6aa86c8f153010043a3797d8@woodstockfilmfestival.org
 DESCRIPTION:In Noah Segan’s impressive debut\, John Turturro plays an ag
  ing NYC pickpocket who lifts a multi-million-dollar item from the wrong mo
  bster. Backed by Steve Buscemi and Giancarlo Esposito\, this Sundance hit 
  trades thriller clichés for a heartwarming\, nostalgic love letter to cla
- ssic New York. – Amir Bogen\n\n🎟️ Tickets Available\n\n🔗 https:/
- /woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a3797d
- 8
+ ssic New York. – Amir Bogen\n\n🔴 Sold out as of Sun\, Oct 04 2026 at 
+ 2:48 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?even
+ tId=6aa86c8f153010043a3797d8
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797d8
+X-WFF-SOLDOUT:2026-10-04T14:48:51.629719-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Test 🎟️

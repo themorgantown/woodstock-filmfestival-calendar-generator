@@ -377,20 +377,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797e7
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Re/Pair 🎟️
+SUMMARY:Re/Pair 🔴
 DTSTART;TZID=America/New_York:20261015T191500
 DTEND;TZID=America/New_York:20261015T211500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261004T020100Z
 UID:6aa86c8f153010043a37977e@woodstockfilmfestival.org
 DESCRIPTION:Re/Pair is profound\, funny and deeply moving. Woodstock nativ
  e\, Director Lacey Schwartz Delgado\, gathers Black and Jewish visionaries
   in pairs to have hard conversations about the anti-Semitic and anti-Black
   crises threatening to tear down 75 years of civil rights gains. – Pamel
- a Yates\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival
- .org/2026-all-events?eventId=6aa86c8f153010043a37977e
+ a Yates\n\n🔴 Sold out as of Sat\, Oct 03 2026 at 10:01 PM EDT\n\n🔗 h
+ ttps://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043
+ a37977e
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37977e
+X-WFF-SOLDOUT:2026-10-03T22:01:00.095889-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Coming of Age 🎟️

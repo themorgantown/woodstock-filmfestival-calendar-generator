@@ -12,3 +12,5 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-03T22:01:00.095889-04:00,sold_out,6aa86c8f153010043a37977e,Re/Pair,2026-10-15T19:15:00-04:00,Bearsville Theater,285.23
 2026-10-04T14:48:51.629719-04:00,sold_out,6aa86c8f153010043a3797d8,The Only Living Pickpocket in New York,2026-10-17T21:15:00-04:00,Woodstock Playhouse,318.44
 2026-10-04T21:19:11.711255-04:00,sold_out,6aa86c8f153010043a37971f,Fatherland,2026-10-18T12:45:00-04:00,Tinker Street Cinema,327.43
+2026-10-05T03:43:24.912998-04:00,back_on_sale,6aa86c8f153010043a3797d8,The Only Living Pickpocket in New York,2026-10-17T21:15:00-04:00,Woodstock Playhouse,305.53
+2026-10-05T03:43:24.912998-04:00,back_on_sale,6aa86c8f153010043a379805,Wild Horse Nine,2026-10-18T16:00:00-04:00,Woodstock Playhouse,324.28

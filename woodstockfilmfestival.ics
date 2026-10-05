@@ -1845,21 +1845,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa883a46634
  5ed69ce4be81
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fatherland 🎟️
+SUMMARY:Fatherland 🔴
 DTSTART;TZID=America/New_York:20261018T124500
 DTEND;TZID=America/New_York:20261018T144500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261005T011911Z
 UID:6aa86c8f153010043a37971f@woodstockfilmfestival.org
 DESCRIPTION:Paweł Pawlikowski's new film centers on celebrated novelist T
  homas Mann’s post-WWII return to a divided Europe. Haunted by Nazi atroc
  ities and his son's suicide\, Mann (Hanns Zischler) and daughter Erika (Sa
  ndra Hüller) navigate Cold War politics in an elegant\, classic tale from
-  the director ofIdaandCold War. – Amir Bogen\n\n🎟️ Tickets Availabl
- e\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c
- 8f153010043a37971f
+  the director ofIdaandCold War. – Amir Bogen\n\n🔴 Sold out as of Sun
+ \, Oct 04 2026 at 9:19 PM EDT\n\n🔗 https://woodstockfilmfestival.org/20
+ 26-all-events?eventId=6aa86c8f153010043a37971f
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37971f
+X-WFF-SOLDOUT:2026-10-04T21:19:11.711255-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Paper Tiger 🎟️

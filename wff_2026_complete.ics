@@ -135,10 +135,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
 X-WFF-SOLDOUT:2026-09-18T14:51:04.910757-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fork in the Road Reception + Screening 🎟️
+SUMMARY:Fork in the Road Reception + Screening 🔴
 DTSTART;TZID=America/New_York:20261014T183000
 DTEND;TZID=America/New_York:20261014T203000
-DTSTAMP:20260916T195115Z
+DTSTAMP:20261005T225624Z
 UID:6a970a18c4b7247c54e12b02@woodstockfilmfestival.org
 DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  st of Plant Friends” reception\, created by Kyra Kristof and herForest K
@@ -150,13 +150,14 @@ DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  s Network\; with Tianna Kennedy\, Executive Director of theCatskills Agrar
  ian Alliance\, and filmmakers Vivian Sorenson\, Lisa Holmes\, andJonathan 
  Nastasi\,featuring a conversation about building just and community-center
- ed food systems for people and the planet.\n\n🎟️ Tickets Available\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c
- 4b7247c54e12b02
+ ed food systems for people and the planet.\n\n🔴 Sold out as of Mon\, Oc
+ t 05 2026 at 6:56 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-al
+ l-events?eventId=6a970a18c4b7247c54e12b02
 LOCATION:Broken Wing Barn at White Feather Farm\, 1389 Route 212\, Saugert
  ies\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c4b7
  247c54e12b02
+X-WFF-SOLDOUT:2026-10-05T18:56:24.231423-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunatic Dreamers World Premiere Screening + Music Performance 🎟
@@ -1090,8 +1091,8 @@ DESCRIPTION:Immersed in Brooklyn’s gay nightlife scene\, Jordan Firstman
  hen an aging party boy dealing drugs is forced to become a 10-year-old boy
  ’s guardian\, his wild world collides with a sudden\, late-blooming comi
  ng-of-age journey. – Amir Bogen\n\n🔴 Sold out as of Mon\, Oct 05 2026
-  at 12:25 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events
- ?eventId=6aa86c8f153010043a37970a
+  at 12:25 PM \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?ev
+ entId=6aa86c8f153010043a37970a
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37970a
@@ -1224,9 +1225,9 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New York Women in Film & Television (NYWIFT) - Breaking the Frame 
  - How Far Have Women in Film Really Come? 🎟️
-DTSTART;TZID=America/New_York:20261017T123000
-DTEND;TZID=America/New_York:20261017T143000
-DTSTAMP:20260929T155342Z
+DTSTART;TZID=America/New_York:20261017T120000
+DTEND;TZID=America/New_York:20261017T140000
+DTSTAMP:20261005T225624Z
 UID:6aa1be5d4a562fb0e741ea94@woodstockfilmfestival.org
 DESCRIPTION:As the film industry continues to evolve\, so too have the opp
  ortunities for women behind and in front of the camera. From the pioneers 
@@ -1750,21 +1751,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797d3
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Only Living Pickpocket in New York 🎟️
+SUMMARY:The Only Living Pickpocket in New York 🔴
 DTSTART;TZID=America/New_York:20261017T211500
 DTEND;TZID=America/New_York:20261017T231500
-DTSTAMP:20261005T074324Z
+DTSTAMP:20261005T225624Z
 UID:6aa86c8f153010043a3797d8@woodstockfilmfestival.org
 DESCRIPTION:In Noah Segan’s impressive debut\, John Turturro plays an ag
  ing NYC pickpocket who lifts a multi-million-dollar item from the wrong mo
  bster. Backed by Steve Buscemi and Giancarlo Esposito\, this Sundance hit 
  trades thriller clichés for a heartwarming\, nostalgic love letter to cla
- ssic New York. – Amir Bogen\n\n🎟️ Tickets Available\n\n🔗 https:/
- /woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a3797d
- 8
+ ssic New York. – Amir Bogen\n\n🔴 Sold out as of Mon\, Oct 05 2026 at 
+ 6:56 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?even
+ tId=6aa86c8f153010043a3797d8
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797d8
+X-WFF-SOLDOUT:2026-10-05T18:56:24.231423-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Test 🎟️
@@ -1961,21 +1963,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796ec
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Wild Horse Nine 🎟️
+SUMMARY:Wild Horse Nine 🔴
 DTSTART;TZID=America/New_York:20261018T160000
 DTEND;TZID=America/New_York:20261018T180000
-DTSTAMP:20261005T074324Z
+DTSTAMP:20261005T225624Z
 UID:6aa86c8f153010043a379805@woodstockfilmfestival.org
 DESCRIPTION:Cold War geopolitics\, espionage\, and mortality collide in Ma
  rtin McDonagh’s sharp new satire. Posing as tourists on Easter Island be
  fore Pinochet's coup\, two CIA agents face personal unraveling. Starring J
  ohn Malkovich (who won Best Actor at Venice) and Sam Rockwell\, it’s a w
- itty critique with soul. – Amir Bogen\n\n🎟️ Tickets Available\n\n
- 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153
- 010043a379805
+ itty critique with soul. – Amir Bogen\n\n🔴 Sold out as of Mon\, Oct 0
+ 5 2026 at 6:56 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-e
+ vents?eventId=6aa86c8f153010043a379805
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379805
+X-WFF-SOLDOUT:2026-10-05T18:56:24.231423-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Contact High 🎟️

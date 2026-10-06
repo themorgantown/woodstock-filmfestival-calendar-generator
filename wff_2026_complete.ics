@@ -94,6 +94,24 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6ab433254626
  1575ed75841f
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:IndieWire: ScreenTalk Live Podcast with Carrie Coon & Guy Nattiv 
+ 🎟️
+DTSTART;TZID=America/New_York:20261014T150000
+DTEND;TZID=America/New_York:20261014T170000
+DTSTAMP:20261006T215457Z
+UID:6ac3ce993b9d25c6215c7c17@woodstockfilmfestival.org
+DESCRIPTION:Join IndieWire Executive Editor Ryan Lattanzio for a special W
+ oodstock Film Festival live edition of Screen Talk\, IndieWire’s weekly 
+ podcast. Ryan will be joined by filmmaker Guy Nattiv and actress Carrie Co
+ on of WFF Official Selection\,The Liberation.\n\nThis event is free and op
+ en to the public\, but RSVP is required.\n\n🎟️ Tickets Available\n\n
+ 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6ac3ce993b9
+ d25c6215c7c17
+LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
+URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6ac3ce993b9d
+ 25c6215c7c17
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:THE LIBERATION 🎟️
 DTSTART;TZID=America/New_York:20261014T170000
 DTEND;TZID=America/New_York:20261014T190000
@@ -912,20 +930,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37972e
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sydney Cash Makes Too Much Art 🎟️
+SUMMARY:Sydney Cash Makes Too Much Art 🔴
 DTSTART;TZID=America/New_York:20261016T171500
 DTEND;TZID=America/New_York:20261016T191500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261006T215457Z
 UID:6aa86c8f153010043a3797a1@woodstockfilmfestival.org
 DESCRIPTION:Sydney Cash Makes Too Much Artbelongs in the storied canon of 
  personal documentaries. But what begins as a family reckoning opens onto l
  arger generational questions: What will we do with a lifetime's worth of o
  ur parents' possessions\, and what does it mean to inherit a legacy? – J
- essica Edwards\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmf
- estival.org/2026-all-events?eventId=6aa86c8f153010043a3797a1
+ essica Edwards\n\n🔴 Sold out as of Tue\, Oct 06 2026 at 5:54 PM EDT\n\n
+ 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153
+ 010043a3797a1
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797a1
+X-WFF-SOLDOUT:2026-10-06T17:54:57.816696-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Avedon 🔴

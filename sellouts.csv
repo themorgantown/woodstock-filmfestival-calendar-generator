@@ -19,3 +19,8 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-05T18:56:24.231423-04:00,sold_out,6aa86c8f153010043a3797d8,The Only Living Pickpocket in New York,2026-10-17T21:15:00-04:00,Woodstock Playhouse,290.31
 2026-10-05T18:56:24.231423-04:00,sold_out,6aa86c8f153010043a379805,Wild Horse Nine,2026-10-18T16:00:00-04:00,Woodstock Playhouse,309.06
 2026-10-06T17:54:57.816696-04:00,sold_out,6aa86c8f153010043a3797a1,Sydney Cash Makes Too Much Art,2026-10-16T17:15:00-04:00,Woodstock Playhouse,239.33
+2026-10-07T18:17:26.157524-04:00,sold_out,6a85e6f6eb5b7ddb41ae0ca0,American Zoo,2026-10-13T19:00:00-04:00,Community Theater,144.71
+2026-10-07T18:17:26.157524-04:00,back_on_sale,6a970a18c4b7247c54e12b02,Fork in the Road Reception + Screening,2026-10-14T18:30:00-04:00,Broken Wing Barn at White Feather Farm,168.21
+2026-10-07T18:17:26.157524-04:00,sold_out,6aa1ba453e8fcdbaebbd2a4f,DEMOCRACY IN DOCUMENTARY,2026-10-16T14:30:00-04:00,Utopia Studios,212.21
+2026-10-07T18:17:26.157524-04:00,sold_out,6a876a84e4d615068dc4fba8,Difficult Beauty,2026-10-17T14:00:00-04:00,Woodstock Community Center,235.71
+2026-10-07T18:17:26.157524-04:00,sold_out,6aa86c8f153010043a3797d3,The Natural State,2026-10-17T20:00:00-04:00,Upstate Films (Saugerties): Orpheum Theatre 1,241.71

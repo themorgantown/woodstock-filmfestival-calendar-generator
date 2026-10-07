@@ -31,10 +31,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a91be39d917
  2f9c50cda2b4
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:American Zoo 🎟️
+SUMMARY:American Zoo 🔴
 DTSTART;TZID=America/New_York:20261013T190000
 DTEND;TZID=America/New_York:20261013T210000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261007T221726Z
 UID:6a85e6f6eb5b7ddb41ae0ca0@woodstockfilmfestival.org
 DESCRIPTION:Community Presenter:The Overlook News\n\nThe 27th Annual Woods
  tock Film Festival kicks off with the Hudson Valley premiere ofAmerican Zo
@@ -58,11 +58,13 @@ DESCRIPTION:Community Presenter:The Overlook News\n\nThe 27th Annual Woods
  let providing public-service journalism across seven towns in the Catskill
  s. His work has appeared inThe New York Times\,Vogue\,Semafor\,Variety\,Th
  e GuardianandFast Company\, among other national and international publica
- tions.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.
- org/2026-all-events?eventId=6a85e6f6eb5b7ddb41ae0ca0
+ tions.\n\n🔴 Sold out as of Wed\, Oct 07 2026 at 6:17 PM EDT\n\n🔗 htt
+ ps://woodstockfilmfestival.org/2026-all-events?eventId=6a85e6f6eb5b7ddb41a
+ e0ca0
 LOCATION:The Community Theatre\, 373 Main St\, Catskill\, NY 12414
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a85e6f6eb5b
  7ddb41ae0ca0
+X-WFF-SOLDOUT:2026-10-07T18:17:26.157524-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Opening Ceremony 🎟️
@@ -153,10 +155,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
 X-WFF-SOLDOUT:2026-09-18T14:51:04.910757-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fork in the Road Reception + Screening 🔴
+SUMMARY:Fork in the Road Reception + Screening 🎟️
 DTSTART;TZID=America/New_York:20261014T183000
 DTEND;TZID=America/New_York:20261014T203000
-DTSTAMP:20261005T225624Z
+DTSTAMP:20261007T221726Z
 UID:6a970a18c4b7247c54e12b02@woodstockfilmfestival.org
 DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  st of Plant Friends” reception\, created by Kyra Kristof and herForest K
@@ -168,14 +170,13 @@ DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  s Network\; with Tianna Kennedy\, Executive Director of theCatskills Agrar
  ian Alliance\, and filmmakers Vivian Sorenson\, Lisa Holmes\, andJonathan 
  Nastasi\,featuring a conversation about building just and community-center
- ed food systems for people and the planet.\n\n🔴 Sold out as of Mon\, Oc
- t 05 2026 at 6:56 PM \n\n🔗 https://woodstockfilmfestival.org/2026-all-e
- vents?eventId=6a970a18c4b7247c54e12b02
+ ed food systems for people and the planet.\n\n🎟️ Tickets Available\n
+ \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c
+ 4b7247c54e12b02
 LOCATION:Broken Wing Barn at White Feather Farm\, 1389 Route 212\, Saugert
  ies\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c4b7
  247c54e12b02
-X-WFF-SOLDOUT:2026-10-05T18:56:24.231423-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunatic Dreamers World Premiere Screening + Music Performance 🎟
@@ -373,24 +374,32 @@ BEGIN:VEVENT
 SUMMARY:FIERCELY INDEPENDENT BAND feat. JUST DESSERTS 🎟️
 DTSTART;TZID=America/New_York:20261015T190000
 DTEND;TZID=America/New_York:20261015T210000
-DTSTAMP:20261002T155902Z
+DTSTAMP:20261007T221726Z
 UID:6ab5322b32625557cbe7529b@woodstockfilmfestival.org
-DESCRIPTION:The Fiercely Independent Band is made up of longtime Woodstock
-  Film Festival friends Brian Devine (lead electric guitar) and John Mazlis
- h (acoustic guitar and vocals). The classic rock band will perform at the 
- historic Colony for an electric night of music featuring additional specia
- l guests.\n\nOpening for FIB is Just Desserts\, featuring Tom Laverack on 
- guitar and vocals\, and Larry Fessenden on vocals and sax\, backed by Mark
-  Ambrosino on drums\, Dave Richards on bass\, and Dave Morgan on keyboards
- .\n\nLarry and Tom have played music since 1979 and have released 5 albums
- \, most recentlyCurtains(2025) and the JD SamplerNot What You Want But Wha
- t You Deserve(2026). They played all the New York clubs back in the day\, 
- including CBGBs\, Pyramid Club\, and Knitting Factory. Laverack’s music 
- has been featured in all of Fessenden’s movies\, including his latest\,T
- rauma Or\, Monsters All\, unspooling at the Woodstock Film Festival this y
- ear.\n\nPhoto credit:John Mazlish\n\n🎟️ Tickets Available\n\n🔗 htt
- ps://woodstockfilmfestival.org/2026-all-events?eventId=6ab5322b32625557cbe
- 7529b
+DESCRIPTION:Gigantic Pictures Presents: the Fiercely Independent Band is m
+ ade up of longtime Woodstock Film Festival friends Brian Devine (lead elec
+ tric guitar) and John Mazlish (acoustic guitar and vocals). The classic ro
+ ck band will perform at the historic Colony for an electric night of music
+  featuring additional special guests.\n\nOpening for FIB is Just Desserts
+ \, featuring Tom Laverack on guitar and vocals\, and Larry Fessenden on vo
+ cals and sax\, backed by Mark Ambrosino on drums\, Dave Richards on bass\,
+  and Dave Morgan on keyboards.\n\nLarry and Tom have played music since 19
+ 79 and have released 5 albums\, most recentlyCurtains(2025) and the JD Sam
+ plerNot What You Want But What You Deserve(2026). They played all the New 
+ York clubs back in the day\, including CBGBs\, Pyramid Club\, and Knitting
+  Factory. Laverack’s music has been featured in all of Fessenden’s mov
+ ies\, including his latest\,Trauma Or\, Monsters All\, unspooling at the W
+ oodstock Film Festival this year.\n\nThis event is sponsored byGIGANTIC PI
+ CTURES\, an independent New York City-based film and television production
+  company with a reputation for award-winning festival favorites\, socially
+  relevant documentaries\, and elevated genre films. Gigantic is also celeb
+ rating its 15th year sponsoring the Mavericks Award and the Woodstock Film
+  Festival\, with two films in this year’s festival: the world premiere o
+ fIn Hines Sight\, directed by Jared Whipple\;The Life and Deaths of Wilson
+  Shedd\, directed by Tim Blake Nelson. Congratulations to all of the filmm
+ akers!\n\nPhoto credit:John Mazlish\n\n🎟️ Tickets Available\n\n🔗 h
+ ttps://woodstockfilmfestival.org/2026-all-events?eventId=6ab5322b32625557c
+ be7529b
 LOCATION:Colony\, 22 Rock City Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6ab5322b3262
  5557cbe7529b
@@ -757,10 +766,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
  481cdea888a5
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:DEMOCRACY IN DOCUMENTARY 🎟️
+SUMMARY:DEMOCRACY IN DOCUMENTARY 🔴
 DTSTART;TZID=America/New_York:20261016T143000
 DTEND;TZID=America/New_York:20261016T163000
-DTSTAMP:20260918T165146Z
+DTSTAMP:20261007T221726Z
 UID:6aa1ba453e8fcdbaebbd2a4f@woodstockfilmfestival.org
 DESCRIPTION:As corporate news consolidation accelerates and independent jo
  urnalism faces growing challenges\, documentaries are filling a critical g
@@ -857,11 +866,13 @@ DESCRIPTION:As corporate news consolidation accelerates and independent jo
  am airing worldwide\, with millions of subscribers across social media pla
  tforms. She is a bestselling author\, columnist\, and the subject of the d
  ocumentarySteal This Story\, Please!\, by directors Tia Lessin and Carl De
- al.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org
- /2026-all-events?eventId=6aa1ba453e8fcdbaebbd2a4f
+ al.\n\n🔴 Sold out as of Wed\, Oct 07 2026 at 6:17 PM EDT\n\n🔗 https:
+ //woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8fcdbaebbd2a
+ 4f
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8f
  cdbaebbd2a4f
+X-WFF-SOLDOUT:2026-10-07T18:17:26.157524-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:To Hold a Mountain 🎟️
@@ -1138,17 +1149,18 @@ BEGIN:VEVENT
 SUMMARY:Short Form Focus: WePresent by WeTransfer 🎟️
 DTSTART;TZID=America/New_York:20261017T100000
 DTEND;TZID=America/New_York:20261017T120000
-DTSTAMP:20260921T165234Z
+DTSTAMP:20261007T221726Z
 UID:6aa05c0a4202d9a219d10186@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\nCommissioned by WePresent\, the Academy Award®-wi
- nning arts platform of WeTransfer\, this screening features four short fil
- ms by some of cinema’s most distinct emerging voices. Screened alongside
-  a brunch reception\, attendees will also receive a complimentary copy ofB
- rilliant: Unexpected Art From Everywhere\, the upcoming book published by 
- Phaidon Monacelli that highlights the curatorial work and artist commissio
- ns by WePresent over the last decade.\n\nThe films screening as part of th
- e event are:\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfes
- tival.org/2026-all-events?eventId=6aa05c0a4202d9a219d10186
+DESCRIPTION:Q&A with Jamie-James Medina\, Nadia Hallgren\, Tony Cavalero\,
+  and Atalanta Swire\n\nCommissioned byWePresent\, the Academy Award®-winn
+ ing arts platform of WeTransfer\, this screening features four short films
+  by some of cinema’s most distinct emerging voices. Screened alongside a
+  brunch reception\, attendees will also receive a complimentary copy ofBri
+ lliant: Unexpected Art From Everywhere\, the upcoming book published by Ph
+ aidon Monacelli that highlights the curatorial work and artist commissions
+  by WePresent over the last decade.\n\nThe films screening as part of the 
+ event are:\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfesti
+ val.org/2026-all-events?eventId=6aa05c0a4202d9a219d10186
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c0a4202
  d9a219d10186
@@ -1400,19 +1412,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379724
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Difficult Beauty 🎟️
+SUMMARY:Difficult Beauty 🔴
 DTSTART;TZID=America/New_York:20261017T140000
 DTEND;TZID=America/New_York:20261017T160000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261007T221726Z
 UID:6a876a84e4d615068dc4fba8@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\nThe pain and joy of creation: a diverse group of a
- rtists admitting their truths.\n\n🎟️ Tickets Available\n\n🔗 https:
- //woodstockfilmfestival.org/2026-all-events?eventId=6a876a84e4d615068dc4fb
- a8
+ rtists admitting their truths.\n\n🔴 Sold out as of Wed\, Oct 07 2026 at
+  6:17 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eve
+ ntId=6a876a84e4d615068dc4fba8
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876a84e4d6
  15068dc4fba8
+X-WFF-SOLDOUT:2026-10-07T18:17:26.157524-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Our Dark Horse 🎟️
@@ -1755,20 +1768,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876a091227
  60a14e2836fb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Natural State 🎟️
+SUMMARY:The Natural State 🔴
 DTSTART;TZID=America/New_York:20261017T200000
 DTEND;TZID=America/New_York:20261017T220000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261007T221726Z
 UID:6aa86c8f153010043a3797d3@woodstockfilmfestival.org
 DESCRIPTION:The Natural Stateupends the guru documentary genre. Seeking en
  lightenment\, Julie Thayer films her own surrender to anti-guru U.G. Krish
  namurti. His “blastings” strip away her ego – as her camera rolls. M
  att Dougherty crafts a complex portrait of a woman longing to be found. 
- – Jessica Edwards\n\n🎟️ Tickets Available\n\n🔗 https://woodstock
- filmfestival.org/2026-all-events?eventId=6aa86c8f153010043a3797d3
+ – Jessica Edwards\n\n🔴 Sold out as of Wed\, Oct 07 2026 at 6:17 PM ED
+ T\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c
+ 8f153010043a3797d3
 LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797d3
+X-WFF-SOLDOUT:2026-10-07T18:17:26.157524-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Only Living Pickpocket in New York 🔴

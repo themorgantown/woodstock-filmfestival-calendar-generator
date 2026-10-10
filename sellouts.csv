@@ -32,3 +32,6 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-09T12:38:13.814771-04:00,back_on_sale,6a970a18c4b7247c54e12b02,Fork in the Road Reception + Screening,2026-10-14T18:30:00-04:00,Broken Wing Barn at White Feather Farm,125.86
 2026-10-09T12:38:13.814771-04:00,back_on_sale,6a95b567c1445f8f5e65a05b,Lunatic Dreamers World Premiere Screening + Music Performance,2026-10-14T19:00:00-04:00,Assembly,126.36
 2026-10-09T17:20:26.523223-04:00,sold_out,6a970a18c4b7247c54e12b02,Fork in the Road Reception + Screening,2026-10-14T18:30:00-04:00,Broken Wing Barn at White Feather Farm,121.16
+2026-10-10T03:46:03.416108-04:00,back_on_sale,6a85e6f6eb5b7ddb41ae0ca0,American Zoo,2026-10-13T19:00:00-04:00,Community Theater,87.23
+2026-10-10T03:46:03.416108-04:00,sold_out,6a95b567c1445f8f5e65a05b,Lunatic Dreamers World Premiere Screening + Music Performance,2026-10-14T19:00:00-04:00,Assembly,111.23
+2026-10-10T03:46:03.416108-04:00,sold_out,6aa86c8f153010043a379756,NUISANCE BEAR,2026-10-17T11:30:00-04:00,Upstate Films (Saugerties): Orpheum Theatre 1,175.73

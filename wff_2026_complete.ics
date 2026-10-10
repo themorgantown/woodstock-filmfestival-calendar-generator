@@ -31,10 +31,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a91be39d917
  2f9c50cda2b4
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:American Zoo 🔴
+SUMMARY:American Zoo 🎟️
 DTSTART;TZID=America/New_York:20261013T190000
 DTEND;TZID=America/New_York:20261013T210000
-DTSTAMP:20261007T221726Z
+DTSTAMP:20261010T074603Z
 UID:6a85e6f6eb5b7ddb41ae0ca0@woodstockfilmfestival.org
 DESCRIPTION:Community Presenter:The Overlook News\n\nThe 27th Annual Woods
  tock Film Festival kicks off with the Hudson Valley premiere ofAmerican Zo
@@ -58,13 +58,11 @@ DESCRIPTION:Community Presenter:The Overlook News\n\nThe 27th Annual Woods
  let providing public-service journalism across seven towns in the Catskill
  s. His work has appeared inThe New York Times\,Vogue\,Semafor\,Variety\,Th
  e GuardianandFast Company\, among other national and international publica
- tions.\n\n🔴 Sold out as of Wed\, Oct 07 2026 at 6:17 PM \n\n🔗 https:
- //woodstockfilmfestival.org/2026-all-events?eventId=6a85e6f6eb5b7ddb41ae0c
- a0
+ tions.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.
+ org/2026-all-events?eventId=6a85e6f6eb5b7ddb41ae0ca0
 LOCATION:The Community Theatre\, 373 Main St\, Catskill\, NY 12414
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a85e6f6eb5b
  7ddb41ae0ca0
-X-WFF-SOLDOUT:2026-10-07T18:17:26.157524-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Opening Ceremony 🎟️
@@ -180,11 +178,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c4b7
 X-WFF-SOLDOUT:2026-10-09T17:20:26.523223-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lunatic Dreamers World Premiere Screening + Music Performance 🎟
- ️
+SUMMARY:Lunatic Dreamers World Premiere Screening + Music Performance 🔴
 DTSTART;TZID=America/New_York:20261014T190000
 DTEND;TZID=America/New_York:20261014T210000
-DTSTAMP:20261009T163813Z
+DTSTAMP:20261010T074603Z
 UID:6a95b567c1445f8f5e65a05b@woodstockfilmfestival.org
 DESCRIPTION:Presented by: Woodstock Film Festival\, Assembly\, and Radio W
  oodstock\n\nThe film is an intimate portrait of Palenville-born The Felice
@@ -193,11 +190,13 @@ DESCRIPTION:Presented by: Woodstock Film Festival\, Assembly\, and Radio W
  e\,Jesske Hume\,andWill Lawrence.Following the screening at Assembly Kings
  ton\, The Felice Brothers will take the stage for a special live performan
  ce\, bringing the film and their music together for a one-of-a-kind evenin
- g.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org/
- 2026-all-events?eventId=6a95b567c1445f8f5e65a05b
+ g.\n\n🔴 Sold out as of Sat\, Oct 10 2026 at 3:46 AM EDT\n\n🔗 https:/
+ /woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c1445f8f5e65a05
+ b
 LOCATION:Assembly\, 236 Wall Street\, Kingston\, NY 12401
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
  5f8f5e65a05b
+X-WFF-SOLDOUT:2026-10-10T03:46:03.416108-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Debut 🔴
@@ -1245,21 +1244,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876ad52b51
  ed21539b38ea
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:NUISANCE BEAR 🎟️
+SUMMARY:NUISANCE BEAR 🔴
 DTSTART;TZID=America/New_York:20261017T113000
 DTEND;TZID=America/New_York:20261017T133000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261010T074603Z
 UID:6aa86c8f153010043a379756@woodstockfilmfestival.org
 DESCRIPTION:Welcome to Churchill\, Manitoba – the Polar Bear Capital of 
  the World\, where vulnerable bears draw visitors in droves. InNuisance Bea
  r\, a mother polar bear navigates survival amid intrusive ecotourism and a
   disappearing habitat. Winner of the Sundance U.S. Grand Jury Prize\, it d
- emands to be experienced on the big screen. – Jessica Edwards\n\n🎟️
-  Tickets Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-even
- ts?eventId=6aa86c8f153010043a379756
+ emands to be experienced on the big screen. – Jessica Edwards\n\n🔴 So
+ ld out as of Sat\, Oct 10 2026 at 3:46 AM EDT\n\n🔗 https://woodstockfil
+ mfestival.org/2026-all-events?eventId=6aa86c8f153010043a379756
 LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379756
+X-WFF-SOLDOUT:2026-10-10T03:46:03.416108-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New York Women in Film & Television (NYWIFT) - Breaking the Frame 

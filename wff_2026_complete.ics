@@ -985,17 +985,19 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
 X-WFF-SOLDOUT:2026-09-28T22:56:48.699956-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:FRIDAY NIGHT TOONS 🎟️
+SUMMARY:FRIDAY NIGHT TOONS 🔴
 DTSTART;TZID=America/New_York:20261016T173000
 DTEND;TZID=America/New_York:20261016T193000
-DTSTAMP:20260916T205128Z
+DTSTAMP:20261011T021426Z
 UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
-DESCRIPTION:With Q&A\n\n🎟️ Tickets Available\n\n🔗 https://woodstoc
- kfilmfestival.org/2026-all-events?eventId=6aa30e35c98b5350b50db4b0
+DESCRIPTION:With Q&A\n\n🔴 Sold out as of Sat\, Oct 10 2026 at 10:14 PM 
+ EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa3
+ 0e35c98b5350b50db4b0
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
  5350b50db4b0
+X-WFF-SOLDOUT:2026-10-10T22:14:26.029069-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:A Company of Thieves 🎟️
@@ -1224,9 +1226,9 @@ DESCRIPTION:More Than Medicine: The Rise of Psychedelic Therapyfinds a mov
  ement at a cultural crossroads. Following five practitioners through intim
  ate vérité\, directors Kerthy Fix and Paul Kloss capture the raw promise
   and growing pains of therapies moving from counterculture to clinic. – 
- Jessica Edwards\n\n🔴 Sold out as of Sat\, Oct 10 2026 at 6:58 PM EDT\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1
- 53010043a379742
+ Jessica Edwards\n\n🔴 Sold out as of Sat\, Oct 10 2026 at 6:58 PM \n\n
+ 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153
+ 010043a379742
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379742

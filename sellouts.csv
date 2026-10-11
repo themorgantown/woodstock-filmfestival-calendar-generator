@@ -45,3 +45,6 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-10T22:14:26.029069-04:00,sold_out,6aa30e35c98b5350b50db4b0,FRIDAY NIGHT TOONS,2026-10-16T17:30:00-04:00,Woodstock Community Center,139.26
 2026-10-11T05:20:01.283623-04:00,sold_out,6aa86c8f153010043a379719,Everest: The Other Side,2026-10-18T14:00:00-04:00,Upstate Films (Saugerties): Orpheum Theatre 1,176.67
 2026-10-11T11:59:17.729837-04:00,back_on_sale,6aa86c8f153010043a379751,MUSK,2026-10-15T14:00:00-04:00,Bearsville Theater,98.01
+2026-10-11T16:37:34.452225-04:00,sold_out,6aa86c8f153010043a379751,MUSK,2026-10-15T14:00:00-04:00,Bearsville Theater,93.37
+2026-10-11T16:37:34.452225-04:00,sold_out,6aa86c8f153010043a3796dd,A Company of Thieves,2026-10-16T18:45:00-04:00,Tinker Street Cinema,122.12
+2026-10-11T16:37:34.452225-04:00,sold_out,6a876a84e4d615068dc4fba8,Difficult Beauty,2026-10-17T14:00:00-04:00,Woodstock Community Center,141.37

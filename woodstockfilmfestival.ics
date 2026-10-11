@@ -251,19 +251,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379783
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:MUSK 🎟️
+SUMMARY:MUSK 🔴
 DTSTART;TZID=America/New_York:20261015T140000
 DTEND;TZID=America/New_York:20261015T160000
-DTSTAMP:20261011T155917Z
+DTSTAMP:20261011T203734Z
 UID:6aa86c8f153010043a379751@woodstockfilmfestival.org
 DESCRIPTION:An incisive look behind the legend of Elon Musk\, the world’
  s most heralded “inventor-entrepreneur” who has enormous influence on 
- the world in which we all live.\n\n🎟️ Tickets Available\n\n🔗 https
- ://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379
- 751
+ the world in which we all live.\n\n🔴 Sold out as of Sun\, Oct 11 2026 a
+ t 4:37 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?ev
+ entId=6aa86c8f153010043a379751
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379751
+X-WFF-SOLDOUT:2026-10-11T16:37:34.452225-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minotaur 🎟️
@@ -999,20 +1000,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
 X-WFF-SOLDOUT:2026-10-10T22:14:26.029069-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:A Company of Thieves 🎟️
+SUMMARY:A Company of Thieves 🔴
 DTSTART;TZID=America/New_York:20261016T184500
 DTEND;TZID=America/New_York:20261016T204500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261011T203734Z
 UID:6aa86c8f153010043a3796dd@woodstockfilmfestival.org
 DESCRIPTION:In filmmaker Onur Tukel’s wildA Company of Thieves\, an offi
  ce worker hires a trio of thieves to pull off a stunt designed to make him
   look like a hero. This sets off a series of hilarious events that involve
   AI\, a ruthless consultant\, and a million dollar Prince Albert. – Adam
-  Schartoff\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfesti
- val.org/2026-all-events?eventId=6aa86c8f153010043a3796dd
+  Schartoff\n\n🔴 Sold out as of Sun\, Oct 11 2026 at 4:37 PM EDT\n\n🔗
+  https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530100
+ 43a3796dd
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796dd
+X-WFF-SOLDOUT:2026-10-11T16:37:34.452225-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Danny Is My Boyfriend 🎟️
@@ -1424,19 +1427,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379724
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Difficult Beauty 🎟️
+SUMMARY:Difficult Beauty 🔴
 DTSTART;TZID=America/New_York:20261017T140000
 DTEND;TZID=America/New_York:20261017T160000
-DTSTAMP:20261010T185443Z
+DTSTAMP:20261011T203734Z
 UID:6a876a84e4d615068dc4fba8@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\nThe pain and joy of creation: a diverse group of a
- rtists admitting their truths.\n\n🎟️ Tickets Available\n\n🔗 https:
- //woodstockfilmfestival.org/2026-all-events?eventId=6a876a84e4d615068dc4fb
- a8
+ rtists admitting their truths.\n\n🔴 Sold out as of Sun\, Oct 11 2026 at
+  4:37 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eve
+ ntId=6a876a84e4d615068dc4fba8
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a876a84e4d6
  15068dc4fba8
+X-WFF-SOLDOUT:2026-10-11T16:37:34.452225-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Our Dark Horse 🔴

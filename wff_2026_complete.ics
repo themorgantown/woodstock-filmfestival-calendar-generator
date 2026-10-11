@@ -991,8 +991,8 @@ DTEND;TZID=America/New_York:20261016T193000
 DTSTAMP:20261011T021426Z
 UID:6aa30e35c98b5350b50db4b0@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\n🔴 Sold out as of Sat\, Oct 10 2026 at 10:14 PM 
- EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa3
- 0e35c98b5350b50db4b0
+ \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e3
+ 5c98b5350b50db4b0
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30e35c98b
@@ -1948,21 +1948,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05ba36f42
 X-WFF-SOLDOUT:2026-10-02T17:02:31.064148-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Everest: The Other Side 🎟️
+SUMMARY:Everest: The Other Side 🔴
 DTSTART;TZID=America/New_York:20261018T140000
 DTEND;TZID=America/New_York:20261018T160000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261011T092001Z
 UID:6aa86c8f153010043a379719@woodstockfilmfestival.org
 DESCRIPTION:From Academy Award®-winning filmmakers Jimmy Chin and Elizabe
  th Chai Vasarhelyi (Free Solo)\, in this true-life tale of audacious risk 
  and reward\, Jim Morrison and Hilaree Nelson\, elite mountaineers and skie
  rs\, pursue the wildly dangerous dream they share: to be the first to clim
- b the north face of Everest… and ski down it. – Peter Wortmann\n\n🎟
- ️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-e
- vents?eventId=6aa86c8f153010043a379719
+ b the north face of Everest… and ski down it. – Peter Wortmann\n\n🔴
+  Sold out as of Sun\, Oct 11 2026 at 5:20 AM EDT\n\n🔗 https://woodstock
+ filmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379719
 LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379719
+X-WFF-SOLDOUT:2026-10-11T05:20:01.283623-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rapid Response 🎟️

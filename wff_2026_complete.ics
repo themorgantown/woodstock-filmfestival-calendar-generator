@@ -251,19 +251,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379783
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:MUSK 🎟️
+SUMMARY:MUSK 🔴
 DTSTART;TZID=America/New_York:20261015T140000
 DTEND;TZID=America/New_York:20261015T160000
-DTSTAMP:20261012T000115Z
+DTSTAMP:20261012T063639Z
 UID:6aa86c8f153010043a379751@woodstockfilmfestival.org
 DESCRIPTION:An incisive look behind the legend of Elon Musk\, the world’
  s most heralded “inventor-entrepreneur” who has enormous influence on 
- the world in which we all live.\n\n🎟️ Tickets Available\n\n🔗 https
- ://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a379
- 751
+ the world in which we all live.\n\n🔴 Sold out as of Mon\, Oct 12 2026 a
+ t 2:36 AM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?ev
+ entId=6aa86c8f153010043a379751
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379751
+X-WFF-SOLDOUT:2026-10-12T02:36:39.187485-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minotaur 🎟️
@@ -339,21 +340,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
 X-WFF-SOLDOUT:2026-09-30T22:09:40.410825-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Life and Deaths of Wilson Shedd 🔴
+SUMMARY:The Life and Deaths of Wilson Shedd 🎟️
 DTSTART;TZID=America/New_York:20261015T174500
 DTEND;TZID=America/New_York:20261015T194500
-DTSTAMP:20261009T094451Z
+DTSTAMP:20261012T063639Z
 UID:6aa86c8f153010043a3797c9@woodstockfilmfestival.org
 DESCRIPTION:When a teacher in an abusive marriage takes a job leading crea
  tive writing classes at a maximum security prison\, she begins to fall for
   a charismatic inmate. The consequences call into question not only the na
  ture of punishment and retribution\, but the very limits of our humanity.
- \n\n🔴 Sold out as of Fri\, Oct 09 2026 at 5:44 AM \n\n🔗 https://wood
- stockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043a3797c9
+ \n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org/20
+ 26-all-events?eventId=6aa86c8f153010043a3797c9
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797c9
-X-WFF-SOLDOUT:2026-10-09T05:44:51.029277-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:GIGANTIC presents: FIERCELY INDEPENDENT BAND feat. JUST DESSERTS 

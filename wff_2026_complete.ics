@@ -155,10 +155,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
 X-WFF-SOLDOUT:2026-09-18T14:51:04.910757-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fork in the Road Reception + Screening 🎟️
+SUMMARY:Fork in the Road Reception + Screening 🔴
 DTSTART;TZID=America/New_York:20261014T183000
 DTEND;TZID=America/New_York:20261014T203000
-DTSTAMP:20261012T231553Z
+DTSTAMP:20261013T121316Z
 UID:6a970a18c4b7247c54e12b02@woodstockfilmfestival.org
 DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  st of Plant Friends” reception\, created by Kyra Kristof and herForest K
@@ -170,13 +170,14 @@ DESCRIPTION:The evening at White Feather Farm begins with a special “Fea
  s Network\; with Tianna Kennedy\, Executive Director of theCatskills Agrar
  ian Alliance\, and filmmakers Vivian Sorenson\, Lisa Holmes\, andJonathan 
  Nastasi\,featuring a conversation about building just and community-center
- ed food systems for people and the planet.\n\n🎟️ Tickets Available\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c
- 4b7247c54e12b02
+ ed food systems for people and the planet.\n\n🔴 Sold out as of Tue\, Oc
+ t 13 2026 at 8:13 AM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-al
+ l-events?eventId=6a970a18c4b7247c54e12b02
 LOCATION:Broken Wing Barn at White Feather Farm\, 1389 Route 212\, Saugert
  ies\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a970a18c4b7
  247c54e12b02
+X-WFF-SOLDOUT:2026-10-13T08:13:16.294150-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunatic Dreamers World Premiere Screening + Music Performance 🔴
@@ -258,8 +259,8 @@ UID:6aa86c8f153010043a379751@woodstockfilmfestival.org
 DESCRIPTION:An incisive look behind the legend of Elon Musk\, the world’
  s most heralded “inventor-entrepreneur” who has enormous influence on 
  the world in which we all live.\n\n🔴 Sold out as of Mon\, Oct 12 2026 a
- t 11:55 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?e
- ventId=6aa86c8f153010043a379751
+ t 11:55 PM \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?even
+ tId=6aa86c8f153010043a379751
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379751
@@ -1989,21 +1990,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c4d0b1b
  01a1129538d1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:American Zoo 🎟️
+SUMMARY:American Zoo 🔴
 DTSTART;TZID=America/New_York:20261018T153000
 DTEND;TZID=America/New_York:20261018T173000
-DTSTAMP:20261013T035527Z
+DTSTAMP:20261013T121316Z
 UID:6aa86c8f153010043a3796ec@woodstockfilmfestival.org
 DESCRIPTION:Every documentary filmmaker dreams of finding a lost archive a
  nd hidden history. WithAmerican Zoo\, director Tim Travers Hawkins found b
  oth. This gripping film unravels the extraordinary discovery of a beloved 
  local attraction – the Catskill Game Farm – and the complex bond betwe
- en humans and animals. – Jessica Edwards\n\n🎟️ Tickets Available\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1
- 53010043a3796ec
+ en humans and animals. – Jessica Edwards\n\n🔴 Sold out as of Tue\, Oc
+ t 13 2026 at 8:13 AM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-al
+ l-events?eventId=6aa86c8f153010043a3796ec
 LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796ec
+X-WFF-SOLDOUT:2026-10-13T08:13:16.294150-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:We're Out Here 🎟️

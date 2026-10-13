@@ -57,3 +57,6 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-12T19:15:53.833276-04:00,sold_out,6aa1be5d4a562fb0e741ea94,New York Women in Film & Television (NYWIFT) - Breaking the Frame - How Far Have Women in Film Really Come?,2026-10-17T12:00:00-04:00,Utopia Studios,112.74
 2026-10-12T19:15:53.833276-04:00,sold_out,6aa86c8f153010043a379779,Rain Reign,2026-10-17T12:30:00-04:00,Woodstock Playhouse,113.24
 2026-10-12T19:15:53.833276-04:00,sold_out,6aa86c8f153010043a3796ec,American Zoo,2026-10-18T15:30:00-04:00,Rosendale Theatre,140.24
+2026-10-12T23:55:27.085960-04:00,sold_out,6aa86c8f153010043a379751,MUSK,2026-10-15T14:00:00-04:00,Bearsville Theater,62.08
+2026-10-12T23:55:27.085960-04:00,back_on_sale,6aa86c8f153010043a3796dd,A Company of Thieves,2026-10-16T18:45:00-04:00,Tinker Street Cinema,90.83
+2026-10-12T23:55:27.085960-04:00,back_on_sale,6aa86c8f153010043a3796ec,American Zoo,2026-10-18T15:30:00-04:00,Rosendale Theatre,135.58

@@ -1688,22 +1688,23 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa
 X-WFF-SOLDOUT:2026-10-10T14:54:43.723166-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:I Play Rocky 🎟️
+SUMMARY:I Play Rocky 🔴
 DTSTART;TZID=America/New_York:20261017T180000
 DTEND;TZID=America/New_York:20261017T200000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261014T021131Z
 UID:6aa86c8f153010043a379729@woodstockfilmfestival.org
 DESCRIPTION:The film is an electrifying true story about an unknown actor 
  with an unshakable belief that he wasn’t just meant to write Rocky—he 
  was meant to be Rocky Balboa. Told “no” at every turn\, Sylvester Stal
  lone bets everything on himself\, holding the line on playing the lead aga
  inst seemingly impossible odds. The result is the ultimate underdog story 
- behind the ultimate underdog movie.\n\n🎟️ Tickets Available\n\n🔗 h
- ttps://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043
- a379729
+ behind the ultimate underdog movie.\n\n🔴 Sold out as of Tue\, Oct 13 20
+ 26 at 10:11 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-even
+ ts?eventId=6aa86c8f153010043a379729
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379729
+X-WFF-SOLDOUT:2026-10-13T22:11:31.528389-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sender 🎟️

@@ -62,3 +62,4 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-12T23:55:27.085960-04:00,back_on_sale,6aa86c8f153010043a3796ec,American Zoo,2026-10-18T15:30:00-04:00,Rosendale Theatre,135.58
 2026-10-13T08:13:16.294150-04:00,sold_out,6a970a18c4b7247c54e12b02,Fork in the Road Reception + Screening,2026-10-14T18:30:00-04:00,Broken Wing Barn at White Feather Farm,34.28
 2026-10-13T08:13:16.294150-04:00,sold_out,6aa86c8f153010043a3796ec,American Zoo,2026-10-18T15:30:00-04:00,Rosendale Theatre,127.28
+2026-10-13T22:11:31.528389-04:00,sold_out,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,91.81

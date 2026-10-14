@@ -200,36 +200,40 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a95b567c144
 X-WFF-SOLDOUT:2026-10-10T03:46:03.416108-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Debut 🎟️
+SUMMARY:The Debut 🔴
 DTSTART;TZID=America/New_York:20261014T194500
 DTEND;TZID=America/New_York:20261014T214500
-DTSTAMP:20261014T185752Z
+DTSTAMP:20261014T224116Z
 UID:6aa86c8f153010043a3797ba@woodstockfilmfestival.org
 DESCRIPTION:When Mona Friedman is cast in a bit part at a small community 
  theater\, she transforms from a shy\, unassuming housewife into a zealous 
  method actor willing to do anything to protect the artistic integrity of h
  er marginal role—even if it means waging war against the show’s domine
- ering director.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilm
- festival.org/2026-all-events?eventId=6aa86c8f153010043a3797ba
+ ering director.\n\n🔴 Sold out as of Wed\, Oct 14 2026 at 6:41 PM EDT\n
+ \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1
+ 53010043a3797ba
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797ba
+X-WFF-SOLDOUT:2026-10-14T18:41:16.648061-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Josephine 🎟️
+SUMMARY:Josephine 🔴
 DTSTART;TZID=America/New_York:20261014T203000
 DTEND;TZID=America/New_York:20261014T223000
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261014T224116Z
 UID:6aa86c8f153010043a379738@woodstockfilmfestival.org
 DESCRIPTION:In Beth de Araújo’s Sundance Grand Jury winnerJosephine\, a
  n 8-year-old witnesses a horrific crime\, leaving her parents torn between
   seeking justice and protecting her fragile innocence. Channing Tatum and 
  Gemma Chan excel\, but young discovery Mason Reeves steals the show. – A
- mir Bogen\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestiv
- al.org/2026-all-events?eventId=6aa86c8f153010043a379738
+ mir Bogen\n\n🔴 Sold out as of Wed\, Oct 14 2026 at 6:41 PM EDT\n\n🔗 
+ https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f15301004
+ 3a379738
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379738
+X-WFF-SOLDOUT:2026-10-14T18:41:16.648061-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rehearsals for a Revolution 🎟️
@@ -722,10 +726,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37979c
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:DEMOCRACY IN DOCUMENTARY 🎟️
+SUMMARY:DEMOCRACY IN DOCUMENTARY 🔴
 DTSTART;TZID=America/New_York:20261016T143000
 DTEND;TZID=America/New_York:20261016T163000
-DTSTAMP:20261014T185752Z
+DTSTAMP:20261014T224116Z
 UID:6aa1ba453e8fcdbaebbd2a4f@woodstockfilmfestival.org
 DESCRIPTION:As corporate news consolidation accelerates and independent jo
  urnalism faces growing challenges\, documentaries are filling a critical g
@@ -822,11 +826,13 @@ DESCRIPTION:As corporate news consolidation accelerates and independent jo
  am airing worldwide\, with millions of subscribers across social media pla
  tforms. She is a bestselling author\, columnist\, and the subject of the d
  ocumentarySteal This Story\, Please!\, by directors Tia Lessin and Carl De
- al.\n\n🎟️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org
- /2026-all-events?eventId=6aa1ba453e8fcdbaebbd2a4f
+ al.\n\n🔴 Sold out as of Wed\, Oct 14 2026 at 6:41 PM EDT\n\n🔗 https:
+ //woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8fcdbaebbd2a
+ 4f
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1ba453e8f
  cdbaebbd2a4f
+X-WFF-SOLDOUT:2026-10-14T18:41:16.648061-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Family Matters 🔴
@@ -836,8 +842,8 @@ DTSTAMP:20261014T185752Z
 UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
  s in moments of control\, heartbreak\, and memory.\n\n🔴 Sold out as of 
- Wed\, Oct 14 2026 at 2:57 PM EDT\n\n🔗 https://woodstockfilmfestival.org
- /2026-all-events?eventId=6aa05b3baa83481cdea888a5
+ Wed\, Oct 14 2026 at 2:57 PM \n\n🔗 https://woodstockfilmfestival.org/20
+ 26-all-events?eventId=6aa05b3baa83481cdea888a5
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
@@ -1466,10 +1472,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
 X-WFF-SOLDOUT:2026-10-10T14:54:43.723166-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:In Conversation: Tony Goldwyn & Griffin Dunne 🔴
+SUMMARY:In Conversation: Tony Goldwyn & Griffin Dunne 🎟️
 DTSTART;TZID=America/New_York:20261017T150000
 DTEND;TZID=America/New_York:20261017T170000
-DTSTAMP:20261014T185752Z
+DTSTAMP:20261014T224116Z
 UID:6aa1bf4b04d5e95e0b11709a@woodstockfilmfestival.org
 DESCRIPTION:Panelists:\n\n﻿TONY GOLDWYN\n\nTony Goldwyncompleted directi
  ng his latest film\,Hello Darkness\, teaming up again with his friend Tony
@@ -1509,13 +1515,12 @@ DESCRIPTION:Panelists:\n\n﻿TONY GOLDWYN\n\nTony Goldwyncompleted directi
  cal Magicstarring Sandra Bullock and Nicole Kidman\,Fierce Peoplestarring 
  Diane Lane and Donald Sutherland\, andThe Center Will Not Holdabout his au
  nt Joan Didion. In 2024 Dunne wrote aNew York Timesbest selling family mem
- oir calledThe Friday Afternoon Club.\n\n🔴 Sold out as of Wed\, Oct 14 2
- 026 at 2:57 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-even
- ts?eventId=6aa1bf4b04d5e95e0b11709a
+ oir calledThe Friday Afternoon Club.\n\n🎟️ Tickets Available\n\n🔗 
+ https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1bf4b04d5e95e
+ 0b11709a
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1bf4b04d5
  e95e0b11709a
-X-WFF-SOLDOUT:2026-10-14T14:57:52.514075-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Blow the Horn 🎟️
@@ -1691,22 +1696,23 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa30f22a0fa
 X-WFF-SOLDOUT:2026-10-10T14:54:43.723166-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:I Play Rocky 🎟️
+SUMMARY:I Play Rocky 🔴
 DTSTART;TZID=America/New_York:20261017T180000
 DTEND;TZID=America/New_York:20261017T200000
-DTSTAMP:20261014T140458Z
+DTSTAMP:20261014T224116Z
 UID:6aa86c8f153010043a379729@woodstockfilmfestival.org
 DESCRIPTION:The film is an electrifying true story about an unknown actor 
  with an unshakable belief that he wasn’t just meant to write Rocky—he 
  was meant to be Rocky Balboa. Told “no” at every turn\, Sylvester Stal
  lone bets everything on himself\, holding the line on playing the lead aga
  inst seemingly impossible odds. The result is the ultimate underdog story 
- behind the ultimate underdog movie.\n\n🎟️ Tickets Available\n\n🔗 h
- ttps://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f153010043
- a379729
+ behind the ultimate underdog movie.\n\n🔴 Sold out as of Wed\, Oct 14 20
+ 26 at 6:41 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-event
+ s?eventId=6aa86c8f153010043a379729
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379729
+X-WFF-SOLDOUT:2026-10-14T18:41:16.648061-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sender 🎟️
@@ -1771,8 +1777,8 @@ DESCRIPTION:Olivia Colman\, Alexander Skarsgård\, Peter Dinklage\, Elizab
  m Eleanor Wilson and Alex Huston Fischer. When a lonely woman gets a man-l
  ike wicker creature\, her world fills with passion\, sparking fierce envy
  \, fear\, and desire across her village. – Amir Bogen\n\n🔴 Sold out a
- s of Wed\, Oct 14 2026 at 2:57 PM EDT\n\n🔗 https://woodstockfilmfestiva
- l.org/2026-all-events?eventId=6aa86c8f153010043a379800
+ s of Wed\, Oct 14 2026 at 2:57 PM \n\n🔗 https://woodstockfilmfestival.o
+ rg/2026-all-events?eventId=6aa86c8f153010043a379800
 LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379800
@@ -2082,9 +2088,9 @@ DTSTAMP:20261014T185752Z
 UID:6a9718c4c74d8b8d037dbad5@woodstockfilmfestival.org
 DESCRIPTION:Enjoy a special three-song performance by Little Feat members 
  Scott Sharrard and Tony Leone following the screening and Q&A with directo
- r Jesse Lauter.\n\n🔴 Sold out as of Wed\, Oct 14 2026 at 2:57 PM EDT\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a9718c4c
- 74d8b8d037dbad5
+ r Jesse Lauter.\n\n🔴 Sold out as of Wed\, Oct 14 2026 at 2:57 PM \n\n
+ 🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6a9718c4c74
+ d8b8d037dbad5
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6a9718c4c74d
  8b8d037dbad5

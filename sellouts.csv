@@ -72,3 +72,8 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-14T14:57:52.514075-04:00,sold_out,6aa1bf4b04d5e95e0b11709a,In Conversation: Tony Goldwyn & Griffin Dunne,2026-10-17T15:00:00-04:00,Utopia Studios,72.04
 2026-10-14T14:57:52.514075-04:00,sold_out,6aa86c8f153010043a379800,Wicker,2026-10-17T19:00:00-04:00,Rosendale Theatre,76.04
 2026-10-14T14:57:52.514075-04:00,sold_out,6a9718c4c74d8b8d037dbad5,Little Feat: The Documentary,2026-10-18T17:45:00-04:00,Bearsville Theater,98.79
+2026-10-14T18:41:16.648061-04:00,sold_out,6aa86c8f153010043a3797ba,The Debut,2026-10-14T19:45:00-04:00,Woodstock Playhouse,1.06
+2026-10-14T18:41:16.648061-04:00,sold_out,6aa86c8f153010043a379738,Josephine,2026-10-14T20:30:00-04:00,Tinker Street Cinema,1.81
+2026-10-14T18:41:16.648061-04:00,sold_out,6aa1ba453e8fcdbaebbd2a4f,DEMOCRACY IN DOCUMENTARY,2026-10-16T14:30:00-04:00,Utopia Studios,43.81
+2026-10-14T18:41:16.648061-04:00,back_on_sale,6aa1bf4b04d5e95e0b11709a,In Conversation: Tony Goldwyn & Griffin Dunne,2026-10-17T15:00:00-04:00,Utopia Studios,68.31
+2026-10-14T18:41:16.648061-04:00,sold_out,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,71.31

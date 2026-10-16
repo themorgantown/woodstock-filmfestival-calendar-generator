@@ -11,18 +11,12 @@ Usage:
     python build_site.py            # writes ./public
 """
 
-import html
 import shutil
 import sys
-from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
-import pytz
-from dateutil.parser import isoparse
 from icalendar import Calendar
-
-import venues
 
 PUBLIC_DIR = Path("public")
 CURRENT_FEED = "woodstockfilmfestival.ics"
@@ -35,10 +29,9 @@ SITE_URL = "https://woodstock-filmfestival-calendar-generator.themorgantown.work
 WEBCAL_URL = SITE_URL.replace("https://", "webcal://")
 CALENDAR_NAME = "Woodstock Film Festival"
 
-SELLOUTS_PAGE = "sellouts.html"
-TZ = pytz.timezone("America/New_York")
-SOLDOUT_PROP = "X-WFF-SOLDOUT"
-STRIP_EMOJI = ("🔴", "🎟️")
+# Sold-out report, regenerated and committed by make_sellouts.py each scrape
+SELLOUTS_URL = ("https://github.com/themorgantown/woodstock-filmfestival-calendar-generator"
+                "/blob/main/SELLOUTS.md")
 
 # Screenshot of Apple Calendar's subscribe menu, shown alongside the manual steps
 SCREENSHOT = "calendar_add.png"
@@ -153,7 +146,7 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
     <figcaption>In Apple Calendar: File &rarr; New Calendar Subscription&hellip;, then paste the URL above.</figcaption>
   </figure>
 
-  <p><a href="/{SELLOUTS_PAGE}">See which shows have sold out &rarr;</a></p>
+  <p><a href="{SELLOUTS_URL}">See which shows have sold out &rarr;</a></p>
 
   <h2>Archive</h2>
   <p>Past festivals, kept as-is and no longer updated:</p>
@@ -165,166 +158,6 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
     Unofficial - please verify details on the
     <a href="https://woodstockfilmfestival.org">official festival site</a>.
     <a href="https://github.com/themorgantown/woodstock-filmfestival-calendar-generator">Source</a>.
-  </footer>
-</body>
-</html>
-"""
-
-
-def sold_out_shows(path: Path) -> list[dict]:
-    """Every event the feed currently marks sold out, earliest showtime first"""
-    cal = Calendar.from_ical(path.read_text(encoding="utf-8"))
-    shows = []
-    for ev in cal.walk("VEVENT"):
-        soldout = ev.get(SOLDOUT_PROP)
-        if not soldout:
-            continue
-        title = str(ev.get("summary", ""))
-        for mark in STRIP_EMOJI:
-            title = title.replace(mark, "")
-        venue = str(ev.get("location", "")).split(",")[0].strip()
-        start = ev.decoded("dtstart")
-        if start.tzinfo is None:
-            start = TZ.localize(start)
-        shows.append({
-            "title": title.strip(),
-            "start": start.astimezone(TZ),
-            "soldout_at": isoparse(str(soldout)).astimezone(TZ),
-            "venue": venue,
-            "seats": venues.seats(venue),
-            "url": str(ev.get("url", "")),
-        })
-    return sorted(shows, key=lambda s: s["start"])
-
-
-def _lead(show: dict) -> str:
-    """How far ahead of showtime it sold out, in the coarsest useful unit"""
-    hours = (show["start"] - show["soldout_at"]).total_seconds() / 3600
-    if hours < 0:
-        return "at showtime"
-    if hours < 48:
-        return f"{hours:.0f}h before"
-    return f"{hours / 24:.0f} days before"
-
-
-def build_sellouts(shows: list[dict], now: datetime) -> str:
-    total = sum(s["seats"][0] for s in shows if s["seats"])
-    unknown = sum(1 for s in shows if not s["seats"])
-    estimated = sum(1 for s in shows if s["seats"] and s["seats"][1] != "sourced")
-
-    by_venue: dict[str, list[int]] = {}
-    for s in shows:
-        row = by_venue.setdefault(s["venue"], [0, 0])
-        row[0] += 1
-        row[1] += s["seats"][0] if s["seats"] else 0
-    venue_rows = "\n".join(
-        f'<tr><td>{html.escape(v)}</td><td class="num">{n}</td>'
-        f'<td class="num">{f"{seats:,}" if seats else "?"}</td></tr>'
-        for v, (n, seats) in sorted(by_venue.items(), key=lambda kv: -kv[1][1])
-    )
-
-    def row(s: dict) -> str:
-        if s["seats"]:
-            count, confidence = s["seats"]
-            seats = f"{count}" + ("*" if confidence != "sourced" else "")
-        else:
-            seats = "?"
-        title = html.escape(s["title"])
-        if s["url"]:
-            title = f'<a href="{html.escape(s["url"])}">{title}</a>'
-        return (
-            f'<tr><td class="when">{s["start"].strftime("%a %-d")}'
-            f'<div>{s["start"].strftime("%-I:%M %p")}</div></td>'
-            f'<td class="film">{title}<div class="venue">{html.escape(s["venue"])}</div></td>'
-            f'<td class="num">{seats}</td>'
-            f'<td class="lead">{_lead(s)}</td></tr>'
-        )
-
-    def table(subset: list[dict]) -> str:
-        return (
-            '<table><thead><tr><th>When</th><th>Film &amp; venue</th>'
-            '<th class="num">Seats</th><th class="lead">Sold out</th></tr></thead>\n<tbody>\n'
-            + "\n".join(row(s) for s in subset)
-            + "\n</tbody></table>"
-        )
-
-    upcoming = [s for s in shows if s["start"] >= now]
-    past = [s for s in shows if s["start"] < now]
-    sections = []
-    if upcoming:
-        sections.append(f"<h2>Coming up ({len(upcoming)})</h2>\n{table(upcoming)}")
-    if past:
-        sections.append(f'<h2>Already screened ({len(past)})</h2>\n<div class="past">{table(past)}</div>')
-    show_tables = "\n".join(sections) or "<p>Nothing has sold out yet.</p>"
-
-    caveat = ""
-    if estimated or unknown:
-        caveat = (f"<p class=\"note\">* {estimated} show(s) use a rough or guessed seat count "
-                  f"(no reliable published capacity)"
-                  + (f"; {unknown} venue(s) have no estimate and are left out of the total" if unknown else "")
-                  + ".</p>")
-
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Woodstock Film Festival Sellouts</title>
-<style>
-  :root {{ color-scheme: light dark; --muted: rgba(128,128,128,.85); --line: rgba(128,128,128,.25);
-           --accent: #d1242f; }}
-  body {{ margin: 0 auto; padding: 2rem 1rem; max-width: 46rem;
-         font: 16px/1.5 system-ui, -apple-system, sans-serif; }}
-  h1 {{ font-size: 1.5rem; margin: 0 0 .25rem; }}
-  h2 {{ font-size: 1.1rem; margin-top: 2rem; }}
-  .sub, .note {{ color: var(--muted); font-size: .9rem; margin-top: 0; }}
-  .stats {{ display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.25rem 0; }}
-  .stat {{ flex: 1 1 7rem; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 10px; }}
-  .stat b {{ display: block; font-size: 1.8rem; line-height: 1.1; font-variant-numeric: tabular-nums; }}
-  .stat span {{ color: var(--muted); font-size: .85rem; }}
-  table {{ width: 100%; border-collapse: collapse; }}
-  th {{ text-align: left; font-size: .8rem; font-weight: 600; color: var(--muted);
-        border-bottom: 1px solid var(--line); padding: .4rem .5rem; }}
-  td {{ padding: .55rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }}
-  .num, th.num {{ text-align: right; font-variant-numeric: tabular-nums; }}
-  .when, .lead {{ white-space: nowrap; font-size: .9rem; }}
-  .lead {{ color: var(--muted); }}
-  .film a {{ color: inherit; font-weight: 600; text-decoration: none; }}
-  .film a:hover {{ text-decoration: underline; }}
-  .venue {{ color: var(--muted); font-size: .85rem; }}
-  .when div {{ color: var(--muted); }}
-  .past {{ opacity: .6; }}
-  a {{ color: #1f6feb; }}
-  @media (max-width: 34rem) {{ .lead, th.lead {{ display: none; }} }}
-  footer {{ margin-top: 2rem; font-size: .85rem; color: var(--muted); }}
-</style>
-</head>
-<body>
-  <h1>Sold-out shows</h1>
-  <p class="sub">Updated {now.strftime("%a %b %-d, %-I:%M %p %Z")} with every calendar scrape.
-     Ticket counts are estimates: one ticket per seat at the venue.</p>
-
-  <div class="stats">
-    <div class="stat"><b>{len(shows)}</b><span>shows sold out</span></div>
-    <div class="stat"><b>~{total:,}</b><span>tickets (estimated)</span></div>
-  </div>
-
-{show_tables}
-  {caveat}
-
-  <h2>By venue</h2>
-  <table>
-    <thead><tr><th>Venue</th><th class="num">Shows</th><th class="num">Est. tickets</th></tr></thead>
-    <tbody>
-{venue_rows}
-    </tbody>
-  </table>
-
-  <footer>
-    Unofficial. A show counts as sold out when the festival site stops offering tickets;
-    some may come back on sale. Seat counts come from venue and press listings, not the festival.
-    <a href="/">Calendar</a> &middot;
-    <a href="https://github.com/themorgantown/woodstock-filmfestival-calendar-generator">Source</a>
   </footer>
 </body>
 </html>
@@ -368,13 +201,7 @@ def main():
         build_index(current_events, archive_info), encoding="utf-8"
     )
 
-    shows = sold_out_shows(current)
-    (PUBLIC_DIR / SELLOUTS_PAGE).write_text(
-        build_sellouts(shows, datetime.now(TZ)), encoding="utf-8"
-    )
-
     print(f"✓ Built {PUBLIC_DIR}/")
-    print(f"  {SELLOUTS_PAGE}: {len(shows)} sold-out shows")
     print(f"  {CURRENT_FEED}: {current_events} events")
     for name, count in archive_info:
         print(f"  {name}: {count} events (archive)")

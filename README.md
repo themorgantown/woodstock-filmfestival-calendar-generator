@@ -48,10 +48,10 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 - Sellout marker (🔴) with the time tickets ran out, both in the event description
   and as an `X-WFF-SOLDOUT` property; sellouts are also appended to `sellouts.csv`
  
-## Sellouts page
+## Sellouts report
 
-[`/sellouts.html`](https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev/sellouts.html)
-lists every show the current feed marks sold out, rebuilt after each scrape. Ticket counts
+[`SELLOUTS.md`](SELLOUTS.md) lists every show the current feed marks sold out. `make_sellouts.py`
+rewrites it after each scrape and the workflow commits it. Ticket counts
 are estimates: one ticket per seat, from the capacities (and their sources) in
 `VENUE_SEATS` in `venues.py`. Counts marked `*` are rough or guessed.
 
@@ -75,8 +75,7 @@ The feeds are served from Cloudflare Workers (static assets) at
 `https://woodstock-filmfestival-calendar-generator.themorgantown.workers.dev`, which gives
 them a proper `text/calendar` content-type, request logs, and redirects.
 
-`build_site.py` assembles `public/` (feeds + `_headers` + `_redirects` + landing page +
-`sellouts.html`) and
+`build_site.py` assembles `public/` (feeds + `_headers` + `_redirects` + landing page) and
 refuses to build an empty or unparseable calendar. The GitHub Action runs it and deploys
 with `wrangler` after each successful scrape.
 

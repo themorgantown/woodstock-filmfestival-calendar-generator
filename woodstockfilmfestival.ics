@@ -841,8 +841,8 @@ DTSTAMP:20261016T200738Z
 UID:6aa05b3baa83481cdea888a5@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\nIntimate portraits of diverse generational familie
  s in moments of control\, heartbreak\, and memory.\n\n🔴 Sold out as of 
- Fri\, Oct 16 2026 at 4:07 PM EDT\n\n🔗 https://woodstockfilmfestival.org
- /2026-all-events?eventId=6aa05b3baa83481cdea888a5
+ Fri\, Oct 16 2026 at 4:07 PM \n\n🔗 https://woodstockfilmfestival.org/20
+ 26-all-events?eventId=6aa05b3baa83481cdea888a5
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05b3baa83
@@ -913,29 +913,30 @@ DESCRIPTION:Twelve random people are selected to convene for an indefinite
   and directed by Dean Imperial and Zach LeBeau\, what interests the filmma
  kers is how human beings cope in the pressure cooker that is a sequestered
   jury. – Adam Schartoff\n\n🔴 Sold out as of Fri\, Oct 16 2026 at 4:07
-  PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=
- 6aa86c8f153010043a3797dd
+  PM \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa
+ 86c8f153010043a3797dd
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797dd
 X-WFF-SOLDOUT:2026-10-16T16:07:38.867714-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elsinore 🎟️
+SUMMARY:Elsinore 🔴
 DTSTART;TZID=America/New_York:20261016T170000
 DTEND;TZID=America/New_York:20261016T190000
-DTSTAMP:20260925T135155Z
+DTSTAMP:20261016T230310Z
 UID:6ab3da9355848849f511cd07@woodstockfilmfestival.org
 DESCRIPTION:A deeply moving tribute starring the breathtaking Andrew Scott
   is based on the inspiring true story of Scottish actor Ian Charleson. Sec
  retly battling AIDS after his Chariots of Fire success\, he is called upon
   to play Hamlet at the National Theatre in London\, determined to act unti
- l his final bow. – Amir Bogen\n\n🎟️ Tickets Available\n\n🔗 https
- ://woodstockfilmfestival.org/2026-all-events?eventId=6ab3da9355848849f511c
- d07
+ l his final bow. – Amir Bogen\n\n🔴 Sold out as of Fri\, Oct 16 2026 a
+ t 7:03 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?ev
+ entId=6ab3da9355848849f511cd07
 LOCATION:Rosendale Theatre\, 408 Main St\, Rosendale\, NY 12472
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6ab3da935584
  8849f511cd07
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:In Hines Sight 🔴
@@ -1086,21 +1087,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37975b
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:School For Defectors 🎟️
+SUMMARY:School For Defectors 🔴
 DTSTART;TZID=America/New_York:20261016T201500
 DTEND;TZID=America/New_York:20261016T221500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261016T230310Z
 UID:6aa86c8f153010043a37978d@woodstockfilmfestival.org
 DESCRIPTION:Unlike most schools\, Jangdaehyun School in South Korea is hom
  e to 20 boarders\, all children of defectors from North Korea\, risking ev
  erything including their lives. Director Jeremy Workman captures an intima
  te portrait of a generation living in the shadow of one of the world’s m
- ost enduring political divisions. – Adam Schartoff\n\n🎟️ Tickets Av
- ailable\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=
- 6aa86c8f153010043a37978d
+ ost enduring political divisions. – Adam Schartoff\n\n🔴 Sold out as o
+ f Fri\, Oct 16 2026 at 7:03 PM EDT\n\n🔗 https://woodstockfilmfestival.o
+ rg/2026-all-events?eventId=6aa86c8f153010043a37978d
 LOCATION:Orpheum Theatre\, 156 Main Street\, Saugerties\, NY 12477
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37978d
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hilarity 🔴
@@ -1281,10 +1283,10 @@ X-WFF-SOLDOUT:2026-10-10T03:46:03.416108-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New York Women in Film & Television (NYWIFT) - Breaking the Frame 
- - How Far Have Women in Film Really Come? 🎟️
+ - How Far Have Women in Film Really Come? 🔴
 DTSTART;TZID=America/New_York:20261017T120000
 DTEND;TZID=America/New_York:20261017T140000
-DTSTAMP:20261016T200738Z
+DTSTAMP:20261016T230310Z
 UID:6aa1be5d4a562fb0e741ea94@woodstockfilmfestival.org
 DESCRIPTION:As the film industry continues to evolve\, so too have the opp
  ortunities for women behind and in front of the camera. From the pioneers 
@@ -1380,12 +1382,13 @@ DESCRIPTION:As the film industry continues to evolve\, so too have the opp
  film and television industry. She was honored along with Martin Scorsese a
  nd Michael Apted\, the Leading Light Award from DOC NYC’s Visionaries Tr
  ibute. She currently serves on several national boards\, and is on the dis
- tinguished Peabody Awards Board of Jurors.\n\n🎟️ Tickets Available\n
- \n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1be5d4
- a562fb0e741ea94
+ tinguished Peabody Awards Board of Jurors.\n\n🔴 Sold out as of Fri\, Oc
+ t 16 2026 at 7:03 PM EDT\n\n🔗 https://woodstockfilmfestival.org/2026-al
+ l-events?eventId=6aa1be5d4a562fb0e741ea94
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1be5d4a56
  2fb0e741ea94
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rain Reign 🔴
@@ -1473,10 +1476,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
 X-WFF-SOLDOUT:2026-10-10T14:54:43.723166-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:In Conversation: Tony Goldwyn & Griffin Dunne 🔴
+SUMMARY:In Conversation: Tony Goldwyn & Griffin Dunne 🎟️
 DTSTART;TZID=America/New_York:20261017T150000
 DTEND;TZID=America/New_York:20261017T170000
-DTSTAMP:20261015T172402Z
+DTSTAMP:20261016T230310Z
 UID:6aa1bf4b04d5e95e0b11709a@woodstockfilmfestival.org
 DESCRIPTION:Panelists:\n\n﻿TONY GOLDWYN\n\nTony Goldwyncompleted directi
  ng his latest film\,Hello Darkness\, teaming up again with his friend Tony
@@ -1516,13 +1519,12 @@ DESCRIPTION:Panelists:\n\n﻿TONY GOLDWYN\n\nTony Goldwyncompleted directi
  cal Magicstarring Sandra Bullock and Nicole Kidman\,Fierce Peoplestarring 
  Diane Lane and Donald Sutherland\, andThe Center Will Not Holdabout his au
  nt Joan Didion. In 2024 Dunne wrote aNew York Timesbest selling family mem
- oir calledThe Friday Afternoon Club.\n\n🔴 Sold out as of Thu\, Oct 15 2
- 026 at 1:24 PM \n\n🔗 https://woodstockfilmfestival.org/2026-all-events?
- eventId=6aa1bf4b04d5e95e0b11709a
+ oir calledThe Friday Afternoon Club.\n\n🎟️ Tickets Available\n\n🔗 
+ https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1bf4b04d5e95e
+ 0b11709a
 LOCATION:Utopia Studios\, 293 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa1bf4b04d5
  e95e0b11709a
-X-WFF-SOLDOUT:2026-10-15T13:24:02.823024-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Blow the Horn 🎟️
@@ -1541,20 +1543,21 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379700
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Man I Love 🎟️
+SUMMARY:The Man I Love 🔴
 DTSTART;TZID=America/New_York:20261017T154500
 DTEND;TZID=America/New_York:20261017T174500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261016T230310Z
 UID:6aa86c8f153010043a3797ce@woodstockfilmfestival.org
 DESCRIPTION:Rami Malek stars in Ira Sachs’ 1980s drama as Jimmy\, a magn
  etic stage actor hiding an AIDS diagnosis from his lovers and friends. As 
  he refuses to slow down\, his inner circle (Tom Sturridge\, Rebecca Hall) 
- struggles to face his decline. Premiered at Cannes. – Amir Bogen\n\n🎟
- ️ Tickets Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-e
- vents?eventId=6aa86c8f153010043a3797ce
+ struggles to face his decline. Premiered at Cannes. – Amir Bogen\n\n🔴
+  Sold out as of Fri\, Oct 16 2026 at 7:03 PM EDT\n\n🔗 https://woodstock
+ filmfestival.org/2026-all-events?eventId=6aa86c8f153010043a3797ce
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3797ce
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mother Wolf 🎟️
@@ -1918,21 +1921,22 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa883a46634
  5ed69ce4be81
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fatherland 🎟️
+SUMMARY:Fatherland 🔴
 DTSTART;TZID=America/New_York:20261018T124500
 DTEND;TZID=America/New_York:20261018T144500
-DTSTAMP:20261016T200738Z
+DTSTAMP:20261016T230310Z
 UID:6aa86c8f153010043a37971f@woodstockfilmfestival.org
 DESCRIPTION:Paweł Pawlikowski's new film centers on celebrated novelist T
  homas Mann’s post-WWII return to a divided Europe. Haunted by Nazi atroc
  ities and his son's suicide\, Mann (Hanns Zischler) and daughter Erika (Sa
  ndra Hüller) navigate Cold War politics in an elegant\, classic tale from
-  the director ofIdaandCold War. – Amir Bogen\n\n🎟️ Tickets Availabl
- e\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c
- 8f153010043a37971f
+  the director ofIdaandCold War. – Amir Bogen\n\n🔴 Sold out as of Fri
+ \, Oct 16 2026 at 7:03 PM EDT\n\n🔗 https://woodstockfilmfestival.org/20
+ 26-all-events?eventId=6aa86c8f153010043a37971f
 LOCATION:Tinker Street Cinema\, 132 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a37971f
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Paper Tiger 🔴
@@ -2117,19 +2121,20 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a3796e2
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:INK 🎟️
+SUMMARY:INK 🔴
 DTSTART;TZID=America/New_York:20261018T191500
 DTEND;TZID=America/New_York:20261018T211500
-DTSTAMP:20260916T171252Z
+DTSTAMP:20261016T230310Z
 UID:6aa86c8f153010043a379733@woodstockfilmfestival.org
 DESCRIPTION:Danny Boyle’s period drama starts in 1969 when Rupert Murdoc
  h (Guy Pearce) hires editor Larry Lamb (Jack O’Connell) to revampThe Sun
  . Their tabloid revolution skyrockets in sales while raising sharp questio
- ns about media ethics that resonate today. – Amir Bogen\n\n🎟️ Ticke
- ts Available\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eve
- ntId=6aa86c8f153010043a379733
+ ns about media ethics that resonate today. – Amir Bogen\n\n🔴 Sold out
+  as of Fri\, Oct 16 2026 at 7:03 PM EDT\n\n🔗 https://woodstockfilmfesti
+ val.org/2026-all-events?eventId=6aa86c8f153010043a379733
 LOCATION:Woodstock Playhouse\, 103 Mill Hill Rd\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
  10043a379733
+X-WFF-SOLDOUT:2026-10-16T19:03:10.784969-04:00
 END:VEVENT
 END:VCALENDAR

@@ -100,3 +100,7 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-16T13:00:16.792625-04:00,sold_out,6aa1bb66f557af72f6cf64fc,MASTERCLASS WITH CATHERINE HARDWICKE: FIX IT IN PREP,2026-10-16T11:30:00-04:00,Utopia Studios,-1.50
 2026-10-16T13:00:16.792625-04:00,sold_out,6aa1ba453e8fcdbaebbd2a4f,DEMOCRACY IN DOCUMENTARY,2026-10-16T14:30:00-04:00,Utopia Studios,1.50
 2026-10-16T13:00:16.792625-04:00,sold_out,6aa86c8f153010043a379797,Sender,2026-10-17T18:45:00-04:00,Tinker Street Cinema,29.75
+2026-10-16T16:07:38.867714-04:00,sold_out,6aa05b3baa83481cdea888a5,Family Matters,2026-10-16T14:30:00-04:00,Woodstock Community Center,-1.63
+2026-10-16T16:07:38.867714-04:00,sold_out,6aa86c8f153010043a3797dd,The Plea,2026-10-16T15:30:00-04:00,Tinker Street Cinema,-0.63
+2026-10-16T16:07:38.867714-04:00,back_on_sale,6aa1be5d4a562fb0e741ea94,New York Women in Film & Television (NYWIFT) - Breaking the Frame - How Far Have Women in Film Really Come?,2026-10-17T12:00:00-04:00,Utopia Studios,19.87
+2026-10-16T16:07:38.867714-04:00,back_on_sale,6aa86c8f153010043a37971f,Fatherland,2026-10-18T12:45:00-04:00,Tinker Street Cinema,44.62

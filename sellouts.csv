@@ -117,3 +117,7 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,7.54
 2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a37976f,Paper Tiger,2026-10-18T13:00:00-04:00,Woodstock Playhouse,26.54
 2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a379733,INK,2026-10-18T19:15:00-04:00,Woodstock Playhouse,32.79
+2026-10-17T13:33:33.221041-04:00,sold_out,6aa1be5d4a562fb0e741ea94,New York Women in Film & Television (NYWIFT) - Breaking the Frame - How Far Have Women in Film Really Come?,2026-10-17T12:00:00-04:00,Utopia Studios,-1.56
+2026-10-17T13:33:33.221041-04:00,sold_out,6aa1bf4b04d5e95e0b11709a,In Conversation: Tony Goldwyn & Griffin Dunne,2026-10-17T15:00:00-04:00,Utopia Studios,1.44
+2026-10-17T13:33:33.221041-04:00,sold_out,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,4.44
+2026-10-17T13:33:33.221041-04:00,sold_out,6aa86c8f153010043a37976f,Paper Tiger,2026-10-18T13:00:00-04:00,Woodstock Playhouse,23.44

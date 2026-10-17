@@ -121,3 +121,5 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-17T13:33:33.221041-04:00,sold_out,6aa1bf4b04d5e95e0b11709a,In Conversation: Tony Goldwyn & Griffin Dunne,2026-10-17T15:00:00-04:00,Utopia Studios,1.44
 2026-10-17T13:33:33.221041-04:00,sold_out,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,4.44
 2026-10-17T13:33:33.221041-04:00,sold_out,6aa86c8f153010043a37976f,Paper Tiger,2026-10-18T13:00:00-04:00,Woodstock Playhouse,23.44
+2026-10-17T15:44:12.363313-04:00,back_on_sale,6aa86c8f153010043a3796dd,A Company of Thieves,2026-10-16T18:45:00-04:00,Tinker Street Cinema,-20.99
+2026-10-17T15:44:12.363313-04:00,sold_out,6aa86c8f153010043a379733,INK,2026-10-18T19:15:00-04:00,Woodstock Playhouse,27.51

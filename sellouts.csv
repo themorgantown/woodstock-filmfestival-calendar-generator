@@ -113,3 +113,7 @@ detected_at,status,event_id,title,event_start,venue,hours_before_start
 2026-10-16T19:03:10.784969-04:00,sold_out,6aa86c8f153010043a379733,INK,2026-10-18T19:15:00-04:00,Woodstock Playhouse,48.20
 2026-10-16T21:35:32.159182-04:00,sold_out,6aa86c8f153010043a379700,Blow the Horn,2026-10-17T15:15:00-04:00,Woodstock Playhouse,17.66
 2026-10-17T07:12:30.531713-04:00,back_on_sale,6aa1be5d4a562fb0e741ea94,New York Women in Film & Television (NYWIFT) - Breaking the Frame - How Far Have Women in Film Really Come?,2026-10-17T12:00:00-04:00,Utopia Studios,4.79
+2026-10-17T10:27:46.744617-04:00,sold_out,6aa86c8f153010043a379747,Mother Wolf,2026-10-17T16:00:00-04:00,Rosendale Theatre,5.54
+2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a379729,I Play Rocky,2026-10-17T18:00:00-04:00,Woodstock Playhouse,7.54
+2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a37976f,Paper Tiger,2026-10-18T13:00:00-04:00,Woodstock Playhouse,26.54
+2026-10-17T10:27:46.744617-04:00,back_on_sale,6aa86c8f153010043a379733,INK,2026-10-18T19:15:00-04:00,Woodstock Playhouse,32.79

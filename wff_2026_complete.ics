@@ -1991,10 +1991,10 @@ URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa86c8f1530
 X-WFF-SOLDOUT:2026-10-11T05:20:01.283623-04:00
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rapid Response 🎟️
+SUMMARY:Rapid Response 🔴
 DTSTART;TZID=America/New_York:20261018T143000
 DTEND;TZID=America/New_York:20261018T163000
-DTSTAMP:20261002T155902Z
+DTSTAMP:20261018T210434Z
 UID:6aa05c4d0b1b01a1129538d1@woodstockfilmfestival.org
 DESCRIPTION:With Q&A.Moderated by Broadcast Journalist and Anchor Soledad 
  O'Brien.\n\n﻿Four films follow the rapid response of ordinary people to 
@@ -2002,11 +2002,13 @@ DESCRIPTION:With Q&A.Moderated by Broadcast Journalist and Anchor Soledad
  \, a paramilitary force raiding their streets\; the chilling dissonance be
  tween agents' casual conversation and the violence they carry out in court
  house hallways\; and a veteran photojournalist risking her safety to docum
- ent rising extremism.\n\n🎟️ Tickets Available\n\n🔗 https://woodsto
- ckfilmfestival.org/2026-all-events?eventId=6aa05c4d0b1b01a1129538d1
+ ent rising extremism.\n\n🔴 Sold out as of Sun\, Oct 18 2026 at 5:04 PM 
+ EDT\n\n🔗 https://woodstockfilmfestival.org/2026-all-events?eventId=6aa0
+ 5c4d0b1b01a1129538d1
 LOCATION:Bearsville Theater\, 291 Tinker Street\, Woodstock\, NY 12498
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa05c4d0b1b
  01a1129538d1
+X-WFF-SOLDOUT:2026-10-18T17:04:34.807994-04:00
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:American Zoo 🔴
@@ -2065,9 +2067,8 @@ DTEND;TZID=America/New_York:20261018T182000
 DTSTAMP:20261018T181736Z
 UID:6aa83079bb66804ab74a5676@woodstockfilmfestival.org
 DESCRIPTION:With Q&A\n\nFeel-good shorts. The kind of joy that's contagiou
- s.\n\n🔴 Sold out as of Sun\, Oct 18 2026 at 2:17 PM EDT\n\n🔗 https:/
- /woodstockfilmfestival.org/2026-all-events?eventId=6aa83079bb66804ab74a567
- 6
+ s.\n\n🔴 Sold out as of Sun\, Oct 18 2026 at 2:17 PM \n\n🔗 https://wo
+ odstockfilmfestival.org/2026-all-events?eventId=6aa83079bb66804ab74a5676
 LOCATION:Woodstock Community Center\, 56 Rock City Rd\, Woodstock\, NY 124
  98
 URL:https://woodstockfilmfestival.org/2026-all-events?eventId=6aa83079bb66

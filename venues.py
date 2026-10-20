@@ -53,6 +53,38 @@ VENUE_ADDRESSES: Dict[str, Tuple[str, str, str, str, str]] = {
         'Saugerties', 'NY', '12477'),
 }
 
+# Canonical key -> (seats, confidence, source) for estimating tickets sold at a
+# sold-out show. confidence is 'sourced' (a page states it), 'rough' (weak or
+# conflicting sources) or 'guess' (no source found - an estimate).
+VENUE_SEATS: Dict[str, Tuple[int, str, str]] = {
+    'tinker street cinema': (
+        160, 'sourced', 'https://hudsonvalleyone.com/?p=82645'),
+    'woodstock playhouse': (
+        321, 'sourced', 'https://www.woodstockplayhouse.org/rental'),
+    # ~500 is sit-stand; no seated-only figure published, so this is a guess
+    # at the seated film setup.
+    'bearsville theater': (
+        300, 'rough', 'https://www.mixonline.com/blog/toms-travels-audio-along-the-hudson-day-2'),
+    # Only source is an aggregator's auto-generated blurb ("up to 300")
+    'utopia studios': (
+        300, 'rough', 'https://atmosfy.io/location/woodstock/utopia-soundstage'),
+    'upstate midtown': (
+        42, 'sourced', 'https://hudsonvalleyone.com/?p=95522'),
+    # Main theater; there is also a 300-seat upstairs room
+    'community theater': (
+        500, 'sourced', 'https://www.chronogram.com/arts/theater/the-renovated-catskill-community-theatre-reopens-september-5/'),
+    'woodstock community center': (200, 'guess', ''),
+    # 450 is standing capacity; a seated screening holds fewer
+    'assembly': (
+        450, 'rough', 'http://hudsonvalleyone.com/2024/12/18/kingstons-new-450-capacity-music-venue-assembly-debuts-with-two-nights-of-felice-brothers/'),
+    # Three auditoriums of 136/138/145; the calendar doesn't keep the screen
+    'orpheum theatre': (
+        138, 'sourced', 'https://villageofsaugerties.gov/community/attractions-links/orpheum'),
+    'rosendale theatre': (
+        260, 'sourced', 'https://en.wikipedia.org/wiki/Rosendale_Theatre'),
+    'broken wing barn at white feather farm': (100, 'guess', ''),
+}
+
 # Substring matched against the normalized venue name, for the names the site
 # decorates: "Upstate Films (Saugerties): Orpheum Theatre 1" is the Orpheum.
 # First match wins, so order these most-specific first.
@@ -72,14 +104,33 @@ def normalize(name: str) -> str:
     return key
 
 
-def lookup(venue_name: str) -> Optional[Tuple[str, str, str, str, str]]:
-    """Return the verified address tuple for a venue name, or None"""
+def canonical_key(venue_name: str) -> Optional[str]:
+    """Map any spelling of a venue onto its VENUE_ADDRESSES key, or None"""
     key = normalize(venue_name)
     if key in VENUE_ADDRESSES:
-        return VENUE_ADDRESSES[key]
+        return key
     for fragment, canonical in ALIASES:
         if fragment in key:
-            return VENUE_ADDRESSES[canonical]
+            return canonical
+    # The calendar's LOCATION uses the display name ("The Community Theatre")
+    for canonical, entry in VENUE_ADDRESSES.items():
+        if normalize(entry[0]) == key:
+            return canonical
+    return None
+
+
+def lookup(venue_name: str) -> Optional[Tuple[str, str, str, str, str]]:
+    """Return the verified address tuple for a venue name, or None"""
+    key = canonical_key(venue_name)
+    return VENUE_ADDRESSES[key] if key else None
+
+
+def seats(venue_name: str) -> Optional[Tuple[int, str]]:
+    """(seat count, confidence) for a venue name, or None if unknown"""
+    key = canonical_key(venue_name)
+    if key in VENUE_SEATS:
+        count, confidence, _ = VENUE_SEATS[key]
+        return count, confidence
     return None
 
 

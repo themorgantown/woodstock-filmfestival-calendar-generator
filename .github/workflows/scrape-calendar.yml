@@ -83,6 +83,11 @@ jobs:
         run: |
           python make_calendar.py
 
+      - name: Write sellouts report
+        if: steps.check-date.outputs.skip != 'true' && steps.scrape.outcome == 'success'
+        run: |
+          python make_sellouts.py
+
       # Only runs when the scrape above succeeded - make_calendar.py exits
       # non-zero if it found no events, so a broken scrape never deploys.
       - name: Build static site
@@ -108,6 +113,7 @@ jobs:
             woodstockfilmfestival.ics
             wff_2026_complete.ics
             sellouts.csv
+            SELLOUTS.md
             wff_calendar_v2.log
           retention-days: 30
 
@@ -120,6 +126,7 @@ jobs:
           git add woodstockfilmfestival.ics wff_2026_complete.ics
           # Only exists once something has actually sold out
           if [ -f sellouts.csv ]; then git add sellouts.csv; fi
+          if [ -f SELLOUTS.md ]; then git add SELLOUTS.md; fi
           git diff --staged --quiet || git commit -m "Update calendar data - $(TZ='America/New_York' date +'%Y-%m-%d %H:%M:%S %Z')"
           git push
         continue-on-error: true

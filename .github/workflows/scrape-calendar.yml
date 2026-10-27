@@ -1,9 +1,6 @@
 name: Scrape Woodstock Calendar
 
 on:
-  schedule:
-    # Run every 2 hours
-    - cron: '47 */1 * * *'
   workflow_dispatch: # Allow manual triggering
 
 permissions:

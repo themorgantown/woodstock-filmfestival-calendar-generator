@@ -29,6 +29,10 @@ SITE_URL = "https://woodstock-filmfestival-calendar-generator.themorgantown.work
 WEBCAL_URL = SITE_URL.replace("https://", "webcal://")
 CALENDAR_NAME = "Woodstock Film Festival"
 
+# Sold-out report, regenerated and committed by make_sellouts.py each scrape
+SELLOUTS_URL = ("https://github.com/themorgantown/woodstock-filmfestival-calendar-generator"
+                "/blob/main/SELLOUTS.md")
+
 # Screenshot of Apple Calendar's subscribe menu, shown alongside the manual steps
 SCREENSHOT = "calendar_add.png"
 
@@ -141,6 +145,8 @@ def build_index(current_events: int, archives: list[tuple[str, int]]) -> str:
          width="672" height="636" loading="lazy">
     <figcaption>In Apple Calendar: File &rarr; New Calendar Subscription&hellip;, then paste the URL above.</figcaption>
   </figure>
+
+  <p><a href="{SELLOUTS_URL}">See which shows have sold out &rarr;</a></p>
 
   <h2>Archive</h2>
   <p>Past festivals, kept as-is and no longer updated:</p>

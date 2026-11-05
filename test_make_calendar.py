@@ -281,6 +281,18 @@ def test_unknown_venue_falls_back_to_site_text():
     assert location == 'Some New Barn, 1 Made Up Rd, Woodstock, NY 12498'
 
 
+def test_every_site_venue_has_a_seat_count():
+    """The sellouts page estimates tickets from these - a gap drops a show from the total."""
+    # Bar events are general admission with no published capacity
+    no_seats = {'Unicorn Bar'}
+    missing = [venues.venue_name(b) for b in SITE_VENUE_BLOCKS
+               if venues.venue_name(b) not in no_seats and not venues.seats(venues.venue_name(b))]
+    assert not missing, f"venues missing from VENUE_SEATS: {missing}"
+    # The ICS LOCATION carries the display name, not the site's spelling
+    assert venues.seats('The Community Theatre') == (500, 'sourced')
+    assert venues.seats('Orpheum Theatre') == venues.seats('Upstate Films (Saugerties): Orpheum Theatre 1')
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_"):

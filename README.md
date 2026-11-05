@@ -48,6 +48,13 @@ This repository automatically reads the [Woodstock Film Festival website](https:
 - Sellout marker (🔴) with the time tickets ran out, both in the event description
   and as an `X-WFF-SOLDOUT` property; sellouts are also appended to `sellouts.csv`
  
+## Sellouts report
+
+[`SELLOUTS.md`](SELLOUTS.md) lists every show the current feed marks sold out. `make_sellouts.py`
+rewrites it after each scrape and the workflow commits it. Ticket counts
+are estimates: one ticket per seat, from the capacities (and their sources) in
+`VENUE_SEATS` in `venues.py`. Counts marked `*` are rough or guessed.
+
 ## Respectful Scraping
 
 This scraper is designed to be respectful of the festival's website:
